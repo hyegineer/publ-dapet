@@ -1,0 +1,96 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --main-green: #56c595;
+  --sub-yellow-green: #8abe53;
+  --gray: #aeaeae;
+  --gray-dark: #6c6c6c;
+  --gray-light: #f1f1f1;
+  --red: #cd3e3e;
+  --yellow: #ffc700;
+  --alarm-before: #fff6f4;
+  --alarm: #ffb179;
+}
+
+#guide-page {
+  background-color: #CFD7CF;
+  padding: 100px 0;
+}
+
+#guide-page .list-gtbl {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1080px;
+  margin-bottom: 20px;
+}
+
+#guide-page .list-gtbl:last-child {
+  margin-bottom: 0;
+}
+
+#guide-page .list-gtbl > h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 13px;
+}
+
+#guide-page .gtbl {
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid #a3a3a3;
+}
+
+#guide-page .gtbl-head {
+  border-bottom: 1px solid #eaeaea;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 10px 0;
+}
+
+#guide-page .gtbl-head .cell {
+  color: #555;
+  font-weight: 600;
+}
+
+#guide-page .gtbl-body .list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 11px 0;
+  border-bottom: 1px solid #eaeaea;
+  color: #333;
+}
+
+#guide-page .gtbl-body .list:last-child {
+  border-bottom: 0;
+}
+
+#guide-page .gtbl-body .list a {
+  text-decoration: underline;
+  color: var(--sub-yellow-green, #8abe53);
+}
+
+#guide-page .gtbl-head .cell,
+#guide-page .gtbl-body .list .cell {
+  width: 100%;
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+#guide-page .badge {
+  padding: 3px 8px;
+  font-size: 10px;
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+#guide-page .badge.green {
+  background-color: #daf3e8;
+  color: var(--main-green, #56c595);
+}
+
+#guide-page .badge.blue {
+  background-color: #d0ebff;
+  color: #54a4e0;
+}
