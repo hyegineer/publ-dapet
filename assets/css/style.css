@@ -23,13 +23,13 @@ body {
 html {
   font-size: 10px;
 }
-
-#app {
-  height: 100%;
+@media all and (max-width: 350px) {
+  html {
+    font-size: 9px;
+  }
 }
 
-.page {
-  width: 100%;
+#app {
   height: 100%;
 }
 
@@ -49,29 +49,32 @@ html {
   background-color: white;
 }
 
-.header {
+.page {
   width: 100%;
-  height: 4.4rem;
-}
-
-.header .ttl {
-  font-size: 1.4rem;
+  position: relative;
 }
 
 .contents-container {
   width: 100%;
-  height: calc(100% - 4.4rem);
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
 }
 
+.header + .contents-container {
+  height: calc(100% - 4.4rem);
+}
+
 .contents-top-wrapper {
   flex: 1;
   width: 100%;
-  background-color: #d3dfd3;
   overflow: auto;
+}
+
+.contents-bottom-wrapper {
+  width: 100%;
 }
 
 .contents-top-wrapper ul li {
@@ -79,9 +82,182 @@ html {
   margin-bottom: 2rem;
 }
 
-.contents-bottom-wrapper {
+.header {
   width: 100%;
-  padding: 13px;
+  height: 4.4rem;
+}
+
+.header-inner {
+  width: calc(100% - 30px);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+.header .hd-left {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.header .hd-right {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+.header .hd-center .ttl {
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: var(--black, #000);
+  text-align: center;
+}
+
+.header .hd-btn {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.txt-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+.invisible {
+  display: none !important;
+}
+
+.form-page {
+  padding: 1rem 1.5rem;
+}
+
+.form-item {
+  margin-bottom: 2rem;
+}
+
+.form-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--black, #000);
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.form-inp-grp {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-inp-grp .form-inp-btn {
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: var(--gray_light, #F1F1F1);
+  padding: 0 1.5rem;
+  color: var(--gray, #AEAEAE);
+  font-size: 1.2rem;
+  font-weight: 300;
+  transition: background 0.2s;
+}
+
+.form-inp-grp .form-inp-btn.active {
+  background-color: white;
+  color: var(--main---green, #56C595);
+}
+
+.inp-btn-item,
+.inp-unit-item {
+  position: relative;
+}
+
+.inp-btn-item .btn {
+  position: absolute;
+  top: 1.05rem;
+  right: 1.5rem;
+  width: 2.4rem;
+}
+
+.inp-btn-item .custom-inp {
+  padding-right: 5rem;
+}
+
+.inp-unit-item .unit {
+  position: absolute;
+  top: 1.4rem;
+  right: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.inp-unit-item .custom-inp {
+  padding-right: 4rem;
+}
+
+.form-inp-grp .inp-btn-item,
+.form-inp-grp .inp-unit-item {
+  width: 100%;
+}
+
+.form-caution {
+  color: var(--red, #CD3E3E);
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.form-submit-btn-wrap {
+  border-top: 1px solid var(--gray_light, #F1F1F1);
+  padding: 1rem 1.5rem;
+  /* iPhone XR : 1792x828px at 326ppi */
+  /* iPhone XS : 2436x1125px at 458ppi */
+  /* iPhone XS Max : 2688x1242px at 458ppi */
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+  .form-submit-btn-wrap {
+    padding-bottom: 4rem;
+  }
+}
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .form-submit-btn-wrap {
+    padding-bottom: 4rem;
+  }
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  .form-submit-btn-wrap {
+    padding-bottom: 4rem;
+  }
+}
+
+.form-submit-btn-wrap .btn {
+  width: 100%;
 }
 
 .custom-inp {
@@ -104,24 +280,95 @@ html {
   font-weight: 300;
 }
 
-/* iPhone XR : 1792x828px at 326ppi */
-@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
-  .contents-bottom-wrapper {
-    padding-bottom: 4rem;
-  }
+.ico {
+  width: 2.4rem;
+  height: 2.4rem;
+  display: inline-flex;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
-/* iPhone XS : 2436x1125px at 458ppi */
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-  .contents-bottom-wrapper {
-    padding-bottom: 4rem;
-  }
+
+.ico-line-arrow-left {
+  background-image: url(../images/ico/ico-line-arrow-left.svg);
 }
-/* iPhone XS Max : 2688x1242px at 458ppi */
-@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
-  .contents-bottom-wrapper {
-    padding-bottom: 4rem;
-  }
+
+.ico-line-arrow-right {
+  background-image: url(../images/ico/ico-line-arrow-right.svg);
 }
+
+.ico-home {
+  background-image: url(../images/ico/ico-home.svg);
+}
+
+.ico-alarm {
+  background-image: url(../images/ico/ico-alarm.svg);
+}
+
+.ico-alarm-on {
+  background-image: url(../images/ico/ico-alarm-on.svg);
+}
+
+.ico-eye-on-gray {
+  background-image: url(../images/ico/ico-eye-on-gray.svg);
+}
+
+.ico-eye-off-gray {
+  background-image: url(../images/ico/ico-eye-off-gray.svg);
+}
+
+.btn {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eye-btn .ico {
+  width: 2rem;
+}
+
+.eye-btn .ico-on {
+  display: none;
+}
+
+.eye-btn.on .ico-off {
+  display: none;
+}
+
+.eye-btn.on .ico-on {
+  display: block;
+}
+
+.theme-solid-btn {
+  background: var(--main---green, #56C595);
+  color: white;
+  transition: all 0.2s;
+}
+
+.theme-solid-btn.before {
+  background: var(--gray, #AEAEAE);
+  transition: all 0.2s;
+}
+
+.square-btn {
+  border-radius: 5px;
+}
+
+.btn-lg {
+  height: 5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 0 1rem;
+}
+
+.btn-lg .txt {
+  font-weight: inherit;
+}
+
 #guide-page {
   background-color: #CFD7CF;
   padding: 100px 0;

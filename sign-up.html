@@ -14,118 +14,165 @@
   </head>
   <body>
     <div id="app">
-      <div class="page">
 
-        <!-- 페이지 -->
-        <div class="page-wrapper">
-          <div class="page-container">
+      <!-- 페이지 레이아웃 -->
+      <div class="page-wrapper">
+        <div class="page-container">
 
-            <!-- 헤더 -->
-            <header class="header">
-              <div class="header-inner">
+          <!-- 헤더 -->
+          <header class="header">
+            <div class="header-inner">
 
-                <!-- 헤더 왼쪽 -->
-                <div class="hd-left">
-                  <button type="button" class="hd-btn">
-                    <span class="txt-hidden">뒤로가기</span>
-                    <img src="" alt="">
-                  </button>
-                  <button type="button" class="hd-btn">
-                    <span class="txt-hidden">홈</span>
-                    <img src="" alt="">
-                  </button>
-                </div>
+              <!-- 헤더 왼쪽 -->
 
-                <!-- 헤더 중앙 -->
-                <div class="hd-center">
-                  <span class="ttl">회원가입 헤더이다</span>
-                </div>
+              <!-- TODO: invisible 클래스 넣으면 안보임 -->
+              <div class="hd-left ">
+                <button type="button" class="hd-btn">
+                  <span class="txt-hidden">뒤로가기</span>
+                  <i class="ico ico-line-arrow-left"></i>
+                </button>
 
-                <!-- 헤더 오른쪽 -->
-                <div class="hd-right">
-                  <button type="button" class="hd-btn">
-                    <span class="txt-hidden">알림</span>
-                    <img src="" alt="">
-                  </button>
-                </div>
+                <!-- TODO: invisible 클래스 넣으면 안보임 -->
+                <button type="button" class="hd-btn invisible">
+                  <span class="txt-hidden">홈</span>
+                  <i class="ico ico-home"></i>
+                </button>
               </div>
-            </header>
 
-            <!-- END 헤더 -->
-            <div class="contents-container">
-              <div class="contents-top-wrapper">
-                <ul>
-                  <li>
-                    <input type="text" class="custom-inp" placeholder="placeholder">
-                  </li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                  <li>테스트요</li>
-                </ul>
+              <!-- 헤더 중앙 -->
+              <div class="hd-center">
+                <span class="ttl">회원가입</span>
               </div>
-              <div class="contents-bottom-wrapper">
-                <div class="btn-wrapper">
-                  <button type="button">회원가입</button>
+
+              <!-- 헤더 오른쪽 -->
+
+              <!-- TODO: invisible 클래스 넣으면 안보임 -->
+              <div class="hd-right invisible">
+
+                <!-- 알림 버튼 -->
+                <button type="button" class="hd-btn">
+                  <span class="txt-hidden">알림</span>
+
+                  <!-- TODO: 새로 알람 들어온 경우 ico-alarm-on 클래스 추가해야함 -->
+                  <i class="ico ico-alarm"></i>
+                </button>
+
+                <!-- END 알림 버튼 -->
+              </div>
+            </div>
+          </header>
+
+          <!-- END 헤더 -->
+
+          <!-- 페이지 -->
+          <div class="contents-container">
+
+            <!-- 페이지 상단 -->
+            <div class="contents-top-wrapper">
+              <div class="page form-page">
+                <div class="form-item-grp">
+
+                  <!-- 아이디 -->
+                  <div class="form-item">
+                    <label for="#" class="form-label">이메일(아이디)</label>
+                    <div class="form-inp-grp">
+                      <input type="text" class="custom-inp" placeholder="아이디 입력">
+                    </div>
+                    <span class="form-caution">* 올바른 형식의 이메일 주소를 입력해 주세요.</span>
+                  </div>
+
+                  <!-- 비밀번호 -->
+                  <div class="form-item">
+                    <label for="#" class="form-label">비밀번호</label>
+                    <div class="form-inp-grp">
+                      <div class="inp-btn-item">
+                        <input type="password" class="custom-inp" required="required" autocomplete="new-password" placeholder="숫자, 영문, 특수문자 8자~16자 이상 입력">
+
+                        <!-- TODO: eye-btn 누를 시 on 클래스 추가 -->
+                        <button type="button" class="btn eye-btn on">
+                          <i class="ico ico-eye-off-gray ico-off"></i>
+                          <i class="ico ico-eye-on-gray ico-on"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <span class="form-caution">* 숫자, 영문, 특수문자 8~16자로 입력해 주세요.</span>
+                  </div>
+
+                  <!-- 비밀번호 확인 -->
+                  <div class="form-item">
+                    <label for="#" class="form-label">비밀번호 확인</label>
+                    <div class="form-inp-grp">
+                      <div class="inp-btn-item">
+                        <input type="password" class="custom-inp" required="required" autocomplete="new-password" placeholder="비밀번호 확인">
+
+                        <!-- TODO: eye-btn 누를 시 on 클래스 추가 -->
+                        <button type="button" class="btn eye-btn">
+                          <i class="ico ico-eye-off-gray ico-off"></i>
+                          <i class="ico ico-eye-on-gray ico-on"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <span class="form-caution">* 비밀번호가 일치하지 않습니다.</span>
+                  </div>
+
+                  <!-- 휴대폰 번호 -->
+                  <div class="form-item">
+                    <label for="#" class="form-label">휴대폰 번호</label>
+                    <div class="form-inp-grp">
+                      <input type="text" class="custom-inp" required="required" placeholder="휴대폰 번호 (숫자 입력)">
+
+                      <!-- TODO: form-inp-btn 누를 시 active 클래스 추가 -->
+                      <button type="button" class="btn form-inp-btn active">인증</button>
+                    </div>
+                    <div class="form-inp-grp">
+                      <input type="text" class="custom-inp" required="required" placeholder="휴대폰 번호 (숫자 입력)">
+                      <button type="button" class="btn form-inp-btn">재발송</button>
+                      <button type="button" class="btn form-inp-btn">인증</button>
+                    </div>
+                    <span class="form-caution">* 인증번호가 일치하지 않습니다.</span>
+                  </div>
+
+                  <!-- 주소지 정보 -->
+                  <div class="form-item">
+                    <label for="#" class="form-label">주소지 정보</label>
+                    <div class="form-inp-grp">
+                      <input type="text" class="custom-inp" required="required" placeholder="주소 검색">
+                      <button type="button" class="btn form-inp-btn">검색</button>
+                    </div>
+                    <div class="form-inp-grp">
+                      <input type="text" class="custom-inp" required="required" placeholder="주소 입력">
+                    </div>
+                    <div class="form-inp-grp">
+                      <input type="text" class="custom-inp" placeholder="상세주소 입력">
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <!-- END 페이지 -->
+            <!-- END 페이지 상단 -->
+
+            <!-- 페이지 하단 -->
+            <div class="contents-bottom-wrapper">
+              <div class="form-submit-btn-wrap">
+
+                <!-- TODO: form required 다 채우고나서 before 클래스 삭제 -->
+                <button type="button" class="btn theme-solid-btn btn-lg square-btn before">
+
+                  <!-- TODO: before 클래스 없어지고나서 '회원가입'으로 워딩 변경 -->
+                  <span class="txt">다음</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- END 페이지 하단 -->
+          </div>
+
+          <!-- END 페이지 -->
+        </div>
       </div>
+
+      <!-- END 페이지 레이아웃 -->
     </div>
   </body>
 </html>
