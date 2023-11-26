@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --white: #fff;
   --black: #000;
@@ -16,6 +17,11 @@ html,
 body {
   width: 100%;
   height: 100%;
+  background-color: #f0f0f0;
+}
+
+html {
+  font-size: 10px;
 }
 
 #app {
@@ -25,12 +31,77 @@ body {
 .page {
   width: 100%;
   height: 100%;
+}
+
+.page-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.page-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.header {
+  width: 100%;
+  height: 4.4rem;
+}
+
+.header .ttl {
+  font-size: 1.4rem;
+}
+
+.contents-container {
+  width: 100%;
+  height: calc(100% - 4.4rem);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
 }
 
+.contents-top-wrapper {
+  flex: 1;
+  width: 100%;
+  background-color: #d3dfd3;
+  overflow: auto;
+}
+
+.contents-top-wrapper ul li {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contents-bottom-wrapper {
+  width: 100%;
+  padding: 13px;
+}
+
+/* iPhone XR : 1792x828px at 326ppi */
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+  .contents-bottom-wrapper {
+    padding-bottom: 4rem;
+  }
+}
+/* iPhone XS : 2436x1125px at 458ppi */
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .contents-bottom-wrapper {
+    padding-bottom: 4rem;
+  }
+}
+/* iPhone XS Max : 2688x1242px at 458ppi */
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  .contents-bottom-wrapper {
+    padding-bottom: 4rem;
+  }
+}
 #guide-page {
   background-color: #CFD7CF;
   padding: 100px 0;
