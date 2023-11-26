@@ -153,6 +153,15 @@ img {
   display: none !important;
 }
 
+.mb-show {
+  display: none;
+}
+@media all and (max-width: 600px) {
+  .mb-show {
+    display: block;
+  }
+}
+
 .form-page {
   padding: 1rem 1.5rem;
 }
@@ -450,4 +459,63 @@ img {
 #guide-page .badge.blue {
   background-color: #d0ebff;
   color: #54a4e0;
+}
+
+@media all and (max-width: 1280px) {
+  #guide-page {
+    padding: 20px 0;
+  }
+  #guide-page .list-gtbl {
+    max-width: 500px;
+  }
+  #guide-page .gtbl-head {
+    display: none;
+  }
+  #guide-page .gtbl-body .list {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* gap: 5px; */
+  }
+  #guide-page .gtbl-body .list .cell:nth-child(1) {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+  }
+  #guide-page .gtbl-body .list .cell .etc {
+    margin-bottom: 5px;
+    color: #7b7b7b;
+  }
+  #guide-page .gtbl-body .list .cell:nth-last-child(1),
+  #guide-page .gtbl-body .list .cell:nth-last-child(2) {
+    text-align: right;
+  }
+  #guide-page .gtbl-body .list .cell:nth-last-child(2) {
+    /* margin-bottom: 5px; */
+    margin-top: 10px;
+  }
+  #guide-page .gtbl-body .list .cell .etc li {
+    margin-bottom: 5px;
+  }
+  #guide-page .gtbl-body .list .cell:nth-last-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3px;
+  }
+  #guide-page .gtbl-body .list .cell .label-date {
+    margin-top: 5px;
+  }
+  #guide-page .cell .mb-show.label {
+    display: inline-flex;
+    color: #7b7b7b;
+    font-weight: 300;
+    font-size: 12px;
+    margin-right: 3px;
+    margin-top: 5px;
+  }
 }
