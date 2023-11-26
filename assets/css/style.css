@@ -12,6 +12,25 @@
   --alarm: #ffb179;
 }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 #guide-page {
   background-color: #CFD7CF;
   padding: 100px 0;
