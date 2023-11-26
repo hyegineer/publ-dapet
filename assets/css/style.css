@@ -84,6 +84,26 @@ html {
   padding: 13px;
 }
 
+.custom-inp {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid var(--gray_light, #F1F1F1);
+  padding: 0 1.5rem;
+  height: 4.5rem;
+  outline: none;
+  background-color: white;
+}
+
+.custom-inp:focus {
+  border-color: var(--gray, #aeaeae);
+}
+
+.custom-inp::placeholder {
+  color: var(--gray, #AEAEAE);
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
 /* iPhone XR : 1792x828px at 326ppi */
 @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
   .contents-bottom-wrapper {
