@@ -787,6 +787,7 @@ img {
   border-radius: 12px;
   background-image: url(../images/ico/ico-kakao.svg);
   background-position: 2.5rem 50%;
+  color: #000;
 }
 .social-btn.email-btn {
   background-image: url(../images/ico/ico-mail.svg);
@@ -794,6 +795,7 @@ img {
 .social-btn .txt {
   font-size: 1.6rem;
   font-weight: 400;
+  color: inherit;
 }
 
 .btn-lg {
