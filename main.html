@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>DAPET</title>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <div id="app">
+
+      <!-- 페이지 레이아웃 -->
+      <div class="l-wrapper">
+        <div class="l-container">
+
+          <!-- TODO: layout) 헤더 타입 01 -->
+          <header class="header">
+            <div class="header-inner">
+
+              <!-- 헤더 왼쪽 -->
+              <div class="hd-left">
+                <h1 class="logo">
+                  <a href="#">
+                    <img src="assets/images/logo/logo-text-only.png" alt="DAPET">
+                  </a>
+                </h1>
+              </div>
+
+              <!-- 헤더 중앙 -->
+
+              <!-- TODO: invisible 클래스 넣으면 안보임 -->
+              <div class="hd-center ">
+                <span class="ttl"></span>
+              </div>
+
+              <!-- 헤더 오른쪽 -->
+
+              <!-- TODO: invisible 클래스 넣으면 안보임 -->
+              <div class="hd-right">
+                <button type="button" class="hd-btn">
+                  <span class="txt-hidden">알림</span>
+
+                  <!-- TODO: 새로 알람 들어온 경우 ico-alarm-on 클래스 추가해야함 -->
+                  <i class="ico ico-alarm"></i>
+                </button>
+              </div>
+            </div>
+          </header>
+
+          <!-- END layout) 헤더 타입 01 -->
+
+          <!-- 페이지 -->
+          <div class="main-page l-contt-container">
+
+            <!-- 페이지 상단 -->
+            <div class="l-contt-top">
+              <div class="page">
+                <section class="main-section-first heavy-bd-row">
+                  <div class="main-ttl-wrap">
+                    <span class="sub-ttl">오늘의 다펫소식</span>
+                    <div class="ttl-wrap">
+                      <h2 class="ttl">
+                        <span class="red-txt">HOT</span>&nbsp;게시글 🔥
+                      </h2>
+                      <a href="#" class="txt-btn txt-arw-btn">
+                        <span>더보기</span>
+                        <i class="ico ico-arrow-right-gray"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="contt">
+                    <div class="tabs">
+                      <div class="tab-grp full-tab-grp">
+                        <button type="button" class="tab active">전체</button>
+                        <button type="button" class="tab">정보</button>
+                        <button type="button" class="tab">유머</button>
+                        <button type="button" class="tab">감동</button>
+                        <button type="button" class="tab">위치</button>
+                      </div>
+                    </div>
+                    <div class="col-list-grp lci-list-grp">
+                      <div class="list">
+                        <div class="list-card-item type01">
+                          <ul class="card-information">
+                            <li>
+                              <p class="mini-txt-wrap">
+                                <span class="main-green-txt bd-right-txt">위치게시판</span>
+                                <span class="gray-txt">2023-11-09</span>
+                                <span class="gray-txt">몽이누나</span>
+                              </p>
+                            </li>
+                            <li>
+                              <h3 class="card-name">펫시터 몽이누나님의 산책루트</h3>
+                            </li>
+                            <li>
+                              <p class="card-desc">오늘은 펫시터로써 자주 가는 저의 산책 루트를 소개해 드리려고 합니다! 산책루트는 어쩌구 저쩌구 어쩌구...</p>
+                            </li>
+                          </ul>
+
+                          <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                          <figure class="thumbnail inactive">
+                            <img src="assets/images/sample/img-sample01.png" alt="" class="thumbnail-img">
+                          </figure>
+                        </div>
+                      </div>
+
+                      <!-- END list -->
+                      <div class="list">
+                        <div class="list-card-item type01">
+                          <ul class="card-information">
+                            <li>
+                              <p class="mini-txt-wrap">
+                                <span class="main-green-txt bd-right-txt">정보게시판</span>
+                                <span class="gray-txt">2023-11-09</span>
+                                <span class="gray-txt">강아지박사</span>
+                              </p>
+                            </li>
+                            <li>
+                              <h3 class="card-name">강아지가 신발을 물 때</h3>
+                            </li>
+                            <li>
+                              <p class="card-desc">오늘은 펫시터로써 자주 가는 저의 산책 루트를 소개해 드리려고 합니다! 산책루트는 어쩌구 저쩌구 어쩌구...</p>
+                            </li>
+                          </ul>
+
+                          <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                          <figure class="thumbnail inactive">
+                            <img src="assets/images/sample/img-sample02.png" alt="" class="thumbnail-img">
+                          </figure>
+                        </div>
+                      </div>
+
+                      <!-- END list -->
+                      <div class="list">
+                        <div class="list-card-item type01">
+                          <ul class="card-information">
+                            <li>
+                              <p class="mini-txt-wrap">
+                                <span class="main-green-txt bd-right-txt">유머게시판</span>
+                                <span class="gray-txt">2023-11-09</span>
+                                <span class="gray-txt">몽이누나</span>
+                              </p>
+                            </li>
+                            <li>
+                              <h3 class="card-name">하품이 이렇게 이뻐도 돼요 안돼요?</h3>
+                            </li>
+                            <li>
+                              <p class="card-desc">하품하는 강아지 보고가세요 ~ 너무 귀엽죠 ㅜㅜ</p>
+                            </li>
+                          </ul>
+
+                          <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                          <figure class="thumbnail inactive">
+                            <img src="assets/images/sample/img-sample03.png" alt="" class="thumbnail-img">
+                          </figure>
+                        </div>
+                      </div>
+
+                      <!-- END list -->
+                    </div>
+                  </div>
+                </section>
+                <section class="main-section-2nd heavy-bd-row">
+                  <div class="main-ttl-wrap">
+                    <span class="sub-ttl">의뢰 횟수 최다!</span>
+                    <div class="ttl-wrap">
+                      <h2 class="ttl">
+                        BEST 펫시터 🏆
+                      </h2>
+                    </div>
+                  </div>
+                  <div class="contt">
+                    <div class="contt-row">
+                      <div class="row-list-grp">
+                        <div class="list">
+                          <div class="card-item type01">
+
+                            <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                            <figure class="thumbnail inactive">
+                              <img src="assets/images/sample/img-sample04.png" alt="" class="thumbnail-img">
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+                                <h3 class="card-name">김몽이</h3>
+                              </li>
+                              <li>
+                                <div>
+                                  <div class="star-txt-item">
+                                    <i class="ico ico-star-yellow"></i>
+                                    <span class="dark-txt">4.9</span>
+                                    <span class="gray-txt">/ 5.0</span>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- END list -->
+                        <div class="list">
+                          <div class="card-item type01">
+
+                            <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                            <figure class="thumbnail inactive">
+                              <img src="assets/images/sample/img-sample05.png" alt="" class="thumbnail-img">
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+                                <h3 class="card-name">강박사</h3>
+                              </li>
+                              <li>
+                                <div>
+                                  <div class="star-txt-item">
+                                    <i class="ico ico-star-yellow"></i>
+                                    <span class="dark-txt">4.5</span>
+                                    <span class="gray-txt">/ 5.0</span>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- END list -->
+                        <div class="list">
+                          <div class="card-item type01">
+
+                            <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                            <figure class="thumbnail inactive">
+
+                              <!-- <img src="assets/images/sample/img-sample05.png" alt="" class="thumbnail-img"> -->
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+                                <h3 class="card-name">스폰지밥</h3>
+                              </li>
+                              <li>
+                                <div>
+                                  <div class="star-txt-item">
+                                    <i class="ico ico-star-yellow"></i>
+                                    <span class="dark-txt">4.5</span>
+                                    <span class="gray-txt">/ 5.0</span>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- END list -->
+                      </div>
+                    </div>
+                    <a href="#">
+                      <div class="gray-bd-btn">
+                        <p class="gray-bd-btn-txt">
+                          <span class="txt">더 많은 펫시터 알아보기</span>
+                          <i class="ico ico-arrow-right-gray"></i>
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </section>
+                <section class="main-ad-banner-section">
+                  <img src="assets/images/sample/img-sample06.png" alt="" class="img-banner">
+                </section>
+                <section class="main-section-3th heavy-bd-row">
+                  <div class="main-ttl-wrap">
+                    <div class="ttl-wrap">
+                      <h2 class="ttl">
+                        다펫 쇼핑몰 🛍️️
+                      </h2>
+                      <a href="#" class="txt-arw-btn">
+                        <span>더보기</span>
+                        <i class="ico ico-arrow-right-gray"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="contt">
+                    <div class="tabs">
+                      <div class="tab-grp">
+                        <button type="button" class="tab active">전체</button>
+                        <button type="button" class="tab">펫제품</button>
+                      </div>
+                    </div>
+                    <div class="contt-row">
+                      <div class="row-list-grp">
+                        <div class="list">
+                          <div class="card-item type02">
+
+                            <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                            <figure class="thumbnail inactive">
+                              <img src="assets/images/sample/img-sample07.png" alt="" class="thumbnail-img">
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+                                <h3 class="card-name">그랜마루시 쓰리베이즈 동결건조 독 푸드 닭고기</h3>
+                              </li>
+                              <li>
+                                <p>
+                                  <span class="info-txt">50,000원</span>
+                                </p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- END list -->
+                        <div class="list">
+                          <div class="card-item type02">
+
+                            <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                            <figure class="thumbnail inactive">
+                              <img src="assets/images/sample/img-sample08.png" alt="" class="thumbnail-img">
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+                                <h3 class="card-name">디어니스트키친 디하이드레이티드 그레인프리 LID...</h3>
+                              </li>
+                              <li>
+                                <p>
+                                  <span class="info-txt">110,000원</span>
+                                </p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- END list -->
+                        <div class="list">
+                          <div class="card-item type02">
+
+                            <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                            <figure class="thumbnail inactive">
+                              <img src="assets/images/sample/img-sample09.png" alt="" class="thumbnail-img">
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+                                <h3 class="card-name">디어니스트키친 디하이드레이티드 그레인프리 피쉬...</h3>
+                              </li>
+                              <li>
+                                <p>
+                                  <span class="info-txt">130,000원</span>
+                                </p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- END list -->
+                        <div class="list">
+                          <div class="card-item type02">
+
+                            <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                            <figure class="thumbnail inactive">
+                              <img src="assets/images/sample/img-sample10.png" alt="" class="thumbnail-img">
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+                                <h3 class="card-name">스텔라앤츄이스 디너패티 퍼피397g</h3>
+                              </li>
+                              <li>
+                                <p>
+                                  <span class="info-txt">56,000원</span>
+                                </p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- END list -->
+                        <div class="list">
+                          <div class="card-item type02">
+
+                            <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                            <figure class="thumbnail inactive">
+                              <img src="assets/images/sample/img-sample11.png" alt="" class="thumbnail-img">
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+                                <h3 class="card-name">어워드독 6인치(15cm) 불리스틱 점보 [6개입]</h3>
+                              </li>
+                              <li>
+                                <p>
+                                  <span class="info-txt">38,900원</span>
+                                </p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- END list -->
+                        <div class="list">
+                          <div class="card-item type02">
+
+                            <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                            <figure class="thumbnail inactive">
+                              <img src="assets/images/sample/img-sample12.png" alt="" class="thumbnail-img">
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+                                <h3 class="card-name">오씨로우 치킨앤프로듀스 리틀바이트 (566g)</h3>
+                              </li>
+                              <li>
+                                <p>
+                                  <span class="info-txt">68,000원</span>
+                                </p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- END list -->
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="main-section-4th heavy-bd-row">
+                  <div class="main-ttl-wrap">
+                    <div class="ttl-wrap">
+                      <h2 class="ttl">
+                        다펫 기부몰 💕
+                      </h2>
+                      <a href="#" class="txt-arw-btn">
+                        <span>더보기</span>
+                        <i class="ico ico-arrow-right-gray"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="contt">
+                    <div class="contt-row">
+                      <div class="row-list-grp">
+                        <div class="list">
+                          <div class="card-item type03">
+
+                            <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                            <figure class="thumbnail inactive">
+                              <img src="assets/images/sample/img-sample13.png" alt="" class="thumbnail-img">
+                            </figure>
+                            <div class="card-information">
+                              <h3 class="card-name">용인 행강 보호소</h3>
+                              <p class="card-desc">
+                                2023년 5월, 행강보호소에는 보호견 310여 마리가 생활하고 있습니다...
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- END list -->
+                        <div class="list">
+                          <div class="card-item type03">
+
+                            <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                            <figure class="thumbnail inactive">
+                              <img src="assets/images/sample/img-sample14.png" alt="" class="thumbnail-img">
+                            </figure>
+                            <div class="card-information">
+                              <h3 class="card-name">[송송이 골절수술] 관악구 유기...</h3>
+                              <p class="card-desc">
+                                송송이가 앞발 골절로 유기되었습니다. 여러분의 따뜻한 손길을 기다리겠습...
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- END list -->
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+
+            <!-- 페이지 하단 -->
+            <div class="l-contt-bottom">
+              <div class="l-bottom-btns">
+
+                <!-- TODO: 활성화된 페이지는 active 클래스 추가 -->
+                <a href="#" class="lb-btn">
+                  <span class="ico-box">
+                <i class="ico ico-nav01-off off"></i>
+                <i class="ico ico-nav01-on on"></i>
+              </span>
+                  <p class="txt">다펫몰</p>
+                </a>
+                <a href="#" class="lb-btn">
+                  <span class="ico-box">
+                <i class="ico ico-nav02-off off"></i>
+                <i class="ico ico-nav02-on on"></i>
+              </span>
+                  <p class="txt">펫시터 의뢰</p>
+                </a>
+                <a href="#" class="lb-btn">
+                  <span class="ico-box">
+                <i class="ico ico-nav03-off off"></i>
+                <i class="ico ico-nav03-on on"></i>
+              </span>
+                  <p class="txt">채팅 목록</p>
+                </a>
+                <a href="#" class="lb-btn">
+                  <span class="ico-box">
+                <i class="ico ico-nav04-off off"></i>
+                <i class="ico ico-nav04-on on"></i>
+              </span>
+                  <p class="txt">예약 일정</p>
+                </a>
+                <a href="#" class="lb-btn">
+                  <span class="ico-box">
+                <i class="ico ico-nav05-off off"></i>
+                <i class="ico ico-nav05-on on"></i>
+              </span>
+                  <p class="txt">내 정보</p>
+                </a>
+              </div>
+            </div>
+
+            <!-- END 페이지 하단 -->
+          </div>
+
+          <!-- END 페이지 상단 -->
+        </div>
+      </div>
+
+      <!-- END 페이지 레이아웃 -->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>DAPET</title>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <div id="app">
+
+      <!-- 페이지 레이아웃 -->
+      <div class="l-wrapper">
+        <div class="l-container">
+
+          <!-- TODO: layout) 헤더 타입 02 -->
+          <header class="header">
+            <div class="header-inner">
+
+              <!-- 헤더 왼쪽 -->
+
+              <!-- TODO: invisible 클래스 넣으면 안보임 -->
+              <div class="hd-left ">
+                <button onclick="history.back()" type="button" class="hd-btn">
+                  <span class="txt-hidden">뒤로가기</span>
+                  <i class="ico ico-line-arrow-left"></i>
+                </button>
+
+                <!-- TODO: invisible 클래스 넣으면 안보임 -->
+                <button type="button" class="hd-btn invisible">
+                  <span class="txt-hidden">홈</span>
+                  <i class="ico ico-home"></i>
+                </button>
+              </div>
+
+              <!-- 헤더 중앙 -->
+              <div class="hd-center ">
+                <span class="ttl">비밀번호 재설정</span>
+              </div>
+
+              <!-- 헤더 오른쪽 -->
+
+              <!-- TODO: invisible 클래스 넣으면 안보임 -->
+              <div class="hd-right invisible">
+
+                <!-- 알림 버튼 -->
+                <button type="button" class="hd-btn">
+                  <span class="txt-hidden">알림</span>
+
+                  <!-- TODO: 새로 알람 들어온 경우 ico-alarm-on 클래스 추가해야함 -->
+                  <i class="ico ico-alarm"></i>
+                </button>
+
+                <!-- END 알림 버튼 -->
+              </div>
+            </div>
+          </header>
+
+          <!-- ENDO layout) 헤더 타입 02 -->
+
+          <!-- 페이지 -->
+          <div class="form-page l-contt-container">
+
+            <!-- 페이지 상단 -->
+            <div class="l-contt-top">
+              <div class="page">
+                <div class="form-item-grp">
+                  <div class="form-item">
+                    <label class="form-label">비밀번호</label>
+                    <div class="form-inp-wrap">
+                      <div class="inp-btn-item">
+                        <input type="password" class="custom-inp" required="required" autocomplete="new-password" placeholder="숫자, 영문, 특수문자 8자~16자 이상 입력">
+
+                        <!-- TODO: eye-btn 누를 시 on 클래스 추가 -->
+                        <button type="button" class="btn eye-btn">
+                          <i class="ico ico-eye-off-gray ico-off"></i>
+                          <i class="ico ico-eye-on-gray ico-on"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <span class="form-caution">* 숫자, 영문, 특수문자 8~16자로 입력해 주세요.</span>
+                  </div>
+                  <div class="form-item">
+                    <label class="form-label">비밀번호 확인</label>
+                    <div class="form-inp-wrap">
+                      <div class="inp-btn-item">
+                        <input type="password" class="custom-inp" required="required" autocomplete="new-password" placeholder="비밀번호 입력">
+
+                        <!-- TODO: eye-btn 누를 시 on 클래스 추가 -->
+                        <button type="button" class="btn eye-btn">
+                          <i class="ico ico-eye-off-gray ico-off"></i>
+                          <i class="ico ico-eye-on-gray ico-on"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <span class="form-caution">* 비밀번호가 일치하지 않습니다.</span>
+                  </div>
+                </div>
+                <div class="form-submit-btn-wrap">
+                  <button type="button" class="btn theme-solid-btn btn-lg square-btn">
+                    <span class="txt">비밀번호 재설정</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 페이지 하단 -->
+            <div class="l-contt-bottom">
+            </div>
+
+            <!-- END 페이지 하단 -->
+          </div>
+
+          <!-- END 페이지 상단 -->
+        </div>
+      </div>
+
+      <!-- END 페이지 레이아웃 -->
+    </div>
+  </body>
+</html>

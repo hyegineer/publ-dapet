@@ -16,10 +16,10 @@
     <div id="app">
 
       <!-- 페이지 레이아웃 -->
-      <div class="page-wrapper">
-        <div class="page-container">
+      <div class="l-wrapper">
+        <div class="l-container">
 
-          <!-- 헤더 -->
+          <!-- TODO: layout) 헤더 타입 02 -->
           <header class="header">
             <div class="header-inner">
 
@@ -27,7 +27,7 @@
 
               <!-- TODO: invisible 클래스 넣으면 안보임 -->
               <div class="hd-left ">
-                <button type="button" class="hd-btn">
+                <button onclick="history.back()" type="button" class="hd-btn">
                   <span class="txt-hidden">뒤로가기</span>
                   <i class="ico ico-line-arrow-left"></i>
                 </button>
@@ -40,7 +40,7 @@
               </div>
 
               <!-- 헤더 중앙 -->
-              <div class="hd-center">
+              <div class="hd-center ">
                 <span class="ttl">회원가입</span>
               </div>
 
@@ -62,20 +62,20 @@
             </div>
           </header>
 
-          <!-- END 헤더 -->
+          <!-- ENDO layout) 헤더 타입 02 -->
 
           <!-- 페이지 -->
-          <div class="contents-container">
+          <div class="form-page l-contt-container">
 
             <!-- 페이지 상단 -->
-            <div class="contents-top-wrapper">
-              <div class="page form-page">
+            <div class="l-contt-top">
+              <div class="page">
                 <div class="form-item-grp">
 
                   <!-- 아이디 -->
                   <div class="form-item">
                     <label for="#" class="form-label">이메일(아이디)</label>
-                    <div class="form-inp-grp">
+                    <div class="form-inp-wrap">
                       <input type="text" class="custom-inp" placeholder="아이디 입력">
                     </div>
                     <span class="form-caution">* 올바른 형식의 이메일 주소를 입력해 주세요.</span>
@@ -84,7 +84,7 @@
                   <!-- 비밀번호 -->
                   <div class="form-item">
                     <label for="#" class="form-label">비밀번호</label>
-                    <div class="form-inp-grp">
+                    <div class="form-inp-wrap">
                       <div class="inp-btn-item">
                         <input type="password" class="custom-inp" required="required" autocomplete="new-password" placeholder="숫자, 영문, 특수문자 8자~16자 이상 입력">
 
@@ -101,7 +101,7 @@
                   <!-- 비밀번호 확인 -->
                   <div class="form-item">
                     <label for="#" class="form-label">비밀번호 확인</label>
-                    <div class="form-inp-grp">
+                    <div class="form-inp-wrap">
                       <div class="inp-btn-item">
                         <input type="password" class="custom-inp" required="required" autocomplete="new-password" placeholder="비밀번호 확인">
 
@@ -118,13 +118,13 @@
                   <!-- 휴대폰 번호 -->
                   <div class="form-item">
                     <label for="#" class="form-label">휴대폰 번호</label>
-                    <div class="form-inp-grp">
+                    <div class="form-inp-wrap">
                       <input type="text" class="custom-inp" required="required" placeholder="휴대폰 번호 (숫자 입력)">
 
                       <!-- TODO: form-inp-btn 누를 시 active 클래스 추가 -->
                       <button type="button" class="btn form-inp-btn active">인증</button>
                     </div>
-                    <div class="form-inp-grp">
+                    <div class="form-inp-wrap">
                       <input type="text" class="custom-inp" required="required" placeholder="휴대폰 번호 (숫자 입력)">
                       <button type="button" class="btn form-inp-btn">재발송</button>
                       <button type="button" class="btn form-inp-btn">인증</button>
@@ -135,15 +135,74 @@
                   <!-- 주소지 정보 -->
                   <div class="form-item">
                     <label for="#" class="form-label">주소지 정보</label>
-                    <div class="form-inp-grp">
+                    <div class="form-inp-wrap">
                       <input type="text" class="custom-inp" required="required" placeholder="주소 검색">
                       <button type="button" class="btn form-inp-btn">검색</button>
                     </div>
-                    <div class="form-inp-grp">
+                    <div class="form-inp-wrap">
                       <input type="text" class="custom-inp" required="required" placeholder="주소 입력">
                     </div>
-                    <div class="form-inp-grp">
+                    <div class="form-inp-wrap">
                       <input type="text" class="custom-inp" placeholder="상세주소 입력">
+                    </div>
+                  </div>
+
+                  <!-- 이용약관 및 개인정보 취금방침 -->
+                  <div class="form-item">
+                    <label class="form-label">이용약관 및 개인정보 취급방침</label>
+                    <div class="agree-box">
+                      <div class="total-agree-row">
+                        <div class="cckbox-item">
+                          <input id="total-agree" type="checkbox" class="none custom-ckbox-inp" />
+                          <label for="total-agree" class="custom-ckbox"></label>
+                          <label for="total-agree" class="custom-ckbox-label">약관 전체 동의</label>
+                        </div>
+                        <button type="button" class="btn ico-btn">
+                          <i class="ico ico-arrow-right-gray-light"></i>
+                        </button>
+                      </div>
+                      <ul class="agree-list-grp">
+                        <li class="agree-list">
+                          <div class="cckbox-item">
+                            <input id="agree01" type="checkbox" class="none custom-ckbox-inp" />
+                            <label for="agree01" class="custom-ckbox"></label>
+                            <label for="agree01" class="custom-ckbox-label">(필수) 서비스 이용약관 동의</label>
+                          </div>
+                          <button type="button" class="btn ico-btn">
+                            <i class="ico ico-arrow-right-gray-light"></i>
+                          </button>
+                        </li>
+                        <li class="agree-list">
+                          <div class="cckbox-item">
+                            <input id="agree02" type="checkbox" class="none custom-ckbox-inp" />
+                            <label for="agree02" class="custom-ckbox"></label>
+                            <label for="agree02" class="custom-ckbox-label">(필수) 개인정보 수집/이용 동의</label>
+                          </div>
+                          <button type="button" class="btn ico-btn">
+                            <i class="ico ico-arrow-right-gray-light"></i>
+                          </button>
+                        </li>
+                        <li class="agree-list">
+                          <div class="cckbox-item">
+                            <input id="agree03" type="checkbox" class="none custom-ckbox-inp" />
+                            <label for="agree03" class="custom-ckbox"></label>
+                            <label for="agree03" class="custom-ckbox-label">(필수) 개인정보 제3자 제공 동의</label>
+                          </div>
+                          <button type="button" class="btn ico-btn">
+                            <i class="ico ico-arrow-right-gray-light"></i>
+                          </button>
+                        </li>
+                        <li class="agree-list">
+                          <div class="cckbox-item">
+                            <input id="agree04" type="checkbox" class="none custom-ckbox-inp" />
+                            <label for="agree04" class="custom-ckbox"></label>
+                            <label for="agree04" class="custom-ckbox-label">(선택) 이벤트 혜택 및 광고성 정보 수신 동의</label>
+                          </div>
+                          <button type="button" class="btn ico-btn">
+                            <i class="ico ico-arrow-right-gray-light"></i>
+                          </button>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -153,8 +212,8 @@
             <!-- END 페이지 상단 -->
 
             <!-- 페이지 하단 -->
-            <div class="contents-bottom-wrapper">
-              <div class="form-submit-btn-wrap">
+            <div class="l-contt-bottom">
+              <div class="btn-wrap">
 
                 <!-- TODO: form required 다 채우고나서 before 클래스 삭제 -->
                 <button type="button" class="btn theme-solid-btn btn-lg square-btn before">

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>DAPET</title>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <div id="app">
+
+      <!-- 페이지 레이아웃 -->
+      <div class="l-wrapper">
+        <div class="l-container">
+
+          <!-- 페이지 -->
+          <div class="l-contt-container">
+
+            <!-- 페이지 상단 -->
+            <div class="l-contt-top">
+              <div class="page">
+                <div class="form-item-grp">
+                  <div class="form-item">
+                    <label class="form-label">제목</label>
+                    <div class="form-inp-wrap">
+                      <input type="text" class="custom-inp" placeholder="제목을 입력해 주세요. (40자 이내)" maxlength="40">
+                    </div>
+                  </div>
+                  <div class="form-item">
+                    <label class="form-label">
+                      <span>카테고리</span>
+                      <span class="sm-txt">(기부 1회당)</span>
+                    </label>
+                    <div class="form-inp-wrap">
+                      <div class="inp-unit-item">
+                        <input type="text" class="custom-inp" placeholder="숫자만 입력하세요." maxlength="40">
+                        <span class="unit">원</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-item">
+                    <label class="form-label">상세 설명</label>
+                    <div class="form-inp-wrap">
+                      <textarea class="custom-inp-textarea" placeholder="기부 요청과 관련된 자세한 내용을 입력해 주세요."></textarea>
+                    </div>
+                  </div>
+                  <div class="form-item">
+                    <label class="form-label">썸네일 등록</label>
+                    <p class="form-label-desc">기부몰 메인 페이지에서 보일 사진을 등록해 주세요. (최대 1개)</p>
+                    <div class="form-inp-wrap">
+                      <div class="attach-list-grp">
+                        <div class="attach-list">
+                          <input type="file" id="file01" class="none custom-file-inp">
+                          <label for="file01" class="square-card">
+                            <span class="txt-hidden">파일 첨부</span>
+                          </label>
+                        </div>
+                        <div class="attach-list">
+                          <div class="square-card">
+                            <img src="" alt="">
+                            <button type="button">
+                              <span class="txt-hidden">삭제</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-item">
+                    <label class="form-label">관련 사진</label>
+                    <p class="form-label-desc">상세 페이지에서 보일 기부 요청과 관련된 사진을 등록해 주세요.</p>
+                    <div class="form-inp-wrap">
+                      <div class="attach-list-grp">
+                        <div class="attach-list">
+                          <input type="file" id="file01" class="none custom-file-inp">
+                          <label for="file01" class="square-card">
+                            <span class="txt-hidden">파일 첨부</span>
+                          </label>
+                        </div>
+                        <div class="attach-list">
+                          <div class="square-card">
+                            <img src="" alt="">
+                            <button type="button">
+                              <span class="txt-hidden">삭제</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 페이지 하단 -->
+            <div class="l-contt-bottom">
+              <div class="btn-wrap">
+
+                <!-- TODO: 다 채우고나서 before 클래스 삭제 -->
+                <button type="button" class="btn theme-solid-btn btn-lg square-btn before">
+                  <span class="txt">등록하기</span>
+                </button>
+              </div>
+
+              <!-- END 페이지 하단 -->
+            </div>
+
+            <!-- END 페이지 상단 -->
+          </div>
+        </div>
+
+        <!-- END 페이지 레이아웃 -->
+      </div>
+  </body>
+</html>

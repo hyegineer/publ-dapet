@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>DAPET</title>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <div id="app">
+
+      <!-- 페이지 레이아웃 -->
+      <div class="l-wrapper">
+        <div class="l-container">
+
+          <!-- TODO: layout) 헤더 타입 02 -->
+          <header class="header">
+            <div class="header-inner">
+
+              <!-- 헤더 왼쪽 -->
+
+              <!-- TODO: invisible 클래스 넣으면 안보임 -->
+              <div class="hd-left ">
+                <button onclick="history.back()" type="button" class="hd-btn">
+                  <span class="txt-hidden">뒤로가기</span>
+                  <i class="ico ico-line-arrow-left"></i>
+                </button>
+
+                <!-- TODO: invisible 클래스 넣으면 안보임 -->
+                <button type="button" class="hd-btn invisible">
+                  <span class="txt-hidden">홈</span>
+                  <i class="ico ico-home"></i>
+                </button>
+              </div>
+
+              <!-- 헤더 중앙 -->
+              <div class="hd-center invisible">
+                <span class="ttl">회원가입</span>
+              </div>
+
+              <!-- 헤더 오른쪽 -->
+
+              <!-- TODO: invisible 클래스 넣으면 안보임 -->
+              <div class="hd-right invisible">
+
+                <!-- 알림 버튼 -->
+                <button type="button" class="hd-btn">
+                  <span class="txt-hidden">알림</span>
+
+                  <!-- TODO: 새로 알람 들어온 경우 ico-alarm-on 클래스 추가해야함 -->
+                  <i class="ico ico-alarm"></i>
+                </button>
+
+                <!-- END 알림 버튼 -->
+              </div>
+            </div>
+          </header>
+
+          <!-- ENDO layout) 헤더 타입 02 -->
+
+          <!-- 페이지 -->
+          <div class="terms-of-page l-contt-container">
+
+            <!-- 페이지 상단 -->
+            <div class="l-contt-top">
+              <div class="page">
+                <h2 class="ttl">서비스 이용약관</h2>
+                <p class="sub-ttl01">제 1 장 총칙</p>
+                <p class="sub-ttl02">제 1조 (목적)</p>
+                <p class="txt">본 이용약관은 ...</p>
+              </div>
+            </div>
+
+            <!-- 페이지 하단 -->
+            <div class="l-contt-bottom">
+            </div>
+
+            <!-- END 페이지 하단 -->
+          </div>
+
+          <!-- END 페이지 상단 -->
+        </div>
+      </div>
+
+      <!-- END 페이지 레이아웃 -->
+    </div>
+  </body>
+</html>
