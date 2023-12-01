@@ -1756,10 +1756,10 @@ img {
 .main-page .heavy-bd-row:nth-child(1) {
   border-top: 5px solid var(--gray-light, #f1f1f1);
 }
-.main-page .col-list-grp {
+.main-page .col-list-grp .list {
   padding: 0 1.5rem;
 }
-.main-page .col-list-grp .list {
+.main-page .col-list-grp .col-item {
   padding: 1.5rem 0;
 }
 .main-page .row-list-grp {
@@ -1794,7 +1794,7 @@ img {
   color: var(--red, #cd3e3e);
 }
 .main-ttl-wrap .ttl-wrap .txt-arw-btn {
-  margin-top: 0.4rem;
+  margin-top: 0.8rem;
   margin-left: auto;
   flex-shrink: 0;
 }
