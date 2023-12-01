@@ -15,64 +15,118 @@
   <body>
     <div id="app">
 
-      <!-- 페이지 레이아웃 -->
+      <!-- layout) 페이지 레이아웃 -->
       <div class="l-wrapper">
+
+        <!-- TODO: ***** 기부몰 목록 페이지 ***** -->
         <div class="l-container">
 
-          <!-- 페이지 -->
+          <!-- TODO: layout) 헤더 타입 02 -->
+
+          <!-- TODO: 밑줄 있는 화면일 때는 type-bd 클래스 추가 -->
+          <header class="header type-bd">
+            <div class="header-inner">
+
+              <!-- 헤더 왼쪽 -->
+
+              <!-- TODO: invisible 클래스 넣으면 안보임 -->
+              <div class="hd-left ">
+                <button onclick="history.back()" type="button" class="hd-btn">
+                  <span class="txt-hidden">뒤로가기</span>
+                  <i class="ico ico-line-arrow-left"></i>
+                </button>
+
+                <!-- TODO: invisible 클래스 넣으면 안보임 -->
+                <a href="main.html" class="hd-btn ">
+                  <span class="txt-hidden">홈</span>
+                  <i class="ico ico-home"></i>
+                </a>
+              </div>
+
+              <!-- 헤더 중앙 -->
+              <div class="hd-center ">
+                <span class="ttl">펫시터 찾기</span>
+              </div>
+
+              <!-- 헤더 오른쪽 -->
+
+              <!-- TODO: invisible 클래스 넣으면 안보임 -->
+              <div class="hd-right ">
+
+                <!-- 알림 버튼 -->
+                <button type="button" class="hd-btn">
+                  <span class="txt-hidden">알림</span>
+
+                  <!-- TODO: 새로 알람 들어온 경우 ico-alarm-on 클래스 추가해야함 -->
+                  <i class="ico ico-alarm"></i>
+                </button>
+
+                <!-- END 알림 버튼 -->
+              </div>
+            </div>
+          </header>
+
+          <!-- ENDO layout) 헤더 타입 02 -->
+
+          <!-- layout) 페이지 -->
           <div class="l-contt-container">
 
-            <!-- 페이지 상단 -->
+            <!-- layout) 페이지 상단 -->
             <div class="tabs">
               <div class="tab-grp">
                 <a href="donation-mall-list.html" class="tab active">기부몰</a>
                 <a href="mall-list.html" type="button" class="tab">쇼핑몰</a>
               </div>
-              <div class="l-contt-top">
-                <div class="page">
+            </div>
+            <div class="l-contt-top">
+              <div class="page">
+                <div>
                   <div>
-                    <div>
-                      <div class="col-list-grp">
-                        <div class="list">
-                          <div class="list-card-item type04">
-                            <figure class="thumbnail">
-                              <img src="" alt="">
-                            </figure>
-                            <ul>
-                              <li>
-                                <h3 class="card-name">용인 행강 보호소</h3>
-                              </li>
-                              <li>
-                                <p class="card-desc gray-txt">2023년 5월, 행강보호소에는 보호견 310여 마리가 생활하고 있습니다. 현재 보호소의 사료가 ...</p>
-                              </li>
-                              <li>
-                                <div>
-                                  <span>₩ 200</span>
-                                  <button type="button" class="rounded-btn">기부하기</button>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
+                    <div class="col-list-grp">
+                      <div class="list">
+                        <div class="list-card-item type04">
+                          <figure class="thumbnail">
+                            <img src="" alt="">
+                          </figure>
+                          <ul>
+                            <li>
+                              <h3 class="card-name">용인 행강 보호소</h3>
+                            </li>
+                            <li>
+                              <p class="card-desc gray-txt">2023년 5월, 행강보호소에는 보호견 310여 마리가 생활하고 있습니다. 현재 보호소의 사료가 ...</p>
+                            </li>
+                            <li>
+                              <div>
+                                <span>₩ 200</span>
+                                <button type="button" class="rounded-btn">기부하기</button>
+                              </div>
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <a href="#" class="">+ 글쓰기</a>
               </div>
-
-              <!-- 페이지 하단 -->
-              <div class="l-contt-bottom">
-              </div>
-
-              <!-- END 페이지 하단 -->
+              <a href="#" class="">+ 글쓰기</a>
             </div>
 
-            <!-- END 페이지 상단 -->
+            <!-- END layout) 페이지 상단 -->
+
+            <!-- layout) 페이지 하단 -->
+            <div class="l-contt-bottom">
+            </div>
+
+            <!-- END layout) 페이지 하단 -->
           </div>
+
+          <!-- END layout) 페이지 -->
         </div>
 
-        <!-- END 페이지 레이아웃 -->
+        <!-- END ***** 기부몰 목록 페이지 ***** -->
       </div>
+
+      <!-- END layout) 페이지 레이아웃 -->
+    </div>
   </body>
 </html>

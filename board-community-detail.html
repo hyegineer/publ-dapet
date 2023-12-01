@@ -15,14 +15,63 @@
   <body>
     <div id="app">
 
-      <!-- 페이지 레이아웃 -->
+      <!-- layout) 페이지 레이아웃 -->
       <div class="l-wrapper">
+
+        <!-- TODO: ***** 커뮤니티 글 상세 페이지 ***** -->
         <div class="l-container">
 
-          <!-- 페이지 -->
+          <!-- TODO: layout) 헤더 타입 02 -->
+
+          <!-- TODO: 밑줄 있는 화면일 때는 type-bd 클래스 추가 -->
+          <header class="header type-bd">
+            <div class="header-inner">
+
+              <!-- 헤더 왼쪽 -->
+
+              <!-- TODO: invisible 클래스 넣으면 안보임 -->
+              <div class="hd-left ">
+                <button onclick="history.back()" type="button" class="hd-btn">
+                  <span class="txt-hidden">뒤로가기</span>
+                  <i class="ico ico-line-arrow-left"></i>
+                </button>
+
+                <!-- TODO: invisible 클래스 넣으면 안보임 -->
+                <a href="main.html" class="hd-btn ">
+                  <span class="txt-hidden">홈</span>
+                  <i class="ico ico-home"></i>
+                </a>
+              </div>
+
+              <!-- 헤더 중앙 -->
+              <div class="hd-center ">
+                <span class="ttl">펫시터 찾기</span>
+              </div>
+
+              <!-- 헤더 오른쪽 -->
+
+              <!-- TODO: invisible 클래스 넣으면 안보임 -->
+              <div class="hd-right ">
+
+                <!-- 알림 버튼 -->
+                <button type="button" class="hd-btn">
+                  <span class="txt-hidden">알림</span>
+
+                  <!-- TODO: 새로 알람 들어온 경우 ico-alarm-on 클래스 추가해야함 -->
+                  <i class="ico ico-alarm"></i>
+                </button>
+
+                <!-- END 알림 버튼 -->
+              </div>
+            </div>
+          </header>
+
+          <!-- ENDO layout) 헤더 타입 02 -->
+
+          <!-- layout) 페이지 -->
           <div class="l-contt-container">
 
-            <!-- 페이지 상단 -->
+            <!-- layout) 페이지 상단 -->
             <div class="l-contt-top">
               <div class="page">
                 <div class="detail-page-container">
@@ -83,7 +132,9 @@
               </div>
             </div>
 
-            <!-- 페이지 하단 -->
+            <!-- END layout) 페이지 상단 -->
+
+            <!-- layout) 페이지 하단 -->
             <div class="l-contt-bottom">
               <div>
                 <textarea></textarea>
@@ -91,14 +142,16 @@
               </div>
             </div>
 
-            <!-- END 페이지 하단 -->
+            <!-- END layout) 페이지 하단 -->
           </div>
 
-          <!-- END 페이지 상단 -->
+          <!-- END layout) 페이지 -->
         </div>
+
+        <!-- END ***** 커뮤니티 글 상세 페이지 ***** -->
       </div>
 
-      <!-- END 페이지 레이아웃 -->
+      <!-- END layout) 페이지 레이아웃 -->
     </div>
   </body>
 </html>

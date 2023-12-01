@@ -15,14 +15,63 @@
   <body>
     <div id="app">
 
-      <!-- 페이지 레이아웃 -->
+      <!-- layout) 페이지 레이아웃 -->
       <div class="l-wrapper">
-        <div class="l-container">
 
-          <!-- 페이지 -->
+        <!-- TODO: ***** 펫시터 목록 페이지 ***** -->
+        <div class="find-pstlist-page l-container">
+
+          <!-- TODO: layout) 헤더 타입 02 -->
+
+          <!-- TODO: 밑줄 있는 화면일 때는 type-bd 클래스 추가 -->
+          <header class="header type-bd">
+            <div class="header-inner">
+
+              <!-- 헤더 왼쪽 -->
+
+              <!-- TODO: invisible 클래스 넣으면 안보임 -->
+              <div class="hd-left ">
+                <button onclick="history.back()" type="button" class="hd-btn">
+                  <span class="txt-hidden">뒤로가기</span>
+                  <i class="ico ico-line-arrow-left"></i>
+                </button>
+
+                <!-- TODO: invisible 클래스 넣으면 안보임 -->
+                <a href="main.html" class="hd-btn ">
+                  <span class="txt-hidden">홈</span>
+                  <i class="ico ico-home"></i>
+                </a>
+              </div>
+
+              <!-- 헤더 중앙 -->
+              <div class="hd-center ">
+                <span class="ttl">펫시터 찾기</span>
+              </div>
+
+              <!-- 헤더 오른쪽 -->
+
+              <!-- TODO: invisible 클래스 넣으면 안보임 -->
+              <div class="hd-right ">
+
+                <!-- 알림 버튼 -->
+                <button type="button" class="hd-btn">
+                  <span class="txt-hidden">알림</span>
+
+                  <!-- TODO: 새로 알람 들어온 경우 ico-alarm-on 클래스 추가해야함 -->
+                  <i class="ico ico-alarm"></i>
+                </button>
+
+                <!-- END 알림 버튼 -->
+              </div>
+            </div>
+          </header>
+
+          <!-- ENDO layout) 헤더 타입 02 -->
+
+          <!-- layout) 페이지 -->
           <div class="l-contt-container">
 
-            <!-- 페이지 상단 -->
+            <!-- layout) 페이지 상단 -->
             <div class="tabs">
               <div class="tab-grp">
                 <button type="button" class="tab active">전체</button>
@@ -31,105 +80,372 @@
             </div>
             <div class="l-contt-top">
               <div class="page">
-                <div class="">
-                  <div>
-                    <div>
-                      <div>
+
+                <!-- 상단 검색옵션 바 -->
+                <div class="search-select-wrap">
+                  <div class="d-iflex-row">
+
+                    <!-- 옵션 선택 영역 -->
+                    <div class="custom-select-wrap">
+
+                      <!-- 선택값 보여지는 타겟 -->
+                      <div class="custom-select">
                         <span class="txt">서울시</span>
                       </div>
-                      <div>
-                        <ul>
-                          <li>
+
+                      <!-- END 선택값 보여지는 타겟 -->
+
+                      <!-- 옵션 리스트 -->
+                      <div class="custom-option-wrap">
+                        <ul class="custom-option">
+                          <li class="opt-list">
                             <span>서울시</span>
+                          </li>
+                          <li class="opt-list">
                             <span>경기도</span>
                           </li>
                         </ul>
                       </div>
+
+                      <!-- END 옵션 리스트 -->
                     </div>
-                    <div>
-                      <div>
-                        <span class="txt">서울시</span>
+
+                    <!-- END 옵션 선택 영역 -->
+
+                    <!-- 옵션 선택 영역 -->
+                    <div class="custom-select-wrap">
+
+                      <!-- 선택값 보여지는 타겟 -->
+                      <div class="custom-select">
+                        <span class="txt">시/군/구</span>
                       </div>
-                      <div>
-                        <ul>
-                          <li>
+
+                      <!-- END 선택값 보여지는 타겟 -->
+
+                      <!-- 옵션 리스트 -->
+                      <div class="custom-option-wrap">
+                        <ul class="custom-option">
+                          <li class="opt-list">
                             <span>서울시</span>
+                          </li>
+                          <li class="opt-list">
                             <span>경기도</span>
                           </li>
                         </ul>
                       </div>
+
+                      <!-- END 옵션 리스트 -->
                     </div>
+
+                    <!-- END 옵션 선택 영역 -->
                   </div>
-                  <div>
-                    <div>
-                      <span class="txt">평점순</span>
+                  <div class="d-iflex-row mg-left">
+
+                    <!-- 옵션 선택 영역 -->
+                    <div class="custom-select-wrap">
+
+                      <!-- 선택값 보여지는 타겟 -->
+                      <div class="custom-select">
+                        <span class="txt">평점순</span>
+                      </div>
+
+                      <!-- END 선택값 보여지는 타겟 -->
+
+                      <!-- 옵션 리스트 -->
+                      <div class="custom-option-wrap">
+                        <ul class="custom-option">
+                          <li class="opt-list">
+                            <span>서울시</span>
+                          </li>
+                          <li class="opt-list">
+                            <span>경기도</span>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <!-- END 옵션 리스트 -->
                     </div>
-                    <div>
-                      <ul>
-                        <li>
-                          <span>서울시</span>
-                          <span>경기도</span>
-                        </li>
-                      </ul>
-                    </div>
+
+                    <!-- END 옵션 선택 영역 -->
                   </div>
                 </div>
+
+                <!-- END 상단 검색옵션 바 -->
+
+                <!-- TODO: 목록 있을 때 -->
                 <div class="col-list-grp">
                   <div class="list">
-                    <div class="list-card-item type03">
-                      <figure class="thumbnail"></figure>
-                      <ul>
+                    <div class="col-item list-card-item type03">
+
+                      <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                      <figure class="thumbnail inactive">
+                        <img src="assets/images/sample/img-sample04.png" alt="" class="thumbnail-img">
+                      </figure>
+                      <ul class="card-information">
                         <li>
-                          <div class="star-txt-item">
-                            <i class="ico ico-star-yellow"></i>
-                            <span class="dark-txt">4.9</span>
-                            <span class="gray-txt">/ 5.0</span>
+                          <div class="d-flex-row star-heart-wrap">
+                            <div class="star-txt-item">
+                              <i class="ico ico-star-yellow"></i>
+                              <span class="dark-txt">4.9</span>
+                              <span class="gray-txt">/ 5.0</span>
+                            </div>
+
+                            <!-- TODO: heart-btn 클릭시 하트 색깔 바뀜 -->
+                            <button type="button" class="heart-btn on">
+                              <i class="ico ico-heart-off ico-off"></i>
+                              <i class="ico ico-heart-on ico-on"></i>
+                            </button>
                           </div>
-                          <button type="button">
-                            <i class="ico ico-heart-off"></i>
-                          </button>
                         </li>
                         <li>
-                          <div>
+                          <div class="name-wrap">
                             <h3 class="card-name">김몽이</h3>
-                            <span>(경력 10년, 비흡연자)</span>
+                            <span class="sub-txt">(경력 10년, 비흡연자)</span>
                           </div>
                         </li>
                         <li>
-                          <p>
-                            <span>동대문구</span>
-                            <span>동대문구</span>
-                            <span>동대문구</span>
-                            <span>동대문구</span>
-                            <span>동대문구</span>
+                          <p class="card-desc">
+                            <span class="gray-dot-txt">서울 동대문구</span>
+                            <span class="gray-dot-txt">경기 용인시 일산동구</span>
+                            <span class="gray-dot-txt">충남 군산군</span>
+                            <span class="gray-dot-txt">제주 서귀포시</span>
+                            <span class="gray-dot-txt">부산 해운대구</span>
                           </p>
                         </li>
                       </ul>
                     </div>
                   </div>
+                  <div class="list">
+                    <div class="col-item list-card-item type03">
+
+                      <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                      <figure class="thumbnail inactive">
+                        <img src="assets/images/sample/img-sample05.png" alt="" class="thumbnail-img">
+                      </figure>
+                      <ul class="card-information">
+                        <li>
+                          <div class="d-flex-row star-heart-wrap">
+                            <div class="star-txt-item">
+                              <i class="ico ico-star-yellow"></i>
+                              <span class="dark-txt">4.5</span>
+                              <span class="gray-txt">/ 5.0</span>
+                            </div>
+
+                            <!-- TODO: heart-btn 클릭시 하트 색깔 바뀜 -->
+                            <button type="button" class="heart-btn">
+                              <i class="ico ico-heart-off ico-off"></i>
+                              <i class="ico ico-heart-on ico-on"></i>
+                            </button>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="name-wrap">
+                            <h3 class="card-name">강박사</h3>
+                            <span class="sub-txt">(경력 7년, 흡연자)</span>
+                          </div>
+                        </li>
+                        <li>
+                          <p class="card-desc">
+                            <span class="gray-dot-txt">서울 동대문구</span>
+                            <span class="gray-dot-txt">경기 용인시 일산동구</span>
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="list">
+                    <div class="col-item list-card-item type03">
+
+                      <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                      <figure class="thumbnail inactive">
+
+                        <!-- <img src="assets/images/sample/img-sample05.png" alt="" class="thumbnail-img"> -->
+                      </figure>
+                      <ul class="card-information">
+                        <li>
+                          <div class="d-flex-row star-heart-wrap">
+                            <div class="star-txt-item">
+                              <i class="ico ico-star-yellow"></i>
+                              <span class="dark-txt">4.5</span>
+                              <span class="gray-txt">/ 5.0</span>
+                            </div>
+
+                            <!-- TODO: heart-btn 클릭시 하트 색깔 바뀜 -->
+                            <button type="button" class="heart-btn on">
+                              <i class="ico ico-heart-off ico-off"></i>
+                              <i class="ico ico-heart-on ico-on"></i>
+                            </button>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="name-wrap">
+                            <h3 class="card-name">스폰지밥</h3>
+                            <span class="sub-txt">(경력 5년, 비흡연자)</span>
+                          </div>
+                        </li>
+                        <li>
+                          <p class="card-desc">
+                            <span class="gray-dot-txt">서울 동대문구</span>
+                            <span class="gray-dot-txt">경기 용인시 일산동구</span>
+                            <span class="gray-dot-txt">충남 군산군</span>
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="list">
+                    <div class="col-item list-card-item type03">
+
+                      <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                      <figure class="thumbnail inactive">
+
+                        <!-- <img src="assets/images/sample/img-sample05.png" alt="" class="thumbnail-img"> -->
+                      </figure>
+                      <ul class="card-information">
+                        <li>
+                          <div class="d-flex-row star-heart-wrap">
+                            <div class="star-txt-item">
+                              <i class="ico ico-star-yellow"></i>
+                              <span class="dark-txt">4.3</span>
+                              <span class="gray-txt">/ 5.0</span>
+                            </div>
+
+                            <!-- TODO: heart-btn 클릭시 하트 색깔 바뀜 -->
+                            <button type="button" class="heart-btn">
+                              <i class="ico ico-heart-off ico-off"></i>
+                              <i class="ico ico-heart-on ico-on"></i>
+                            </button>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="name-wrap">
+                            <h3 class="card-name">집게사장</h3>
+                            <span class="sub-txt">(경력 3년, 흡연자)</span>
+                          </div>
+                        </li>
+                        <li>
+                          <p class="card-desc">
+                            <span class="gray-dot-txt">서울 동대문구</span>
+                            <span class="gray-dot-txt">경기 용인시 일산동구</span>
+                            <span class="gray-dot-txt">충남 군산군</span>
+                            <span class="gray-dot-txt">제주 서귀포시</span>
+                            <span class="gray-dot-txt">부산 해운대구</span>
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="list">
+                    <div class="col-item list-card-item type03">
+
+                      <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                      <figure class="thumbnail inactive">
+
+                        <!-- <img src="assets/images/sample/img-sample05.png" alt="" class="thumbnail-img"> -->
+                      </figure>
+                      <ul class="card-information">
+                        <li>
+                          <div class="d-flex-row star-heart-wrap">
+                            <div class="star-txt-item">
+                              <i class="ico ico-star-yellow"></i>
+                              <span class="dark-txt">4.3</span>
+                              <span class="gray-txt">/ 5.0</span>
+                            </div>
+
+                            <!-- TODO: heart-btn 클릭시 하트 색깔 바뀜 -->
+                            <button type="button" class="heart-btn">
+                              <i class="ico ico-heart-off ico-off"></i>
+                              <i class="ico ico-heart-on ico-on"></i>
+                            </button>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="name-wrap">
+                            <h3 class="card-name">다람이</h3>
+                            <span class="sub-txt">(경력 1년, 흡연자)</span>
+                          </div>
+                        </li>
+                        <li>
+                          <p class="card-desc">
+                            <span class="gray-dot-txt">서울 동대문구</span>
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="list">
+                    <div class="col-item list-card-item type03">
+
+                      <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                      <figure class="thumbnail inactive">
+
+                        <!-- <img src="assets/images/sample/img-sample05.png" alt="" class="thumbnail-img"> -->
+                      </figure>
+                      <ul class="card-information">
+                        <li>
+                          <div class="d-flex-row star-heart-wrap">
+                            <div class="star-txt-item">
+                              <i class="ico ico-star-yellow"></i>
+                              <span class="dark-txt">3.8</span>
+                              <span class="gray-txt">/ 5.0</span>
+                            </div>
+
+                            <!-- TODO: heart-btn 클릭시 하트 색깔 바뀜 -->
+                            <button type="button" class="heart-btn">
+                              <i class="ico ico-heart-off ico-off"></i>
+                              <i class="ico ico-heart-on ico-on"></i>
+                            </button>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="name-wrap">
+                            <h3 class="card-name">뚱이</h3>
+                            <span class="sub-txt">(경력 10년, 비흡연자)</span>
+                          </div>
+                        </li>
+                        <li>
+                          <p class="card-desc">
+                            <span class="gray-dot-txt">서울 동대문구</span>
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- 예시 list -->
                 </div>
-                <div class="nothing-list-grp">
+
+                <!-- END 목록 있을 때 -->
+
+                <!-- TODO: 목록 없을 때 -->
+                <div class="nothing-list-grp type-center" style="display: none;">
                   <div class="nothing-list">
-                    <i></i>
-                    <h3>조건에 맞는 펫시터를 찾을 수 없습니다.</h3>
-                    <p>다른 검색 조건을 설정하여 펫시터를 찾아주세요.</p>
+                    <i class="ico ico-nothing-list"></i>
+                    <h3 class="nl-ttl">조건에 맞는 펫시터를 찾을 수 없습니다.</h3>
+                    <p class="nl-desc">다른 검색 조건을 설정하여 펫시터를 찾아주세요.</p>
                   </div>
                 </div>
+
+                <!-- END 목록 없을 때 -->
               </div>
             </div>
 
-            <!-- 페이지 하단 -->
+            <!-- END layout) 페이지 상단 -->
+
+            <!-- layout) 페이지 하단 -->
             <div class="l-contt-bottom">
             </div>
 
-            <!-- END 페이지 하단 -->
+            <!-- END layout) 페이지 하단 -->
           </div>
 
-          <!-- END 페이지 상단 -->
+          <!-- END layout) 페이지 -->
         </div>
+
+        <!-- END ***** 펫시터 목록 페이지 ***** -->
       </div>
 
-      <!-- END 페이지 레이아웃 -->
+      <!-- END layout) 페이지 레이아웃 -->
     </div>
   </body>
 </html>

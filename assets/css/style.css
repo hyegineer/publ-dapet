@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* ======================== 세팅 ======================== */
 :root {
   --white: #fff;
   --black: #000;
@@ -14,6 +15,7 @@
   --kakao-bg: #FEE500;
 }
 
+/* ======================== 레이아웃 - 공통 ======================== */
 html,
 body {
   width: 100%;
@@ -162,7 +164,7 @@ html {
   width: 2.4rem;
   height: 2.4rem;
 }
-.l-bottom-btns .lb-btn .ico.on {
+.l-bottom-btns .lb-btn .ico-on {
   display: none;
 }
 .l-bottom-btns .lb-btn .txt {
@@ -170,22 +172,28 @@ html {
   font-weight: 300;
   color: var(--gray, #AEAEAE);
 }
-.l-bottom-btns .lb-btn.active .ico.off {
+.l-bottom-btns .lb-btn.on .ico-off {
   display: none;
 }
-.l-bottom-btns .lb-btn.active .ico.on {
+.l-bottom-btns .lb-btn.on .ico-on {
   display: block;
 }
-.l-bottom-btns .lb-btn.active .txt {
+.l-bottom-btns .lb-btn.on .txt {
   color: var(--black, #000);
   font-weight: 500;
 }
 
+/* ======================== 레이아웃 - 헤더 ======================== */
 .header {
   width: 100%;
   height: 4.4rem;
   position: sticky;
   top: 0;
+  border-bottom: 1px solid var(--white, #fff);
+}
+
+.header.type-bd {
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
 }
 
 .header-inner {
@@ -245,10 +253,12 @@ html {
   width: 100%;
 }
 
+/* ======================== 구성요소 - 공통 ======================== */
 img {
   vertical-align: bottom;
 }
 
+/* 텍스트 숨김 */
 .txt-hidden {
   position: absolute;
   width: 1px;
@@ -258,10 +268,12 @@ img {
   clip-path: polygon(0 0, 0 0, 0 0);
 }
 
+/* 무조건 안보이게 */
 .invisible {
   display: none !important;
 }
 
+/* 모바일에서만 보이게 */
 .mb-show {
   display: none;
 }
@@ -271,28 +283,12 @@ img {
   }
 }
 
+/* 그냥 안보이게 */
 .none {
   display: none;
 }
 
-.left-ttl-wrap {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-.left-ttl-wrap .left-ttl {
-  font-size: 1.6rem;
-  font-weight: 500;
-  line-height: 1.3;
-}
-.left-ttl-wrap .left-desc {
-  font-size: 1.4rem;
-  color: var(--gray, #aeaeae);
-}
-
+/* 글씨 색상 */
 .dark-txt {
   color: var(--black, #000);
 }
@@ -305,6 +301,7 @@ img {
   color: var(--main-green, #56C595);
 }
 
+/* 탭 */
 .tabs {
   width: 100%;
   border-bottom: 1px solid var(--gray_light, #F1F1F1);
@@ -352,6 +349,7 @@ img {
   }
 }
 
+/* 썸네일 */
 .thumbnail {
   width: 8rem;
   height: 8rem;
@@ -368,12 +366,17 @@ img {
   background-position: center;
 }
 
+.thumbnail.circle {
+  border-radius: 50%;
+}
+
 .thumbnail-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+/* 12px 텍스트 모음 */
 .mini-txt-wrap {
   display: flex;
   align-items: center;
@@ -400,7 +403,8 @@ img {
   content: "";
   display: inline-block;
   position: absolute;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   right: 0;
 }
 .mini-txt-wrap .gray-txt {
@@ -424,7 +428,29 @@ img {
 .mini-txt-wrap .gray-txt:last-child:after {
   display: none;
 }
+.mini-txt-wrap .gray-txt:last-child {
+  padding-right: 0;
+  margin-right: 0;
+}
 
+.gray-dot-txt {
+  position: relative;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: var(--gray, #aeaeae);
+  line-height: 1.4;
+}
+.gray-dot-txt:after {
+  content: "•";
+  display: inline-block;
+  margin-left: 2px;
+  margin-right: -1px;
+}
+.gray-dot-txt:last-child:after {
+  display: none;
+}
+
+/* 별점 요소 */
 .star-txt-item {
   display: inline-flex;
   align-items: flex-end;
@@ -435,32 +461,103 @@ img {
 }
 .star-txt-item .gray-txt {
   font-size: 86%;
+  font-weight: 300;
 }
 
-.card-information {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  width: 100%;
-  gap: 5px;
-}
-
+/* 메인 섹션 나뉘는 보더 */
 .heavy-bd-row {
   border-bottom: 5px solid var(--gray-light, #f1f1f1);
 }
 
-.col-list-grp .list {
+/* 목록 나열 (세로로) */
+.col-list-grp .col-item {
   border-bottom: 1px solid var(--gray-light, #f1f1f1);
 }
-.col-list-grp .list:last-child {
+.col-list-grp .list:last-child .col-item {
   border-bottom: 0;
 }
 
+/* 목록 나열 (가로로) */
 .row-list-grp {
   display: flex;
 }
 
+/* display - flex 정렬 필요할 때 */
+.d-flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+/* display - inline-flex 정렬 필요할 때 */
+.d-iflex-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* 검색 옵션 선택 */
+.search-select-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 0 1.5rem;
+}
+.search-select-wrap .d-iflex-row {
+  gap: 1.5rem;
+}
+.search-select-wrap .cnt-txt {
+  font-size: 1.2rem;
+}
+
+.mg-left {
+  margin-left: auto;
+}
+
+/* 목록 없을 때 */
+.nothing-list-grp {
+  width: 100%;
+  text-align: center;
+}
+
+.nothing-list-grp.type-center:before {
+  content: "";
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.nothing-list-grp.type-center .nothing-list {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 99%;
+}
+
+.nothing-list {
+  text-align: center;
+  color: var(--gray, #aeaeae);
+  font-weight: 300;
+  padding: 0 1.1rem;
+  margin: 70px auto;
+}
+.nothing-list .ico-nothing-list {
+  width: 3.6rem;
+  height: 3.6rem;
+  margin-bottom: 1.1rem;
+}
+.nothing-list .nl-ttl {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+.nothing-list .nl-desc {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+/* ======================== 구성요소 - 폼 ======================== */
 .form-page .page {
   padding: 1rem 1.5rem;
   padding-bottom: 3rem;
@@ -487,6 +584,12 @@ img {
   font-size: 1.6rem;
   font-weight: 500;
   margin-bottom: 1rem;
+  gap: 5px;
+}
+.form-label .sm-txt {
+  font-weight: 300;
+  font-size: 87%;
+  color: var(--gray, #aeaeae);
 }
 
 .form-inp-wrap {
@@ -557,25 +660,58 @@ img {
   font-weight: 300;
   display: inline-flex;
 }
+.form-caution:before {
+  content: "*";
+  margin-right: 3px;
+}
+
+.form-caution.gray-txt {
+  color: var(--gray, #aeaeae);
+}
+.form-caution.gray-txt:before {
+  content: "•";
+}
 
 .custom-inp {
   width: 100%;
   border-radius: 5px;
   border: 1px solid var(--gray-light, #F1F1F1);
-  padding: 0 1.5rem;
-  height: 4.5rem;
   outline: none;
   background-color: white;
   font-size: 1.4rem;
   font-weight: 300;
+  padding: 0 1.5rem;
+  height: 4.5rem;
 }
-
+.custom-inp::placeholder {
+  color: var(--gray, #AEAEAE);
+  font-size: 1.4rem;
+  font-weight: 300;
+}
 .custom-inp:focus {
   border-color: var(--gray, #aeaeae);
 }
 
-.custom-inp::placeholder {
+.custom-inp-textarea {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid var(--gray-light, #F1F1F1);
+  outline: none;
+  background-color: white;
+  font-size: 1.4rem;
+  font-weight: 300;
+  resize: none;
+  line-height: 1.4;
+  padding: 1.5rem;
+  min-height: 15rem;
+}
+.custom-inp-textarea::placeholder {
   color: var(--gray, #AEAEAE);
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.custom-inp-textarea:focus {
+  border-color: var(--gray, #aeaeae);
 }
 
 .cckbox-item {
@@ -639,6 +775,41 @@ img {
   width: 100%;
 }
 
+.custom-select-wrap {
+  padding: 1rem 0;
+}
+
+.custom-select {
+  height: 3.7rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-right: 3rem;
+  min-width: 7.5rem;
+  background-image: url(../images/ico/ico-keyboard-arrow-down.svg);
+  background-size: 2.4rem;
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+}
+
+.custom-select .txt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.4rem;
+  height: 1.4rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.custom-option-wrap {
+  display: none;
+}
+
+/* ======================== 구성요소 - 아이콘 ======================== */
 .ico {
   width: 2.4rem;
   height: 2.4rem;
@@ -682,6 +853,10 @@ img {
 
 .ico-arrow-right-gray {
   background-image: url(../images/ico/ico-arrow-right-gray.svg);
+}
+
+.ico-arrow-down-gray {
+  background-image: url(../images/ico/ico-arrow-down-gray.svg);
 }
 
 .ico-star-yellow {
@@ -730,6 +905,31 @@ img {
   background-image: url(../images/ico/ico-nav05-off.svg);
 }
 
+.ico-heart-off {
+  background-image: url(../images/ico/ico-heart-off.svg);
+}
+
+.ico-heart-on {
+  background-image: url(../images/ico/ico-heart-on.svg);
+}
+
+.ico-nothing-list {
+  background-image: url(../images/ico/ico-nothing-list.svg);
+}
+
+.ico-stars {
+  width: 80px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.ico-stars.type05 {
+  background-image: url(../images/ico/ico-stars05.svg);
+}
+
+/* ======================== 구성요소 - 버튼 ======================== */
 .btn {
   padding: 0;
   border: 0;
@@ -739,13 +939,22 @@ img {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  cursor: pointer;
 }
 
+/* 눈가렸다 안가렸다 버튼 */
+.eye-btn {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
 .eye-btn .ico {
   width: 2rem;
 }
-
 .eye-btn .ico-on {
   display: none;
 }
@@ -753,7 +962,6 @@ img {
 .eye-btn.on .ico-off {
   display: none;
 }
-
 .eye-btn.on .ico-on {
   display: block;
 }
@@ -809,6 +1017,10 @@ img {
   font-weight: inherit;
 }
 
+.btn-w100 {
+  width: 100%;
+}
+
 .txt-arw-btn {
   padding: 0;
   border: 0;
@@ -856,58 +1068,44 @@ img {
   font-weight: 300;
 }
 
-.list-card-item {
-  width: 100%;
+.heart-btn {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.heart-btn .ico {
+  width: 2rem;
+}
+.heart-btn .ico-on {
+  display: none;
+}
+
+.heart-btn.on .ico-off {
+  display: none;
+}
+.heart-btn.on .ico-on {
+  display: block;
+}
+
+/* ======================== 구성요소 - 목록 카드 아이템 ======================== */
+.card-information {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 1rem;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
 }
-.list-card-item .thumbnail {
-  width: 8rem;
-  height: 8rem;
-  flex-shrink: 0;
-}
-.list-card-item .card-name {
-  font-size: 1.4rem;
-  font-weight: 500;
-  line-height: 1.5;
-}
-.list-card-item .card-desc {
-  color: var(--gray-dark, #6c6c6c);
-  font-size: 1.2rem;
-  font-weight: 300;
-}
-.list-card-item .card-desc.gray-txt {
-  color: var(--gray, #aeaeae);
+.card-information > li {
+  width: 100%;
 }
 
-.list-card-item.type01 .card-information {
-  gap: 1rem;
-}
-.list-card-item.type01 .card-name {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  word-wrap: break-word;
-  line-height: 1.5rem;
-  height: 1.5rem;
-}
-.list-card-item.type01 .card-desc {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  word-wrap: break-word;
-  line-height: 1.5rem;
-  height: 3rem;
-  height: auto;
-  max-height: 3rem;
-}
-
+/* 카드 아이템 타입 01 (메인 BEST 펫시터) */
 .card-item.type01 {
   width: 123px;
 }
@@ -929,6 +1127,7 @@ img {
   font-weight: 500;
 }
 
+/* 카드 아이템 타입 02 (메인 다펫 쇼핑몰) */
 .card-item.type02 {
   width: 129px;
 }
@@ -958,6 +1157,7 @@ img {
   font-weight: 500;
 }
 
+/* 카드 아이템 타입 03 (메인 다펫 기부몰) */
 .card-item.type03 {
   width: 200px;
   border: 1px solid var(--gray-light, #f1f1f1);
@@ -998,6 +1198,216 @@ img {
   font-weight: 300;
 }
 
+/* 카드 아이템 - 리뷰 카드 아이템 */
+.rv-card-item .star-txts-wrap {
+  margin-bottom: 1.3rem;
+}
+.rv-card-item .star-txts-wrap .txt {
+  font-size: 1.2rem;
+  position: relative;
+  padding-right: 1rem;
+  margin-right: 0.7rem;
+  display: inline-flex;
+  align-items: center;
+  justify-self: flex-start;
+  font-weight: 300;
+}
+.rv-card-item .star-txts-wrap .txt:after {
+  width: 1px;
+  height: 1.3rem;
+  background-color: var(--gray-light, #f1f1f1);
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+.rv-card-item .star-txts-wrap .txt:last-child {
+  margin-right: 0;
+  padding-right: 0;
+}
+.rv-card-item .star-txts-wrap .txt:last-child:after {
+  display: none;
+}
+.rv-card-item .rv-txt {
+  font-size: 1.2rem;
+  font-weight: 300;
+  word-break: keep-all;
+  line-height: 1.4;
+}
+
+/* 채팅 아이템 */
+.chat-card-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+.chat-card-item .card-information {
+  gap: 3px;
+}
+.chat-card-item .thumbnail.circle {
+  width: 6rem;
+  height: 6rem;
+  flex-shrink: 0;
+}
+.chat-card-item .thumbnail.inactive {
+  background-size: 2.4rem;
+}
+.chat-card-item .name-date-wrap {
+  gap: 1.5rem;
+}
+.chat-card-item .name-date-wrap .date {
+  color: var(--gray-dark, #6c6c6c);
+  font-size: 1.2rem;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+.chat-card-item .card-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 2.1rem;
+  height: 2.1rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.chat-card-item .txt-badge-wrap {
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.chat-card-item .txt-badge-wrap .txt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.8rem;
+  height: 3.6rem;
+  height: auto;
+  max-height: 3.8rem;
+  color: var(--gray, #aeaeae);
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.chat-card-item .txt-badge-wrap .badge-cnt {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--red, #cd3e3e);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0 0.8rem;
+  height: 2rem;
+  border-radius: 100px;
+  min-width: 2.4rem;
+}
+
+.list-card-item {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.list-card-item .thumbnail {
+  width: 8rem;
+  height: 8rem;
+  flex-shrink: 0;
+}
+.list-card-item .card-name {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.list-card-item .card-desc {
+  color: var(--gray-dark, #6c6c6c);
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.list-card-item .card-desc.gray-txt {
+  color: var(--gray, #aeaeae);
+}
+
+/* 목록 카드 아이템 타입 01 (메인 등...) */
+.list-card-item.type01 .card-information {
+  gap: 1rem;
+}
+.list-card-item.type01 .card-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.5rem;
+  height: 1.5rem;
+}
+.list-card-item.type01 .card-desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.5rem;
+  height: 3rem;
+  height: auto;
+  max-height: 3rem;
+}
+
+/* 목록 카드 아이템 타입 02 (알림 등...) */
+/* 목록 카드 아이템 타입 03 (펫시터 목록 등...) */
+.list-card-item.type03 {
+  gap: 1.5rem;
+}
+.list-card-item.type03 .thumbnail {
+  width: 7.5rem;
+  height: 7.5rem;
+}
+.list-card-item.type03 .thumbnail.inactive {
+  background-size: 2.4rem;
+}
+.list-card-item.type03 .card-information {
+  gap: 0;
+}
+.list-card-item.type03 .star-heart-wrap {
+  gap: 1rem;
+  align-items: flex-start;
+  margin-top: -2px;
+  margin-bottom: 1px;
+}
+.list-card-item.type03 .star-heart-wrap .star-txt-item {
+  font-weight: 500;
+}
+.list-card-item.type03 .star-heart-wrap .heart-btn {
+  margin-left: auto;
+  margin-top: -2px;
+}
+.list-card-item.type03 .name-wrap {
+  margin-bottom: 2px;
+}
+.list-card-item.type03 .name-wrap .card-name {
+  display: inline-block;
+  line-height: 1.3;
+  font-size: 1.6rem;
+  font-weight: 500;
+  vertical-align: bottom;
+}
+.list-card-item.type03 .name-wrap .sub-txt {
+  line-height: 1.6;
+  font-size: 1.2rem;
+  font-weight: 300;
+  vertical-align: bottom;
+}
+
+/* ======================== 페이지 - 가이드 ======================== */
 #guide-page {
   background-color: #CFD7CF;
   padding: 100px 0;
@@ -1139,6 +1549,7 @@ img {
     margin-top: 5px;
   }
 }
+/* ======================== 페이지 - 회원가입/로그인 진입 ======================== */
 .intro-page {
   background: var(--main-green, #56C595);
 }
@@ -1213,6 +1624,7 @@ img {
   color: white;
 }
 
+/* ======================== 페이지 - 회원가입 ======================== */
 .total-agree-row {
   display: flex;
   align-items: center;
@@ -1240,6 +1652,7 @@ img {
   margin-left: auto;
 }
 
+/* ======================== 페이지 - 로그인 ======================== */
 .login-opt {
   width: 100%;
   text-align: center;
@@ -1276,6 +1689,7 @@ img {
   display: none;
 }
 
+/* ======================== 페이지 - 이용약관 ======================== */
 .terms-of-page .page {
   padding: 1rem 1.5rem;
   display: flex;
@@ -1304,6 +1718,26 @@ img {
   font-weight: 300;
 }
 
+/* ======================== 페이지 - 아이디/비밀번호 찾기 등 ======================== */
+/* 아이디/비밀번호 찾기 쪽 */
+.left-ttl-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.left-ttl-wrap .left-ttl {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.left-ttl-wrap .left-desc {
+  font-size: 1.4rem;
+  color: var(--gray, #aeaeae);
+}
+
 .find-form-inp-wrap .form-inp-wrap {
   margin-bottom: 1.5rem;
 }
@@ -1315,6 +1749,7 @@ img {
   padding: 0.5rem 0;
 }
 
+/* ======================== 페이지 - 메인 ======================== */
 .main-page .tab-grp .tab {
   min-width: auto;
 }
@@ -1403,4 +1838,65 @@ img {
 }
 .main-section-4th .contt-row .row-list-grp {
   padding: 0 1.5rem;
+}
+
+/* ======================== 페이지 - 펫시터목록 ======================== */
+.find-pstlist-page .header {
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
+}
+.find-pstlist-page .col-list-grp .list {
+  padding: 0 1.5rem;
+}
+.find-pstlist-page .col-list-grp .list .col-item {
+  padding: 1.5rem 0;
+}
+.find-pstlist-page .col-list-grp .list:first-child .col-item {
+  padding-top: 0;
+}
+.find-pstlist-page .page {
+  height: 100%;
+}
+.find-pstlist-page .nothing-list-grp {
+  height: calc(100% - 5.7rem);
+}
+
+/* ======================== 페이지 - 펫시터 후기 상세 ======================== */
+.pst-rvdetail-page .col-list-grp-wrap .list {
+  padding: 0 1.5rem;
+}
+.pst-rvdetail-page .col-list-grp-wrap .col-item {
+  padding: 1.5rem 0;
+}
+.pst-rvdetail-page .page {
+  height: 100%;
+}
+.pst-rvdetail-page .nothing-list-grp {
+  height: calc(100% - 5.7rem);
+}
+
+/* ======================== 페이지 - 펫시터 후기 작성 ======================== */
+.pst-rvcreate-page .page {
+  padding: 1.5rem;
+}
+.pst-rvcreate-page .top-card-wrap {
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
+}
+.pst-rvcreate-page .list-card-item.type03 {
+  align-items: center;
+}
+.pst-rvcreate-page .list-card-item .card-name {
+  font-size: 1.6rem;
+}
+.pst-rvcreate-page .custom-inp-textarea {
+  height: 15rem;
+}
+
+/* ======================== 페이지 - 채팅 목록 ======================== */
+.ctlist-page .col-list-grp .list {
+  padding: 0 1.5rem;
+}
+.ctlist-page .col-list-grp .col-item {
+  padding: 1.5rem 0;
 }
