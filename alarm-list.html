@@ -18,8 +18,8 @@
       <!-- layout) 페이지 레이아웃 -->
       <div class="l-wrapper">
 
-        <!-- TODO: ***** 아이디 찾기 페이지 ***** -->
-        <div class="form-page l-container">
+        <!-- TODO: ***** 알림 페이지 ***** -->
+        <div class="alarm-page l-container">
 
           <!-- TODO: layout) 헤더 타입 02 -->
 
@@ -37,7 +37,7 @@
                 </button>
 
                 <!-- TODO: invisible 클래스 넣으면 안보임 -->
-                <a href="main.html" class="hd-btn invisible">
+                <a href="main.html" class="hd-btn ">
                   <span class="txt-hidden">홈</span>
                   <i class="ico ico-home"></i>
                 </a>
@@ -45,7 +45,7 @@
 
               <!-- 헤더 중앙 -->
               <div class="hd-center ">
-                <span class="ttl">아이디 찾기</span>
+                <span class="ttl">알림</span>
               </div>
 
               <!-- 헤더 오른쪽 -->
@@ -72,52 +72,58 @@
           <div class="l-contt-container">
 
             <!-- layout) 페이지 상단 -->
+            <div class="tabs">
+              <div class="tab-grp full-tab-grp">
+                <button type="button" class="tab active">내 활동 알림</button>
+                <button type="button" class="tab">채팅 알림</button>
+              </div>
+            </div>
             <div class="l-contt-top">
               <div class="page">
-
-                <!-- before: 아이디 찾기 정보 입력 -->
-                <div class="find-form-container">
-                  <div class="left-ttl-wrap">
-                    <h2 class="left-ttl">회원가입 시 등록한 <br>
-                      휴대폰 번호를 입력해 주세요.</h2>
-                  </div>
-                  <div class="find-form-inp-wrap">
-                    <div class="form-inp-wrap">
-                      <input type="text" class="custom-inp" placeholder="이름">
-                    </div>
-
-                    <!-- <span class="form-caution">이름을 입력해주세요</span> -->
-                    <div class="form-inp-wrap">
-                      <input type="text" class="custom-inp" placeholder="휴대폰 번호 (숫자 입력)">
-                    </div>
-
-                    <!-- <span class="form-caution">휴대폰 번호를 입력해주세요</span> -->
-                  </div>
-                  <div class="form-submit-btn-wrap">
-                    <button type="button" class="btn theme-solid-btn btn-lg square-btn">
-                      <span class="txt">아이디 찾기</span>
-                    </button>
-                  </div>
-                </div>
-
-                <!-- after: 아이디 찾기 정보 입력 후 결과 -->
-                <div class="find-form-container" style="display: none;">
-                  <div class="left-ttl-wrap">
-                    <h2 class="left-ttl">입력하신 정보로 <br>가입된 아이디입니다.</h2>
-                    <p class="left-desc">개인정보 보호를 위해 아이디의 일부분을 ***로 표시합니다.</p>
-                  </div>
-                  <div class="find-form-inp-wrap">
-                    <div class="form-inp-wrap">
-                      <div class="inp-unit-item type-sm-gray">
-                        <input type="text" readonly class="custom-inp" value="da****23@dapet.com">
-                        <span class="unit">2023-11-13 가입</span>
+                <div class="col-list-grp">
+                  <div class="list">
+                    <div class="list-card-item type02">
+                      <div>
+                        <div>
+                          <div class="status-item">
+                            <i></i>
+                            <span>정산 완료</span>
+                          </div>
+                          <span class="gray-txt gray-dot-txt">오늘</span>
+                          <span class="gray-txt gray-dot-txt">오후 4:20</span>
+                        </div>
+                        <div>
+                          <h3 class="card-name">
+                            <span>[ 몽이 / 목욕, 산책 ]</span><span>&nbsp;서비스의 결제가 완료되었습니다.</span>
+                          </h3>
+                        </div>
+                        <p class="card-desc">다른 고객님들을 위해 펫시터님에 대한 후기를 남겨보세요.</p>
                       </div>
                     </div>
                   </div>
-                  <div class="form-submit-btn-wrap">
-                    <a href="sign-in.html" class="btn theme-solid-btn btn-lg square-btn">
-                      <span class="txt">로그인하러 가기</span>
-                    </a>
+                  <div class="list">
+                    <div class="list-card-item type02">
+                      <ul>
+                        <li>
+                          <div>
+                            <div>
+                              <i></i>
+                              <span>정산 완료</span>
+                            </div>
+                            <span>오늘</span>
+                            <span>오후 4:20</span>
+                          </div>
+                        </li>
+                        <li>
+                          <h3>
+                            <span>[ 몽이 / 목욕, 산책 ]</span><span>&nbsp;서비스의 결제가 완료되었습니다.</span>
+                          </h3>
+                        </li>
+                        <li>
+                          <p class="card-desc">다른 고객님들을 위해 펫시터님에 대한 후기를 남겨보세요.</p>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -135,7 +141,7 @@
           <!-- END layout) 페이지 -->
         </div>
 
-        <!-- END ***** 아이디 찾기 페이지 ***** -->
+        <!-- END ***** 알림 페이지 ***** -->
       </div>
 
       <!-- END layout) 페이지 레이아웃 -->
