@@ -22,12 +22,12 @@
       <div class="l-wrapper">
 
         <!-- TODO: ***** 다펫몰 리뷰 작성 페이지 ***** -->
-        <div class="l-container">
+        <div class="mall-rvcreate-page l-container">
 
           <!-- TODO: layout) 헤더 타입 02 -->
 
           <!-- TODO: 밑줄 있는 화면일 때는 type-bd 클래스 추가 -->
-          <header class="header type-bd">
+          <header class="header ">
             <div class="header-inner">
 
               <!-- 헤더 왼쪽 -->
@@ -48,7 +48,7 @@
 
               <!-- 헤더 중앙 -->
               <div class="hd-center ">
-                <span class="ttl">펫시터 찾기</span>
+                <span class="ttl">리뷰 작성</span>
               </div>
 
               <!-- 헤더 오른쪽 -->
@@ -77,14 +77,16 @@
             <!-- layout) 페이지 상단 -->
             <div class="l-contt-top">
               <div class="page">
-                <section>
+                <section class="top-card-wrap">
                   <div class="list-card-item type03">
-                    <figure class="thumbnail"></figure>
-                    <ul>
+
+                    <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                    <figure class="thumbnail">
+                      <img src="assets/images/sample/img-sample07.png" alt="" class="thumbnail-img">
+                    </figure>
+                    <ul class="card-information">
                       <li>
-                        <div>
-                          <h3 class="card-name">그랜마루시 쓰리베이즈 동결건조 독 푸드 닭고기</h3>
-                        </div>
+                        <h3 class="card-name">그랜마루시 쓰리베이즈 동결건조 독 푸드 닭고기</h3>
                       </li>
                       <li>
                         <p class="gray-txt">주문수량 : 2</p>
@@ -96,18 +98,21 @@
                   <div class="form-item">
                     <label class="form-label">상품 만족도</label>
                     <div class="form-inp-wrap">
-                      <div>별</div>
+
+                      <!-- FIXME: 별 새로 -->
+                      <i class="ico-stars type05"></i>
                     </div>
                   </div>
                   <div class="form-item">
                     <label class="form-label">
                       <span>리뷰작성</span>
-                      <span class="sm-txt">(0/200)</span>
+                      <span class="sm-txt">(<span class="js-txtarea-count">0</span>/200)</span>
                     </label>
                     <div class="form-inp-wrap">
-                      <textarea class="custom-inp-textarea" maxlength="200"></textarea>
+                      <textarea placeholder="최소 10자 이상의 내용을 입력해 주세요." class="custom-inp-textarea js-txtarea" maxlength="200"></textarea>
                     </div>
-                    <span class="form-caution gray-txt">상품과 관련 없는 내용, 비속어 등을 포함한 부적절한 리뷰는 통보 없이 삭제 처리될 수 있습니다. 작성해 주신 리뷰는 상업적 용도로 활용될 수 있습니다.</span>
+                    <span class="form-caution gray-txt">상품과 관련 없는 내용, 비속어 등을 포함한 부적절한 리뷰는 통보 없이 삭제 처리될 수 있습니다. 작성해 주신 리뷰는
+                  상업적 용도로 활용될 수 있습니다.</span>
                   </div>
                 </div>
               </div>
