@@ -11,6 +11,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/vendor/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- JS -->
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
   </head>
   <body>
     <div id="app">
@@ -82,7 +85,7 @@
               <div class="page">
                 <div class="col-list-grp">
                   <div class="list">
-                    <div class="col-item chat-card-item">
+                    <a href="chat-detail.html" class="col-item chat-card-item">
 
                       <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
                       <figure class="thumbnail circle inactive">
@@ -102,13 +105,15 @@
                           </div>
                         </li>
                       </ul>
-                    </div>
+                    </a>
                   </div>
                   <div class="list">
-                    <div class="col-item chat-card-item">
+                    <a href="chat-detail.html" class="col-item chat-card-item">
 
                       <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
-                      <figure class="thumbnail circle inactive">
+
+                      <!-- TODO: 관리자일 경우 type-admin 클래스 추가 -->
+                      <figure class="thumbnail circle type-admin inactive">
 
                         <!-- <img src="assets/images/sample/img-sample04.png" alt="" class="thumbnail-img"> -->
                       </figure>
@@ -126,14 +131,15 @@
                           </div>
                         </li>
                       </ul>
-                    </div>
+                    </a>
                   </div>
                   <div class="list">
-                    <div class="col-item chat-card-item">
+                    <a href="chat-detail.html" class="col-item chat-card-item">
 
                       <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
                       <figure class="thumbnail circle inactive">
-                        <img src="assets/images/sample/img-sample04.png" alt="" class="thumbnail-img">
+
+                        <!-- <img src="assets/images/sample/img-sample04.png" alt="" class="thumbnail-img"> -->
                       </figure>
                       <ul class="card-information">
                         <li>
@@ -149,7 +155,7 @@
                           </div>
                         </li>
                       </ul>
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -211,5 +217,6 @@
 
       <!-- END layout) 페이지 레이아웃 -->
     </div>
+    <script src="assets/js/ui.js"></script>
   </body>
 </html>

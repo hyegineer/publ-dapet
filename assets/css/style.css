@@ -125,19 +125,19 @@ html {
 }
 @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
   .l-bottom-btns {
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     box-sizing: content-box;
   }
 }
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
   .l-bottom-btns {
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     box-sizing: content-box;
   }
 }
 @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
   .l-bottom-btns {
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     box-sizing: content-box;
   }
 }
@@ -351,6 +351,9 @@ img {
 
 /* 썸네일 */
 .thumbnail {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 8rem;
   height: 8rem;
   border-radius: 5px;
@@ -368,6 +371,18 @@ img {
 
 .thumbnail.circle {
   border-radius: 50%;
+}
+
+.thumbnail.type-admin {
+  background-image: none;
+  align-items: center;
+  justify-self: center;
+}
+.thumbnail.type-admin:after {
+  content: "관리자";
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--gray-dark, #6c6c6c);
 }
 
 .thumbnail-img {
@@ -927,6 +942,14 @@ img {
 
 .ico-stars.type05 {
   background-image: url(../images/ico/ico-stars05.svg);
+}
+
+.ico-send-gray {
+  background-image: url(../images/ico/ico-send-gray.svg);
+}
+
+.ico-send-white {
+  background-image: url(../images/ico/ico-send-white.svg);
 }
 
 /* ======================== 구성요소 - 버튼 ======================== */
@@ -1899,4 +1922,132 @@ img {
 }
 .ctlist-page .col-list-grp .col-item {
   padding: 1.5rem 0;
+}
+
+/* ======================== 페이지 - 채팅 상세 ======================== */
+.chat-window-wrap {
+  padding: 1.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 2rem;
+}
+.chat-window-wrap .bubble-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+}
+.chat-window-wrap .bubble-wrap .thumbnail.circle {
+  width: 4rem;
+  height: 4rem;
+  flex-shrink: 0;
+}
+.chat-window-wrap .bubble-wrap .thumbnail.inactive {
+  background-size: 1.6rem;
+}
+.chat-window-wrap .bubble-wrap .thumbnail.type-admin:after {
+  font-size: 1.1rem;
+}
+.chat-window-wrap .bubble-date-wrap {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+}
+.chat-window-wrap .bubble-wrap.type-send {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.chat-window-wrap .bubble-wrap.type-send .bubble-date-wrap {
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex-direction: row-reverse;
+}
+.chat-window-wrap .bubble-wrap.type-send .bubble {
+  background-color: var(--main-green, #56C595);
+}
+.chat-window-wrap .bubble {
+  max-width: 22rem;
+  padding: 1.5rem;
+  font-size: 1.4rem;
+  border-radius: 10px;
+  background-color: var(--gray-light, #f1f1f1);
+  line-height: 1.3;
+  font-weight: 300;
+}
+.chat-window-wrap .date {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--black, #000);
+  flex-shrink: 0;
+}
+
+.chat-create-wrap {
+  padding: 1rem 1.5rem;
+  /* iPhone XR : 1792x828px at 326ppi */
+  /* iPhone XS : 2436x1125px at 458ppi */
+  /* iPhone XS Max : 2688x1242px at 458ppi */
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+  .chat-create-wrap {
+    padding-bottom: 4rem;
+  }
+}
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .chat-create-wrap {
+    padding-bottom: 4rem;
+  }
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  .chat-create-wrap {
+    padding-bottom: 4rem;
+  }
+}
+.chat-create-wrap .custom-inp-textarea {
+  height: 5.2rem;
+  padding: 1.5rem;
+  min-height: auto;
+  max-height: 13rem;
+}
+.chat-create-wrap .send-btn.before {
+  background-color: var(--gray-light, #f1f1f1);
+}
+.chat-create-wrap .send-btn.before .ico-on {
+  display: none;
+}
+.chat-create-wrap .send-btn.before .ico-off {
+  display: block;
+}
+.chat-create-wrap .send-btn {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 6rem;
+  height: 5.2rem;
+  border-radius: 5px;
+  background-color: var(--main-green, #56C595);
+  transition: all 0.3s;
+}
+.chat-create-wrap .send-btn .ico-on {
+  display: block;
+}
+.chat-create-wrap .send-btn .ico-off {
+  display: none;
 }

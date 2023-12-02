@@ -11,6 +11,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/vendor/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- JS -->
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
   </head>
   <body>
     <div id="app">
@@ -19,12 +22,12 @@
       <div class="l-wrapper">
 
         <!-- TODO: ***** 채팅 상세 페이지 ***** -->
-        <div class="l-container">
+        <div class="ctdetail-page l-container">
 
           <!-- TODO: layout) 헤더 타입 02 -->
 
           <!-- TODO: 밑줄 있는 화면일 때는 type-bd 클래스 추가 -->
-          <header class="header type-bd">
+          <header class="header ">
             <div class="header-inner">
 
               <!-- 헤더 왼쪽 -->
@@ -45,13 +48,13 @@
 
               <!-- 헤더 중앙 -->
               <div class="hd-center ">
-                <span class="ttl">펫시터 찾기</span>
+                <span class="ttl">펫시터 강박사</span>
               </div>
 
               <!-- 헤더 오른쪽 -->
 
               <!-- TODO: invisible 클래스 넣으면 안보임 -->
-              <div class="hd-right ">
+              <div class="hd-right invisible">
 
                 <!-- 알림 버튼 -->
                 <a href="alarm-list.html" type="button" class="hd-btn">
@@ -74,21 +77,131 @@
             <!-- layout) 페이지 상단 -->
             <div class="l-contt-top">
               <div class="page">
-                <div class="">
-                  <div>
-                    <figure></figure>
-                    <div>
-                      <div>안녕하세요 ! <br>
+                <div class="chat-window-wrap">
+
+                  <!-- 수신자 채팅 아이템 -->
+                  <div class="bubble-wrap">
+
+                    <!-- TODO: 수신자일 경우 thumbnail이 존재 -->
+
+                    <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+
+                    <!-- TODO: 관리자일 경우 type-admin 클래스 추가 -->
+                    <figure class="thumbnail circle inactive">
+                      <img src="assets/images/sample/img-sample05.png" alt="" class="thumbnail-img">
+                    </figure>
+                    <div class="bubble-date-wrap">
+                      <div class="bubble">안녕하세요 ! <br>
                         펫시터 강박사입니다 ~</div>
-                      <span>오전 11:20</span>
+                      <span class="date">오전 11:20</span>
                     </div>
                   </div>
-                  <div>
-                    <div>
-                      <div>수요일 12시부터 1시 사이에 괜찮을 것 같습니다 !</div>
-                      <span>오전 11:20</span>
+
+                  <!-- END 수신자 채팅 아이템 -->
+
+                  <!-- 수신자 채팅 아이템 -->
+                  <div class="bubble-wrap">
+
+                    <!-- TODO: 수신자일 경우 thumbnail이 존재 -->
+
+                    <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+
+                    <!-- TODO: 관리자일 경우 type-admin 클래스 추가 -->
+                    <figure class="thumbnail circle inactive">
+                      <img src="assets/images/sample/img-sample05.png" alt="" class="thumbnail-img">
+                    </figure>
+                    <div class="bubble-date-wrap">
+                      <div class="bubble">몽이 산책 및 미용을 위해 픽업 원하시는 날짜 및 시간을 말씀해주세요 ~</div>
+                      <span class="date">오전 11:21</span>
                     </div>
                   </div>
+
+                  <!-- END 수신자 채팅 아이템 -->
+
+                  <!-- 발신자 채팅 아이템 -->
+
+                  <!-- TODO: 발신자일 경우 type-send 클래스 추가 -->
+
+                  <!-- TODO: 발신자일 경우 thumbnail 없음 -->
+                  <div class="bubble-wrap type-send">
+                    <div class="bubble-date-wrap">
+                      <div class="bubble">수요일 12시부터 1시 사이에 괜찮을 것 같습니다 !</div>
+                      <span class="date">오후 3:23</span>
+                    </div>
+                  </div>
+
+                  <!-- END 발신자 채팅 아이템 -->
+
+                  <!-- 수신자 채팅 아이템 -->
+                  <div class="bubble-wrap">
+
+                    <!-- TODO: 수신자일 경우 thumbnail이 존재 -->
+
+                    <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+
+                    <!-- TODO: 관리자일 경우 type-admin 클래스 추가 -->
+                    <figure class="thumbnail circle inactive">
+                      <img src="assets/images/sample/img-sample05.png" alt="" class="thumbnail-img">
+                    </figure>
+                    <div class="bubble-date-wrap">
+                      <div class="bubble">제가 12시 정각은 어려울 듯한데, 12시 30분 어떠신가요!?</div>
+                      <span class="date">오후 4:30</span>
+                    </div>
+                  </div>
+
+                  <!-- END 수신자 채팅 아이템 -->
+
+                  <!-- 발신자 채팅 아이템 -->
+
+                  <!-- TODO: 발신자일 경우 type-send 클래스 추가 -->
+
+                  <!-- TODO: 발신자일 경우 thumbnail 없음 -->
+                  <div class="bubble-wrap type-send">
+                    <div class="bubble-date-wrap">
+                      <div class="bubble">아 그러시면 12시 30분에 데리러 오셔도 괜찮을 것 같아요 !!</div>
+                      <span class="date">오후 5:15</span>
+                    </div>
+                  </div>
+
+                  <!-- END 발신자 채팅 아이템 -->
+
+                  <!-- 수신자 채팅 아이템 -->
+                  <div class="bubble-wrap">
+
+                    <!-- TODO: 수신자일 경우 thumbnail이 존재 -->
+
+                    <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+
+                    <!-- TODO: 관리자일 경우 type-admin 클래스 추가 -->
+                    <figure class="thumbnail circle inactive">
+                      <img src="assets/images/sample/img-sample05.png" alt="" class="thumbnail-img">
+                    </figure>
+                    <div class="bubble-date-wrap">
+                      <div class="bubble">네네 ~ 저에게 맡겨주셔서 감사합니다 ! </div>
+                      <span class="date">오후 7:43</span>
+                    </div>
+                  </div>
+
+                  <!-- END 수신자 채팅 아이템 -->
+
+                  <!-- 수신자 채팅 아이템 -->
+                  <div class="bubble-wrap">
+
+                    <!-- TODO: 수신자일 경우 thumbnail이 존재 -->
+
+                    <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+
+                    <!-- TODO: 관리자일 경우 type-admin 클래스 추가 -->
+                    <figure class="thumbnail circle inactive">
+                      <img src="assets/images/sample/img-sample05.png" alt="" class="thumbnail-img">
+                    </figure>
+                    <div class="bubble-date-wrap">
+                      <div class="bubble">그럼 수요일 12시 30분에 봴게용 ^^ !! 좋은 하루 보내세요 ~~</div>
+                      <span class="date">오후 7:45</span>
+                    </div>
+                  </div>
+
+                  <!-- END 수신자 채팅 아이템 -->
                 </div>
               </div>
             </div>
@@ -97,9 +210,15 @@
 
             <!-- layout) 페이지 하단 -->
             <div class="l-contt-bottom">
-              <div>
-                <textarea></textarea>
-                <button type="button">등록</button>
+              <div class="chat-create-wrap">
+                <textarea data-autoresize rows="1" class="custom-inp-textarea" placeholder="메세지를 입력해 주세요."></textarea>
+
+                <!-- TODO: textarea에 입력하면 send-btn에 before 클래스가 사라지면서 활성화가 됨 -->
+                <button type="button" class="send-btn before">
+                  <span class="txt-hidden">등록</span>
+                  <i class="ico ico-send-gray ico-off"></i>
+                  <i class="ico ico-send-white ico-on"></i>
+                </button>
               </div>
             </div>
 
@@ -114,5 +233,6 @@
 
       <!-- END layout) 페이지 레이아웃 -->
     </div>
+    <script src="assets/js/ui.js"></script>
   </body>
 </html>
