@@ -27,7 +27,7 @@
           <!-- TODO: layout) 헤더 타입 02 -->
 
           <!-- TODO: 밑줄 있는 화면일 때는 type-bd 클래스 추가 -->
-          <header class="header type-bd">
+          <header class="header ">
             <div class="header-inner">
 
               <!-- 헤더 왼쪽 -->
@@ -48,7 +48,7 @@
 
               <!-- 헤더 중앙 -->
               <div class="hd-center ">
-                <span class="ttl">펫시터 찾기</span>
+                <span class="ttl">쇼핑 상세보기</span>
               </div>
 
               <!-- 헤더 오른쪽 -->
@@ -77,125 +77,230 @@
             <!-- layout) 페이지 상단 -->
             <div class="l-contt-top">
               <div class="page">
-                <div class="detail-page-container">
 
-                  <!-- 사진 -->
-                  <div></div>
+                <!-- 사진 -->
+                <div class="detail-page-top">
+                  <div class="thumbnail-wrap"></div>
+                </div>
 
-                  <!-- 정보 -->
-                  <div>
-                    <div>
-                      <p class="mini-txt-wrap">
-                        <span class="main-green-txt bd-right-txt">위치게시판</span>
-                        <span class="gray-txt">2023-11-09</span>
-                        <span class="gray-txt">몽이누나</span>
-                      </p>
-                      <h3>그랜마루시 쓰리베이즈 동결건조 독 푸드 닭고기</h3>
+                <!-- 정보 -->
+                <div class="detail-page-bottom">
+                  <div class="dp-ttl-wrap">
+                    <h3 class="dp-ttl">그랜마루시 쓰리베이즈 동결건조 독 푸드 닭고기</h3>
+                  </div>
+                  <div class="tabs">
+                    <div class="tab-grp full-tab-grp">
+                      <button type="button" data-tabs-content="mall-tab01" class="tab active">상세 정보</button>
+                      <button type="button" data-tabs-content="mall-tab02" class="tab">리뷰</button>
+                      <button type="button" data-tabs-content="mall-tab03" class="tab">문의</button>
                     </div>
-                    <div class="tabs">
-                      <div class="tab-grp full-tab-grp">
-                        <button type="button" class="tab active">상세 정보</button>
-                        <button type="button" class="tab">리뷰</button>
-                        <button type="button" class="tab">문의</button>
+                  </div>
+                  <div class="tabs-content-container">
+
+                    <!-- 상세정보 -->
+
+                    <!-- TODO: 보여지는 탭에 show 클래스 추가 -->
+                    <div id="mall-tab01" class="tabs-content show">
+                      <div class="tab-img-detail-area">
+                        <img src="assets/images/sample/img-sample-detail01.png" alt="" class="img-detail">
                       </div>
                     </div>
-                    <div>
 
-                      <!-- 상세정보 -->
-                      <div>
-                        <div>
-                          <img src="" alt="">
-                        </div>
-                      </div>
+                    <!-- END 상세정보 -->
 
-                      <!-- END 상세정보 -->
-
-                      <!-- 리뷰 -->
-                      <div>
-                        <section>
-                          <div>
-                            <p class="txt">
-                              <span>후기 전체</span>&nbsp;<span>총 5개</span>
+                    <!-- 리뷰 -->
+                    <div id="mall-tab02" class="tabs-content">
+                      <div class="tab-review-area">
+                        <section class="section">
+                          <div class="average-review-item">
+                            <p class="txt-wrap">
+                              <span class="gray-txt">상품 리뷰</span><span class="main-green-txt">총 5개</span>
                             </p>
+                            <div class="stars-wrap">
+                              <i class="ico ico-stars type05"></i>
+                              <p class="star-txt-item">
+                                <span class="dark-txt">4.9</span>
+                                <span class="gray-txt">/ 5.0</span>
+                              </p>
+                            </div>
                           </div>
-                          <div>
-                            <div></div>
-                            <p>
-                              <span>4.9</span>
-                              <span>/ 5.0</span>
-                            </p>
-                          </div>
-                          <div>
-                            <h4>이 상품을 구매하셨나요?</h4>
-                            <p>다른 고객님들을 위해 상품 리뷰를 남겨보세요.</p>
-                            <button type="button">리뷰 작성하러가기</button>
+                          <div class="advice-box-item">
+                            <h4 class="ttl">이 상품을 구매하셨나요?</h4>
+                            <p class="desc">다른 고객님들을 위해 상품 리뷰를 남겨보세요.</p>
+                            <a href="mall-review-create.html" class="btn btn-w100 theme-bd-btn btn-lg square-btn">리뷰
+                              작성하러가기</a>
                           </div>
                         </section>
-                        <div>
-                          <div class="">
-                            <div>
-                              <span class="txt">후기 전체 (5)</span>
-                            </div>
-                            <div>
-                              <div>
-                                <span class="txt">평점순</span>
+                        <div class="search-select-wrap">
+                          <div class="d-iflex-row">
+                            <span class="gray-txt cnt-txt">리뷰 전체</span>
+                          </div>
+                          <div class="mg-left">
+
+                            <!-- 옵션 선택 영역 -->
+                            <div class="custom-select-wrap">
+
+                              <!-- 선택값 보여지는 타겟 -->
+                              <div class="custom-select">
+                                <span class="txt">최신순</span>
                               </div>
-                              <div>
-                                <ul>
+
+                              <!-- END 선택값 보여지는 타겟 -->
+
+                              <!-- 옵션 리스트 -->
+                              <div class="custom-option-wrap">
+                                <ul class="custom-option">
+                                  <li class="opt-list">
+                                    <span>최신순</span>
+                                  </li>
+                                  <li class="opt-list">
+                                    <span>별점순</span>
+                                  </li>
+                                </ul>
+                              </div>
+
+                              <!-- END 옵션 리스트 -->
+                            </div>
+
+                            <!-- END 옵션 선택 영역 -->
+                          </div>
+                        </div>
+
+                        <!-- TODO: 목록 있을 때 -->
+                        <div class="col-list-grp-wrap">
+                          <div class="col-list-grp">
+                            <div class="list">
+                              <div class="col-item rv-card-item">
+                                <ul class="card-information">
                                   <li>
-                                    <span>5.0</span>
-                                    <span>4.0</span>
+                                    <div class="d-flex-row star-txts-wrap">
+                                      <div class="ico-stars type05"></div>
+                                      <div class="txts mg-left">
+                                        <span class="txt">ad********1</span>
+                                        <span class="txt">2023-11-03</span>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <p class="rv-txt">서비스 최고에요 ~</p>
                                   </li>
                                 </ul>
                               </div>
                             </div>
-                          </div>
-                          <div>
-                            <div class="col-list-grp">
-                              <div class="list">
-                                <div class="rv-card-item">
-                                  <ul>
-                                    <li>
-                                      <div>
-                                        <div></div>
-                                        <div>
-                                          <span>c**2</span>
-                                          <span>2023-11-03</span>
-                                        </div>
+                            <div class="list">
+                              <div class="col-item rv-card-item">
+                                <ul class="card-information">
+                                  <li>
+                                    <div class="d-flex-row star-txts-wrap">
+                                      <div class="ico-stars type05"></div>
+                                      <div class="txts mg-left">
+                                        <span class="txt">b********m</span>
+                                        <span class="txt">2023-11-03</span>
                                       </div>
-                                    </li>
-                                    <li>
-                                      <p class="txt">저희 춘식이가 몽이 펫시터님 말은 되게 잘듣더라구요 !</p>
-                                    </li>
-                                  </ul>
-                                </div>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <p class="rv-txt">저희 춘식이가 몽이 펫시터님 말은 되게 잘듣더라구요 !</p>
+                                  </li>
+                                </ul>
                               </div>
                             </div>
-                            <button type="button">
-                              <p>
-                                <span class="txt">더보기</span>
-                                <i></i>
-                              </p>
-                            </button>
+                            <div class="list">
+                              <div class="col-item rv-card-item">
+                                <ul class="card-information">
+                                  <li>
+                                    <div class="d-flex-row star-txts-wrap">
+                                      <div class="ico-stars type05"></div>
+                                      <div class="txts mg-left">
+                                        <span class="txt">c**2</span>
+                                        <span class="txt">2023-11-01</span>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <p class="rv-txt">시츄 5년째 보호 중인데, 몽이 펫시터님도 보호 중이라고 하셔서 믿고 맡겼습니다 ! 역시나 최고였어요.</p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="col-item rv-card-item">
+                                <ul class="card-information">
+                                  <li>
+                                    <div class="d-flex-row star-txts-wrap">
+                                      <div class="ico-stars type05"></div>
+                                      <div class="txts mg-left">
+                                        <span class="txt">q****9</span>
+                                        <span class="txt">2023-10-31</span>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <p class="rv-txt">시간 약속은 칼같이 지키셔서 좋았습니다.</p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="list">
+                              <div class="col-item rv-card-item">
+                                <ul class="card-information">
+                                  <li>
+                                    <div class="d-flex-row star-txts-wrap">
+                                      <div class="ico-stars type05"></div>
+                                      <div class="txts mg-left">
+                                        <span class="txt">p**i</span>
+                                        <span class="txt">2023-10-15</span>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <p class="rv-txt">만족</p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+
+                            <!-- 예시 list -->
+                          </div>
+                          <button type="button" class="btn-w100 gray-bd-btn">
+                            <p class="gray-bd-btn-txt">
+                              <span class="txt">더보기</span>
+                              <i class="ico ico-arrow-down-gray"></i>
+                            </p>
+                          </button>
+                        </div>
+
+                        <!-- END 목록 있을 때 -->
+
+                        <!-- TODO: 목록 없을 때 -->
+                        <div class="nothing-list-grp" style="display: none;">
+                          <div class="nothing-list">
+                            <i class="ico ico-nothing-list"></i>
+                            <h3 class="nl-ttl">등록된 리뷰가 없습니다.</h3>
+                            <p class="nl-desc"></p>
                           </div>
                         </div>
+
+                        <!-- END 목록 없을 때 -->
                       </div>
+                    </div>
 
-                      <!-- END 리뷰 -->
+                    <!-- END 리뷰 -->
 
-                      <!-- 문의 -->
-                      <div>
-                        <section>
-                          <div>
-                            <h4>이 상품에 대해 궁금한 점이 있으신가요?</h4>
-                            <p>판매자와의 채팅을 통해 문의하세요.</p>
-                            <button type="button">판매자에게 상품 문의하기</button>
+                    <!-- 문의 -->
+                    <div id="mall-tab03" class="tabs-content">
+                      <div class="tab-inquiry-area">
+                        <section class="section">
+                          <div class="advice-box-item">
+                            <h4 class="ttl">이 상품에 대해 궁금한 점이 있으신가요?</h4>
+                            <p class="desc">판매자와의 채팅을 통해 문의하세요.</p>
+                            <button type="button" class="btn btn-w100 theme-bd-btn btn-lg square-btn">판매자에게 상품 문의하기</button>
                           </div>
                         </section>
                       </div>
-
-                      <!-- END 문의 -->
                     </div>
+
+                    <!-- END 문의 -->
                   </div>
                 </div>
               </div>
@@ -205,12 +310,15 @@
 
             <!-- layout) 페이지 하단 -->
             <div class="l-contt-bottom">
-              <div class="price-btn-wrap">
-                <div>
-                  <span>50,000원</span>
+              <div class="mall-detail-bottom">
+                <div class="d-iflex-row">
+                  <span class="dark-txt">50,000원</span>
                 </div>
-                <button type="button" class="btn theme-solid-btn btn-lg square-btn">
-                  <span class="txt">구매하기</span>
+                <div class="mg-left d-iflex-row">
+                  <button type="button" class="btn theme-solid-btn btn-lg square-btn">
+                    <span class="txt">구매하기</span>
+                  </button>
+                </div>
               </div>
             </div>
 

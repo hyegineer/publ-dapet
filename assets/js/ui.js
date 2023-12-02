@@ -10,6 +10,13 @@
     $(this).on('keyup input', function () { resizeTextarea(this); }).removeAttr('data-autoresize');
   })
 
+  // 셀렉트: 선택하면 글씨 색 바뀌는 효과
+  $('select[data-customselect]').change(function () {
+    if ($(this).val()) {
+      $(this).css('color', '#000');
+    }
+  })
+
   // 텍스트에어리어: 글자수 체크
   $('.js-txtarea').keyup(function (e) {
     let content = $(this).val();
@@ -75,10 +82,14 @@
     $target.parent().remove();
   });
 
-  // 셀렉트: 선택하면 글씨 색 바뀌는 효과
-  $('[data-customselect]').change(function () {
-    if ($(this).val()) {
-      $(this).css('color', '#000');
-    }
+  // 탭 버튼 효과
+  $('button[data-tabs-content]').on('click', function (e) {
+    var content = $(this).attr('data-tabs-content');
+
+    $('button[data-tabs-content]').removeClass('active');
+    $(this).addClass('active');
+
+    $('.tabs-content').removeClass('show');
+    $(`#${content}`).addClass('show');
   })
 })();
