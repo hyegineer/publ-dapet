@@ -812,6 +812,9 @@ img {
   padding: 2rem 1.5rem;
   border-bottom: 1px solid var(--gray-light, #f1f1f1);
 }
+.dp-ttl-wrap .mini-txt-wrap {
+  margin-bottom: 1rem;
+}
 .dp-ttl-wrap .dp-ttl {
   font-size: 2rem;
   font-weight: 500;
@@ -1314,6 +1317,14 @@ img {
   background-image: url(../images/ico/ico-plus-white.svg);
 }
 
+.ico-like-bd {
+  background-image: url(../images/ico/ico-like-bd.svg);
+}
+
+.ico-like-solid {
+  background-image: url(../images/ico/ico-like-solid.svg);
+}
+
 /* ======================== 구성요소 - 버튼 ======================== */
 .btn {
   padding: 0;
@@ -1482,6 +1493,41 @@ img {
   display: block;
 }
 
+.like-btn {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 100px;
+  border: 1px solid var(--gray-light, #f1f1f1);
+  padding: 0.5rem 1rem;
+  min-width: 9.3rem;
+  gap: 0.5rem;
+}
+.like-btn .txt {
+  color: var(--gray, #aeaeae);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.like-btn .ico {
+  width: 2rem;
+  height: 2rem;
+}
+.like-btn .ico-on {
+  display: none;
+}
+
+.like-btn.on .ico-off {
+  display: none;
+}
+.like-btn.on .ico-on {
+  display: block;
+}
+
 /* ======================== 구성요소 - 목록 카드 아이템 ======================== */
 .card-information {
   display: flex;
@@ -1643,6 +1689,7 @@ img {
   align-items: center;
   justify-content: flex-start;
   gap: 1.5rem;
+  width: 100%;
 }
 .chat-card-item .card-information {
   gap: 3px;
@@ -2486,7 +2533,7 @@ img {
   }
 }
 .chat-create-wrap .custom-inp-textarea {
-  height: 5.18rem;
+  height: 5.16rem;
   padding: 1.5rem;
   min-height: auto;
   max-height: 13rem;
@@ -2511,6 +2558,7 @@ img {
   cursor: pointer;
   width: 6rem;
   height: 5.2rem;
+  flex-shrink: 0;
   border-radius: 5px;
   background-color: var(--main-green, #56C595);
   transition: all 0.3s;
@@ -2797,6 +2845,145 @@ img {
   color: white;
   font-size: 1.4rem;
   font-weight: 500;
+}
+
+/* 글 상세 */
+.bcomm-detail-page .dp-ttl {
+  color: black;
+}
+
+.board-dt-wrap {
+  padding: 0 1.5rem 2.5rem;
+}
+.board-dt-wrap .txt-wrap {
+  padding: 2rem 0;
+}
+.board-dt-wrap .txt {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.3;
+  color: var(--gray-dark, #6c6c6c);
+}
+
+.board-dt-comment-wrap {
+  background-color: #f7f7f7;
+}
+.board-dt-comment-wrap .search-select-wrap {
+  background-color: transparent;
+}
+.board-dt-comment-wrap .search-select-wrap .d-iflex-row {
+  gap: 0.5rem;
+}
+.board-dt-comment-wrap .custom-select-wrap {
+  padding: 0.5rem 0;
+}
+.board-dt-comment-wrap .col-list-grp {
+  padding: 0 1.5rem;
+}
+
+.comment-item {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.cmt-top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.cmt-top .thumbnail.circle {
+  width: 2.7rem;
+  height: 2.7rem;
+}
+.cmt-top .name {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.cmt-txt {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+.cmt-bottom {
+  margin-top: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sm-square-btn {
+  background-color: white;
+  border: 1px solid var(--gray-light, #f1f1f1);
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+}
+
+.sm-square-btn.type-like {
+  color: var(--red, #cd3e3e);
+}
+
+.comment-create-wrap {
+  padding: 1rem 1.5rem;
+  /* iPhone XR : 1792x828px at 326ppi */
+  /* iPhone XS : 2436x1125px at 458ppi */
+  /* iPhone XS Max : 2688x1242px at 458ppi */
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+  .comment-create-wrap {
+    padding-bottom: 4rem;
+  }
+}
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .comment-create-wrap {
+    padding-bottom: 4rem;
+  }
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  .comment-create-wrap {
+    padding-bottom: 4rem;
+  }
+}
+.comment-create-wrap .custom-inp-textarea {
+  height: 5.16rem;
+  padding: 1.5rem;
+  min-height: auto;
+  max-height: 13rem;
+}
+.comment-create-wrap .send-btn.before {
+  background-color: var(--gray-light, #f1f1f1);
+}
+.comment-create-wrap .send-btn.before .txt {
+  color: var(--gray, #AEAEAE);
+}
+.comment-create-wrap .send-btn {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 6rem;
+  height: 5.2rem;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background-color: var(--main-green, #56C595);
+  transition: all 0.3s;
+}
+.comment-create-wrap .send-btn .txt {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: white;
 }
 
 /* 글 작성 */

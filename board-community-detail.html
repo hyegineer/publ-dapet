@@ -22,12 +22,12 @@
       <div class="l-wrapper">
 
         <!-- TODO: ***** 커뮤니티 글 상세 페이지 ***** -->
-        <div class="l-container">
+        <div class="bcomm-detail-page l-container">
 
           <!-- TODO: layout) 헤더 타입 02 -->
 
           <!-- TODO: 밑줄 있는 화면일 때는 type-bd 클래스 추가 -->
-          <header class="header type-bd">
+          <header class="header ">
             <div class="header-inner">
 
               <!-- 헤더 왼쪽 -->
@@ -48,7 +48,7 @@
 
               <!-- 헤더 중앙 -->
               <div class="hd-center ">
-                <span class="ttl">펫시터 찾기</span>
+                <span class="ttl"></span>
               </div>
 
               <!-- 헤더 오른쪽 -->
@@ -80,55 +80,127 @@
                 <div class="detail-page-container">
 
                   <!-- 사진 -->
-                  <div></div>
+                  <div class="detail-page-top">
+                    <div class="thumbnail-wrap"></div>
+                  </div>
 
                   <!-- 정보 -->
-                  <div>
-                    <div>
+                  <div class="detail-page-bottom">
+                    <div class="dp-ttl-wrap">
                       <p class="mini-txt-wrap">
                         <span class="main-green-txt bd-right-txt">위치게시판</span>
                         <span class="gray-txt">2023-11-09</span>
                         <span class="gray-txt">몽이누나</span>
+                        <span class="gray-txt">조회 20</span>
                       </p>
-                      <h3 class="">강아지가 신발을 물 때</h3>
+                      <h3 class="dp-ttl">강아지가 신발을 물 때</h3>
                     </div>
-                    <div>
-                      <div>
-                        <p>안녕하세요 ~ 강아지박사입니다.
-                          여러분 ! 혹시 강아지가 신발을 물거나 계속적으로 관심을 가질 때가 있지 않나요?
+                    <div class="board-dt-wrap">
+                      <div class="txt-wrap">
+                        <p class="txt">안녕하세요 ~ 강아지박사입니다. <br><br>
+                          여러분 ! 혹시 강아지가 신발을 물거나 계속적으로 관심을 가질 때가 있지 않나요? <br><br>
                           그 이유는 어쩌구 저쩌구...</p>
                       </div>
-                      <button type="button">
+
+                      <!-- TODO: like-btn 클릭시 on 클래스 추가 -->
+                      <button type="button" class="like-btn on">
                         <span class="txt">이 글 추천</span>
-                        <i></i>
+                        <i class="ico ico-like-bd ico-off"></i>
+                        <i class="ico ico-like-solid ico-on"></i>
                       </button>
                     </div>
                   </div>
 
                   <!-- 댓글 -->
-                  <div>
-                    <div>
+                  <div class="board-dt-comment-wrap">
+                    <div class="search-select-wrap">
+                      <div class="d-iflex-row">
+                        <span class="gray-txt cnt-txt">전체</span>
+                        <span class="main-green-txt cnt-txt">2</span>
+                      </div>
+                      <div class="mg-left">
+
+                        <!-- 옵션 선택 영역 -->
+                        <div class="custom-select-wrap">
+
+                          <!-- 선택값 보여지는 타겟 -->
+                          <div class="custom-select">
+                            <span class="txt">최신순</span>
+                          </div>
+
+                          <!-- END 선택값 보여지는 타겟 -->
+
+                          <!-- 옵션 리스트 -->
+                          <div class="custom-option-wrap">
+                            <ul class="custom-option">
+                              <li class="opt-list">
+                                <span>최신순</span>
+                              </li>
+                              <li class="opt-list">
+                                <span>별점순</span>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <!-- END 옵션 리스트 -->
+                        </div>
+
+                        <!-- END 옵션 선택 영역 -->
+                      </div>
                     </div>
-                    <ul>
-                      <li>
-                        <div>
-                          <div>
-                            <figure></figure>
-                            <span>toysix</span>
-                            <span>2023-09-07</span>
-                            <span>20:31</span>
+                    <ul class="col-list-grp">
+
+                      <!-- 댓글 -->
+                      <li class="list">
+                        <div class="col-item comment-item">
+                          <div class="cmt-top">
+                            <figure class="thumbnail circle">
+                              <img src="assets/images/sample/img-sample04.png" alt="" class="thumbnail-img">
+                            </figure>
+                            <span class="name">toysix</span>
+                            <div class="gray-dot-txt">
+                              <span class="gray-dot-txt">2023-09-07</span>
+                              <span class="gray-dot-txt">20:31</span>
+                            </div>
                           </div>
-                          <div>
-                            <p>너무 이뻐요~~ ^^</p>
+                          <div class="cmt-mid">
+                            <p class="cmt-txt">너무 이뻐요~~ ^^</p>
                           </div>
-                          <div>
-                            <div>
-                              <button type="button">좋아요 0</button>
-                              <button type="button">싫어요</button>
+                          <div class="cmt-bottom">
+                            <div class="mg-left">
+                              <button type="button" class="btn sm-square-btn type-like">좋아요 0</button>
                             </div>
                           </div>
                         </div>
                       </li>
+
+                      <!-- END 댓글 -->
+
+                      <!-- 댓글 -->
+                      <li class="list">
+                        <div class="col-item comment-item">
+                          <div class="cmt-top">
+                            <figure class="thumbnail circle">
+                              <img src="assets/images/sample/img-sample03.png" alt="" class="thumbnail-img">
+                            </figure>
+                            <span class="name">toysix</span>
+                            <div class="gray-dot-txt">
+                              <span class="gray-dot-txt">2023-09-07</span>
+                              <span class="gray-dot-txt">20:31</span>
+                            </div>
+                          </div>
+                          <div class="cmt-mid">
+                            <p class="cmt-txt">너무 이뻐요~~ ^^</p>
+                          </div>
+                          <div class="cmt-bottom">
+                            <div class="mg-left">
+                              <button type="button" class="btn sm-square-btn type-like">좋아요 0</button>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <!-- END 댓글 -->
                     </ul>
                   </div>
                 </div>
@@ -139,9 +211,13 @@
 
             <!-- layout) 페이지 하단 -->
             <div class="l-contt-bottom">
-              <div>
-                <textarea></textarea>
-                <button type="button">등록</button>
+              <div class="comment-create-wrap textarea-create-wrap">
+                <textarea data-autoresize rows="1" class="custom-inp-textarea" placeholder="댓글을 입력해 주세요."></textarea>
+
+                <!-- TODO: textarea에 입력하면 send-btn에 before 클래스가 사라지면서 활성화가 됨 -->
+                <button type="button" class="send-btn before">
+                  <span class="txt">등록</span>
+                </button>
               </div>
             </div>
 

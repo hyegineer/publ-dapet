@@ -1,4 +1,14 @@
 (function () {
+  $('.textarea-create-wrap textarea[data-autoresize]').on('input', function () {
+    if ($(this).siblings('.send-btn')) {
+      if ($(this).val()) {
+        $(this).siblings('.send-btn').removeClass('before');
+      } else {
+        $(this).siblings('.send-btn').addClass('before');
+      }
+    }
+  })
+
   // 텍스트에어리어: 자동 높이 조절
   $('textarea[data-autoresize]').each(function () {
     var offset = this.offsetHeight - this.clientHeight;
