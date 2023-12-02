@@ -29,4 +29,49 @@
       alert('글자수는 200자까지 입력 가능합니다.');
     };
   });
+
+  // FIXME: 임시로 만든 이미지 업로드 시 썸네일 보이게 처리한 script
+  var uploadFiles = [];
+
+  $(".js-upload-inp").change(function (e) {
+    var files = e.target.files;
+    var parentDiv = e.target.parentNode.parentNode.getAttribute('id');
+
+    for (var i = 0; i < files.length; i++) {
+      var file = files[i];
+      var size = uploadFiles.push(file);
+
+      //업로드 목록에 추가    
+      preview(parentDiv, file, size - 1);
+      //미리보기 만들기  
+    }
+  });
+
+  function preview(parentElement, file, idx) {
+    var reader = new FileReader();
+    reader.onload = (function (f, idx) {
+      return function (e) {
+        var div = `<div class="attach-list">
+                      <div class="square-card">
+                        <img src="${e.target.result}" title="${escape(f.name)}"" alt="" class="thumbnail-img">
+                      </div>
+
+                      <button type="button" class="del-btn" data-idx="${idx}">
+                        <span class="txt-hidden">삭제</span>
+                      </button>
+                    </div>`;
+
+        $(`#${parentElement}`).append(div);
+      };
+    })(file, idx);
+    reader.readAsDataURL(file);
+  }
+
+  $(".attach-list-grp").on("click", ".del-btn", function (e) {
+    var $target = $(e.target);
+    var idx = $target.attr('data-idx');
+
+    uploadFiles[idx].upload = 'disable';
+    $target.parent().remove();
+  });
 })();
