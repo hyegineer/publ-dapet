@@ -1710,6 +1710,9 @@ img {
 }
 
 /* 카드 아이템 - 리뷰 카드 아이템 */
+.rv-card-item {
+  width: 100%;
+}
 .rv-card-item .star-txts-wrap {
   margin-bottom: 1.3rem;
 }
