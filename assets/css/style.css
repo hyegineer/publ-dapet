@@ -513,6 +513,13 @@ img {
 .col-list-grp .col-item {
   border-bottom: 1px solid var(--gray-light, #f1f1f1);
 }
+.col-list-grp .list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 .col-list-grp .list:last-child .col-item {
   border-bottom: 0;
 }
@@ -2340,9 +2347,6 @@ img {
 
 /* ======================== 페이지 - 기부몰 글 작성 ======================== */
 /* 글 목록 */
-.dnmall-list-page .header {
-  border-bottom: 1px solid var(--gray-light, #f1f1f1);
-}
 .dnmall-list-page .page {
   height: 100%;
   position: relative;
