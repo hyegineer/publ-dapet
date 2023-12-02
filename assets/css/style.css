@@ -1669,6 +1669,69 @@ img {
   vertical-align: bottom;
 }
 
+/* 목록 카드 아이템 타입 04 (기부몰 목록 등...) */
+.list-card-item.type04 {
+  gap: 1rem;
+  align-items: center;
+}
+.list-card-item.type04 .thumbnail {
+  width: 10rem;
+  height: 10rem;
+}
+.list-card-item.type04 .card-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.8rem;
+  height: 3.6rem;
+  height: auto;
+  max-height: 4rem;
+  font-size: 1.6rem;
+  line-height: 1.3;
+}
+.list-card-item.type04 .card-desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.5rem;
+  height: 3rem;
+  height: auto;
+  max-height: 3rem;
+}
+.list-card-item.type04 .txt-btn-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.list-card-item.type04 .txt-btn-wrap .dark-txt {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.list-card-item.type04 .rounded-btn {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 100px;
+  background-color: var(--main-green, #56C595);
+  padding: 0.6rem 1.5rem;
+  min-width: 7.2rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: white;
+}
+
 /* ======================== 페이지 - 가이드 & 컴포넌트 ======================== */
 #guide-page {
   background-color: #CFD7CF;
@@ -2354,34 +2417,14 @@ img {
 .dnmall-list-page .nothing-list-grp {
   height: 100%;
 }
+.dnmall-list-page .col-list-grp {
+  padding-bottom: 2rem;
+}
 .dnmall-list-page .col-list-grp .list {
   padding: 0 1.5rem;
 }
 .dnmall-list-page .col-list-grp .list .col-item {
   padding: 1.5rem 0;
-}
-.dnmall-list-page .bcomm-create-btn {
-  position: absolute;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  /* iPhone XR : 1792x828px at 326ppi */
-  /* iPhone XS : 2436x1125px at 458ppi */
-  /* iPhone XS Max : 2688x1242px at 458ppi */
-}
-@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
-  .dnmall-list-page .bcomm-create-btn {
-    bottom: 4.5rem;
-  }
-}
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-  .dnmall-list-page .bcomm-create-btn {
-    bottom: 4.5rem;
-  }
-}
-@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
-  .dnmall-list-page .bcomm-create-btn {
-    bottom: 4.5rem;
-  }
 }
 
 /* 글 작성 */
