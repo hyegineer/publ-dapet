@@ -37,7 +37,9 @@ figcaption {
 a {
   color: inherit;
   text-decoration: none;
+  -webkit-tap-hightlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-hightlight-color: transparent;
+  outline: none;
 }
 
 table {
@@ -107,5 +109,7 @@ select,
 textarea {
   box-sizing: border-box;
   font-family: "Pretendard Variable", Pretendard, -apple-system, "Apple Color Emoji", sans-serif;
+  -webkit-tap-hightlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-hightlight-color: transparent;
+  outline: none;
 }
