@@ -22,12 +22,12 @@
       <div class="l-wrapper">
 
         <!-- TODO: ***** 기부몰 목록 페이지 ***** -->
-        <div class="l-container">
+        <div class="dnmall-list-page l-container">
 
           <!-- TODO: layout) 헤더 타입 02 -->
 
           <!-- TODO: 밑줄 있는 화면일 때는 type-bd 클래스 추가 -->
-          <header class="header type-bd">
+          <header class="header ">
             <div class="header-inner">
 
               <!-- 헤더 왼쪽 -->
@@ -48,7 +48,7 @@
 
               <!-- 헤더 중앙 -->
               <div class="hd-center ">
-                <span class="ttl">펫시터 찾기</span>
+                <span class="ttl">다펫몰</span>
               </div>
 
               <!-- 헤더 오른쪽 -->
@@ -83,35 +83,78 @@
             </div>
             <div class="l-contt-top">
               <div class="page">
-                <div>
-                  <div>
-                    <div class="col-list-grp col-list-active-grp">
-                      <div class="list">
-                        <div class="list-card-item type04">
-                          <figure class="thumbnail">
-                            <img src="" alt="">
-                          </figure>
-                          <ul>
-                            <li>
-                              <h3 class="card-name">용인 행강 보호소</h3>
-                            </li>
-                            <li>
-                              <p class="card-desc gray-txt">2023년 5월, 행강보호소에는 보호견 310여 마리가 생활하고 있습니다. 현재 보호소의 사료가 ...</p>
-                            </li>
-                            <li>
-                              <div>
-                                <span>₩ 200</span>
-                                <button type="button" class="rounded-btn">기부하기</button>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
+
+                <!-- TODO: 목록 있을 때 -->
+                <div class="col-list-grp col-list-active-grp">
+
+                  <!-- 리스트 -->
+                  <div class="list">
+                    <a href="donation-mall-detail.html" class="col-item list-card-item type04">
+
+                      <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                      <figure class="thumbnail">
+                        <img src="assets/images/sample/img-sample13.png" alt="" class="thumbnail-img">
+                      </figure>
+                      <ul class="card-information">
+                        <li>
+                          <h3 class="card-name">용인 행강 보호소</h3>
+                        </li>
+                        <li>
+                          <p class="card-desc gray-txt">2023년 5월, 행강보호소에는 보호견 310여 마리가 생활하고 있습니다. 현재 보호소의 사료가 ...</p>
+                        </li>
+                        <li>
+                          <div class="txt-btn-wrap">
+                            <span class="dark-txt">₩ 200</span>
+                            <button type="button" class="rounded-btn">기부하기</button>
+                          </div>
+                        </li>
+                      </ul>
+                    </a>
+                  </div>
+
+                  <!-- END 리스트 -->
+
+                  <!-- 리스트 -->
+                  <div class="list">
+                    <a href="donation-mall-detail.html" class="col-item list-card-item type04">
+
+                      <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                      <figure class="thumbnail">
+                        <img src="assets/images/sample/img-sample13.png" alt="" class="thumbnail-img">
+                      </figure>
+                      <ul class="card-information">
+                        <li>
+                          <h3 class="card-name">용인 행강 보호소</h3>
+                        </li>
+                        <li>
+                          <p class="card-desc gray-txt">2023년 5월, 행강보호소에는 보호견 310여 마리가 생활하고 있습니다. 현재 보호소의 사료가 ...</p>
+                        </li>
+                        <li>
+                          <div class="txt-btn-wrap">
+                            <span class="dark-txt">₩ 200</span>
+                            <button type="button" class="rounded-btn">기부하기</button>
+                          </div>
+                        </li>
+                      </ul>
+                    </a>
+                  </div>
+
+                  <!-- END 리스트 -->
+                </div>
+
+                <!-- END 목록 있을 때 -->
+
+                <!-- TODO: 목록 없을 때 -->
+                <div class="nothing-list-grp type-center" style="display: none;">
+                  <div class="nothing-list">
+                    <i class="ico ico-nothing-list"></i>
+                    <h3 class="nl-ttl">등록된 다펫몰 글이 없습니다.</h3>
+                    <p class="nl-desc"></p>
                   </div>
                 </div>
+
+                <!-- END 목록 없을 때 -->
               </div>
-              <a href="#" class="">+ 글쓰기</a>
             </div>
 
             <!-- END layout) 페이지 상단 -->

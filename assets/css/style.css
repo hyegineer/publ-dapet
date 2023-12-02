@@ -2277,7 +2277,7 @@ img {
   }
 }
 .chat-create-wrap .custom-inp-textarea {
-  height: 5.2rem;
+  height: 5.18rem;
   padding: 1.5rem;
   min-height: auto;
   max-height: 13rem;
@@ -2339,6 +2339,48 @@ img {
 }
 
 /* ======================== 페이지 - 기부몰 글 작성 ======================== */
+/* 글 목록 */
+.dnmall-list-page .header {
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
+}
+.dnmall-list-page .page {
+  height: 100%;
+  position: relative;
+}
+.dnmall-list-page .nothing-list-grp {
+  height: 100%;
+}
+.dnmall-list-page .col-list-grp .list {
+  padding: 0 1.5rem;
+}
+.dnmall-list-page .col-list-grp .list .col-item {
+  padding: 1.5rem 0;
+}
+.dnmall-list-page .bcomm-create-btn {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  /* iPhone XR : 1792x828px at 326ppi */
+  /* iPhone XS : 2436x1125px at 458ppi */
+  /* iPhone XS Max : 2688x1242px at 458ppi */
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+  .dnmall-list-page .bcomm-create-btn {
+    bottom: 4.5rem;
+  }
+}
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .dnmall-list-page .bcomm-create-btn {
+    bottom: 4.5rem;
+  }
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  .dnmall-list-page .bcomm-create-btn {
+    bottom: 4.5rem;
+  }
+}
+
+/* 글 작성 */
 .dnmall-create-page .page {
   padding: 1rem 1.5rem;
 }
@@ -2359,6 +2401,9 @@ img {
 .bcomm-list-page .page {
   height: 100%;
   position: relative;
+}
+.bcomm-list-page .nothing-list-grp {
+  height: 100%;
 }
 .bcomm-list-page .col-list-grp .list {
   padding: 0 1.5rem;
