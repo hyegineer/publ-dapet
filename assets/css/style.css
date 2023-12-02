@@ -1672,6 +1672,7 @@ img {
 .card-item.type03 {
   width: 200px;
   border: 1px solid var(--gray-light, #f1f1f1);
+  border-radius: 5px;
 }
 .card-item.type03 .thumbnail {
   width: 100%;
