@@ -517,6 +517,10 @@ img {
   border-bottom: 0;
 }
 
+.col-list-active-grp .list:active {
+  background-color: #f5f5f5;
+}
+
 /* 목록 나열 (가로로) */
 .row-list-grp {
   display: flex;
@@ -1163,6 +1167,10 @@ img {
 
 .ico-status-msg-orange {
   background-image: url(../images/ico/ico-status-msg-orange.svg);
+}
+
+.ico-plus-white {
+  background-image: url(../images/ico/ico-plus-white.svg);
 }
 
 /* ======================== 구성요소 - 버튼 ======================== */
@@ -2343,7 +2351,72 @@ img {
   height: 15rem;
 }
 
-/* ======================== 페이지 - 커뮤니티 글 작성 ======================== */
+/* ======================== 페이지 - 커뮤니티 ======================== */
+/* 글 목록 */
+.bcomm-list-page .header {
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
+}
+.bcomm-list-page .page {
+  height: 100%;
+  position: relative;
+}
+.bcomm-list-page .col-list-grp .list {
+  padding: 0 1.5rem;
+}
+.bcomm-list-page .col-list-grp .list .col-item {
+  padding: 1.5rem 0;
+}
+.bcomm-list-page .bcomm-create-btn {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  /* iPhone XR : 1792x828px at 326ppi */
+  /* iPhone XS : 2436x1125px at 458ppi */
+  /* iPhone XS Max : 2688x1242px at 458ppi */
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+  .bcomm-list-page .bcomm-create-btn {
+    bottom: 4.5rem;
+  }
+}
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .bcomm-list-page .bcomm-create-btn {
+    bottom: 4.5rem;
+  }
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  .bcomm-list-page .bcomm-create-btn {
+    bottom: 4.5rem;
+  }
+}
+
+.bcomm-create-btn {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 100px;
+  background-color: #000;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.25);
+  gap: 0.5rem;
+  min-width: 9rem;
+  padding: 1rem;
+}
+.bcomm-create-btn .ico {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.bcomm-create-btn .txt {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+/* 글 작성 */
 .bcomm-create-page .page {
   padding: 1rem 1.5rem;
 }

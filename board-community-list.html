@@ -22,7 +22,7 @@
       <div class="l-wrapper">
 
         <!-- TODO: ***** 커뮤니티 글 목록 페이지 ***** -->
-        <div class="l-container">
+        <div class="bcomm-list-page l-container">
 
           <!-- TODO: layout) 헤더 타입 02 -->
 
@@ -48,7 +48,7 @@
 
               <!-- 헤더 중앙 -->
               <div class="hd-center ">
-                <span class="ttl">펫시터 찾기</span>
+                <span class="ttl">커뮤니티</span>
               </div>
 
               <!-- 헤더 오른쪽 -->
@@ -86,34 +86,101 @@
             </div>
             <div class="l-contt-top">
               <div class="page">
-                <div>
-                  <div>
-                    <div class="col-list-grp">
-                      <div class="list">
-                        <div class="list-card-item type01">
-                          <ul>
-                            <li>
-                              <p class="mini-txt-wrap">
-                                <span class="main-green-txt bd-right-txt">위치게시판</span>
-                                <span class="gray-txt">2023-11-09</span>
-                                <span class="gray-txt">몽이누나</span>
-                              </p>
-                            </li>
-                            <li>
-                              <h3 class="card-name">펫시터 몽이누나님의 산책루튼</h3>
-                            </li>
-                            <li>
-                              <p class="card-desc">오늘은 펫시터로써 자주 가는 저의 산책 루트를 소개해 드리려고 합니다! 산책루트는 어쩌구 저쩌구 어쩌구...</p>
-                            </li>
-                          </ul>
-                          <figure class="thumbnail"></figure>
-                        </div>
-                      </div>
-                    </div>
+                <div class="col-list-grp col-list-active-grp">
+
+                  <!-- 리스트 -->
+                  <div class="list">
+                    <a href="board-community-detail.html" class="col-item list-card-item type01">
+                      <ul class="card-information">
+                        <li>
+                          <p class="mini-txt-wrap">
+                            <span class="main-green-txt bd-right-txt">위치게시판</span>
+                            <span class="gray-txt">2023-11-09</span>
+                            <span class="gray-txt">몽이누나</span>
+                          </p>
+                        </li>
+                        <li>
+                          <h3 class="card-name">펫시터 몽이누나님의 산책루트</h3>
+                        </li>
+                        <li>
+                          <p class="card-desc">오늘은 펫시터로써 자주 가는 저의 산책 루트를 소개해 드리려고 합니다! 산책루트는 어쩌구 저쩌구 어쩌구...</p>
+                        </li>
+                      </ul>
+
+                      <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                      <figure class="thumbnail inactive">
+                        <img src="assets/images/sample/img-sample01.png" alt="" class="thumbnail-img">
+                      </figure>
+                    </a>
                   </div>
+
+                  <!-- END 리스트 -->
+
+                  <!-- 리스트 -->
+                  <div class="list">
+                    <a href="board-community-detail.html" class="col-item list-card-item type01">
+                      <ul class="card-information">
+                        <li>
+                          <p class="mini-txt-wrap">
+                            <span class="main-green-txt bd-right-txt">정보게시판</span>
+                            <span class="gray-txt">2023-11-09</span>
+                            <span class="gray-txt">강아지박사</span>
+                          </p>
+                        </li>
+                        <li>
+                          <h3 class="card-name">강아지가 신발을 물 때</h3>
+                        </li>
+                        <li>
+                          <p class="card-desc">오늘은 펫시터로써 자주 가는 저의 산책 루트를 소개해 드리려고 합니다! 산책루트는 어쩌구 저쩌구 어쩌구...</p>
+                        </li>
+                      </ul>
+
+                      <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                      <figure class="thumbnail inactive">
+                        <img src="assets/images/sample/img-sample02.png" alt="" class="thumbnail-img">
+                      </figure>
+                    </a>
+                  </div>
+
+                  <!-- END 리스트 -->
+
+                  <!-- 리스트 -->
+                  <div class="list">
+                    <a href="board-community-detail.html" class="col-item list-card-item type01">
+                      <ul class="card-information">
+                        <li>
+                          <p class="mini-txt-wrap">
+                            <span class="main-green-txt bd-right-txt">유머게시판</span>
+                            <span class="gray-txt">2023-11-09</span>
+                            <span class="gray-txt">몽이누나</span>
+                          </p>
+                        </li>
+                        <li>
+                          <h3 class="card-name">하품이 이렇게 이뻐도 돼요 안돼요?</h3>
+                        </li>
+                        <li>
+                          <p class="card-desc">하품하는 강아지 보고가세요 ~ 너무 귀엽죠 ㅜㅜ</p>
+                        </li>
+                      </ul>
+
+                      <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                      <figure class="thumbnail inactive">
+                        <img src="assets/images/sample/img-sample03.png" alt="" class="thumbnail-img">
+                      </figure>
+                    </a>
+                  </div>
+
+                  <!-- END 리스트 -->
                 </div>
+
+                <!-- 글쓰기 버튼 -->
+                <a href="board-community-create.html" class="bcomm-create-btn">
+                  <i class="ico ico-plus-white"></i>
+                  <span class="txt">글쓰기</span>
+                </a>
+
+                <!-- END 글쓰기 버튼 -->
               </div>
-              <a href="#" class="">+ 글쓰기</a>
             </div>
 
             <!-- END layout) 페이지 상단 -->
