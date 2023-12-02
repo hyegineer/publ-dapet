@@ -22,7 +22,7 @@
       <div class="l-wrapper">
 
         <!-- TODO: ***** 펫시터 프로필 페이지 ***** -->
-        <div class="l-container">
+        <div class="pst-profile-page l-container">
 
           <!-- TODO: layout) 헤더 타입 02 -->
 
@@ -77,69 +77,78 @@
             <!-- layout) 페이지 상단 -->
             <div class="l-contt-top">
               <div class="page">
-                <section>
-                  <div class="card-item type01">
-                    <figure class="thumbnail"></figure>
-                    <ul>
+                <section class="section">
+                  <div class="list-card-item type03">
+
+                    <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                    <figure class="thumbnail circle inactive">
+                      <img src="assets/images/sample/img-sample04.png" alt="" class="thumbnail-img">
+                    </figure>
+                    <ul class="card-information">
                       <li>
-                        <div>
-                          <h3>김몽이</h3>
-                          <button type="button">
-                            <i class="ico ico-heart-off"></i>
+                        <div class="d-flex-row star-heart-wrap">
+                          <h3 class="card-name">김몽이</h3>
+
+                          <!-- TODO: heart-btn 클릭시 하트 색깔 바뀜 -->
+                          <button type="button" class="heart-btn on">
+                            <i class="ico ico-heart-off ico-off"></i>
+                            <i class="ico ico-heart-on ico-on"></i>
                           </button>
                         </div>
                       </li>
                       <li>
-                        <div>
-                          <div class="star-txt-item">
-                            <i class="ico ico-star-yellow"></i>
-                            <span class="dark-txt">4.9</span>
-                            <span class="gray-txt">/ 5.0</span>
-                          </div>
+                        <div class="star-txt-item">
+                          <i class="ico ico-star-yellow"></i>
+                          <span class="dark-txt">4.9</span>
+                          <span class="gray-txt">/ 5.0</span>
                         </div>
                       </li>
                       <li>
-                        <button type="button">
-                          <span class="txt">펫시터 후기 확인</span>
-                          <i></i>
-                        </button>
+                        <a href="#" class="txt-arw-btn">
+                          <span>펫시터 후기 확인</span>
+                          <i class="ico ico-arrow-right-gray"></i>
+                        </a>
                       </li>
                     </ul>
                   </div>
                 </section>
-                <section>
-                  <ul>
-                    <li>
-                      <div>
-                        <i></i>
-                        <p>
+                <section class="section">
+                  <ul class="prf-list-grp">
+                    <li class="prf-list">
+                      <div class="ico-txt-wrap">
+                        <i class="ico ico-prf-list01"></i>
+                        <p class="txts">
                           <span>경력</span>
-                          <b>7 년</b>
+                          <b class="bold-txt">
+                            7&nbsp;년
+                          </b>
                         </p>
                       </div>
                     </li>
-                    <li>
-                      <div>
-                        <i></i>
-                        <p>
+                    <li class="prf-list">
+                      <div class="ico-txt-wrap">
+                        <i class="ico ico-prf-list02"></i>
+                        <p class="txts">
                           <span>고용</span>
-                          <b>10 회</b>
+                          <b class="bold-txt">
+                            10&nbsp;회
+                          </b>
                         </p>
                       </div>
                     </li>
-                    <li>
-                      <div>
-                        <i></i>
-                        <p>
-                          <b>비흡연자</b>
+                    <li class="prf-list">
+                      <div class="ico-txt-wrap">
+                        <i class="ico ico-prf-list03"></i>
+                        <p class="txts">
+                          <b class="bold-txt">비흡연자</b>
                         </p>
                       </div>
                     </li>
                   </ul>
                 </section>
-                <section>
-                  <div>
-                    <h3>서비스 지역 </h3>
+                <section class="section">
+                  <div class="section-ttl-wrap">
+                    <h3 class="ttl">서비스 지역 </h3>
                   </div>
                   <div class="contt">
                     <div class="badge-grp">
@@ -151,9 +160,9 @@
                     </div>
                   </div>
                 </section>
-                <section>
-                  <div>
-                    <h3>펫시터 소개</h3>
+                <section class="section">
+                  <div class="section-ttl-wrap">
+                    <h3 class="ttl">펫시터 소개</h3>
                   </div>
                   <div class="cont">
                     <div class="txt-wrap">
@@ -167,70 +176,94 @@
                     </div>
                   </div>
                 </section>
-                <section>
-                  <div>
-                    <h3>관련 자격증 사진</h3>
-                    <a href="#">
+                <section class="section type-pb0">
+                  <div class="section-ttl-wrap">
+                    <h3 class="ttl">펫시터 소개</h3>
+                    <a href="#" class="txt-arw-btn">
                       <span>더보기</span>
-                      <i></i>
+                      <i class="ico ico-arrow-right-gray"></i>
                     </a>
                   </div>
                   <div class="contt">
+
+                    <!-- TODO: 목록 있을 때 -->
                     <div class="row-list-grp">
                       <div class="list">
-                        <div class="thumbnail-item">
-                          <figure class="thumbnail">
-                            <img src="" alt="">
-                          </figure>
-                        </div>
+                        <figure class="square-card">
+
+                          <!-- <img src="" alt="" class="thumbnail-img"> -->
+                        </figure>
                       </div>
                       <div class="list">
-                        <div class="thumbnail-item">
-                          <figure class="thumbnail">
-                            <img src="" alt="">
-                          </figure>
-                        </div>
+                        <figure class="square-card">
+
+                          <!-- <img src="" alt="" class="thumbnail-img"> -->
+                        </figure>
+                      </div>
+                      <div class="list">
+                        <figure class="square-card">
+
+                          <!-- <img src="" alt="" class="thumbnail-img"> -->
+                        </figure>
                       </div>
                     </div>
-                    <div class="nothing-list-grp">
+
+                    <!-- END 목록 있을 때 -->
+
+                    <!-- TODO: 목록 없을 때 -->
+                    <div class="nothing-list-grp" style="display: none;">
                       <div class="nothing-list">
-                        <i></i>
-                        <h3>아직 등록된 사진이 없습니다.</h3>
+                        <i class="ico ico-nothing-picture"></i>
+                        <p class="nl-desc">아직 등록된 사진이 없습니다.</p>
                       </div>
                     </div>
+
+                    <!-- END 목록 없을 때 -->
                   </div>
                 </section>
-                <section>
-                  <div>
-                    <h3>서비스 사진</h3>
-                    <a href="#">
+                <section class="section type-pb0">
+                  <div class="section-ttl-wrap">
+                    <h3 class="ttl">서비스 사진</h3>
+                    <a href="#" class="txt-arw-btn">
                       <span>더보기</span>
-                      <i></i>
+                      <i class="ico ico-arrow-right-gray"></i>
                     </a>
                   </div>
                   <div class="contt">
+
+                    <!-- TODO: 목록 있을 때 -->
                     <div class="row-list-grp">
                       <div class="list">
-                        <div class="thumbnail-item">
-                          <figure class="thumbnail">
-                            <img src="" alt="">
-                          </figure>
-                        </div>
+                        <figure class="square-card">
+
+                          <!-- <img src="" alt="" class="thumbnail-img"> -->
+                        </figure>
                       </div>
                       <div class="list">
-                        <div class="thumbnail-item">
-                          <figure class="thumbnail">
-                            <img src="" alt="">
-                          </figure>
-                        </div>
+                        <figure class="square-card">
+
+                          <!-- <img src="" alt="" class="thumbnail-img"> -->
+                        </figure>
+                      </div>
+                      <div class="list">
+                        <figure class="square-card">
+
+                          <!-- <img src="" alt="" class="thumbnail-img"> -->
+                        </figure>
                       </div>
                     </div>
-                    <div class="nothing-list-grp">
+
+                    <!-- END 목록 있을 때 -->
+
+                    <!-- TODO: 목록 없을 때 -->
+                    <div class="nothing-list-grp" style="display: none;">
                       <div class="nothing-list">
-                        <i></i>
-                        <h3>아직 등록된 사진이 없습니다.</h3>
+                        <i class="ico ico-nothing-picture"></i>
+                        <p class="nl-desc">아직 등록된 사진이 없습니다.</p>
                       </div>
                     </div>
+
+                    <!-- END 목록 없을 때 -->
                   </div>
                 </section>
               </div>

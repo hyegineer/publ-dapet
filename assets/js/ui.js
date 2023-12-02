@@ -74,4 +74,11 @@
     uploadFiles[idx].upload = 'disable';
     $target.parent().remove();
   });
+
+  // 셀렉트: 선택하면 글씨 색 바뀌는 효과
+  $('[data-customselect]').change(function () {
+    if ($(this).val()) {
+      $(this).css('color', '#000');
+    }
+  })
 })();

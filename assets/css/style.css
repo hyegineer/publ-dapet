@@ -301,6 +301,23 @@ img {
   color: var(--main-green, #56C595);
 }
 
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.2;
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+}
+
+.badge.gray {
+  background-color: var(--gray-light, #f1f1f1);
+  color: var(--gray-dark, #6c6c6c);
+}
+
 /* 탭 */
 .tabs {
   width: 100%;
@@ -475,7 +492,8 @@ img {
   font-weight: 300;
 }
 .star-txt-item .gray-txt {
-  font-size: 86%;
+  color: var(--gray, #aeaeae);
+  font-size: 1.2rem;
   font-weight: 300;
 }
 
@@ -561,6 +579,9 @@ img {
   width: 3.6rem;
   height: 3.6rem;
   margin-bottom: 1.1rem;
+}
+.nothing-list .ico {
+  margin-bottom: 0.7rem;
 }
 .nothing-list .nl-ttl {
   font-size: 1.4rem;
@@ -685,7 +706,7 @@ img {
 }
 
 .form-label-desc {
-  margin-top: -0.5rem;
+  margin-top: -0.4rem;
   font-size: 1.2rem;
   color: var(--gray, #aeaeae);
   line-height: 1.3;
@@ -812,6 +833,39 @@ img {
   font-weight: 300;
 }
 .custom-inp-textarea:focus {
+  border-color: var(--gray, #aeaeae);
+}
+
+.custom-inp-select {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid var(--gray-light, #F1F1F1);
+  outline: none;
+  background-color: white;
+  font-size: 1.4rem;
+  font-weight: 300;
+  background-image: url(../images/ico/ico-triangle-gray-light.svg);
+  background-position: calc(100% - 1rem) 50%;
+  background-repeat: no-repeat;
+  background-size: 2.4rem;
+  /* 아이폰 사파리 보더 없애기 */
+  -webkit-appearance: none;
+  /* 화살표 없애기 for chrome*/
+  -moz-appearance: none;
+  /* 화살표 없애기 for firefox*/
+  appearance: none;
+  /* 화살표 없애기 공통*/
+  padding: 0 1.5rem;
+  padding-right: 4.5rem;
+  height: 4.5rem;
+  color: var(--gray, #aeaeae);
+}
+.custom-inp-select::placeholder {
+  color: var(--gray, #AEAEAE);
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.custom-inp-select:focus {
   border-color: var(--gray, #aeaeae);
 }
 
@@ -1018,6 +1072,10 @@ img {
   background-image: url(../images/ico/ico-nothing-list.svg);
 }
 
+.ico-nothing-picture {
+  background-image: url(../images/ico/ico-nothing-picture.svg);
+}
+
 .ico-stars {
   width: 80px;
   height: 16px;
@@ -1036,6 +1094,18 @@ img {
 
 .ico-send-white {
   background-image: url(../images/ico/ico-send-white.svg);
+}
+
+.ico-prf-list01 {
+  background-image: url(../images/ico/ico-prf-list01.svg);
+}
+
+.ico-prf-list02 {
+  background-image: url(../images/ico/ico-prf-list02.svg);
+}
+
+.ico-prf-list03 {
+  background-image: url(../images/ico/ico-prf-list03.svg);
 }
 
 /* ======================== 구성요소 - 버튼 ======================== */
@@ -1215,6 +1285,13 @@ img {
 }
 
 /* 카드 아이템 타입 01 (메인 BEST 펫시터) */
+.card-item {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
 .card-item.type01 {
   width: 123px;
 }
@@ -2174,4 +2251,164 @@ img {
 }
 .dnmall-create-page .custom-inp-textarea {
   height: 15rem;
+}
+
+/* ======================== 페이지 - 커뮤니티 글 작성 ======================== */
+.bcomm-create-page .page {
+  padding: 1rem 1.5rem;
+}
+.bcomm-create-page .custom-inp.custom-inp-textarea {
+  padding: 1.15rem 1.5rem;
+  max-height: 6.4rem;
+  height: auto;
+}
+.bcomm-create-page .custom-inp-textarea {
+  height: 15rem;
+}
+
+/* ======================== 페이지 - 펫시터 프로필 ======================== */
+.pst-profile-page .page {
+  /* iPhone XR : 1792x828px at 326ppi */
+  /* iPhone XS : 2436x1125px at 458ppi */
+  /* iPhone XS Max : 2688x1242px at 458ppi */
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+  .pst-profile-page .page {
+    padding-bottom: 3rem;
+  }
+}
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .pst-profile-page .page {
+    padding-bottom: 3rem;
+  }
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  .pst-profile-page .page {
+    padding-bottom: 3rem;
+  }
+}
+.pst-profile-page .section {
+  position: relative;
+  padding: 2rem 0;
+}
+.pst-profile-page .section.type-pb0 {
+  padding-bottom: 0;
+}
+.pst-profile-page .section:after {
+  width: calc(100% - 3rem);
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 1.5rem;
+  height: 1px;
+  background-color: var(--gray-light, #f1f1f1);
+}
+.pst-profile-page .section:last-child:after {
+  display: none;
+}
+.pst-profile-page .section-ttl-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.pst-profile-page .section-ttl-wrap .ttl {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.pst-profile-page .section-ttl-wrap .txt-arw-btn {
+  margin-top: 1px;
+}
+.pst-profile-page .list-card-item.type03 {
+  padding: 0 1.5rem;
+  align-items: center;
+}
+.pst-profile-page .list-card-item .card-name {
+  font-size: 2rem;
+}
+.pst-profile-page .list-card-item .star-heart-wrap {
+  align-items: center;
+}
+.pst-profile-page .list-card-item .star-txt-item {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.pst-profile-page .list-card-item .txt-arw-btn {
+  font-weight: 300;
+}
+.pst-profile-page .badge-grp {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0 1.5rem;
+}
+.pst-profile-page .txt-wrap {
+  padding: 0 1.5rem;
+}
+.pst-profile-page .txt-wrap .txt {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.3;
+}
+.pst-profile-page .row-list-grp {
+  padding: 1.5rem;
+  padding: 0 1.5rem 2rem;
+  gap: 1rem;
+  overflow: auto;
+  width: 100%;
+}
+.pst-profile-page .square-card {
+  background-color: var(--gray, #aeaeae);
+  width: 9rem;
+  height: 9rem;
+}
+.pst-profile-page .nothing-list {
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.prf-list-grp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+}
+
+.prf-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  border-right: 1px solid var(--gray-light, #f1f1f1);
+}
+.prf-list:last-child {
+  border-right: 0;
+}
+.prf-list .ico-txt-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.prf-list .ico-txt-wrap .txts {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #000;
+}
+.prf-list .ico-txt-wrap .txts > * {
+  color: inherit;
+}
+.prf-list .ico-txt-wrap .bold-txt {
+  font-size: 117%;
+  font-weight: 500;
 }

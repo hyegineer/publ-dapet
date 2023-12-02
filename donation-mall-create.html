@@ -81,7 +81,7 @@
                   <div class="form-item">
                     <label class="form-label">제목</label>
                     <div class="form-inp-wrap">
-                      <textarea rows="1" class="custom-inp custom-inp-textarea" placeholder="제목을 입력해 주세요. (40자 이내)" data-autoresize></textarea>
+                      <textarea rows="1" maxlength="40" class="custom-inp custom-inp-textarea" placeholder="제목을 입력해 주세요. (40자 이내)" data-autoresize></textarea>
                     </div>
                   </div>
                   <div class="form-item">
@@ -105,13 +105,15 @@
                   <div class="form-item">
                     <label class="form-label">썸네일 등록</label>
                     <p class="form-label-desc">기부몰 메인 페이지에서 보일 사진을 등록해 주세요. (최대 1개)</p>
+
+                    <!-- TODO: ui.js 에 임시로 만든 이미지 업로드 script 참고 -->
                     <div class="form-inp-wrap">
                       <div id="thumbnails01" class="attach-list-grp">
 
                         <!-- 파일첨부 하는 카드 -->
                         <div class="attach-list">
-                          <input type="file" multiple accept="image/gif, image/jpeg, image/png" id="thumbnail01-upload" class="none custom-file-inp js-upload-inp">
-                          <label for="thumbnail01-upload" class="square-card upload-square-card">
+                          <input type="file" multiple accept="image/gif, image/jpeg, image/png" id="thumbnails01-upload" class="none custom-file-inp js-upload-inp">
+                          <label for="thumbnails01-upload" class="square-card upload-square-card">
                             <span class="txt-hidden">파일 첨부</span>
                           </label>
                         </div>
@@ -123,19 +125,65 @@
                         <!-- <div class="attach-list">
                       <div class="square-card">
                         <img src="" alt="" class="thumbnail-img">
-                        <button type="button" class="del-btn">
-                          <span class="txt-hidden">삭제</span>
-                        </button>
                       </div>
+                      <button type="button" class="del-btn">
+                        <span class="txt-hidden">삭제</span>
+                      </button>
                     </div> -->
 
                         <!-- END 추가되는 카드 -->
                       </div>
                     </div>
+
+                    <!-- END ui.js 에 임시로 만든 이미지 업로드 script 참고 -->
+
+                    <!-- TODO: 아무 스크립트 적용되지 않은 이미지 첨부 html -->
+                    <div class="form-inp-wrap" style="display: none;">
+                      <div class="attach-list-grp">
+
+                        <!-- 파일첨부 하는 카드 -->
+                        <div class="attach-list">
+                          <input type="file" multiple accept="image/gif, image/jpeg, image/png" id="thumbnail01-upload02" class="none custom-file-inp js-upload-inp">
+                          <label for="thumbnail01-upload02" class="square-card upload-square-card">
+                            <span class="txt-hidden">파일 첨부</span>
+                          </label>
+                        </div>
+
+                        <!-- END 파일첨부 하는 카드 -->
+
+                        <!-- 추가되는 카드 -->
+                        <div class="attach-list">
+                          <div class="square-card">
+                            <img src="assets/images/sample/img-sample04.png" alt="" class="thumbnail-img">
+                          </div>
+                          <button type="button" class="del-btn">
+                            <span class="txt-hidden">삭제</span>
+                          </button>
+                        </div>
+
+                        <!-- END 추가되는 카드 -->
+
+                        <!-- 추가되는 카드 -->
+                        <div class="attach-list">
+                          <div class="square-card">
+                            <img src="assets/images/sample/img-sample03.png" alt="" class="thumbnail-img">
+                          </div>
+                          <button type="button" class="del-btn">
+                            <span class="txt-hidden">삭제</span>
+                          </button>
+                        </div>
+
+                        <!-- END 추가되는 카드 -->
+                      </div>
+                    </div>
+
+                    <!-- END 아무 스크립트 적용되지 않은 이미지 첨부 html -->
                   </div>
                   <div class="form-item">
                     <label class="form-label">관련 사진</label>
                     <p class="form-label-desc">상세 페이지에서 보일 기부 요청과 관련된 사진을 등록해 주세요.</p>
+
+                    <!-- TODO: ui.js 에 임시로 만든 이미지 업로드 script 참고 -->
                     <div class="form-inp-wrap">
                       <div id="related01" class="attach-list-grp">
 
@@ -154,15 +202,59 @@
                         <!-- <div class="attach-list">
                       <div class="square-card">
                         <img src="" alt="" class="thumbnail-img">
-                        <button type="button" class="del-btn">
-                          <span class="txt-hidden">삭제</span>
-                        </button>
                       </div>
+                      <button type="button" class="del-btn">
+                        <span class="txt-hidden">삭제</span>
+                      </button>
                     </div> -->
 
                         <!-- END 추가되는 카드 -->
                       </div>
                     </div>
+
+                    <!-- END ui.js 에 임시로 만든 이미지 업로드 script 참고 -->
+
+                    <!-- TODO: 아무 스크립트 적용되지 않은 이미지 첨부 html -->
+                    <div class="form-inp-wrap" style="display: none;">
+                      <div class="attach-list-grp">
+
+                        <!-- 파일첨부 하는 카드 -->
+                        <div class="attach-list">
+                          <input type="file" multiple accept="image/gif, image/jpeg, image/png" id="related01-upload02" class="none custom-file-inp js-upload-inp">
+                          <label for="related01-upload02" class="square-card upload-square-card">
+                            <span class="txt-hidden">파일 첨부</span>
+                          </label>
+                        </div>
+
+                        <!-- END 파일첨부 하는 카드 -->
+
+                        <!-- 추가되는 카드 -->
+                        <div class="attach-list">
+                          <div class="square-card">
+                            <img src="assets/images/sample/img-sample04.png" alt="" class="thumbnail-img">
+                          </div>
+                          <button type="button" class="del-btn">
+                            <span class="txt-hidden">삭제</span>
+                          </button>
+                        </div>
+
+                        <!-- END 추가되는 카드 -->
+
+                        <!-- 추가되는 카드 -->
+                        <div class="attach-list">
+                          <div class="square-card">
+                            <img src="assets/images/sample/img-sample03.png" alt="" class="thumbnail-img">
+                          </div>
+                          <button type="button" class="del-btn">
+                            <span class="txt-hidden">삭제</span>
+                          </button>
+                        </div>
+
+                        <!-- END 추가되는 카드 -->
+                      </div>
+                    </div>
+
+                    <!-- END 아무 스크립트 적용되지 않은 이미지 첨부 html -->
                   </div>
                 </div>
               </div>
