@@ -31,12 +31,13 @@ figcaption {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Apple Color Emoji", sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, "Apple Color Emoji", sans-serif;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  -webkit-tap-hightlight-color: transparent;
 }
 
 table {
@@ -105,5 +106,6 @@ a,
 select,
 textarea {
   box-sizing: border-box;
-  font-family: "Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Apple Color Emoji", sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, "Apple Color Emoji", sans-serif;
+  -webkit-tap-hightlight-color: transparent;
 }
