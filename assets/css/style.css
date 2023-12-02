@@ -819,6 +819,19 @@ img {
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.3;
+  color: black;
+}
+
+.board-dt-wrap {
+  padding: 0 1.5rem 2.5rem;
+}
+.board-dt-wrap .txt-wrap {
+  padding: 2rem 0;
+}
+.board-dt-wrap .txt {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.3;
   color: var(--gray-dark, #6c6c6c);
 }
 
@@ -841,6 +854,58 @@ img {
 }
 .advice-box-item .btn {
   margin-top: 1rem;
+}
+
+/* 기부몰 상세 & 다펫몰 상세 하단 왼쪽 가격 + 버튼 */
+.lefttxt-btn-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  border-top: 1px solid var(--gray-light, #f1f1f1);
+  width: 100%;
+  padding: 1rem 1.5rem;
+  /* iPhone XR : 1792x828px at 326ppi */
+  /* iPhone XS : 2436x1125px at 458ppi */
+  /* iPhone XS Max : 2688x1242px at 458ppi */
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+  .lefttxt-btn-bottom {
+    padding-bottom: 4rem;
+  }
+}
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .lefttxt-btn-bottom {
+    padding-bottom: 4rem;
+  }
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  .lefttxt-btn-bottom {
+    padding-bottom: 4rem;
+  }
+}
+.lefttxt-btn-bottom .d-iflex-row.mall-d-iflex-row {
+  gap: 1rem;
+}
+.lefttxt-btn-bottom .d-iflex-row.dnmall-d-iflex-row {
+  gap: 0.8rem;
+  align-items: flex-end;
+}
+.lefttxt-btn-bottom .mg-left {
+  margin-left: auto;
+}
+.lefttxt-btn-bottom .main-green-txt {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.lefttxt-btn-bottom .dark-txt {
+  font-size: 2rem;
+  font-weight: 500;
+  position: relative;
+  top: 2px;
+}
+.lefttxt-btn-bottom .btn {
+  min-width: 16.5rem;
 }
 
 /* ======================== 구성요소 - 폼 ======================== */
@@ -2616,6 +2681,9 @@ img {
 .mall-detail-page .tabs-content .section:last-child:after {
   display: none;
 }
+.mall-detail-page .dp-ttl {
+  color: var(--gray-dark, #6c6c6c);
+}
 
 .tab-img-detail-area {
   padding: 2rem 1.5rem;
@@ -2766,6 +2834,7 @@ img {
   padding: 1.5rem 0;
 }
 
+/* 글 상세 */
 /* 글 작성 */
 .dnmall-create-page .page {
   padding: 1rem 1.5rem;
@@ -2848,23 +2917,6 @@ img {
 }
 
 /* 글 상세 */
-.bcomm-detail-page .dp-ttl {
-  color: black;
-}
-
-.board-dt-wrap {
-  padding: 0 1.5rem 2.5rem;
-}
-.board-dt-wrap .txt-wrap {
-  padding: 2rem 0;
-}
-.board-dt-wrap .txt {
-  font-size: 1.4rem;
-  font-weight: 300;
-  line-height: 1.3;
-  color: var(--gray-dark, #6c6c6c);
-}
-
 .board-dt-comment-wrap {
   background-color: #f7f7f7;
 }

@@ -22,12 +22,12 @@
       <div class="l-wrapper">
 
         <!-- TODO: ***** 기부몰 상세 페이지 ***** -->
-        <div class="l-container">
+        <div class="dnmall-detail-page l-container">
 
           <!-- TODO: layout) 헤더 타입 02 -->
 
           <!-- TODO: 밑줄 있는 화면일 때는 type-bd 클래스 추가 -->
-          <header class="header type-bd">
+          <header class="header ">
             <div class="header-inner">
 
               <!-- 헤더 왼쪽 -->
@@ -48,7 +48,7 @@
 
               <!-- 헤더 중앙 -->
               <div class="hd-center ">
-                <span class="ttl">펫시터 찾기</span>
+                <span class="ttl">기부 상세보기</span>
               </div>
 
               <!-- 헤더 오른쪽 -->
@@ -77,22 +77,25 @@
             <!-- layout) 페이지 상단 -->
             <div class="l-contt-top">
               <div class="page">
-                <div class="detail-page-container">
 
-                  <!-- 사진 -->
-                  <div></div>
+                <!-- 사진 -->
+                <div class="detail-page-top">
 
-                  <!-- 정보 -->
-                  <div>
-                    <div>
-                      <h3>강아지가 신발을 물 때</h3>
-                    </div>
-                    <div>
-                      <div>
-                        <p>
-                          2023년 5월, 행강보호소에는 보호견 310여 마리가 생활하고 있습니다.
-                        </p>
-                      </div>
+                  <!-- FIXME: 사진 보충 -->
+                  <div class="thumbnail-wrap"></div>
+                </div>
+
+                <!-- 정보 -->
+                <div class="detail-page-bottom">
+                  <div class="dp-ttl-wrap">
+                    <h3 class="dp-ttl">용인 행강 보호소 용인 행강 보호소 용인 행강 보호소 용인 행강 보호소 </h3>
+                  </div>
+                  <div class="board-dt-wrap">
+                    <div class="txt-wrap">
+                      <p class="txt">2023년 5월, 행강보호소에는 보호견 310여 마리가 생활하고 있습니다.
+                        <br><br>
+                        현재 보호소의 사료가 많이 부족합니다.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -103,12 +106,16 @@
 
             <!-- layout) 페이지 하단 -->
             <div class="l-contt-bottom">
-              <div>
-                <div class="">
-                  <span class="">기부 1회</span>
-                  <span>200원</span>
+              <div class="lefttxt-btn-bottom">
+                <div class="d-iflex-row dnmall-d-iflex-row">
+                  <span class="main-green-txt">기부 1회</span>
+                  <span class="dark-txt">200원</span>
                 </div>
-                <button type="button">기부하기</button>
+                <div class="mg-left">
+                  <button type="button" class="btn theme-solid-btn btn-lg square-btn">
+                    <span class="txt">기부하기</span>
+                  </button>
+                </div>
               </div>
             </div>
 

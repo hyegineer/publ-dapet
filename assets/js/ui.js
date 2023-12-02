@@ -1,4 +1,5 @@
 (function () {
+  // 텍스트에어리어: textarea-create-wrap 요소 안에 있는 것들은 값 있으면 전송버튼 활성화하기
   $('.textarea-create-wrap textarea[data-autoresize]').on('input', function () {
     if ($(this).siblings('.send-btn')) {
       if ($(this).val()) {
