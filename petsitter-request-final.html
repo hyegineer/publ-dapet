@@ -21,7 +21,7 @@
       <!-- layout) 페이지 레이아웃 -->
       <div class="l-wrapper">
 
-        <!-- TODO: ***** 펫시터 의뢰 페이지 (의뢰 접수완료) ***** -->
+        <!-- TODO: ***** 펫시터 의뢰 페이지 (의뢰내용 확인) ***** -->
         <div class="pst-request-page l-container">
 
           <!-- TODO: layout) 헤더 타입 02 -->
@@ -48,7 +48,7 @@
 
               <!-- 헤더 중앙 -->
               <div class="hd-center ">
-                <span class="ttl">의뢰 접수 완료</span>
+                <span class="ttl">펫시터 의뢰</span>
               </div>
 
               <!-- 헤더 오른쪽 -->
@@ -77,13 +77,111 @@
             <!-- layout) 페이지 상단 -->
             <div class="l-contt-top">
               <div class="page">
-                <div class="complete-list-grp">
-                  <div class="complete-list">
-                    <i class="ico ico-complete-gif"></i>
-                    <h3 class="cl-ttl">의뢰 접수가 완료되었습니다.</h3>
-                    <p class="cl-desc">곧 매칭되는 펫시터분들에게 연락이 올거에요 !</p>
-                    <a href="#" class="txt-btn">나의 의뢰 내역 확인하기</a>
-                  </div>
+                <div class="left-ttl-wrap type01">
+                  <p class="sub-left-ttl">이제 마지막이에요!</p>
+                  <h2 class="left-ttl">작성하신 내용을 확인한 후, <br>버튼을 눌러 의뢰를 접수해 주세요.</h2>
+                </div>
+                <div class="gray-light-box">
+                  <section class="info-section">
+                    <div class="info-ttl-wrap">
+                      <h3 class="info-ttl">반려동물 정보</h3>
+                    </div>
+                    <div class="info-contt">
+                      <dl class="info-dl">
+                        <dt>이름</dt>
+                        <dd>춘식이</dd>
+                      </dl>
+                      <dl class="info-dl">
+                        <dt>반려동물 종류</dt>
+                        <dd>강아지</dd>
+                      </dl>
+                      <dl class="info-dl">
+                        <dt>성별</dt>
+                        <dd>남자</dd>
+                      </dl>
+                      <dl class="info-dl">
+                        <dt>나이</dt>
+                        <dd>5세</dd>
+                      </dl>
+                      <dl class="info-dl">
+                        <dt>몸무게</dt>
+                        <dd>12kg</dd>
+                      </dl>
+                      <dl class="info-dl">
+                        <dt>품종</dt>
+                        <dd>차이니스 크레스티드 독</dd>
+                      </dl>
+                    </div>
+                  </section>
+                  <section class="info-section">
+                    <div class="info-ttl-wrap">
+                      <h3 class="info-ttl">서비스 정보</h3>
+                    </div>
+                    <div class="info-contt">
+                      <dl class="info-dl">
+                        <dt>산책</dt>
+                        <dd>선택 / 60분</dd>
+                      </dl>
+                      <dl class="info-dl">
+                        <dt>미용</dt>
+                        <dd>선택 안 함</dd>
+                      </dl>
+                      <dl class="info-dl">
+                        <dt>목욕</dt>
+                        <dd>선택</dd>
+                      </dl>
+                      <dl class="info-dl">
+                        <dt>훈련</dt>
+                        <dd>선택 안 함</dd>
+                      </dl>
+                      <dl class="info-dl">
+                        <dt>돌봄</dt>
+                        <dd>선택 안 함</dd>
+                      </dl>
+                      <dl class="info-dl">
+                        <dt>드롭 & 픽업</dt>
+                        <dd>
+                          드롭 - 서울특별시 구로구 다펫1동 <br>
+                          픽업 - 서울특별시 구로구 다펫3동
+                        </dd>
+                      </dl>
+                    </div>
+                  </section>
+                  <section class="info-section">
+                    <div class="info-ttl-wrap">
+                      <h3 class="info-ttl">의뢰 상세</h3>
+                    </div>
+                    <div class="info-contt">
+                      <dl class="info-dl">
+                        <dt>희망일</dt>
+                        <dd>2023-12-15</dd>
+                      </dl>
+                      <dl class="info-dl">
+                        <dt>희망 시간</dt>
+                        <dd>15:00 부터 18:15 까지</dd>
+                      </dl>
+                      <dl class="info-dl">
+                        <dt>휴대폰 번호</dt>
+                        <dd>010-0000-0000</dd>
+                      </dl>
+                      <dl class="info-dl">
+                        <dt>주소지</dt>
+                        <dd>서울특별시 다펫대로 11 (다펫동,마이상가)</dd>
+                      </dl>
+                    </div>
+                  </section>
+                  <section class="info-section">
+                    <div class="info-ttl-wrap">
+                      <h3 class="info-ttl">요청사항</h3>
+                    </div>
+                    <div class="info-contt">
+                      <p class="info-txt">
+                        춘식이는 간식 등 먹을 때 건드리면 물기도 합니다. <br>
+                        그 외에는 입질 없으니 안심하셔도 됩니다. <br>
+                        꼭 시간 맞춰 부탁드립니다.
+                      </p>
+                    </div>
+                  </section>
                 </div>
               </div>
             </div>
@@ -92,6 +190,13 @@
 
             <!-- layout) 페이지 하단 -->
             <div class="l-contt-bottom">
+              <div class="btn-wrap">
+
+                <!-- TODO: 다 채우고나서 before 클래스 삭제 -->
+                <button type="button" class="btn theme-solid-btn btn-lg square-btn before">
+                  <span class="txt">의뢰하기</span>
+                </button>
+              </div>
             </div>
 
             <!-- END layout) 페이지 하단 -->
@@ -100,7 +205,7 @@
           <!-- END layout) 페이지 -->
         </div>
 
-        <!-- END ***** 펫시터 의뢰 페이지 (의뢰 접수완료) ***** -->
+        <!-- END ***** 펫시터 의뢰 페이지 (의뢰내용 확인) ***** -->
       </div>
 
       <!-- END layout) 페이지 레이아웃 -->

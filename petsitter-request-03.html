@@ -89,19 +89,15 @@
                       <!-- FIXME: 달력 데이트피커 -->
                       <input type="text" class="custom-inp" placeholder="희망일시 입력" />
                     </div>
-                    <div>
-                      <div class="form-inp-wrap">
+                    <div class="form-inp-wrap type01">
 
-                        <!-- FIXME: 시간 설정 -->
-                        <input type="text" class="custom-inp" placeholder="시작 시간" />
-                      </div>
-                      <div class="form-inp-wrap">
+                      <!-- FIXME: 시간 설정 -->
+                      <input type="text" class="custom-inp" placeholder="시작 시간" />
 
-                        <!-- FIXME: 시간 설정 -->
-                        <input type="text" class="custom-inp" placeholder="종료 시간" />
-                      </div>
+                      <!-- FIXME: 시간 설정 -->
+                      <input type="text" class="custom-inp" placeholder="종료 시간" />
                     </div>
-                    <div>
+                    <div class="form-inp-wrap">
                       <div class="cckbox-item">
                         <input id="able-1" type="radio" name="option1" class="none custom-ckbox-inp" />
                         <label for="able-1" class="custom-ckbox"></label>
@@ -115,7 +111,7 @@
                       <span class="sm-txt">(<span class="js-txtarea-count">0</span>/100)</span>
                     </label>
                     <div class="form-inp-wrap">
-                      <textarea placeholder="펫시터님들에게 요청하고 싶은 내용을 작성해 주세요." class="custom-inp-textarea js-txtarea" maxlength="200"></textarea>
+                      <textarea placeholder="펫시터님들에게 요청하고 싶은 내용을 작성해 주세요." class="custom-inp-textarea type-dft-height js-txtarea" maxlength="100"></textarea>
                     </div>
                   </div>
                 </div>
@@ -126,11 +122,13 @@
 
             <!-- layout) 페이지 하단 -->
             <div class="l-contt-bottom">
+              <div class="btn-wrap">
 
-              <!-- TODO: 다 채우고나서 before 클래스 삭제 -->
-              <button type="button" class="btn theme-solid-btn btn-lg square-btn before">
-                <span class="txt">다음</span>
-              </button>
+                <!-- TODO: 다 채우고나서 before 클래스 삭제 -->
+                <button type="button" class="btn theme-solid-btn btn-lg square-btn before">
+                  <span class="txt">다음</span>
+                </button>
+              </div>
             </div>
 
             <!-- END layout) 페이지 하단 -->
