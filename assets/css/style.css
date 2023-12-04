@@ -688,6 +688,10 @@ img {
   height: 3.6rem;
   margin-bottom: 1.1rem;
 }
+.nothing-list .ico-nothing-pet {
+  width: 3.6rem;
+  height: 3.6rem;
+}
 .nothing-list .ico {
   margin-bottom: 0.7rem;
 }
@@ -699,6 +703,10 @@ img {
 .nothing-list .nl-desc {
   font-size: 1.2rem;
   line-height: 1.4;
+}
+.nothing-list .gray-bd-btn {
+  min-width: 16.5rem;
+  margin-top: 1.3rem;
 }
 
 /* 파일 첨부 */
@@ -929,6 +937,8 @@ img {
   font-size: 1.4rem;
   color: var(--gray, #aeaeae);
   font-weight: 300;
+  line-height: 1.4;
+  word-break: keep-all;
 }
 
 /* ======================== 구성요소 - 폼 ======================== */
@@ -1335,6 +1345,10 @@ img {
 
 .ico-nothing-picture {
   background-image: url(../images/ico/ico-nothing-picture.svg);
+}
+
+.ico-nothing-pet {
+  background-image: url(../images/ico/ico-nothing-pet.svg);
 }
 
 .ico-stars {
@@ -2765,12 +2779,12 @@ img {
 .tab-review-area .col-list-grp-wrap {
   padding: 0 1.5rem 5rem;
 }
+.tab-review-area .col-list-grp-wrap .col-list-grp {
+  margin-bottom: 1rem;
+}
 .tab-review-area .col-list-grp-wrap .col-item {
   width: 100%;
   padding: 1.5rem 0;
-}
-.tab-review-area .col-list-grp-wrap .gray-bd-btn {
-  margin-top: 1rem;
 }
 .tab-review-area .search-select-wrap {
   position: sticky;
@@ -3213,6 +3227,7 @@ img {
 .pst-request-page .page {
   padding: 1rem 1.5rem;
   padding-bottom: 4rem;
+  height: 100%;
 }
 .pst-request-page .left-ttl-wrap.type01 {
   margin-bottom: 2rem;
@@ -3225,4 +3240,8 @@ img {
 }
 .pst-request-page .col-list-grp .list:last-child {
   margin-bottom: 0;
+}
+.pst-request-page .nothing-list-grp.type-center {
+  /* left-ttl-wrap.type01 높이 빼기 */
+  height: calc(100% - 7.4rem);
 }
