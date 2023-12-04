@@ -104,4 +104,43 @@
     $('.tabs-content').removeClass('show');
     $(`#${content}`).addClass('show');
   })
+
+  // FIXME: 썸네일 업로드 임시 구현
+  $("#thumbnail").on("change", function (e) {
+    var file = e.target.files[0];
+    if (isImageFile(file)) {
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        $("#img-thumbnail").attr("src", e.target.result);
+
+        if ($('#img-thumbnail').hasClass('img-ico-pet')) {
+          $("#img-thumbnail").removeClass("img-ico-pet");
+        }
+
+        if ($('#img-thumbnail').hasClass('img-ico-people')) {
+          $("#img-thumbnail").removeClass("img-ico-people");
+        }
+      }
+      reader.readAsDataURL(file);
+    } else {
+      alert("이미지 파일만 첨부 가능합니다.");
+      $("#thumbnail").val("");
+
+      if ($('#img-thumbnail').attr('data-type') == 'people') {
+        $("#img-thumbnail").addClass("img-ico-people");
+        $("#img-thumbnail").attr("src", "assets/images/ico/ico-nothing-img-gray-dark.svg");
+      }
+
+      if ($('#img-thumbnail').attr('data-type') == 'pet') {
+        $("#img-thumbnail").addClass("img-ico-pet");
+        $("#img-thumbnail").attr("src", "assets/images/ico/ico-pet-gray.svg");
+      }
+    }
+  });
+  // 확장자 확인
+  function isImageFile(file) {
+    // 파일명에서 확장자를 가져옴
+    var ext = file.name.split(".").pop().toLowerCase();
+    return ($.inArray(ext, ["jpg", "jpeg", "gif", "png"]) === -1) ? false : true;
+  }
 })();

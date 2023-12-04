@@ -27,7 +27,7 @@
           <!-- TODO: layout) 헤더 타입 02 -->
 
           <!-- TODO: 밑줄 있는 화면일 때는 type-bd 클래스 추가 -->
-          <header class="header type-bd">
+          <header class="header ">
             <div class="header-inner">
 
               <!-- 헤더 왼쪽 -->
@@ -48,7 +48,7 @@
 
               <!-- 헤더 중앙 -->
               <div class="hd-center ">
-                <span class="ttl">펫시터 찾기</span>
+                <span class="ttl">내 정보</span>
               </div>
 
               <!-- 헤더 오른쪽 -->
@@ -75,26 +75,27 @@
           <div class="l-contt-container">
 
             <!-- layout) 페이지 상단 -->
+
+            <!-- TODO: 모드에 따라 텍스트가 다름 -->
+            <section class="mi-main-top-txt">
+              <p class="txt">유기동물 보호소 모드 사용중</p>
+            </section>
             <div class="l-contt-top">
               <div class="page">
-
-                <!-- TODO: 모드에 따라 텍스트가 다름 -->
-                <section>
-                  <p>유기동물 보호소 모드 사용중</p>
-                </section>
                 <section class="heavy-bd-row">
                   <div class="list-card-item type05">
 
                     <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
-                    <figure class="thumbnail circle">
-                      <img src="assets/images/sample/img-sample05.png" alt="" class="thumbnail-img">
+                    <figure class="thumbnail circle inactive">
+
+                      <!-- <img src="assets/images/sample/img-sample05.png" alt="" class="thumbnail-img"> -->
                     </figure>
-                    <ul>
+                    <ul class="card-information">
                       <li>
                         <h3 class="card-name">김다펫</h3>
                       </li>
                       <li>
-                        <div class="d-flex-row">
+                        <div class="d-flex-row name-under-txt-wrap">
                           <span class="gray-txt">보유 포인트</span>
                           <span class="main-green-txt">103,000 P</span>
                         </div>
@@ -102,71 +103,72 @@
                     </ul>
 
                     <!-- TODO: 신청 수락 시 버튼 보임 -->
-                    <div style="display: none;">
-                      <button type="button">고객 변환</button>
-                      <button type="button">자격 변경</button>
+                    <div class="d-iflex-row mg-left">
+                      <button type="button" class="rounded-btn">고객 변환</button>
+
+                      <!-- <button type="button" class="theme-bd-btn">자격 변경</button> -->
                     </div>
                   </div>
                 </section>
-                <section class="heavy-bd-row">
-                  <h3>정보관리</h3>
-                  <div class="contt">
-                    <ul>
-                      <li>
-                        <div>
-                          <i></i>
-                          <span>내 정보 수정</span>
-                        </div>
+                <section class="mi-main-section heavy-bd-row">
+                  <h3 class="mi-main-ttl">정보관리</h3>
+                  <div class="mi-main-contt">
+                    <ul class="col-list-grp col-list-active-grp">
+                      <li class="list">
+                        <a href="myinfo-edit.html" class="mi-cta-card-item">
+                          <i class="ico ico-micta-user"></i>
+                          <span class="txt">내 정보 수정</span>
+                        </a>
                       </li>
-                      <li>
-                        <div>
-                          <i></i>
-                          <span>등록된 반려동물</span>
-                        </div>
+                      <li class="list">
+                        <a href="pet-list.html" class="mi-cta-card-item">
+                          <i class="ico ico-micta-pet"></i>
+                          <span class="txt">등록된 반려동물</span>
+                        </a>
                       </li>
-                      <li>
-                        <div>
-                          <i></i>
-                          <span>의뢰 및 예약 내역</span>
-                        </div>
+                      <li class="list">
+                        <a href="#" class="mi-cta-card-item">
+                          <i class="ico ico-micta-rsv"></i>
+                          <span class="txt">의뢰 및 예약 내역</span>
+                        </a>
                       </li>
-                      <li>
-                        <div>
-                          <i></i>
-                          <span>주문내역</span>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </section>
-                <section class="heavy-bd-row">
-                  <h3>자격신청</h3>
-                  <div class="contt">
-                    <ul>
-                      <li>
-                        <div>
-                          <i></i>
-                          <span>펫시터 신청</span>
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <i></i>
-                          <span>유기동물 보호소 신청</span>
-                        </div>
+                      <li class="list">
+                        <a href="#" class="mi-cta-card-item">
+                          <i class="ico ico-micta-basket"></i>
+                          <span class="txt">주문내역</span>
+                        </a>
                       </li>
                     </ul>
                   </div>
                 </section>
-                <section class="heavy-bd-row">
-                  <h3>고객지원</h3>
-                  <div class="contt">
-                    <ul>
-                      <li>
-                        <div>
-                          <i></i>
-                          <span>공지사항</span>
-                        </div>
+                <section class="mi-main-section heavy-bd-row">
+                  <h3 class="mi-main-ttl">자격신청</h3>
+                  <div class="mi-main-contt">
+                    <ul class="col-list-grp col-list-active-grp">
+                      <li class="list">
+                        <a href="apply-petsitter.html" class="mi-cta-card-item">
+                          <i class="ico ico-micta-petsitter"></i>
+                          <span class="txt">펫시터 신청</span>
+                        </a>
+                      </li>
+                      <li class="list">
+                        <a href="apply-shelter.html" class="mi-cta-card-item">
+                          <i class="ico ico-micta-shelter"></i>
+                          <span class="txt">유기동물 보호소 신청</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+                <section class="mi-main-section heavy-bd-row">
+                  <h3 class="mi-main-ttl">고객지원</h3>
+                  <div class="mi-main-contt">
+                    <ul class="col-list-grp col-list-active-grp">
+                      <li class="list">
+                        <a href="notice-list.html" class="mi-cta-card-item">
+                          <i class="ico ico-micta-notice"></i>
+                          <span class="txt">공지사항</span>
+                        </a>
                       </li>
                     </ul>
                   </div>
@@ -178,6 +180,45 @@
 
             <!-- layout) 페이지 하단 -->
             <div class="l-contt-bottom">
+              <div class="l-bottom-btns">
+
+                <!-- TODO: 활성화된 페이지는 on 클래스 추가 -->
+                <a href="mall-list.html" class="lb-btn ">
+                  <span class="ico-box">
+                <i class="ico ico-nav01-off ico-off"></i>
+                <i class="ico ico-nav01-on ico-on"></i>
+              </span>
+                  <p class="txt">다펫몰</p>
+                </a>
+                <a href="petsitter-request-01.html" class="lb-btn ">
+                  <span class="ico-box">
+                <i class="ico ico-nav02-off ico-off"></i>
+                <i class="ico ico-nav02-on ico-on"></i>
+              </span>
+                  <p class="txt">펫시터 의뢰</p>
+                </a>
+                <a href="chat-list.html" class="lb-btn ">
+                  <span class="ico-box">
+                <i class="ico ico-nav03-off ico-off"></i>
+                <i class="ico ico-nav03-on ico-on"></i>
+              </span>
+                  <p class="txt">채팅 목록</p>
+                </a>
+                <a href="#" class="lb-btn ">
+                  <span class="ico-box">
+                <i class="ico ico-nav04-off ico-off"></i>
+                <i class="ico ico-nav04-on ico-on"></i>
+              </span>
+                  <p class="txt">예약 일정</p>
+                </a>
+                <a href="myinfo-main.html" class="lb-btn on">
+                  <span class="ico-box">
+                <i class="ico ico-nav05-off ico-off"></i>
+                <i class="ico ico-nav05-on ico-on"></i>
+              </span>
+                  <p class="txt">내 정보</p>
+                </a>
+              </div>
             </div>
 
             <!-- END layout) 페이지 하단 -->

@@ -89,7 +89,7 @@
                         <!-- TODO: 이미지가 추가되면 img-ico-pet 클래스 삭제 -->
 
                         <!-- TODO: 이미지가 아닌 파일 올라오면 다시 초기화, img-ico-pet 클래스 생김 -->
-                        <img id="img-thumbnail" src="assets/images/ico/ico-pet-gray.svg" alt="" class="thumbnail-img img-ico-pet" />
+                        <img id="img-thumbnail" accept="image/gif, image/jpeg, image/png" data-type="pet" src="assets/images/ico/ico-pet-gray.svg" alt="" class="thumbnail-img img-ico-pet" />
                       </figure>
                       <input type="file" id="thumbnail" class="none">
                       <label for="thumbnail" class="edit-btn">
@@ -209,33 +209,6 @@
 
       <!-- END layout) 페이지 레이아웃 -->
     </div>
-    <script>
-      (function() {
-        // FIXME: 썸네일 업로드 임시 구현
-        $("#thumbnail").on("change", function(e) {
-          var file = e.target.files[0];
-          if (isImageFile(file)) {
-            var reader = new FileReader();
-            reader.onload = function(e) {
-              $("#img-thumbnail").attr("src", e.target.result);
-              $("#img-thumbnail").removeClass("img-ico-pet");
-            }
-            reader.readAsDataURL(file);
-          } else {
-            alert("이미지 파일만 첨부 가능합니다.");
-            $("#thumbnail").val("");
-            $("#img-thumbnail").attr("src", "assets/images/ico/ico-pet-gray.svg");
-            $("#img-thumbnail").addClass("img-ico-pet");
-          }
-        });
-        // 확장자 확인
-        function isImageFile(file) {
-          // 파일명에서 확장자를 가져옴
-          var ext = file.name.split(".").pop().toLowerCase();
-          return ($.inArray(ext, ["jpg", "jpeg", "gif", "png"]) === -1) ? false : true;
-        }
-      })();
-    </script>
     <script src="assets/js/ui.js"></script>
   </body>
 </html>

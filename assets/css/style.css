@@ -585,6 +585,7 @@ img {
 
 /* 메인 섹션 나뉘는 보더 */
 .heavy-bd-row {
+  background-color: white;
   border-bottom: 5px solid var(--gray-light, #f1f1f1);
 }
 
@@ -888,6 +889,10 @@ img {
 .edit-thumbnail-wrap .thumbnail.circle .img-ico-pet {
   width: 4.8rem;
   height: 4.8rem;
+}
+.edit-thumbnail-wrap .thumbnail.circle .img-ico-people {
+  width: 3.2rem;
+  height: 3.2rem;
 }
 .edit-thumbnail-wrap .edit-btn {
   padding: 0;
@@ -1892,6 +1897,34 @@ img {
   background-image: url(../images/ico/ico-edit.svg);
 }
 
+.ico-micta-user {
+  background-image: url(../images/ico/ico-micta-user.svg);
+}
+
+.ico-micta-basket {
+  background-image: url(../images/ico/ico-micta-basket.svg);
+}
+
+.ico-micta-shelter {
+  background-image: url(../images/ico/ico-micta-shelter.svg);
+}
+
+.ico-micta-petsitter {
+  background-image: url(../images/ico/ico-micta-petsitter.svg);
+}
+
+.ico-micta-notice {
+  background-image: url(../images/ico/ico-micta-notice.svg);
+}
+
+.ico-micta-rsv {
+  background-image: url(../images/ico/ico-micta-rsv.svg);
+}
+
+.ico-micta-pet {
+  background-image: url(../images/ico/ico-micta-pet.svg);
+}
+
 /* ======================== 구성요소 - 버튼 ======================== */
 .btn {
   padding: 0;
@@ -1943,6 +1976,7 @@ img {
 }
 
 .theme-bd-btn {
+  background-color: white;
   color: var(--main-green, #56C595);
   border: 1px solid var(--main-green, #56C595);
 }
@@ -2097,7 +2131,7 @@ img {
   justify-content: flex-start;
   flex-direction: column;
   width: 100%;
-  gap: 5px;
+  gap: 0.5rem;
 }
 .card-information > li {
   width: 100%;
@@ -2575,6 +2609,59 @@ img {
   font-size: 1.2rem;
   font-weight: 300;
   color: white;
+}
+
+/* 목록 카드 아이템 타입 05 (내 정보 등...) */
+.list-card-item.type05 {
+  gap: 1.5rem;
+  align-items: center;
+}
+.list-card-item.type05 .thumbnail {
+  width: 7.5rem;
+  height: 7.5rem;
+}
+.list-card-item.type05 .thumbnail.inactive {
+  background-image: url(../images/ico/ico-nothing-img-gray-dark.svg);
+}
+.list-card-item.type05 .card-information {
+  gap: 0.3rem;
+}
+.list-card-item.type05 .card-name {
+  font-size: 2rem;
+  line-height: 1.4;
+}
+.list-card-item.type05 .name-under-txt-wrap {
+  gap: 1rem;
+}
+.list-card-item.type05 .name-under-txt-wrap .gray-txt {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.list-card-item.type05 .name-under-txt-wrap .main-green-txt {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.list-card-item.type05 .mg-left {
+  flex-shrink: 0;
+}
+.list-card-item.type05 .rounded-btn {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 5px;
+  border-radius: 100px;
+  background-color: white;
+  border: 1px solid var(--main-green, #56C595);
+  color: var(--main-green, #56C595);
+  padding: 0.4rem 1.2rem;
+  min-width: 7.5rem;
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 
 /* ======================== 페이지 - 가이드 & 컴포넌트 ======================== */
@@ -3795,4 +3882,73 @@ img {
 /* ======================== 페이지 - 반려동물 관리 ======================== */
 .psetting-page .page {
   padding: 2rem 1.5rem 3rem;
+}
+
+/* ======================== 페이지 - 내 정보 ======================== */
+.mi-main-page .page {
+  padding-bottom: 3rem;
+}
+.mi-main-page .l-contt-top {
+  background-color: var(--gray-light, #f1f1f1);
+}
+.mi-main-page .list-card-item.type05 {
+  padding: 1.5rem;
+}
+
+.mi-main-top-txt {
+  width: 100%;
+  padding: 1.5rem;
+  text-align: center;
+  background-color: var(--gray-light, #F1F1F1);
+}
+.mi-main-top-txt .txt {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--gray, #aeaeae);
+}
+
+.mi-main-section .mi-main-ttl {
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--gray, #aeaeae);
+}
+
+.mi-cta-card-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+  padding: 1.5rem;
+  width: 100%;
+}
+.mi-cta-card-item .txt {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.4rem;
+  font-weight: 300;
+  word-break: keep-all;
+  padding-top: 0.3rem;
+}
+
+.mi-edit-page .page {
+  padding: 2rem 1.5rem 3rem;
+}
+.mi-edit-page .form-label {
+  color: var(--gray, #aeaeae);
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.mi-edit-page .form-item-grp .form-item {
+  margin: 0;
+  padding: 1.5rem 0;
+}
+.mi-edit-page .form-item-grp .form-item:last-child {
+  padding-bottom: 0;
+}
+.mi-edit-page .form-inp-wrap .dark-txt {
+  font-size: 1.4rem;
+  font-weight: 300;
 }
