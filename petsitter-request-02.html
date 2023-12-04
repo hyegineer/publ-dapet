@@ -81,113 +81,262 @@
                   <h2 class="left-ttl">원하는 서비스를 선택한 후, <br>서비스 상세 내용을 작성해 주세요.</h2>
                   <p class="left-desc">서비스를 모두 선택하셔야 정확한 견적을 받아볼 수 있습니다.</p>
                 </div>
-                <div class="col-list-grp">
-                  <div class="list">
+                <div class="col-list-grp-wrap">
+                  <div class="col-list-grp">
 
-                    <!-- 산책을 맡기고 싶어요 -->
-                    <div class="accordion-card-item">
+                    <!-- 산책 list -->
+                    <div class="list">
 
-                      <!-- 선택 영역 -->
-                      <div>
-                        <div>
-                          <i></i>
-                          <p>산책을 맡기고 싶어요</p>
+                      <!-- 산책을 맡기고 싶어요 -->
+
+                      <!-- TODO: accordion-card-item 선택시 active 클래스 추가 -->
+                      <div class="accordion-card-item active">
+
+                        <!-- 선택 영역 -->
+                        <div class="accordion-card-top">
+                          <div class="ico-txt-card">
+                            <span class="ico-box">
+                          <i class="ico ico-svc-walk-gray ico-off"></i>
+                          <i class="ico ico-svc-walk-dark ico-on"></i>
+                        </span>
+                            <p class="txt">산책을 맡기고 싶어요</p>
+                          </div>
                         </div>
-                      </div>
 
-                      <!-- END 선택 영역 -->
+                        <!-- END 선택 영역 -->
 
-                      <!-- 선택하면 보여지는 영역 -->
-                      <div>
-                        <div>
-                          <label>산책 시간 선택</label>
-                          <div>
-                            <div class="cckbox-item">
-                              <input id="option1-1" type="radio" name="option1" class="none custom-ckbox-inp" />
-                              <label for="option1-1" class="custom-ckbox"></label>
-                              <label for="option1-1" class="custom-ckbox-label">30분</label>
-                            </div>
-                            <div class="cckbox-item">
-                              <input id="option1-2" type="radio" name="option1" class="none custom-ckbox-inp" />
-                              <label for="option1-2" class="custom-ckbox"></label>
-                              <label for="option1-2" class="custom-ckbox-label">60분</label>
+                        <!-- 선택하면 보여지는 영역 -->
+                        <div class="accordion-card-bottom">
+                          <div class="form-item-grp">
+                            <label class="form-label">산책 시간 선택</label>
+                            <div class="form-inp-wrap">
+                              <ul class="inner-grid-grp">
+                                <li class="inner-grid">
+                                  <div class="cckbox-item">
+                                    <input id="option1-1" type="radio" name="option1" class="none custom-ckbox-inp" />
+                                    <label for="option1-1" class="custom-ckbox"></label>
+                                    <label for="option1-1" class="custom-ckbox-label">30분</label>
+                                  </div>
+                                </li>
+                                <li class="inner-grid">
+                                  <div class="cckbox-item">
+                                    <input id="option1-2" type="radio" name="option1" class="none custom-ckbox-inp" />
+                                    <label for="option1-2" class="custom-ckbox"></label>
+                                    <label for="option1-2" class="custom-ckbox-label">60분</label>
+                                  </div>
+                                </li>
+                              </ul>
                             </div>
                           </div>
                         </div>
+
+                        <!-- END 선택하면 보여지는 영역 -->
                       </div>
 
-                      <!-- END 선택하면 보여지는 영역 -->
+                      <!-- END 산책을 맡기고 싶어요 -->
                     </div>
 
-                    <!-- END 산책을 맡기고 싶어요 -->
-                  </div>
-                  <div class="list">
+                    <!-- END list -->
 
-                    <!-- 미용하고 싶어요 -->
-                    <div class="accordion-card-item">
+                    <!-- 미용 list -->
+                    <div class="list">
 
-                      <!-- 선택 영역 -->
-                      <div>
-                        <div>
-                          <i></i>
-                          <p>미용하고 싶어요</p>
+                      <!-- 미용하고 싶어요 -->
+
+                      <!-- TODO: accordion-card-item 선택시 active 클래스 추가 -->
+                      <div class="accordion-card-item">
+
+                        <!-- 선택 영역 -->
+                        <div class="accordion-card-top">
+                          <div class="ico-txt-card">
+                            <span class="ico-box">
+                          <i class="ico ico-svc-beauty-gray ico-off"></i>
+                          <i class="ico ico-svc-beauty-dark ico-on"></i>
+                        </span>
+                            <p class="txt">미용하고 싶어요</p>
+                          </div>
                         </div>
-                      </div>
 
-                      <!-- END 선택 영역 -->
+                        <!-- END 선택 영역 -->
 
-                      <!-- 선택하면 보여지는 영역 -->
-                      <div>
-                        <div>
-                          <label>미용 종류 선택</label>
-                          <div>
-                            <div class="cckbox-item">
-                              <input id="option2-1" type="checkbox" class="none custom-ckbox-inp" />
-                              <label for="option2-1" class="custom-ckbox"></label>
-                              <label for="option2-1" class="custom-ckbox-label">option1</label>
-                            </div>
-                            <div class="cckbox-item">
-                              <input id="option2-2" type="checkbox" class="none custom-ckbox-inp" />
-                              <label for="option2-2" class="custom-ckbox"></label>
-                              <label for="option2-2" class="custom-ckbox-label">option2</label>
-                            </div>
-                            <div class="cckbox-item">
-                              <input id="option2-3" type="checkbox" class="none custom-ckbox-inp" />
-                              <label for="option2-3" class="custom-ckbox"></label>
-                              <label for="option2-3" class="custom-ckbox-label">option3</label>
+                        <!-- 선택하면 보여지는 영역 -->
+                        <div class="accordion-card-bottom">
+                          <div class="form-item-grp">
+                            <label class="form-label">미용 종류 선택</label>
+                            <div class="form-inp-wrap">
+                              <div class="inner-cckbox-item-grp">
+                                <div class="cckbox-item">
+                                  <input id="option2-1" type="checkbox" class="none custom-ckbox-inp" />
+                                  <label for="option2-1" class="custom-ckbox"></label>
+                                  <label for="option2-1" class="custom-ckbox-label">option1</label>
+                                </div>
+                                <div class="cckbox-item">
+                                  <input id="option2-2" type="checkbox" class="none custom-ckbox-inp" />
+                                  <label for="option2-2" class="custom-ckbox"></label>
+                                  <label for="option2-2" class="custom-ckbox-label">option2</label>
+                                </div>
+                                <div class="cckbox-item">
+                                  <input id="option2-3" type="checkbox" class="none custom-ckbox-inp" />
+                                  <label for="option2-3" class="custom-ckbox"></label>
+                                  <label for="option2-3" class="custom-ckbox-label">option3</label>
+                                </div>
+                                <div class="cckbox-item">
+                                  <input id="option2-4" type="checkbox" class="none custom-ckbox-inp" />
+                                  <label for="option2-4" class="custom-ckbox"></label>
+                                  <label for="option2-4" class="custom-ckbox-label">option4</label>
+                                </div>
+                                <div class="cckbox-item">
+                                  <input id="option2-5" type="checkbox" class="none custom-ckbox-inp" />
+                                  <label for="option2-5" class="custom-ckbox"></label>
+                                  <label for="option2-5" class="custom-ckbox-label">option5</label>
+                                </div>
+                                <div class="cckbox-item">
+                                  <input id="option2-6" type="checkbox" class="none custom-ckbox-inp" />
+                                  <label for="option2-6" class="custom-ckbox"></label>
+                                  <label for="option2-6" class="custom-ckbox-label">option6</label>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
+
+                        <!-- END 선택하면 보여지는 영역 -->
                       </div>
 
-                      <!-- END 선택하면 보여지는 영역 -->
+                      <!-- END 미용하고 싶어요 -->
                     </div>
 
-                    <!-- END 미용하고 싶어요 -->
-                  </div>
-                  <div class="list">
+                    <!-- END list -->
 
-                    <!-- 잠시 동안 돌봐주세요 -->
-                    <div class="accordion-card-item">
+                    <!-- 목욕 list -->
+                    <div class="list">
 
-                      <!-- 선택 영역 -->
-                      <div>
-                        <div>
-                          <i></i>
-                          <p>잠시 동안 돌봐주세요</p>
+                      <!-- 목욕시켜주세요 -->
+
+                      <!-- TODO: accordion-card-item 선택시 active 클래스 추가 -->
+                      <div class="accordion-card-item">
+
+                        <!-- 선택 영역 -->
+                        <div class="accordion-card-top">
+
+                          <!-- 선택 영역 -->
+                          <div class="ico-txt-card">
+                            <span class="ico-box">
+                          <i class="ico ico-svc-wash-gray ico-off"></i>
+                          <i class="ico ico-svc-wash-dark ico-on"></i>
+                        </span>
+                            <p class="txt">목욕시켜주세요</p>
+                          </div>
                         </div>
+
+                        <!-- END 선택 영역 -->
+
+                        <!-- 목욕은 선택하면 보여지는 영역이 없음 -->
                       </div>
 
-                      <!-- END 선택 영역 -->
+                      <!-- END 목욕시켜주세요 -->
+                    </div>
 
-                      <!-- 선택하면 보여지는 영역 -->
-                      <div>
-                        <div>
-                          <label>돌봄 유형 선택</label>
-                          <div>
-                            <ul>
-                              <li>
-                                <div>
+                    <!-- END list -->
+
+                    <!-- 훈련 list -->
+                    <div class="list">
+
+                      <!-- 훈련시켜 주세요 -->
+
+                      <!-- TODO: accordion-card-item 선택시 active 클래스 추가 -->
+                      <div class="accordion-card-item">
+
+                        <!-- 선택 영역 -->
+                        <div class="accordion-card-top">
+                          <div class="ico-txt-card">
+                            <span class="ico-box">
+                          <i class="ico ico-svc-traning-gray ico-off"></i>
+                          <i class="ico ico-svc-traning-dark ico-on"></i>
+                        </span>
+                            <p class="txt">훈련시켜 주세요</p>
+                          </div>
+                        </div>
+
+                        <!-- END 선택 영역 -->
+
+                        <!-- 선택하면 보여지는 영역 -->
+                        <div class="accordion-card-bottom">
+                          <div class="form-item-grp">
+                            <label class="form-label">훈련 종류 선택</label>
+                            <div class="form-inp-wrap">
+                              <div class="inner-cckbox-item-grp">
+                                <div class="cckbox-item">
+                                  <input id="option4-1" type="checkbox" class="none custom-ckbox-inp" />
+                                  <label for="option4-1" class="custom-ckbox"></label>
+                                  <label for="option4-1" class="custom-ckbox-label">option1</label>
+                                </div>
+                                <div class="cckbox-item">
+                                  <input id="option4-2" type="checkbox" class="none custom-ckbox-inp" />
+                                  <label for="option4-2" class="custom-ckbox"></label>
+                                  <label for="option4-2" class="custom-ckbox-label">option2</label>
+                                </div>
+                                <div class="cckbox-item">
+                                  <input id="option4-3" type="checkbox" class="none custom-ckbox-inp" />
+                                  <label for="option4-3" class="custom-ckbox"></label>
+                                  <label for="option4-3" class="custom-ckbox-label">option3</label>
+                                </div>
+                                <div class="cckbox-item">
+                                  <input id="option4-4" type="checkbox" class="none custom-ckbox-inp" />
+                                  <label for="option4-4" class="custom-ckbox"></label>
+                                  <label for="option4-4" class="custom-ckbox-label">option4</label>
+                                </div>
+                                <div class="cckbox-item">
+                                  <input id="option4-5" type="checkbox" class="none custom-ckbox-inp" />
+                                  <label for="option4-5" class="custom-ckbox"></label>
+                                  <label for="option4-5" class="custom-ckbox-label">option5</label>
+                                </div>
+                                <div class="cckbox-item">
+                                  <input id="option4-6" type="checkbox" class="none custom-ckbox-inp" />
+                                  <label for="option4-6" class="custom-ckbox"></label>
+                                  <label for="option4-6" class="custom-ckbox-label">option6</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- END 선택하면 보여지는 영역 -->
+                      </div>
+
+                      <!-- END 훈련시켜 주세요 -->
+                    </div>
+
+                    <!-- END list -->
+
+                    <!-- 잠시동안 돌봐주세요 list -->
+                    <div class="list">
+
+                      <!-- 잠시 동안 돌봐주세요 -->
+
+                      <!-- TODO: accordion-card-item 선택시 active 클래스 추가 -->
+                      <div class="accordion-card-item">
+
+                        <!-- 선택 영역 -->
+                        <div class="accordion-card-top">
+                          <div class="ico-txt-card">
+                            <span class="ico-box">
+                          <i class="ico ico-svc-care-gray ico-off"></i>
+                          <i class="ico ico-svc-care-dark ico-on"></i>
+                        </span>
+                            <p class="txt">잠시 동안 돌봐주세요</p>
+                          </div>
+                        </div>
+
+                        <!-- END 선택 영역 -->
+
+                        <!-- 선택하면 보여지는 영역 -->
+                        <div class="accordion-card-bottom">
+                          <div class="form-item-grp">
+                            <label class="form-label">돌봄 유형 선택</label>
+                            <div class="form-inp-wrap">
+                              <ul class="inner-col-list-grp">
+                                <li class="inner-col-list">
                                   <div class="cckbox-item type01">
                                     <input id="option3-1" type="radio" name="option3" class="none custom-ckbox-inp" />
                                     <label for="option3-1" class="custom-ckbox"></label>
@@ -196,10 +345,8 @@
                                       <span class="sm-txt">위탁 돌봄은 어쩌구 저쩌구 저쩌구 입니다.</span>
                                     </label>
                                   </div>
-                                </div>
-                              </li>
-                              <li>
-                                <div>
+                                </li>
+                                <li class="inner-col-list">
                                   <div class="cckbox-item type01">
                                     <input id="option3-2" type="radio" name="option3" class="none custom-ckbox-inp" />
                                     <label for="option3-2" class="custom-ckbox"></label>
@@ -208,96 +355,80 @@
                                       <span class="sm-txt">방문 돌봄은 어쩌구 저쩌구 저쩌구 입니다.</span>
                                     </label>
                                   </div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-
-                      <!-- END 선택하면 보여지는 영역 -->
-                    </div>
-
-                    <!-- END 잠시 동안 돌봐주세요 -->
-                  </div>
-                  <div class="list">
-
-                    <!-- 드롭 및 픽업을 해 주세요 -->
-                    <div class="accordion-card-item">
-
-                      <!-- 선택 영역 -->
-                      <div>
-                        <div>
-                          <i></i>
-                          <p>드롭 및 픽업을 해 주세요</p>
-                        </div>
-                      </div>
-
-                      <!-- END 선택 영역 -->
-
-                      <!-- 선택하면 보여지는 영역 -->
-                      <div>
-                        <div>
-                          <div>
-                            <label>드롭 장소</label>
-                            <div>
-                              <input type="text" class="custom-inp" placeholder="주소 검색">
-                              <button type="button" class="btn form-inp-btn">검색</button>
-                            </div>
-                            <div class="form-inp-wrap">
-                              <input type="text" class="custom-inp" required="required" placeholder="주소 입력">
-                            </div>
-                            <div class="form-inp-wrap">
-                              <input type="text" class="custom-inp" placeholder="상세주소 입력">
-                            </div>
-                          </div>
-                          <div>
-                            <label>픽업 장소</label>
-                            <div>
-                              <input type="text" class="custom-inp" placeholder="주소 검색">
-                              <button type="button" class="btn form-inp-btn">검색</button>
-                            </div>
-                            <div class="form-inp-wrap">
-                              <input type="text" class="custom-inp" required="required" placeholder="주소 입력">
-                            </div>
-                            <div class="form-inp-wrap">
-                              <input type="text" class="custom-inp" placeholder="상세주소 입력">
+                                </li>
+                              </ul>
                             </div>
                           </div>
                         </div>
+
+                        <!-- END 선택하면 보여지는 영역 -->
                       </div>
 
-                      <!-- END 선택하면 보여지는 영역 -->
+                      <!-- END 잠시 동안 돌봐주세요 -->
                     </div>
 
-                    <!-- END 드롭 및 픽업을 해 주세요 -->
-                  </div>
-                  <div class="list">
+                    <!-- END list -->
 
-                    <!-- 목욕시켜주세요 -->
-                    <div class="accordion-card-item">
+                    <!-- 드롭 및 픽업 list -->
+                    <div class="list">
 
-                      <!-- 선택 영역 -->
-                      <div>
-                        <div>
-                          <i></i>
-                          <p>목욕시켜주세요</p>
+                      <!-- 드롭 및 픽업을 해 주세요 -->
+
+                      <!-- TODO: accordion-card-item 선택시 active 클래스 추가 -->
+                      <div class="accordion-card-item">
+
+                        <!-- 선택 영역 -->
+                        <div class="accordion-card-top">
+                          <div class="ico-txt-card">
+                            <span class="ico-box">
+                          <i class="ico ico-svc-drop-gray ico-off"></i>
+                          <i class="ico ico-svc-drop-dark ico-on"></i>
+                        </span>
+                            <p class="txt">드롭 및 픽업을 해 주세요</p>
+                          </div>
                         </div>
+
+                        <!-- END 선택 영역 -->
+
+                        <!-- 선택하면 보여지는 영역 -->
+                        <div class="accordion-card-bottom">
+                          <div class="form-item-grp">
+                            <div class="form-item">
+                              <label class="form-label">드롭 장소</label>
+                              <div class="form-inp-wrap">
+                                <input type="text" class="custom-inp" placeholder="주소 검색">
+                                <button type="button" class="btn form-inp-btn">검색</button>
+                              </div>
+                              <div class="form-inp-wrap">
+                                <input type="text" class="custom-inp" required="required" placeholder="주소 입력">
+                              </div>
+                              <div class="form-inp-wrap">
+                                <input type="text" class="custom-inp" placeholder="상세주소 입력">
+                              </div>
+                            </div>
+                            <div class="form-item">
+                              <label class="form-label">픽업 장소</label>
+                              <div class="form-inp-wrap">
+                                <input type="text" class="custom-inp" placeholder="주소 검색">
+                                <button type="button" class="btn form-inp-btn">검색</button>
+                              </div>
+                              <div class="form-inp-wrap">
+                                <input type="text" class="custom-inp" required="required" placeholder="주소 입력">
+                              </div>
+                              <div class="form-inp-wrap">
+                                <input type="text" class="custom-inp" placeholder="상세주소 입력">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- END 선택하면 보여지는 영역 -->
                       </div>
 
-                      <!-- END 선택 영역 -->
-
-                      <!-- 선택하면 보여지는 영역 -->
-
-                      <!-- 목욕은 부가옵션이 없어서 div 주석걸어놓았음 -->
-
-                      <!-- <div>
-                  </div> -->
-
-                      <!-- END 선택하면 보여지는 영역 -->
+                      <!-- END 드롭 및 픽업을 해 주세요 -->
                     </div>
 
-                    <!-- END 목욕시켜주세요 -->
+                    <!-- END list -->
                   </div>
                 </div>
               </div>

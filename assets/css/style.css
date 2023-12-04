@@ -993,6 +993,35 @@ img {
   gap: 0.5rem;
   margin-bottom: 1rem;
 }
+.form-inp-wrap:last-child {
+  margin-bottom: 0;
+}
+.form-inp-wrap .inner-grid-grp {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.form-inp-wrap .inner-grid-grp .inner-grid {
+  width: 100%;
+  max-width: calc((100% - 1rem) / 2);
+}
+.form-inp-wrap .inner-cckbox-item-grp {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: 1.5rem;
+  column-gap: 3rem;
+  flex-wrap: wrap;
+}
+.form-inp-wrap .inner-col-list-grp .inner-col-list {
+  margin-bottom: 1.4rem;
+}
+.form-inp-wrap .inner-col-list-grp .inner-col-list:last-child {
+  margin-bottom: 0;
+}
 
 .form-inp-wrap .form-inp-btn {
   flex-shrink: 0;
@@ -1152,6 +1181,19 @@ img {
   line-height: 1.4;
   padding-top: 1px;
   font-weight: 300;
+}
+
+.cckbox-item.type01 .custom-ckbox-label-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3px;
+}
+.cckbox-item.type01 .custom-ckbox-label-wrap .sm-txt {
+  font-size: 1.2rem;
+  color: var(--gray, #aeaeae);
+  line-height: 1.4;
 }
 
 .custom-ckbox {
@@ -1445,6 +1487,54 @@ img {
 
 .ico-plus-gray {
   background-image: url(../images/ico/ico-plus-gray.svg);
+}
+
+.ico-svc-walk-gray {
+  background-image: url(../images/ico/ico-svc-walk-gray.svg);
+}
+
+.ico-svc-walk-dark {
+  background-image: url(../images/ico/ico-svc-walk-dark.svg);
+}
+
+.ico-svc-beauty-gray {
+  background-image: url(../images/ico/ico-svc-beauty-gray.svg);
+}
+
+.ico-svc-beauty-dark {
+  background-image: url(../images/ico/ico-svc-beauty-dark.svg);
+}
+
+.ico-svc-wash-gray {
+  background-image: url(../images/ico/ico-svc-wash-gray.svg);
+}
+
+.ico-svc-wash-dark {
+  background-image: url(../images/ico/ico-svc-wash-dark.svg);
+}
+
+.ico-svc-traning-gray {
+  background-image: url(../images/ico/ico-svc-traning-gray.svg);
+}
+
+.ico-svc-traning-dark {
+  background-image: url(../images/ico/ico-svc-traning-dark.svg);
+}
+
+.ico-svc-care-gray {
+  background-image: url(../images/ico/ico-svc-care-gray.svg);
+}
+
+.ico-svc-care-dark {
+  background-image: url(../images/ico/ico-svc-care-dark.svg);
+}
+
+.ico-svc-drop-gray {
+  background-image: url(../images/ico/ico-svc-drop-gray.svg);
+}
+
+.ico-svc-drop-dark {
+  background-image: url(../images/ico/ico-svc-drop-dark.svg);
 }
 
 /* ======================== 구성요소 - 버튼 ======================== */
@@ -3232,6 +3322,9 @@ img {
 .pst-request-page .left-ttl-wrap.type01 {
   margin-bottom: 2rem;
 }
+.pst-request-page .col-list-grp-wrap {
+  padding-bottom: 4rem;
+}
 .pst-request-page .col-list-grp {
   margin-bottom: 1.5rem;
 }
@@ -3244,4 +3337,82 @@ img {
 .pst-request-page .nothing-list-grp.type-center {
   /* left-ttl-wrap.type01 높이 빼기 */
   height: calc(100% - 7.4rem);
+}
+
+.accordion-card-item {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid var(--gray_light, #F1F1F1);
+  overflow: hidden;
+}
+.accordion-card-item .ico-txt-card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+  padding: 1.5rem;
+  pointer-events: none;
+}
+.accordion-card-item .ico-txt-card .ico-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  flex-shrink: 0;
+}
+.accordion-card-item .ico-txt-card .ico-box .ico-off {
+  display: block;
+}
+.accordion-card-item .ico-txt-card .ico-box .ico-on {
+  display: none;
+}
+.accordion-card-item .ico-txt-card .txt {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--gray-dark, #6C6C6C);
+  line-height: 1.4;
+}
+
+.accordion-card-item.active {
+  border-color: var(--main-green, #56C595);
+}
+.accordion-card-item.active .ico-txt-card .ico-box .ico-off {
+  display: none;
+}
+.accordion-card-item.active .ico-txt-card .ico-box .ico-on {
+  display: block;
+}
+.accordion-card-item.active .ico-txt-card .txt {
+  color: #000;
+}
+.accordion-card-item.active .accordion-card-bottom {
+  height: auto;
+  padding: 1.5rem 0;
+}
+
+.accordion-card-bottom {
+  height: 0;
+  position: relative;
+  transition: all 0.3s;
+}
+.accordion-card-bottom:before {
+  width: calc(100% - 3rem);
+  height: 1px;
+  display: inline-block;
+  background-color: var(--gray-light, #f1f1f1);
+  position: absolute;
+  top: 0;
+  left: 1.5rem;
+  content: "";
+}
+.accordion-card-bottom .form-item-grp {
+  padding: 0 1.5rem;
+}
+.accordion-card-bottom .form-label {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--gray, #AEAEAE);
+  margin-bottom: 1.5rem;
 }
