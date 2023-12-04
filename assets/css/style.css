@@ -9,6 +9,7 @@
   --gray-dark: #6c6c6c;
   --gray-light: #f1f1f1;
   --red: #cd3e3e;
+  --blue: #0085ff;
   --yellow: #ffc700;
   --alarm-before: #fff6f4;
   --alarm: #ffb179;
@@ -867,6 +868,51 @@ img {
 }
 .upload-square-card:hover {
   background-color: var(--gray-light, #f1f1f1);
+}
+
+/* 썸네일 변경 */
+.edit-thumbnail-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto;
+  position: relative;
+}
+.edit-thumbnail-wrap .thumbnail.circle {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--gray-light, #f1f1f1);
+}
+.edit-thumbnail-wrap .thumbnail.circle .img-ico-pet {
+  width: 4.8rem;
+  height: 4.8rem;
+}
+.edit-thumbnail-wrap .edit-btn {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 5px;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 3.2rem;
+  height: 3.2rem;
+  background: var(--gray, #AEAEAE);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.edit-thumbnail-wrap .edit-btn:active {
+  background: var(--gray-dark, #6c6c6c);
+}
+.edit-thumbnail-wrap .edit-btn .ico {
+  width: 1.7rem;
 }
 
 /* 알림 종류 */
@@ -1798,6 +1844,42 @@ img {
   background-image: url(../images/ico/ico-svc-drop-dark.svg);
 }
 
+.ico-ptype-cat-gray {
+  background-image: url(../images/ico/ico-ptype-cat-gray.svg);
+}
+
+.ico-ptype-cat-dark {
+  background-image: url(../images/ico/ico-ptype-cat-dark.svg);
+}
+
+.ico-ptype-dog-gray {
+  background-image: url(../images/ico/ico-ptype-dog-gray.svg);
+}
+
+.ico-ptype-dog-dark {
+  background-image: url(../images/ico/ico-ptype-dog-dark.svg);
+}
+
+.ico-ptype-bird-gray {
+  background-image: url(../images/ico/ico-ptype-bird-gray.svg);
+}
+
+.ico-ptype-bird-dark {
+  background-image: url(../images/ico/ico-ptype-bird-dark.svg);
+}
+
+.ico-ptype-etc-gray {
+  background-image: url(../images/ico/ico-ptype-etc-gray.svg);
+}
+
+.ico-ptype-etc-dark {
+  background-image: url(../images/ico/ico-ptype-etc-dark.svg);
+}
+
+.ico-edit {
+  background-image: url(../images/ico/ico-edit.svg);
+}
+
 /* ======================== 구성요소 - 버튼 ======================== */
 .btn {
   padding: 0;
@@ -2591,6 +2673,7 @@ img {
     align-items: center;
     justify-content: flex-start;
     gap: 5px;
+    flex-wrap: wrap;
   }
   #guide-page .gtbl-body .list .cell .etc {
     margin-bottom: 5px;
@@ -3667,4 +3750,44 @@ img {
   background-color: white;
   text-align: left;
   width: 100%;
+}
+
+/* ======================== 페이지 - 반려동물 등록 ======================== */
+.penroll-page .page {
+  padding: 1rem 1.5rem 3rem;
+}
+.penroll-page .list-page {
+  height: 100%;
+}
+.penroll-page .list-page .col-list-grp {
+  margin-bottom: 1.5rem;
+}
+.penroll-page .list-page .nothing-list-grp.type-center {
+  /* left-ttl-wrap.type01 높이 빼기 */
+  height: calc(100% - 7.7rem - 2rem);
+}
+.penroll-page .left-ttl-wrap.type01 {
+  margin-bottom: 2rem;
+}
+.penroll-page .col-list-grp .list {
+  margin-bottom: 1.5rem;
+}
+.penroll-page .col-list-grp .list:last-child {
+  margin-bottom: 0;
+}
+.penroll-page .txt-btn-row {
+  align-items: flex-start;
+}
+.penroll-page .txt-btn-row .dark-txt {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.5;
+  display: inline-flex;
+  padding-top: 0.2rem;
+}
+.penroll-page .txt-btn-row .badge {
+  min-width: 5.1rem;
+}
+.penroll-page .gray-light-box {
+  padding: 1.5rem;
 }

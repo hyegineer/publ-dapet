@@ -81,102 +81,101 @@
                   <h2 class="left-ttl">반려동물의 <br>기본 정보를 작성해 주세요.</h2>
                   <p class="left-desc">생년월일, 몸무게의 경우 추정 값으로 작성이 가능합니다.</p>
                 </div>
-                <div>
-                  <div>
-                    <div>
-                      <figure class="">
-                        <img src="" alt="">
+                <div class="form-item-grp">
+                  <div class="form-item">
+                    <div class="edit-thumbnail-wrap">
+                      <figure class="thumbnail circle">
+                        <img id="img-thumbnail" src="assets/images/ico/ico-pet-gray.svg" alt="" class="thumbnail-img img-ico-pet" />
                       </figure>
-                      <button type="button">
+                      <input type="file" id="thumbnail" class="none">
+                      <label for="thumbnail" class="edit-btn">
                         <span class="txt-hidden">사진 수정하기</span>
-                        <i></i>
-                      </button>
+                        <i class="ico ico-edit"></i>
+                      </label>
                     </div>
                   </div>
-                  <div class="form-item-grp">
 
-                    <!-- 이름 -->
-                    <div class="form-item">
-                      <label class="form-label">이름</label>
-                      <div class="form-inp-wrap">
-                        <input type="text" class="custom-inp" placeholder="이름 입력">
-                      </div>
-                      <span class="form-caution">이름을 입력해 주세요.</span>
+                  <!-- 이름 -->
+                  <div class="form-item">
+                    <label class="form-label">이름</label>
+                    <div class="form-inp-wrap">
+                      <input type="text" class="custom-inp" placeholder="이름 입력">
                     </div>
+                    <span class="form-caution">이름을 입력해 주세요.</span>
+                  </div>
 
-                    <!-- 품종 -->
-                    <div class="form-item">
-                      <label class="form-label">품종</label>
-                      <div class="form-inp-wrap">
-                        <input type="text" class="custom-inp" placeholder="세부종 입력">
-                      </div>
-                      <span class="form-caution">세부종을 입력해 주세요.</span>
+                  <!-- 품종 -->
+                  <div class="form-item">
+                    <label class="form-label">품종</label>
+                    <div class="form-inp-wrap">
+                      <input type="text" class="custom-inp" placeholder="세부종 입력">
                     </div>
+                    <span class="form-caution">세부종을 입력해 주세요.</span>
+                  </div>
 
-                    <!-- 성별 -->
-                    <div class="form-item">
-                      <label class="form-label">성별</label>
-                      <div class="form-inp-wrap">
-                        <ul>
-                          <li>
-                            <div class="cckbox-item">
-                              <input id="male" type="radio" name="gender" class="none custom-ckbox-inp" />
-                              <label for="male" class="custom-ckbox"></label>
-                              <label for="male" class="custom-ckbox-label">수컷</label>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="cckbox-item">
-                              <input id="female" type="radio" name="gender" class="none custom-ckbox-inp" />
-                              <label for="female" class="custom-ckbox"></label>
-                              <label for="female" class="custom-ckbox-label">암컷</label>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                      <span class="form-caution">세부종을 입력해 주세요.</span>
+                  <!-- 성별 -->
+                  <div class="form-item">
+                    <label class="form-label">성별</label>
+                    <div class="form-inp-wrap">
+                      <ul class="inner-grid-grp">
+                        <li class="inner-grid">
+                          <div class="cckbox-item">
+                            <input id="male" type="radio" name="gender" class="none custom-ckbox-inp" />
+                            <label for="male" class="custom-ckbox"></label>
+                            <label for="male" class="custom-ckbox-label">수컷</label>
+                          </div>
+                        </li>
+                        <li class="inner-grid">
+                          <div class="cckbox-item">
+                            <input id="female" type="radio" name="gender" class="none custom-ckbox-inp" />
+                            <label for="female" class="custom-ckbox"></label>
+                            <label for="female" class="custom-ckbox-label">암컷</label>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
+                    <span class="form-caution">세부종을 입력해 주세요.</span>
+                  </div>
 
-                    <!-- 생년월일 -->
-                    <div class="form-item">
-                      <label class="form-label">
-                        <span>생년월일</span>
-                        <span class="sm-txt">(추정)</span>
-                      </label>
-                      <div class="form-inp-wrap">
+                  <!-- 생년월일 -->
+                  <div class="form-item">
+                    <label class="form-label">
+                      <span>생년월일</span>
+                      <span class="sm-txt">(추정)</span>
+                    </label>
+                    <div class="form-inp-wrap">
 
-                        <!-- FIXME: 달력 데이트피커 -->
-                        <input type="text" class="custom-inp" placeholder="날짜 선택">
-                      </div>
-                      <span class="form-caution">생년월일을 입력해 주세요.</span>
+                      <!-- FIXME: 달력 데이트피커 -->
+                      <input type="text" class="custom-inp" placeholder="날짜 선택">
                     </div>
+                    <span class="form-caution">생년월일을 입력해 주세요.</span>
+                  </div>
 
-                    <!-- 아이와 함께한 첫날 -->
-                    <div class="form-item">
-                      <label class="form-label">아이와 함께한 첫날</label>
-                      </label>
-                      <div class="form-inp-wrap">
+                  <!-- 아이와 함께한 첫날 -->
+                  <div class="form-item">
+                    <label class="form-label">아이와 함께한 첫날</label>
+                    </label>
+                    <div class="form-inp-wrap">
 
-                        <!-- FIXME: 달력 데이트피커 -->
-                        <input type="text" class="custom-inp" placeholder="날짜 선택">
-                      </div>
-                      <span class="form-caution">아이와 함께한 첫날을 입력해 주세요.</span>
+                      <!-- FIXME: 달력 데이트피커 -->
+                      <input type="text" class="custom-inp" placeholder="날짜 선택">
                     </div>
+                    <span class="form-caution">아이와 함께한 첫날을 입력해 주세요.</span>
+                  </div>
 
-                    <!-- 몸무게 (추정) -->
-                    <div class="form-item">
-                      <label class="form-label">
-                        <span>몸무게</span>
-                        <span class="sm-txt">(추정)</span>
-                      </label>
-                      <div class="form-inp-wrap">
-                        <div class="inp-unit-item">
-                          <input type="text" class="custom-inp" placeholder="숫자만 입력하세요." maxlength="40">
-                          <span class="unit">kg</span>
-                        </div>
+                  <!-- 몸무게 (추정) -->
+                  <div class="form-item">
+                    <label class="form-label">
+                      <span>몸무게</span>
+                      <span class="sm-txt">(추정)</span>
+                    </label>
+                    <div class="form-inp-wrap">
+                      <div class="inp-unit-item">
+                        <input type="text" class="custom-inp" placeholder="숫자만 입력하세요." maxlength="40">
+                        <span class="unit">kg</span>
                       </div>
-                      <span class="form-caution">몸무게를 입력해 주세요.</span>
                     </div>
+                    <span class="form-caution">몸무게를 입력해 주세요.</span>
                   </div>
                 </div>
               </div>
@@ -206,6 +205,33 @@
 
       <!-- END layout) 페이지 레이아웃 -->
     </div>
+    <script>
+      (function() {
+        // FIXME: 썸네일 업로드 임시 구현
+        $("#thumbnail").on("change", function(e) {
+          var file = e.target.files[0];
+          if (isImageFile(file)) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+              $("#img-thumbnail").attr("src", e.target.result);
+              $("#img-thumbnail").removeClass("img-ico-pet");
+            }
+            reader.readAsDataURL(file);
+          } else {
+            alert("이미지 파일만 첨부 가능합니다.");
+            $("#thumbnail").val("");
+            $("#img-thumbnail").attr("src", "assets/images/ico/ico-pet-gray.svg");
+            $("#img-thumbnail").addClass("img-ico-pet");
+          }
+        });
+        // 확장자 확인
+        function isImageFile(file) {
+          // 파일명에서 확장자를 가져옴
+          var ext = file.name.split(".").pop().toLowerCase();
+          return ($.inArray(ext, ["jpg", "jpeg", "gif", "png"]) === -1) ? false : true;
+        }
+      })();
+    </script>
     <script src="assets/js/ui.js"></script>
   </body>
 </html>

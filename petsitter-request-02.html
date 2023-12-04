@@ -459,11 +459,14 @@
       <!-- END layout) 페이지 레이아웃 -->
     </div>
     <script>
-      $('.accordion-card-item').on('click', function(e) {
-        if (e.target.getAttribute('class') == 'accordion-card-top') {
-          $(this).toggleClass('active');
-        }
-      })
+      // FIXME: 아코디언 임시 구현
+      (function() {
+        ('.accordion-card-item').on('click', function(e) {
+          if (e.target.getAttribute('class') == 'accordion-card-top') {
+            $(this).toggleClass('active');
+          }
+        })
+      })();
     </script>
     <script src="assets/js/ui.js"></script>
   </body>

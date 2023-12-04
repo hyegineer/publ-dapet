@@ -82,18 +82,22 @@
                   <p class="left-desc">기타의 경우 반려동물의 종류를 작성해 주세요.</p>
                 </div>
                 <div class="col-list-grp">
+
+                  <!-- 고양이 list -->
                   <div class="list">
 
                     <!-- 고양이 -->
                     <div class="accordion-card-item">
 
                       <!-- 선택 영역 -->
-                      <div class="ico-txt-box">
-                        <span class="ico-box">
-                      <i class="ico ico-off"></i>
-                      <i class="ico ico-on"></i>
-                    </span>
-                        <p class="txt">고양이</p>
+                      <div class="accordion-card-top">
+                        <div class="ico-txt-card">
+                          <span class="ico-box">
+                        <i class="ico ico-ptype-cat-gray ico-off"></i>
+                        <i class="ico ico-ptype-cat-dark ico-on"></i>
+                      </span>
+                          <p class="txt">고양이</p>
+                        </div>
                       </div>
 
                       <!-- END 선택 영역 -->
@@ -101,24 +105,83 @@
 
                     <!-- END 고양이 -->
                   </div>
+
+                  <!-- END list -->
+
+                  <!-- 강아지 list -->
+                  <div class="list">
+
+                    <!-- 강아지 -->
+                    <div class="accordion-card-item">
+
+                      <!-- 선택 영역 -->
+                      <div class="accordion-card-top">
+                        <div class="ico-txt-card">
+                          <span class="ico-box">
+                        <i class="ico ico-ptype-dog-gray ico-off"></i>
+                        <i class="ico ico-ptype-dog-dark ico-on"></i>
+                      </span>
+                          <p class="txt">강아지</p>
+                        </div>
+                      </div>
+
+                      <!-- END 선택 영역 -->
+                    </div>
+
+                    <!-- END 강아지 -->
+                  </div>
+
+                  <!-- END list -->
+
+                  <!-- 조류 list -->
+                  <div class="list">
+
+                    <!-- 조류 -->
+                    <div class="accordion-card-item">
+
+                      <!-- 선택 영역 -->
+                      <div class="accordion-card-top">
+                        <div class="ico-txt-card">
+                          <span class="ico-box">
+                        <i class="ico ico-ptype-bird-gray ico-off"></i>
+                        <i class="ico ico-ptype-bird-dark ico-on"></i>
+                      </span>
+                          <p class="txt">조류 (닭, 앵무새, 오리 등)</p>
+                        </div>
+                      </div>
+
+                      <!-- END 선택 영역 -->
+                    </div>
+
+                    <!-- END 조류 -->
+                  </div>
+
+                  <!-- END list -->
+
+                  <!-- 기타 list -->
                   <div class="list">
 
                     <!-- 기타 (토끼, 도마뱀, 거북이 등)  -->
                     <div class="accordion-card-item">
 
                       <!-- 선택 영역 -->
-                      <div>
-                        <div>
-                          <i></i>
-                          <p>기타 (토끼, 도마뱀, 거북이 등) </p>
+                      <div class="accordion-card-top">
+                        <div class="ico-txt-card">
+                          <span class="ico-box">
+                        <i class="ico ico-ptype-etc-gray ico-off"></i>
+                        <i class="ico ico-ptype-etc-dark ico-on"></i>
+                      </span>
+                          <p class="txt">기타 (토끼, 도마뱀, 거북이 등)</p>
                         </div>
                       </div>
 
                       <!-- END 선택 영역 -->
 
                       <!-- 선택하면 보여지는 영역 -->
-                      <div>
-                        <input type="text" class="custom-inp" placeholder="반려동물의 종류를 작성해 주세요.">
+                      <div class="accordion-card-bottom">
+                        <div class="form-item-grp">
+                          <input type="text" class="custom-inp" placeholder="반려동물의 종류를 작성해 주세요.">
+                        </div>
                       </div>
 
                       <!-- END 선택하면 보여지는 영역 -->
@@ -126,6 +189,8 @@
 
                     <!-- END 기타 (토끼, 도마뱀, 거북이 등)  -->
                   </div>
+
+                  <!-- END list -->
                 </div>
               </div>
             </div>
@@ -137,9 +202,9 @@
               <div class="btn-wrap">
 
                 <!-- TODO: 다 채우고나서 before 클래스 삭제 -->
-                <button type="button" class="btn theme-solid-btn btn-lg square-btn before">
+                <a href="pet-enroll-02.html" class="btn theme-solid-btn btn-lg square-btn before">
                   <span class="txt">다음</span>
-                </button>
+                </a>
               </div>
             </div>
 
@@ -154,6 +219,16 @@
 
       <!-- END layout) 페이지 레이아웃 -->
     </div>
+    <script>
+      // FIXME: 아코디언 임시 구현
+      (function() {
+        ('.accordion-card-item').on('click', function(e) {
+          if (e.target.getAttribute('class') == 'accordion-card-top') {
+            $(this).toggleClass('active');
+          }
+        })
+      })();
+    </script>
     <script src="assets/js/ui.js"></script>
   </body>
 </html>
