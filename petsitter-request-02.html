@@ -441,9 +441,9 @@
               <div class="btn-wrap">
 
                 <!-- TODO: 다 채우고나서 before 클래스 삭제 -->
-                <button type="button" class="btn theme-solid-btn btn-lg square-btn before">
+                <a href="petsitter-request-03.html" class="btn theme-solid-btn btn-lg square-btn before">
                   <span class="txt">다음</span>
-                </button>
+                </a>
               </div>
             </div>
 
@@ -458,6 +458,13 @@
 
       <!-- END layout) 페이지 레이아웃 -->
     </div>
+    <script>
+      $('.accordion-card-item').on('click', function(e) {
+        if (e.target.getAttribute('class') == 'accordion-card-top') {
+          $(this).toggleClass('active');
+        }
+      })
+    </script>
     <script src="assets/js/ui.js"></script>
   </body>
 </html>
