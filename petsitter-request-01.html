@@ -21,14 +21,13 @@
       <!-- layout) 페이지 레이아웃 -->
       <div class="l-wrapper">
 
-        <!-- TODO: ***** XXX 페이지 ***** -->
-        <div class="l-container">
+        <!-- TODO: ***** 펫시터 의뢰 페이지 (반려동물 선택) ***** -->
+        <div class="pst-request-page l-container">
 
-          <!--
- <!-- TODO: layout) 헤더 타입 02 -->
+          <!-- TODO: layout) 헤더 타입 02 -->
 
           <!-- TODO: 밑줄 있는 화면일 때는 type-bd 클래스 추가 -->
-          <header class="header type-bd">
+          <header class="header ">
             <div class="header-inner">
 
               <!-- 헤더 왼쪽 -->
@@ -49,7 +48,7 @@
 
               <!-- 헤더 중앙 -->
               <div class="hd-center ">
-                <span class="ttl">펫시터 찾기</span>
+                <span class="ttl">펫시터 의뢰</span>
               </div>
 
               <!-- 헤더 오른쪽 -->
@@ -70,7 +69,7 @@
             </div>
           </header>
 
-          <!-- ENDO layout) 헤더 타입 02 --> -->
+          <!-- ENDO layout) 헤더 타입 02 -->
 
           <!-- layout) 페이지 -->
           <div class="l-contt-container">
@@ -78,6 +77,112 @@
             <!-- layout) 페이지 상단 -->
             <div class="l-contt-top">
               <div class="page">
+                <div class="left-ttl-wrap type01">
+                  <h2 class="left-ttl">맡기고자 하는 <br>반려동물을 선택해 주세요.</h2>
+                  <p class="left-desc">반려동물이 등록되지 않았다면 등록 후 선택하실 수 있습니다.</p>
+                </div>
+
+                <!-- TODO: 목록 있을 때 -->
+                <div class="col-list-grp">
+                  <div class="list">
+
+                    <!-- TODO: pet-card-item 선택시 active 클래스 추가 -->
+                    <div class="pet-card-item">
+                      <article class="pet-card-top">
+
+                        <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                        <figure class="thumbnail circle inactive">
+                          <img src="assets/images/sample/img-sample05.png" alt="" class="thumbnail-img">
+                        </figure>
+                        <ul class="card-information">
+                          <li>
+                            <div class="d-flex-row name-gender-wrap">
+                              <h3 class="card-name">춘식이</h3>
+                              <i class="ico ico-male"></i>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="d-flex-row">
+                              <p class="card-desc">2023-06-01부터 함께하는 중 🥰</p>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="mg-left ico-txt-box">
+                          <i class="ico ico-birth-gray"></i>
+                          <span class="txt">7월 21일</span>
+                        </div>
+                      </article>
+                      <div class="badge-grp">
+                        <span class="badge gray">5세</span>
+                        <span class="badge gray">12kg</span>
+                        <span class="badge gray">강아지</span>
+                        <span class="badge gray">차이니즈 크레스티드 독</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- END list -->
+                  <div class="list">
+
+                    <!-- TODO: pet-card-item 선택시 active 클래스 추가 -->
+                    <div class="pet-card-item active">
+                      <article class="pet-card-top">
+
+                        <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                        <figure class="thumbnail circle inactive">
+
+                          <!-- <img src="assets/images/sample/img-sample05.png" alt="" class="thumbnail-img"> -->
+                        </figure>
+                        <ul class="card-information">
+                          <li>
+                            <div class="d-flex-row name-gender-wrap">
+                              <h3 class="card-name">멍몽이</h3>
+                              <i class="ico ico-female"></i>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="d-flex-row">
+                              <p class="card-desc">2023-12-30부터 함께하는 중 🥰</p>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="mg-left ico-txt-box">
+                          <i class="ico ico-birth-gray"></i>
+                          <span class="txt">7월 21일</span>
+                        </div>
+                      </article>
+                      <div class="badge-grp">
+                        <span class="badge gray">2세</span>
+                        <span class="badge gray">6kg</span>
+                        <span class="badge gray">강아지</span>
+                        <span class="badge gray">푸들</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- END list -->
+                </div>
+                <button type="button" class="btn btn-w100 gray-bd-btn btn-md square-btn">
+                  <i class="ico ico-plus-gray"></i>
+                  <span class="txt">새 반려동물 등록하기</span>
+                </button>
+
+                <!-- END 목록 있을 때 -->
+
+                <!-- TODO: 목록 없을 때 -->
+                <div class="nothing-list-grp type-center" style="display: none;">
+                  <div class="nothing-list">
+                    <i class="ico ico-nothing-pet"></i>
+                    <h3 class="nl-ttl">아직 등록된 반려동물이 없습니다.</h3>
+                    <p class="nl-desc">반려동물을 등록하고 서비스를 의뢰해 보세요.</p>
+                    <button type="button" class="btn gray-bd-btn btn-md square-btn">
+                      <i class="ico ico-plus-gray"></i>
+                      <span class="txt">새 반려동물 등록하기</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- END 목록 없을 때 -->
               </div>
             </div>
 
@@ -85,6 +190,13 @@
 
             <!-- layout) 페이지 하단 -->
             <div class="l-contt-bottom">
+              <div class="btn-wrap">
+
+                <!-- TODO: 다 채우고나서 before 클래스 삭제 -->
+                <button type="button" class="btn theme-solid-btn btn-lg square-btn before">
+                  <span class="txt">다음</span>
+                </button>
+              </div>
             </div>
 
             <!-- END layout) 페이지 하단 -->
@@ -93,7 +205,7 @@
           <!-- END layout) 페이지 -->
         </div>
 
-        <!-- END ***** XXX 페이지 ***** -->
+        <!-- END ***** 펫시터 의뢰 페이지 (반려동물 선택) ***** -->
       </div>
 
       <!-- END layout) 페이지 레이아웃 -->

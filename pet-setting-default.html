@@ -21,8 +21,8 @@
       <!-- layout) 페이지 레이아웃 -->
       <div class="l-wrapper">
 
-        <!-- TODO: ***** 반려동물 등록 페이지 (기본정보 작성) ***** -->
-        <div class="penroll-page l-container">
+        <!-- TODO: ***** 반려동물 관리 페이지 (기본 정보) ***** -->
+        <div class="psetting-page l-container">
 
           <!-- TODO: layout) 헤더 타입 02 -->
 
@@ -48,7 +48,7 @@
 
               <!-- 헤더 중앙 -->
               <div class="hd-center ">
-                <span class="ttl">반려동물 등록</span>
+                <span class="ttl">반려동물 관리</span>
               </div>
 
               <!-- 헤더 오른쪽 -->
@@ -75,12 +75,14 @@
           <div class="l-contt-container">
 
             <!-- layout) 페이지 상단 -->
+            <div class="tabs">
+              <div class="tab-grp full-tab-grp">
+                <a href="pet-setting-default.html" class="tab active">기본 정보</a>
+                <a href="pet-setting-healthy.html" class="tab">건강 정보</a>
+              </div>
+            </div>
             <div class="l-contt-top">
               <div class="page">
-                <div class="left-ttl-wrap type01">
-                  <h2 class="left-ttl">반려동물의 <br>기본 정보를 작성해 주세요.</h2>
-                  <p class="left-desc">생년월일, 몸무게의 경우 추정 값으로 작성이 가능합니다.</p>
-                </div>
                 <div>
                   <div>
                     <div>
@@ -99,18 +101,53 @@
                     <div class="form-item">
                       <label class="form-label">이름</label>
                       <div class="form-inp-wrap">
-                        <input type="text" class="custom-inp" placeholder="이름 입력">
+                        <input type="text" class="custom-inp" value="춘식이">
                       </div>
-                      <span class="form-caution">이름을 입력해 주세요.</span>
+                    </div>
+
+                    <!-- 종류 -->
+                    <div class="form-item">
+                      <label class="form-label">종류</label>
+                      <div class="form-inp-wrap">
+                        <ul>
+                          <li>
+                            <div class="cckbox-item">
+                              <input id="type1" type="radio" name="type" class="none custom-ckbox-inp" />
+                              <label for="type1" class="custom-ckbox"></label>
+                              <label for="type1" class="custom-ckbox-label">고양이</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="cckbox-item">
+                              <input id="type2" type="radio" name="type" class="none custom-ckbox-inp" />
+                              <label for="type2" class="custom-ckbox"></label>
+                              <label for="type2" class="custom-ckbox-label">강아지</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="cckbox-item">
+                              <input id="type3" type="radio" name="type" class="none custom-ckbox-inp" />
+                              <label for="type3" class="custom-ckbox"></label>
+                              <label for="type3" class="custom-ckbox-label">조류</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="cckbox-item">
+                              <input id="type4" type="radio" name="type" class="none custom-ckbox-inp" />
+                              <label for="type4" class="custom-ckbox"></label>
+                              <label for="type4" class="custom-ckbox-label">기타</label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
 
                     <!-- 품종 -->
                     <div class="form-item">
                       <label class="form-label">품종</label>
                       <div class="form-inp-wrap">
-                        <input type="text" class="custom-inp" placeholder="세부종 입력">
+                        <input type="text" class="custom-inp" value="차이니즈 크레스티드 독">
                       </div>
-                      <span class="form-caution">세부종을 입력해 주세요.</span>
                     </div>
 
                     <!-- 성별 -->
@@ -134,7 +171,6 @@
                           </li>
                         </ul>
                       </div>
-                      <span class="form-caution">세부종을 입력해 주세요.</span>
                     </div>
 
                     <!-- 생년월일 -->
@@ -148,7 +184,6 @@
                         <!-- FIXME: 달력 데이트피커 -->
                         <input type="text" class="custom-inp" placeholder="날짜 선택">
                       </div>
-                      <span class="form-caution">생년월일을 입력해 주세요.</span>
                     </div>
 
                     <!-- 아이와 함께한 첫날 -->
@@ -160,7 +195,6 @@
                         <!-- FIXME: 달력 데이트피커 -->
                         <input type="text" class="custom-inp" placeholder="날짜 선택">
                       </div>
-                      <span class="form-caution">아이와 함께한 첫날을 입력해 주세요.</span>
                     </div>
 
                     <!-- 몸무게 (추정) -->
@@ -171,11 +205,10 @@
                       </label>
                       <div class="form-inp-wrap">
                         <div class="inp-unit-item">
-                          <input type="text" class="custom-inp" placeholder="숫자만 입력하세요." maxlength="40">
+                          <input type="text" class="custom-inp" value="12" maxlength="40">
                           <span class="unit">kg</span>
                         </div>
                       </div>
-                      <span class="form-caution">몸무게를 입력해 주세요.</span>
                     </div>
                   </div>
                 </div>
@@ -186,13 +219,9 @@
 
             <!-- layout) 페이지 하단 -->
             <div class="l-contt-bottom">
-              <div class="btn-wrap">
-
-                <!-- TODO: 다 채우고나서 before 클래스 삭제 -->
-                <button type="button" class="btn theme-solid-btn btn-lg square-btn before">
-                  <span class="txt">다음</span>
-                </button>
-              </div>
+              <button type="button" class="btn theme-solid-btn btn-lg square-btn">
+                <span class="txt">저장하기</span>
+              </button>
             </div>
 
             <!-- END layout) 페이지 하단 -->
@@ -201,7 +230,7 @@
           <!-- END layout) 페이지 -->
         </div>
 
-        <!-- END ***** 반려동물 등록 페이지 (기본정보 작성) ***** -->
+        <!-- END ***** 반려동물 관리 페이지 (기본 정보) ***** -->
       </div>
 
       <!-- END layout) 페이지 레이아웃 -->

@@ -21,8 +21,8 @@
       <!-- layout) 페이지 레이아웃 -->
       <div class="l-wrapper">
 
-        <!-- TODO: ***** 반려동물 등록 페이지 (건강정보 작성) ***** -->
-        <div class="penroll-page l-container">
+        <!-- TODO: ***** 반려동물 관리 페이지 (건강 정보) ***** -->
+        <div class="psetting-page l-container">
 
           <!-- TODO: layout) 헤더 타입 02 -->
 
@@ -48,7 +48,7 @@
 
               <!-- 헤더 중앙 -->
               <div class="hd-center ">
-                <span class="ttl">반려동물 등록</span>
+                <span class="ttl">반려동물 관리</span>
               </div>
 
               <!-- 헤더 오른쪽 -->
@@ -75,12 +75,14 @@
           <div class="l-contt-container">
 
             <!-- layout) 페이지 상단 -->
+            <div class="tabs">
+              <div class="tab-grp full-tab-grp">
+                <a href="pet-setting-default.html" class="tab">기본 정보</a>
+                <a href="pet-setting-healthy.html" class="tab active">건강 정보</a>
+              </div>
+            </div>
             <div class="l-contt-top">
               <div class="page">
-                <div class="left-ttl-wrap type01">
-                  <h2 class="left-ttl">반려동물의 <br>건강 정보를 작성해 주세요.</h2>
-                  <p class="left-desc">필수 4대 예방접종을 하지 않았을 경우 펫 서비스 제공이 불가능할 수 있습니다.</p>
-                </div>
                 <div class="form-item-grp">
 
                   <!-- 필수 4대 예방 접종 -->
@@ -90,7 +92,7 @@
                       <ul>
                         <li>
                           <div class="cckbox-item">
-                            <input id="option1-1" type="radio" name="option1" class="none custom-ckbox-inp" />
+                            <input id="option1-1" type="radio" name="option1" checked class="none custom-ckbox-inp" />
                             <label for="option1-1" class="custom-ckbox"></label>
                             <label for="option1-1" class="custom-ckbox-label">했어요</label>
                           </div>
@@ -104,7 +106,6 @@
                         </li>
                       </ul>
                     </div>
-                    <span class="form-caution">필수 4대 예방 접종 여부를 체크해주세요.</span>
                   </div>
 
                   <!-- 중성화 여부 -->
@@ -114,7 +115,7 @@
                       <ul>
                         <li>
                           <div class="cckbox-item">
-                            <input id="option2-1" type="radio" name="option2" class="none custom-ckbox-inp" />
+                            <input id="option2-1" type="radio" name="option2" checked class="none custom-ckbox-inp" />
                             <label for="option2-1" class="custom-ckbox"></label>
                             <label for="option2-1" class="custom-ckbox-label">했어요</label>
                           </div>
@@ -128,7 +129,6 @@
                         </li>
                       </ul>
                     </div>
-                    <span class="form-caution">중성화 여부를 체크해주세요.</span>
                   </div>
 
                   <!-- 입질 유무 -->
@@ -145,17 +145,16 @@
                         </li>
                         <li>
                           <div class="cckbox-item">
-                            <input id="option3-2" type="radio" name="option3" class="none custom-ckbox-inp" />
+                            <input id="option3-2" type="radio" name="option3" checked class="none custom-ckbox-inp" />
                             <label for="option3-2" class="custom-ckbox"></label>
                             <label for="option3-2" class="custom-ckbox-label">안 했어요</label>
                           </div>
                         </li>
                       </ul>
                       <div>
-                        <textarea placeholder="입질에 대한 메모를 작성해 주세요." class="custom-inp-textarea js-txtarea" maxlength="200"></textarea>
+                        <textarea placeholder="입질에 대한 메모를 작성해 주세요." class="custom-inp-textarea js-txtarea" maxlength="200">먹는 중에 만지면 입질이 있어요</textarea>
                       </div>
                     </div>
-                    <span class="form-caution">입질 유무를 체크해주세요.</span>
                   </div>
 
                   <!-- 알러지 유무 -->
@@ -165,7 +164,7 @@
                       <ul>
                         <li>
                           <div class="cckbox-item">
-                            <input id="option4-1" type="radio" name="option4" class="none custom-ckbox-inp" />
+                            <input id="option4-1" type="radio" name="option4" checked class="none custom-ckbox-inp" />
                             <label for="option4-1" class="custom-ckbox"></label>
                             <label for="option4-1" class="custom-ckbox-label">없어요</label>
                           </div>
@@ -179,7 +178,6 @@
                         </li>
                       </ul>
                     </div>
-                    <span class="form-caution">입질 유무를 체크해주세요.</span>
                   </div>
 
                   <!-- 기타 메모 -->
@@ -200,6 +198,9 @@
 
             <!-- layout) 페이지 하단 -->
             <div class="l-contt-bottom">
+              <button type="button" class="btn theme-solid-btn btn-lg square-btn">
+                <span class="txt">저장하기</span>
+              </button>
             </div>
 
             <!-- END layout) 페이지 하단 -->
@@ -208,7 +209,7 @@
           <!-- END layout) 페이지 -->
         </div>
 
-        <!-- END ***** 반려동물 등록 페이지 (건강정보 작성) ***** -->
+        <!-- END ***** 반려동물 관리 페이지 (건강 정보) ***** -->
       </div>
 
       <!-- END layout) 페이지 레이아웃 -->
