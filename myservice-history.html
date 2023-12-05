@@ -21,11 +21,10 @@
       <!-- layout) 페이지 레이아웃 -->
       <div class="l-wrapper">
 
-        <!-- TODO: ***** XXX 페이지 ***** -->
-        <div class="l-container">
+        <!-- TODO: ***** 내 서비스 관리 - 서비스 내역 페이지 ***** -->
+        <div class="msvc-page l-container">
 
-          <!--
- <!-- TODO: layout) 헤더 타입 02 -->
+          <!-- TODO: layout) 헤더 타입 02 -->
 
           <!-- TODO: 밑줄 있는 화면일 때는 type-bd 클래스 추가 -->
           <header class="header type-bd">
@@ -49,7 +48,7 @@
 
               <!-- 헤더 중앙 -->
               <div class="hd-center ">
-                <span class="ttl">펫시터 찾기</span>
+                <span class="ttl">내 서비스 관리</span>
               </div>
 
               <!-- 헤더 오른쪽 -->
@@ -58,7 +57,7 @@
               <div class="hd-right ">
 
                 <!-- 알림 버튼 -->
-                <a href="alarm-list.html" type="button" class="hd-btn">
+                <a href="alarm-activity-list.html" type="button" class="hd-btn">
                   <span class="txt-hidden">알림</span>
 
                   <!-- TODO: 새로 알람 들어온 경우 ico-alarm-on 클래스 추가해야함 -->
@@ -70,12 +69,20 @@
             </div>
           </header>
 
-          <!-- ENDO layout) 헤더 타입 02 --> -->
+          <!-- ENDO layout) 헤더 타입 02 -->
 
           <!-- layout) 페이지 -->
           <div class="l-contt-container">
 
             <!-- layout) 페이지 상단 -->
+            <div class="tabs">
+              <div class="tab-grp full-tab-grp">
+                <a href="myservice-profile.html" class="tab">내 프로필</a>
+                <a href="myservice-history.html" class="tab active">서비스 내역</a>
+                <a href="myservice-review.html" class="tab">받은 후기</a>
+                <a href="myservice-calc.html" class="tab">정산</a>
+              </div>
+            </div>
             <div class="l-contt-top">
               <div class="page">
               </div>
@@ -93,7 +100,7 @@
           <!-- END layout) 페이지 -->
         </div>
 
-        <!-- END ***** XXX 페이지 ***** -->
+        <!-- END ***** 내 서비스 관리 - 서비스 내역 페이지 ***** -->
       </div>
 
       <!-- END layout) 페이지 레이아웃 -->

@@ -21,14 +21,13 @@
       <!-- layout) 페이지 레이아웃 -->
       <div class="l-wrapper">
 
-        <!-- TODO: ***** XXX 페이지 ***** -->
-        <div class="l-container">
+        <!-- TODO: ***** 펫시터 정보 수정 페이지 ***** -->
+        <div class="mi-info-page l-container">
 
-          <!--
- <!-- TODO: layout) 헤더 타입 02 -->
+          <!-- TODO: layout) 헤더 타입 02 -->
 
           <!-- TODO: 밑줄 있는 화면일 때는 type-bd 클래스 추가 -->
-          <header class="header type-bd">
+          <header class="header ">
             <div class="header-inner">
 
               <!-- 헤더 왼쪽 -->
@@ -49,7 +48,7 @@
 
               <!-- 헤더 중앙 -->
               <div class="hd-center ">
-                <span class="ttl">펫시터 찾기</span>
+                <span class="ttl">펫시터 정보</span>
               </div>
 
               <!-- 헤더 오른쪽 -->
@@ -58,7 +57,7 @@
               <div class="hd-right ">
 
                 <!-- 알림 버튼 -->
-                <a href="alarm-list.html" type="button" class="hd-btn">
+                <a href="alarm-activity-list.html" type="button" class="hd-btn">
                   <span class="txt-hidden">알림</span>
 
                   <!-- TODO: 새로 알람 들어온 경우 ico-alarm-on 클래스 추가해야함 -->
@@ -70,7 +69,7 @@
             </div>
           </header>
 
-          <!-- ENDO layout) 헤더 타입 02 --> -->
+          <!-- ENDO layout) 헤더 타입 02 -->
 
           <!-- layout) 페이지 -->
           <div class="l-contt-container">
@@ -78,6 +77,335 @@
             <!-- layout) 페이지 상단 -->
             <div class="l-contt-top">
               <div class="page">
+
+                <!-- 기본정보 -->
+                <section class="mi-main-section">
+                  <h3 class="mi-main-ttl">기본 정보</h3>
+                  <div class="form-item-grp">
+                    <div class="form-item">
+                      <label class="form-label">
+                        <span>프로필 사진</span>
+                        <span class="sm-txt">(선택)</span>
+                      </label>
+                      <div class="edit-thumbnail-wrap">
+                        <figure class="thumbnail circle">
+
+                          <!-- TODO: 이미지가 추가되면 img-ico-people 클래스 삭제 -->
+
+                          <!-- TODO: 이미지가 아닌 파일 올라오면 다시 초기화, img-ico-people 클래스 생김 -->
+                          <img id="img-thumbnail" accept="image/gif, image/jpeg, image/png" data-type="pet" src="assets/images/ico/ico-nothing-img-gray-dark.svg" alt="" class="thumbnail-img img-ico-people" />
+                        </figure>
+                        <input type="file" id="thumbnail" class="none">
+                        <label for="thumbnail" class="edit-btn">
+                          <span class="txt-hidden">사진 수정하기</span>
+                          <i class="ico ico-edit"></i>
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- 이름 -->
+                    <div class="form-item">
+                      <label class="form-label">이름</label>
+                      <div class="form-inp-wrap">
+                        <input type="text" required="required" class="custom-inp" value="김다펫">
+                      </div>
+                    </div>
+
+                    <!-- 경력 -->
+                    <div class="form-item">
+                      <label class="form-label">경력</label>
+                      <div class="form-inp-wrap">
+                        <div class="inp-unit-item">
+                          <input type="text" required="required" class="custom-inp" value="7">
+                          <span class="unit">년</span>
+                        </div>
+                      </div>
+                      <span class="form-caution" style="display: none;">경력을 입력해주세요.</span>
+                    </div>
+
+                    <!-- 펫시터 소개 -->
+                    <div class="form-item">
+                      <label class="form-label">
+                        <span>펫시터 소개</span>
+                        <span class="sm-txt">(<span class="js-txtarea-count">0</span>/500)</span>
+                      </label>
+                      <div class="form-inp-wrap">
+                        <textarea maxlength="500" required="required" class="custom-inp-textarea type-h150 js-txtarea" placeholder="펫시터님에 대한 소개와 보유하고 계신 자격 내용, 과거 근무 경력 등을 자세하게 작성해 주세요.">대한 애견 돌봄 연맹 자격증 보유&#10;그랑프리대회 심사위원&#10;길동 동물병원 수의 테크니션&#10;돌봄 컴퍼니 훈련 수료&#10;시츄 10년간 보호 중
+                    </textarea>
+                      </div>
+                      <span class="form-caution" style="display: none;">펫시터 소개글을 입력해주세요.</span>
+                    </div>
+
+                    <!-- 휴대폰 번호 수정버튼 누르기 전 -->
+                    <div class="form-item">
+                      <label class="form-label">휴대폰 번호</label>
+                      <div class="form-inp-wrap">
+                        <input type="text" readonly class="custom-inp" required="required" placeholder="휴대폰 번호 (숫자 입력)" value="010-0000-0000">
+
+                        <!-- TODO: form-inp-btn 누를 시 active 클래스 추가 -->
+                        <button type="button" class="btn form-inp-btn">수정</button>
+                      </div>
+                    </div>
+
+                    <!-- 휴대폰 번호 수정버튼 누른 후 -->
+                    <div class="form-item">
+                      <label class="form-label">휴대폰 번호</label>
+                      <div class="form-inp-wrap">
+                        <input type="text" class="custom-inp" required="required" placeholder="휴대폰 번호 (숫자 입력)">
+
+                        <!-- TODO: form-inp-btn 누를 시 active 클래스 추가 -->
+                        <button type="button" class="btn form-inp-btn active">인증</button>
+                      </div>
+                      <div class="form-inp-wrap">
+                        <input type="text" class="custom-inp" required="required" placeholder="휴대폰 번호 (숫자 입력)">
+                        <button type="button" class="btn form-inp-btn">재발송</button>
+                        <button type="button" class="btn form-inp-btn">인증</button>
+                      </div>
+                      <span class="form-caution">인증번호가 일치하지 않습니다.</span>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- END 기본정보 -->
+
+                <!-- 상세정보 -->
+                <section class="mi-main-section">
+                  <h3 class="mi-main-ttl">상세 정보</h3>
+                  <div class="form-item-grp">
+
+                    <!-- 흡연 여부 -->
+                    <div class="form-item">
+                      <label class="form-label">흡연 여부</label>
+                      <div class="form-inp-wrap">
+                        <ul class="inner-grid-grp">
+                          <li class="inner-grid">
+                            <div class="cckbox-item">
+                              <input id="smoking-no" type="radio" name="smoking" checked class="none custom-ckbox-inp" />
+                              <label for="smoking-no" class="custom-ckbox"></label>
+                              <label for="smoking-no" class="custom-ckbox-label">비흡연자</label>
+                            </div>
+                          </li>
+                          <li class="inner-grid">
+                            <div class="cckbox-item">
+                              <input id="smoking-yes" type="radio" name="smoking" class="none custom-ckbox-inp" />
+                              <label for="smoking-yes" class="custom-ckbox"></label>
+                              <label for="smoking-yes" class="custom-ckbox-label">흡연자</label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <span class="form-caution">흡연 여부를 선택해주세요.</span>
+                    </div>
+
+                    <!-- 서비스 지역 -->
+                    <div class="form-item">
+                      <label class="form-label">
+                        <span>서비스 지역</span>
+                        <span class="sm-txt">(최대 5개)</span>
+                      </label>
+                      </label>
+                      <div class="form-inp-wrap">
+                        <div class="inp-btn-item">
+                          <input type="text" class="custom-inp" required="required" placeholder="구, 군 단위로 검색">
+                          <button type="button" class="btn" onclick="openModal('modal-search-location');">
+                            <i class="ico ico-search-gray-light"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <span class="form-caution">서비스 지역을 선택해주세요.</span>
+                      <div class="formiw-under-wrap">
+                        <div class="d-flex-row">
+
+                          <!-- 버튼 -->
+                          <div class="mini-txtx-btn">
+                            <span class="txt">부천시 원미구</span>
+                            <button type="button" class="btn">
+                              <i class="txt-hidden">해당 주소 삭제하기</i>
+                              <i class="ico ico-x-gray"></i>
+                            </button>
+                          </div>
+
+                          <!-- END 버튼 -->
+
+                          <!-- 버튼 -->
+                          <div class="mini-txtx-btn">
+                            <span class="txt">전라남도 신안군</span>
+                            <button type="button" class="btn">
+                              <i class="txt-hidden">해당 주소 삭제하기</i>
+                              <i class="ico ico-x-gray"></i>
+                            </button>
+                          </div>
+
+                          <!-- END 버튼 -->
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 관련 자격증 -->
+                    <div class="form-item">
+                      <label class="form-label">
+                        <span>관련 자격증</span>
+                        <span class="sm-txt">(선택)</span>
+                      </label>
+
+                      <!-- TODO: ui.js 에 임시로 만든 이미지 업로드 script 참고 -->
+                      <div class="form-inp-wrap">
+                        <div id="pictures01" class="attach-list-grp">
+
+                          <!-- 파일첨부 하는 카드 -->
+                          <div class="attach-list">
+                            <input type="file" multiple accept="image/gif, image/jpeg, image/png" id="pictures01-upload" class="none custom-file-inp js-upload-inp">
+                            <label for="pictures01-upload" class="square-card upload-square-card">
+                              <span class="txt-hidden">파일 첨부</span>
+                            </label>
+                          </div>
+
+                          <!-- END 파일첨부 하는 카드 -->
+
+                          <!-- 추가되는 카드 -->
+
+                          <!-- <div class="attach-list">
+                      <div class="square-card">
+                        <img src="" alt="" class="thumbnail-img">
+                      </div>
+                      <button type="button" class="del-btn">
+                        <span class="txt-hidden">삭제</span>
+                      </button>
+                    </div> -->
+
+                          <!-- END 추가되는 카드 -->
+                        </div>
+                      </div>
+
+                      <!-- END ui.js 에 임시로 만든 이미지 업로드 script 참고 -->
+
+                      <!-- TODO: 아무 스크립트 적용되지 않은 이미지 첨부 html -->
+                      <div class="form-inp-wrap" style="display: none;">
+                        <div class="attach-list-grp">
+
+                          <!-- 파일첨부 하는 카드 -->
+                          <div class="attach-list">
+                            <input type="file" multiple accept="image/gif, image/jpeg, image/png" id="pictures01-upload02" class="none custom-file-inp js-upload-inp">
+                            <label for="pictures01-upload02" class="square-card upload-square-card">
+                              <span class="txt-hidden">파일 첨부</span>
+                            </label>
+                          </div>
+
+                          <!-- END 파일첨부 하는 카드 -->
+
+                          <!-- 추가되는 카드 -->
+                          <div class="attach-list">
+                            <div class="square-card">
+                              <img src="assets/images/sample/img-sample04.png" alt="" class="thumbnail-img">
+                            </div>
+                            <button type="button" class="del-btn">
+                              <span class="txt-hidden">삭제</span>
+                            </button>
+                          </div>
+
+                          <!-- END 추가되는 카드 -->
+
+                          <!-- 추가되는 카드 -->
+                          <div class="attach-list">
+                            <div class="square-card">
+                              <img src="assets/images/sample/img-sample03.png" alt="" class="thumbnail-img">
+                            </div>
+                            <button type="button" class="del-btn">
+                              <span class="txt-hidden">삭제</span>
+                            </button>
+                          </div>
+
+                          <!-- END 추가되는 카드 -->
+                        </div>
+                      </div>
+
+                      <!-- END 아무 스크립트 적용되지 않은 이미지 첨부 html -->
+                    </div>
+
+                    <!-- 기타 사진 -->
+                    <div class="form-item">
+                      <label class="form-label">
+                        <span>기타 사진 (업체, 서비스 제공 사진)</span>
+                        <span class="sm-txt">(선택)</span>
+                      </label>
+
+                      <!-- TODO: ui.js 에 임시로 만든 이미지 업로드 script 참고 -->
+                      <div class="form-inp-wrap">
+                        <div id="pictures02" class="attach-list-grp">
+
+                          <!-- 파일첨부 하는 카드 -->
+                          <div class="attach-list">
+                            <input type="file" multiple accept="image/gif, image/jpeg, image/png" id="pictures02-upload" class="none custom-file-inp js-upload-inp">
+                            <label for="pictures02-upload" class="square-card upload-square-card">
+                              <span class="txt-hidden">파일 첨부</span>
+                            </label>
+                          </div>
+
+                          <!-- END 파일첨부 하는 카드 -->
+
+                          <!-- 추가되는 카드 -->
+
+                          <!-- <div class="attach-list">
+                      <div class="square-card">
+                        <img src="" alt="" class="thumbnail-img">
+                      </div>
+                      <button type="button" class="del-btn">
+                        <span class="txt-hidden">삭제</span>
+                      </button>
+                    </div> -->
+
+                          <!-- END 추가되는 카드 -->
+                        </div>
+                      </div>
+
+                      <!-- END ui.js 에 임시로 만든 이미지 업로드 script 참고 -->
+
+                      <!-- TODO: 아무 스크립트 적용되지 않은 이미지 첨부 html -->
+                      <div class="form-inp-wrap" style="display: none;">
+                        <div class="attach-list-grp">
+
+                          <!-- 파일첨부 하는 카드 -->
+                          <div class="attach-list">
+                            <input type="file" multiple accept="image/gif, image/jpeg, image/png" id="pictures02-upload02" class="none custom-file-inp js-upload-inp">
+                            <label for="pictures02-upload02" class="square-card upload-square-card">
+                              <span class="txt-hidden">파일 첨부</span>
+                            </label>
+                          </div>
+
+                          <!-- END 파일첨부 하는 카드 -->
+
+                          <!-- 추가되는 카드 -->
+                          <div class="attach-list">
+                            <div class="square-card">
+                              <img src="assets/images/sample/img-sample04.png" alt="" class="thumbnail-img">
+                            </div>
+                            <button type="button" class="del-btn">
+                              <span class="txt-hidden">삭제</span>
+                            </button>
+                          </div>
+
+                          <!-- END 추가되는 카드 -->
+
+                          <!-- 추가되는 카드 -->
+                          <div class="attach-list">
+                            <div class="square-card">
+                              <img src="assets/images/sample/img-sample03.png" alt="" class="thumbnail-img">
+                            </div>
+                            <button type="button" class="del-btn">
+                              <span class="txt-hidden">삭제</span>
+                            </button>
+                          </div>
+
+                          <!-- END 추가되는 카드 -->
+                        </div>
+                      </div>
+
+                      <!-- END 아무 스크립트 적용되지 않은 이미지 첨부 html -->
+                    </div>
+                  </div>
+                </section>
+
+                <!-- END 상세정보 -->
               </div>
             </div>
 
@@ -85,15 +413,125 @@
 
             <!-- layout) 페이지 하단 -->
             <div class="l-contt-bottom">
+              <div class="btn-wrap">
+                <button type="button" class="btn theme-solid-btn btn-lg square-btn">
+                  <span class="txt">저장하기</span>
+                </button>
+              </div>
             </div>
 
             <!-- END layout) 페이지 하단 -->
           </div>
 
           <!-- END layout) 페이지 -->
+
+          <!-- **** modal) 페이지 내 모달 **** -->
+          <div id="modal-search-location" class="modal-wrapper">
+            <div class="window-modal search-location-modal">
+              <div class="wmodal">
+                <header class="header">
+                  <div class="header-inner">
+
+                    <!-- 헤더 왼쪽 -->
+
+                    <!-- TODO: invisible 클래스 넣으면 안보임 -->
+                    <div class="hd-left">
+                      <button onclick="closeModal('modal-search-location');" type="button" class="hd-btn">
+                        <span class="txt-hidden">뒤로가기</span>
+                        <i class="ico ico-line-arrow-left"></i>
+                      </button>
+
+                      <!-- TODO: invisible 클래스 넣으면 안보임 -->
+                      <a href="main.html" class="hd-btn">
+                        <span class="txt-hidden">홈</span>
+                        <i class="ico ico-home"></i>
+                      </a>
+                    </div>
+
+                    <!-- 헤더 중앙 -->
+                    <div class="hd-center ">
+                      <span class="ttl">서비스 지역 설정</span>
+                    </div>
+
+                    <!-- 헤더 오른쪽 -->
+
+                    <!-- TODO: invisible 클래스 넣으면 안보임 -->
+                    <div class="hd-right">
+
+                      <!-- 알림 버튼 -->
+                      <a href="alarm-activity-list.html" type="button" class="hd-btn">
+                        <span class="txt-hidden">알림</span>
+
+                        <!-- TODO: 새로 알람 들어온 경우 ico-alarm-on 클래스 추가해야함 -->
+                        <i class="ico ico-alarm"></i>
+                      </a>
+
+                      <!-- END 알림 버튼 -->
+                    </div>
+                  </div>
+                </header>
+
+                <!-- modal) 모달 페이지 -->
+                <div class="wmodal-contt-container">
+
+                  <!-- modal) 모달 페이지 상단 -->
+                  <div class="top-form-item">
+                    <div class="form-item">
+                      <label class="form-label">서비스 지역 검색</label>
+                      <div class="form-inp-wrap">
+                        <div class="inp-btn-item">
+                          <input type="text" class="custom-inp" required="required" placeholder="구, 군 단위로 검색">
+                          <button type="button" class="btn">
+                            <i class="ico ico-search-gray-light"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wmodal-contt-top">
+                    <div class="modal-page">
+
+                      <!-- TODO: 목록 있을 때 -->
+                      <section class="search-location-section">
+                        <h3 class="sls-ttl">"원미구" 검색 결과</h3>
+                        <ul class="contt">
+                          <li class="list">
+                            <span class="txt">부천시 원미구</span>
+                          </li>
+                        </ul>
+                      </section>
+
+                      <!-- END 목록 있을 때 -->
+
+                      <!-- TODO: 목록 없을 때 -->
+                      <div class="nothing-list-grp type-center" style="display: none;">
+                        <div class="nothing-list">
+                          <i class="ico ico-nothing ico-lg ico-nothing-location"></i>
+                          <h3 class="nl-ttl">펫시터 활동을 원하시는 지역을 설정해 주세요.</h3>
+                        </div>
+                      </div>
+
+                      <!-- END 목록 없을 때 -->
+                    </div>
+                  </div>
+
+                  <!-- END modal) 모달 페이지 상단 -->
+
+                  <!-- modal) 모달 페이지 하단 -->
+                  <div class="wmodal-contt-bottom"></div>
+
+                  <!-- END modal) 모달 페이지 하단 -->
+                </div>
+
+                <!-- END modal) 모달 페이지 -->
+              </div>
+            </div>
+          </div>
+
+          <!-- END **** modal) 페이지 내 모달 **** -->
         </div>
 
-        <!-- END ***** XXX 페이지 ***** -->
+        <!-- END ***** 펫시터 정보 수정 페이지 ***** -->
       </div>
 
       <!-- END layout) 페이지 레이아웃 -->

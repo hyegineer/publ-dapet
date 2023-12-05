@@ -21,11 +21,10 @@
       <!-- layout) 페이지 레이아웃 -->
       <div class="l-wrapper">
 
-        <!-- TODO: ***** XXX 페이지 ***** -->
-        <div class="l-container">
+        <!-- TODO: ***** 내 서비스 관리 - 받은 후기 페이지 ***** -->
+        <div class="pst-rvdetail-page msvc-page l-container">
 
-          <!--
- <!-- TODO: layout) 헤더 타입 02 -->
+          <!-- TODO: layout) 헤더 타입 02 -->
 
           <!-- TODO: 밑줄 있는 화면일 때는 type-bd 클래스 추가 -->
           <header class="header type-bd">
@@ -49,7 +48,7 @@
 
               <!-- 헤더 중앙 -->
               <div class="hd-center ">
-                <span class="ttl">펫시터 찾기</span>
+                <span class="ttl">내 서비스 관리</span>
               </div>
 
               <!-- 헤더 오른쪽 -->
@@ -58,7 +57,7 @@
               <div class="hd-right ">
 
                 <!-- 알림 버튼 -->
-                <a href="alarm-list.html" type="button" class="hd-btn">
+                <a href="alarm-activity-list.html" type="button" class="hd-btn">
                   <span class="txt-hidden">알림</span>
 
                   <!-- TODO: 새로 알람 들어온 경우 ico-alarm-on 클래스 추가해야함 -->
@@ -70,14 +69,171 @@
             </div>
           </header>
 
-          <!-- ENDO layout) 헤더 타입 02 --> -->
+          <!-- ENDO layout) 헤더 타입 02 -->
 
           <!-- layout) 페이지 -->
           <div class="l-contt-container">
 
             <!-- layout) 페이지 상단 -->
+            <div class="tabs">
+              <div class="tab-grp full-tab-grp">
+                <a href="myservice-profile.html" class="tab">내 프로필</a>
+                <a href="myservice-history.html" class="tab">서비스 내역</a>
+                <a href="myservice-review.html" class="tab active">받은 후기</a>
+                <a href="myservice-calc.html" class="tab">정산</a>
+              </div>
+            </div>
             <div class="l-contt-top">
               <div class="page">
+                <div class="search-select-wrap">
+                  <div class="d-iflex-row">
+                    <span class="gray-txt cnt-txt">후기 전체 (5)</span>
+                  </div>
+                  <div class="mg-left">
+
+                    <!-- 옵션 선택 영역 -->
+                    <div class="custom-select-wrap">
+
+                      <!-- 선택값 보여지는 타겟 -->
+                      <div class="custom-select">
+                        <span class="txt">최신순</span>
+                      </div>
+
+                      <!-- END 선택값 보여지는 타겟 -->
+
+                      <!-- 옵션 리스트 -->
+                      <div class="custom-option-wrap">
+                        <ul class="custom-option">
+                          <li class="opt-list">
+                            <span>최신순</span>
+                          </li>
+                          <li class="opt-list">
+                            <span>별점순</span>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <!-- END 옵션 리스트 -->
+                    </div>
+
+                    <!-- END 옵션 선택 영역 -->
+                  </div>
+                </div>
+
+                <!-- TODO: 목록 있을 때 -->
+                <div class="col-list-grp-wrap">
+                  <div class="col-list-grp">
+                    <div class="list">
+                      <div class="col-item rv-card-item">
+                        <ul class="card-information">
+                          <li>
+                            <div class="d-flex-row star-txts-wrap">
+                              <div class="ico-stars type05"></div>
+                              <div class="txts mg-left">
+                                <span class="txt">ad********1</span>
+                                <span class="txt">2023-11-03</span>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="rv-txt">서비스 최고에요 ~</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="list">
+                      <div class="col-item rv-card-item">
+                        <ul class="card-information">
+                          <li>
+                            <div class="d-flex-row star-txts-wrap">
+                              <div class="ico-stars type05"></div>
+                              <div class="txts mg-left">
+                                <span class="txt">b********m</span>
+                                <span class="txt">2023-11-03</span>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="rv-txt">저희 춘식이가 몽이 펫시터님 말은 되게 잘듣더라구요 !</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="list">
+                      <div class="col-item rv-card-item">
+                        <ul class="card-information">
+                          <li>
+                            <div class="d-flex-row star-txts-wrap">
+                              <div class="ico-stars type05"></div>
+                              <div class="txts mg-left">
+                                <span class="txt">c**2</span>
+                                <span class="txt">2023-11-01</span>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="rv-txt">시츄 5년째 보호 중인데, 몽이 펫시터님도 보호 중이라고 하셔서 믿고 맡겼습니다 ! 역시나 최고였어요.</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="list">
+                      <div class="col-item rv-card-item">
+                        <ul class="card-information">
+                          <li>
+                            <div class="d-flex-row star-txts-wrap">
+                              <div class="ico-stars type05"></div>
+                              <div class="txts mg-left">
+                                <span class="txt">q****9</span>
+                                <span class="txt">2023-10-31</span>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="rv-txt">시간 약속은 칼같이 지키셔서 좋았습니다.</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="list">
+                      <div class="col-item rv-card-item">
+                        <ul class="card-information">
+                          <li>
+                            <div class="d-flex-row star-txts-wrap">
+                              <div class="ico-stars type05"></div>
+                              <div class="txts mg-left">
+                                <span class="txt">p**i</span>
+                                <span class="txt">2023-10-15</span>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="rv-txt">만족</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <!-- 예시 list -->
+                  </div>
+                  <button type="button" class="btn btn-w100 gray-bd-btn btn-md square-btn">
+                    <span class="txt">더보기</span>
+                    <i class="ico ico-arrow-down-gray"></i>
+                  </button>
+                </div>
+
+                <!-- END 목록 있을 때 -->
+
+                <!-- TODO: 목록 없을 때 -->
+                <div class="nothing-list-grp type-center" style="display: none;">
+                  <div class="nothing-list">
+                    <i class="ico ico-nothing ico-lg ico-nothing-pst"></i>
+                    <h3 class="nl-ttl">등록된 리뷰가 없습니다.</h3>
+                    <p class="nl-desc"></p>
+                  </div>
+                </div>
+
+                <!-- END 목록 없을 때 -->
               </div>
             </div>
 
@@ -93,7 +249,7 @@
           <!-- END layout) 페이지 -->
         </div>
 
-        <!-- END ***** XXX 페이지 ***** -->
+        <!-- END ***** 내 서비스 관리 - 받은 후기 페이지 ***** -->
       </div>
 
       <!-- END layout) 페이지 레이아웃 -->

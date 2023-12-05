@@ -16,6 +16,21 @@
   --kakao-bg: #FEE500;
 }
 
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-green, #56c595);
+  border-radius: 16px;
+  border: 4px solid transparent;
+}
+
 /* ======================== 레이아웃 - 공통 ======================== */
 html,
 body {
@@ -252,6 +267,143 @@ html {
   width: 100%;
 }
 
+/* ======================== 레이아웃 - 모달 ======================== */
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-wrapper.active {
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.modal-wrapper.active .modal-overlay {
+  opacity: 1;
+}
+
+.custom-modal {
+  transform: translateY(60px);
+  transition: all 0.3s;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.modal-wrapper.active .custom-modal {
+  transform: translateY(0);
+}
+
+.modal-wrapper.active .window-modal {
+  opacity: 1;
+}
+
+.modal-wrapper.active .wmodal {
+  right: 0;
+}
+
+.window-modal {
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.wmodal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: white;
+  position: relative;
+  right: -100%;
+  transition: all 0.3s;
+}
+
+.wmodal-contt-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header + .wmodal-contt-container {
+  height: calc(100% - 4.4rem);
+}
+
+.wmodal-contt-top {
+  flex: 1;
+  width: 100%;
+  overflow: auto;
+}
+
+.wmodal-contt-bottom {
+  width: 100%;
+}
+
+.search-location-modal .modal-page {
+  height: 100%;
+}
+.search-location-modal .nothing-list-grp {
+  height: 100%;
+}
+
+.search-location-section {
+  width: 100%;
+  padding: 0 1.5rem 3rem;
+}
+.search-location-section .sls-ttl {
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding-bottom: 1rem;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+  padding-top: 0.5rem;
+}
+.search-location-section .list {
+  padding: 1.5rem 0;
+  text-align: left;
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
+}
+.search-location-section .list .txt {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
 /* ======================== 구성요소 - 공통 ======================== */
 img {
   vertical-align: bottom;
@@ -373,12 +525,13 @@ img {
 
 .tab-grp.full-tab-grp .tab {
   width: 100%;
-  padding: 0 1rem;
+  padding: 0;
   min-width: auto;
 }
 @media all and (min-width: 500px) {
   .tab-grp.full-tab-grp .tab {
     max-width: max-content;
+    padding: 0 1rem;
   }
 }
 
@@ -646,11 +799,26 @@ img {
   width: 100%;
 }
 
+.d-flex-col {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  flex-direction: column;
+}
+
 /* display - inline-flex 정렬 필요할 때 */
 .d-iflex-row {
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
+}
+
+.d-iflex-col {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 
 /* 검색 옵션 선택 */
@@ -699,26 +867,30 @@ img {
   padding: 0 1.1rem;
   margin: 70px auto;
 }
-.nothing-list > .ico {
+.nothing-list .ico-nothing {
   margin-bottom: 0.7rem;
 }
-.nothing-list .ico-nothing-list {
+.nothing-list .ico-lg {
   width: 3.6rem;
   height: 3.6rem;
-  margin-bottom: 1.1rem;
 }
-.nothing-list .ico-nothing-pet {
-  width: 3.6rem;
-  height: 3.6rem;
+.nothing-list .ico-nothing-pst {
+  margin-bottom: 1.1rem;
 }
 .nothing-list .nl-ttl {
   font-size: 1.4rem;
   margin-bottom: 1rem;
   line-height: 1.4;
 }
+.nothing-list .nl-ttl:last-child {
+  margin-bottom: 0;
+}
 .nothing-list .nl-desc {
   font-size: 1.2rem;
   line-height: 1.4;
+}
+.nothing-list .nl-desc:last-child {
+  margin-bottom: 0;
 }
 .nothing-list .gray-bd-btn {
   min-width: 16.5rem;
@@ -1169,6 +1341,14 @@ img {
   margin-bottom: 1.5rem;
 }
 
+.fold-card-item {
+  width: 100%;
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
+}
+.fold-card-item .fold-card-bottom {
+  display: none;
+}
+
 /* 회색 박스 */
 .gray-light-box {
   background-color: var(--gray-light, #f1f1f1);
@@ -1243,6 +1423,63 @@ img {
   .info-section .info-txt {
     font-size: 1.2rem;
   }
+}
+
+/* 양 옆 컨트롤 버튼 + 가운데 텍스트 */
+.ctrls-txt-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  position: relative;
+  padding: 2rem 5.4rem;
+}
+.ctrls-txt-wrap .txt {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.ctrls-txt-wrap .btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.ctrls-txt-wrap .prev-ctrl-btn {
+  left: 1.5rem;
+}
+.ctrls-txt-wrap .next-ctrl-btn {
+  right: 1.5rem;
+}
+
+/* 기본 테이블 */
+.default-tbl {
+  width: 100%;
+  text-align: center;
+}
+.default-tbl thead th {
+  background-color: var(--gray-light, #f1f1f1);
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 1rem 0;
+  text-align: center;
+  line-height: 1.3;
+}
+.default-tbl tbody td {
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
+  line-height: 1.3;
+}
+.default-tbl .ellipse-txt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.6rem;
+  height: 1.6rem;
 }
 
 /* ======================== 구성요소 - 폼 ======================== */
@@ -1655,6 +1892,10 @@ img {
   background-image: url(../images/ico/ico-arrow-right-gray.svg);
 }
 
+.ico-arrow-left-gray {
+  background-image: url(../images/ico/ico-arrow-left-gray.svg);
+}
+
 .ico-arrow-down-gray {
   background-image: url(../images/ico/ico-arrow-down-gray.svg);
 }
@@ -1713,6 +1954,10 @@ img {
   background-image: url(../images/ico/ico-heart-on.svg);
 }
 
+.ico-nothing-pst {
+  background-image: url(../images/ico/ico-nothing-pst.svg);
+}
+
 .ico-nothing-list {
   background-image: url(../images/ico/ico-nothing-list.svg);
 }
@@ -1723,6 +1968,10 @@ img {
 
 .ico-nothing-pet {
   background-image: url(../images/ico/ico-nothing-pet.svg);
+}
+
+.ico-nothing-location {
+  background-image: url(../images/ico/ico-nothing-location.svg);
 }
 
 .ico-stars {
@@ -1935,6 +2184,10 @@ img {
 
 .ico-x-gray {
   background-image: url(../images/ico/ico-x-gray.svg);
+}
+
+.ico-search-gray-light {
+  background-image: url(../images/ico/ico-search-gray-light.svg);
 }
 
 /* ======================== 구성요소 - 버튼 ======================== */
@@ -3994,6 +4247,7 @@ img {
 }
 
 /* ======================== 페이지 - 내 정보 > 신청하기 (보호소, 펫시터) ======================== */
+/* ======================== 페이지 - 내 정보 > 수정하기 (보호소, 펫시터) ======================== */
 .apply-page .page {
   padding: 2rem 1.5rem;
 }
@@ -4008,4 +4262,68 @@ img {
   margin-bottom: 1.7rem;
   line-height: 1.4;
   padding: 0;
+}
+
+.mi-info-page .page {
+  padding: 2rem 1.5rem;
+}
+.mi-info-page .mi-main-section {
+  margin-bottom: 2rem;
+}
+.mi-info-page .mi-main-section:last-child {
+  margin-bottom: 0;
+}
+.mi-info-page .mi-main-ttl {
+  font-size: 1.4rem;
+  margin-bottom: 1.7rem;
+  line-height: 1.4;
+  padding: 0;
+}
+.mi-info-page .top-form-item {
+  width: 100%;
+  padding: 1.5rem;
+}
+
+/* ======================== 페이지 - 내 서비스 관리 ======================== */
+.msvc-page .header {
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
+}
+.msvc-page .default-tbl thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* ======================== 페이지 - 공지사항 ======================== */
+.ntc-list-hd {
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+}
+.ntc-list-hd .ttl {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.ntc-list-hd .date {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.3;
+  color: var(--gray, #AEAEAE);
+}
+
+.ntc-list-contt {
+  background-color: var(--gray-light, #f1f1f1);
+  padding: 3rem 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 300;
+  word-break: keep-all;
+  line-height: 1.4;
+}
+.ntc-list-contt img {
+  max-width: 100%;
 }

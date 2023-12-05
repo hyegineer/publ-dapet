@@ -21,14 +21,13 @@
       <!-- layout) 페이지 레이아웃 -->
       <div class="l-wrapper">
 
-        <!-- TODO: ***** XXX 페이지 ***** -->
-        <div class="l-container">
+        <!-- TODO: ***** 공지사항 리스트 페이지 ***** -->
+        <div class="ntc-list-page l-container">
 
-          <!--
- <!-- TODO: layout) 헤더 타입 02 -->
+          <!-- TODO: layout) 헤더 타입 02 -->
 
           <!-- TODO: 밑줄 있는 화면일 때는 type-bd 클래스 추가 -->
-          <header class="header type-bd">
+          <header class="header ">
             <div class="header-inner">
 
               <!-- 헤더 왼쪽 -->
@@ -49,7 +48,7 @@
 
               <!-- 헤더 중앙 -->
               <div class="hd-center ">
-                <span class="ttl">펫시터 찾기</span>
+                <span class="ttl">공지사항</span>
               </div>
 
               <!-- 헤더 오른쪽 -->
@@ -58,7 +57,7 @@
               <div class="hd-right ">
 
                 <!-- 알림 버튼 -->
-                <a href="alarm-list.html" type="button" class="hd-btn">
+                <a href="alarm-activity-list.html" type="button" class="hd-btn">
                   <span class="txt-hidden">알림</span>
 
                   <!-- TODO: 새로 알람 들어온 경우 ico-alarm-on 클래스 추가해야함 -->
@@ -70,7 +69,7 @@
             </div>
           </header>
 
-          <!-- ENDO layout) 헤더 타입 02 --> -->
+          <!-- ENDO layout) 헤더 타입 02 -->
 
           <!-- layout) 페이지 -->
           <div class="l-contt-container">
@@ -78,6 +77,74 @@
             <!-- layout) 페이지 상단 -->
             <div class="l-contt-top">
               <div class="page">
+
+                <!-- TODO: 목록 있을 때 -->
+                <div class="col-list-grp">
+
+                  <!-- 리스트 -->
+                  <div class="list">
+                    <div class="fold-card-item type01">
+                      <div class="fold-card-top">
+                        <div class="ntc-list-hd">
+                          <h3 class="ttl">[공지] 공지입니다.</h3>
+                          <p class="date">2023-11-14</p>
+                        </div>
+                      </div>
+                      <div class="fold-card-bottom">
+                        <div class="ntc-list-contt">
+                          <p class="txt">
+                            안녕하세요. 다펫입니다. <br><br>
+                            벌써 날씨가 많이 추워지고 있습니다. <br>
+                            다들 감기 조심하시고 올 한 해 마무리 잘 하시길 바랍니다. <br><br>
+                            또한, 고객님의 즐겁고 행복한 연말에 다펫이 함께 하였으면 합니다. <br><br>
+                            다펫 서비스를 이용해 주시는 모든 고객님들께 감사의 마음을 전합니다. <br><br>
+                            따뜻한 연말 되세요 :)
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- END 리스트 -->
+
+                  <!-- 리스트 -->
+                  <div class="list">
+                    <div class="fold-card-item type01">
+                      <div class="fold-card-top">
+                        <div class="ntc-list-hd">
+                          <h3 class="ttl">[공지] 다펫 어플 출시 안내</h3>
+                          <p class="date">2023-11-13</p>
+                        </div>
+                      </div>
+                      <div class="fold-card-bottom">
+                        <div class="ntc-list-contt">
+                          <p class="txt">
+                            안녕하세요. 다펫입니다.<br><br>
+                            벌써 날씨가 많이 추워지고 있습니다. <br>
+                            다들 감기 조심하시고 올 한 해 마무리 잘 하시길 바랍니다. <br><br>
+                            또한, 고객님의 즐겁고 행복한 연말에 다펫이 함께 하였으면 합니다. <br><br>
+                            다펫 서비스를 이용해 주시는 모든 고객님들께 감사의 마음을 전합니다. <br><br>
+                            따뜻한 연말 되세요 :)
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- END 리스트 -->
+                </div>
+
+                <!-- END 목록 있을 때 -->
+
+                <!-- TODO: 목록 있을 때 -->
+                <div class="nothing-list-grp type-center" style="display: none;">
+                  <div class="nothing-list">
+                    <i class="ico ico-nothing ico-lg ico-nothing-list"></i>
+                    <h3 class="nl-ttl">등록된 공지사항이 없습니다.</h3>
+                  </div>
+                </div>
+
+                <!-- END 목록 없을 때 -->
               </div>
             </div>
 
@@ -93,11 +160,17 @@
           <!-- END layout) 페이지 -->
         </div>
 
-        <!-- END ***** XXX 페이지 ***** -->
+        <!-- END ***** 공지사항 리스트 페이지 ***** -->
       </div>
 
       <!-- END layout) 페이지 레이아웃 -->
     </div>
     <script src="assets/js/ui.js"></script>
+    <script>
+      // 공지사항 아코디언 구현
+      $(".fold-card-item.type01 .fold-card-top").click(function(e) {
+        $(this).siblings().slideToggle();
+      });
+    </script>
   </body>
 </html>

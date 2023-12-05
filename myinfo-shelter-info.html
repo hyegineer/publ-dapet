@@ -21,14 +21,13 @@
       <!-- layout) 페이지 레이아웃 -->
       <div class="l-wrapper">
 
-        <!-- TODO: ***** XXX 페이지 ***** -->
-        <div class="l-container">
+        <!-- TODO: ***** 유기동물 보호소 수정 페이지 ***** -->
+        <div class="mi-info-page l-container">
 
-          <!--
- <!-- TODO: layout) 헤더 타입 02 -->
+          <!-- TODO: layout) 헤더 타입 02 -->
 
           <!-- TODO: 밑줄 있는 화면일 때는 type-bd 클래스 추가 -->
-          <header class="header type-bd">
+          <header class="header ">
             <div class="header-inner">
 
               <!-- 헤더 왼쪽 -->
@@ -49,7 +48,7 @@
 
               <!-- 헤더 중앙 -->
               <div class="hd-center ">
-                <span class="ttl">펫시터 찾기</span>
+                <span class="ttl">유기동물 보호소 정보</span>
               </div>
 
               <!-- 헤더 오른쪽 -->
@@ -58,7 +57,7 @@
               <div class="hd-right ">
 
                 <!-- 알림 버튼 -->
-                <a href="alarm-list.html" type="button" class="hd-btn">
+                <a href="alarm-activity-list.html" type="button" class="hd-btn">
                   <span class="txt-hidden">알림</span>
 
                   <!-- TODO: 새로 알람 들어온 경우 ico-alarm-on 클래스 추가해야함 -->
@@ -70,7 +69,7 @@
             </div>
           </header>
 
-          <!-- ENDO layout) 헤더 타입 02 --> -->
+          <!-- ENDO layout) 헤더 타입 02 -->
 
           <!-- layout) 페이지 -->
           <div class="l-contt-container">
@@ -78,6 +77,222 @@
             <!-- layout) 페이지 상단 -->
             <div class="l-contt-top">
               <div class="page">
+
+                <!-- 기본정보 -->
+                <section class="mi-main-section">
+                  <h3 class="mi-main-ttl">기본 정보</h3>
+                  <div class="form-item-grp">
+
+                    <!-- 단체명 -->
+                    <div class="form-item">
+                      <label class="form-label">단체명</label>
+                      <div class="form-inp-wrap">
+                        <input type="text" required="required" class="custom-inp" placeholder="단체명 입력" value="용인 행강 보호소">
+                      </div>
+                      <span class="form-caution" style="display: none;">단체명을 입력해주세요.</span>
+                    </div>
+
+                    <!-- 대표자명 -->
+                    <div class="form-item">
+                      <label class="form-label">대표자명</label>
+                      <div class="form-inp-wrap">
+                        <input type="text" required="required" class="custom-inp" placeholder="대표자명 입력" value="김용인">
+                      </div>
+                      <span class="form-caution" style="display: none;">경력을 입력해주세요.</span>
+                    </div>
+
+                    <!-- 담당자명 -->
+                    <div class="form-item">
+                      <label class="form-label">
+                        <span>담당자명</span>
+                        <span class="sm-txt">(선택)</span>
+                      </label>
+                      <div class="form-inp-wrap">
+                        <input type="text" class="custom-inp" placeholder="">
+                      </div>
+                    </div>
+
+                    <!-- 휴대폰 번호 -->
+                    <div class="form-item">
+                      <label class="form-label">휴대폰 번호</label>
+                      <div class="form-inp-wrap">
+                        <input type="text" class="custom-inp" required="required" placeholder="휴대폰 번호 (숫자 입력)" value="010-0000-0000">
+
+                        <!-- TODO: form-inp-btn 누를 시 active 클래스 추가 -->
+                        <button type="button" class="btn form-inp-btn">인증</button>
+                      </div>
+                      <div class="form-inp-wrap">
+                        <input type="text" class="custom-inp" required="required" placeholder="휴대폰 번호 (숫자 입력)">
+                        <button type="button" class="btn form-inp-btn">재발송</button>
+                        <button type="button" class="btn form-inp-btn">인증</button>
+                      </div>
+                      <span class="form-caution">인증번호가 일치하지 않습니다.</span>
+                    </div>
+
+                    <!-- 보호소 전화번호 -->
+                    <div class="form-item">
+                      <label class="form-label">보호소 전화번호</label>
+                      <div class="form-inp-wrap">
+                        <input type="text" required="required" class="custom-inp" placeholder="보호소 전화번호 (숫자 입력)" value="031-403-1031">
+                      </div>
+                      <span class="form-caution">보호소 전화번호를 입력해주세요.</span>
+                    </div>
+
+                    <!-- 추가 연락처 -->
+                    <div class="form-item">
+                      <label class="form-label">
+                        <span>추가 연락처</span>
+                        <span class="sm-txt">(선택)</span>
+                      </label>
+                      <div class="form-inp-wrap">
+                        <input type="text" class="custom-inp" placeholder="">
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- END 기본정보 -->
+
+                <!-- 상세정보 -->
+                <section class="mi-main-section">
+                  <h3 class="mi-main-ttl">상세 정보</h3>
+                  <div class="form-item-grp">
+
+                    <!-- 보호소 주소 -->
+                    <div class="form-item">
+                      <label class="form-label">보호소 주소</label>
+                      <div class="form-inp-wrap">
+                        <input type="text" class="custom-inp" required="required" placeholder="주소 검색" value="12345">
+                        <button type="button" class="btn form-inp-btn">검색</button>
+                      </div>
+                      <div class="form-inp-wrap">
+                        <input type="text" class="custom-inp" required="required" placeholder="주소 입력" value="서울특별시 다펫대로 11 (다펫동, 마이상가)">
+                      </div>
+                      <div class="form-inp-wrap">
+                        <input type="text" class="custom-inp" placeholder="상세주소 입력" value="102호">
+                      </div>
+                      <span class="form-caution">보호소 주소를 입력해주세요.</span>
+                    </div>
+
+                    <!-- 지정 단체 확인서 및 비영리 단체 확인증 -->
+                    <div class="form-item">
+                      <label class="form-label">
+                        <span>지정 단체 확인서 및 비영리 단체 확인증</span>
+                      </label>
+
+                      <!-- TODO: ui.js 에 임시로 만든 이미지 업로드 script 참고 -->
+                      <div class="form-inp-wrap">
+                        <div id="pictures01" class="attach-list-grp">
+
+                          <!-- 파일첨부 하는 카드 -->
+                          <div class="attach-list">
+                            <input type="file" multiple accept="image/gif, image/jpeg, image/png" id="pictures01-upload" class="none custom-file-inp js-upload-inp">
+                            <label for="pictures01-upload" class="square-card upload-square-card">
+                              <span class="txt-hidden">파일 첨부</span>
+                            </label>
+                          </div>
+
+                          <!-- END 파일첨부 하는 카드 -->
+
+                          <!-- 추가되는 카드 -->
+
+                          <!-- <div class="attach-list">
+                      <div class="square-card">
+                        <img src="" alt="" class="thumbnail-img">
+                      </div>
+                      <button type="button" class="del-btn">
+                        <span class="txt-hidden">삭제</span>
+                      </button>
+                    </div> -->
+
+                          <!-- END 추가되는 카드 -->
+                        </div>
+                      </div>
+
+                      <!-- END ui.js 에 임시로 만든 이미지 업로드 script 참고 -->
+
+                      <!-- TODO: 아무 스크립트 적용되지 않은 이미지 첨부 html -->
+                      <div class="form-inp-wrap" style="display: none;">
+                        <div class="attach-list-grp">
+
+                          <!-- 파일첨부 하는 카드 -->
+                          <div class="attach-list">
+                            <input type="file" multiple accept="image/gif, image/jpeg, image/png" id="pictures01-upload02" class="none custom-file-inp js-upload-inp">
+                            <label for="pictures01-upload02" class="square-card upload-square-card">
+                              <span class="txt-hidden">파일 첨부</span>
+                            </label>
+                          </div>
+
+                          <!-- END 파일첨부 하는 카드 -->
+
+                          <!-- 추가되는 카드 -->
+                          <div class="attach-list">
+                            <div class="square-card">
+                              <img src="assets/images/sample/img-sample04.png" alt="" class="thumbnail-img">
+                            </div>
+                            <button type="button" class="del-btn">
+                              <span class="txt-hidden">삭제</span>
+                            </button>
+                          </div>
+
+                          <!-- END 추가되는 카드 -->
+
+                          <!-- 추가되는 카드 -->
+                          <div class="attach-list">
+                            <div class="square-card">
+                              <img src="assets/images/sample/img-sample03.png" alt="" class="thumbnail-img">
+                            </div>
+                            <button type="button" class="del-btn">
+                              <span class="txt-hidden">삭제</span>
+                            </button>
+                          </div>
+
+                          <!-- END 추가되는 카드 -->
+                        </div>
+                      </div>
+
+                      <!-- END 아무 스크립트 적용되지 않은 이미지 첨부 html -->
+                    </div>
+                  </div>
+                </section>
+
+                <!-- END 상세정보 -->
+
+                <!-- 후원금 입금 계좌 정보 -->
+                <section class="mi-main-section">
+                  <h3 class="mi-main-ttl">후원금 입금 계좌 정보</h3>
+                  <div class="form-item-grp">
+
+                    <!-- 은행명 -->
+                    <div class="form-item">
+                      <label class="form-label">은행명</label>
+                      <div class="form-inp-wrap">
+                        <input type="text" required="required" class="custom-inp" placeholder="은행명 입력" value="다펫은행">
+                      </div>
+                      <span class="form-caution" style="display: none;">은행명을 입력해주세요.</span>
+                    </div>
+
+                    <!-- 예금주명 -->
+                    <div class="form-item">
+                      <label class="form-label">예금주명</label>
+                      <div class="form-inp-wrap">
+                        <input type="text" required="required" class="custom-inp" placeholder="예금주명 입력" value="김용인">
+                      </div>
+                      <span class="form-caution" style="display: none;">예금주명을 입력해주세요.</span>
+                    </div>
+
+                    <!-- 계좌 번호 -->
+                    <div class="form-item">
+                      <label class="form-label">계좌 번호</label>
+                      <div class="form-inp-wrap">
+                        <input type="text" required="required" class="custom-inp" placeholder="계좌 번호 입력 (숫자 입력)" value="00000000000000">
+                      </div>
+                      <span class="form-caution" style="display: none;">계좌번호를 입력해주세요.</span>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- END 후원금 입금 계좌 정보 -->
               </div>
             </div>
 
@@ -85,6 +300,11 @@
 
             <!-- layout) 페이지 하단 -->
             <div class="l-contt-bottom">
+              <div class="btn-wrap">
+                <button type="button" class="btn theme-solid-btn btn-lg square-btn">
+                  <span class="txt">저장하기</span>
+                </button>
+              </div>
             </div>
 
             <!-- END layout) 페이지 하단 -->
@@ -93,7 +313,7 @@
           <!-- END layout) 페이지 -->
         </div>
 
-        <!-- END ***** XXX 페이지 ***** -->
+        <!-- END ***** 유기동물 보호소 수정 페이지 ***** -->
       </div>
 
       <!-- END layout) 페이지 레이아웃 -->

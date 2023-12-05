@@ -57,7 +57,7 @@
               <div class="hd-right ">
 
                 <!-- 알림 버튼 -->
-                <a href="alarm-list.html" type="button" class="hd-btn">
+                <a href="alarm-activity-list.html" type="button" class="hd-btn">
                   <span class="txt-hidden">알림</span>
 
                   <!-- TODO: 새로 알람 들어온 경우 ico-alarm-on 클래스 추가해야함 -->
@@ -219,16 +219,6 @@
 
       <!-- END layout) 페이지 레이아웃 -->
     </div>
-    <script>
-      // FIXME: 아코디언 임시 구현
-      (function() {
-        ('.accordion-card-item').on('click', function(e) {
-          if (e.target.getAttribute('class') == 'accordion-card-top') {
-            $(this).toggleClass('active');
-          }
-        })
-      })();
-    </script>
     <script src="assets/js/ui.js"></script>
   </body>
 </html>

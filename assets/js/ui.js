@@ -28,7 +28,18 @@
     }
   })
 
-  // 텍스트에어리어: 글자수 체크
+  // 텍스트에어리어: 기존 글자수 체크
+  $('.js-txtarea').each(function () {
+    let content = $(this).val();
+
+    if (content.length == 0 || content == '') {
+      $('.js-txtarea-count').text('0');
+    } else {
+      $('.js-txtarea-count').text(content.length);
+    }
+  })
+
+  // 텍스트에어리어: 입력할 때 글자수 체크
   $('.js-txtarea').keyup(function (e) {
     let content = $(this).val();
     let maxlength = $(this).attr('maxlength');
@@ -143,4 +154,21 @@
     var ext = file.name.split(".").pop().toLowerCase();
     return ($.inArray(ext, ["jpg", "jpeg", "gif", "png"]) === -1) ? false : true;
   }
+
+  // FIXME: 아코디언
+  $('.accordion-card-item').on('click', function (e) {
+    if (e.target.getAttribute('class') == 'accordion-card-top') {
+      $(this).toggleClass('active');
+    }
+  })
 })();
+function openModal(id) {
+  $('#' + id).addClass('active');
+  $('#' + id).children('.custom-modal').scrollTop(0);
+}
+function closeModal(id) {
+  $('#' + id).removeClass('active');
+}
+function allCloseModal() {
+  $('.modal-wrapper').removeClass('active');
+}
