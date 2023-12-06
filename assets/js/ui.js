@@ -106,14 +106,26 @@
   });
 
   // 탭 버튼 효과
-  $('button[data-tabs-content]').on('click', function (e) {
-    var content = $(this).attr('data-tabs-content');
+  $('[data-tabs-contt]').on('click', function (e) {
+    var content = $(this).attr('data-tabs-contt');
 
-    $('button[data-tabs-content]').removeClass('active');
+    $('[data-tabs-contt]').removeClass('active');
     $(this).addClass('active');
 
-    $('.tabs-content').removeClass('show');
+    $('.tabs-contt').removeClass('show');
     $(`#${content}`).addClass('show');
+
+    if ($(this).parent().attr('data-tabs-type') == 'mall') {
+      var scrollValue = $('.detail-page-top').outerHeight() + $('.dp-ttl-wrap').outerHeight();
+
+      $('.l-contt-top').animate({
+        scrollTop: scrollValue
+      }, 500);
+    } else {
+      $('.l-contt-top').animate({
+        scrollTop: '0'
+      }, 500);
+    }
   })
 
   // FIXME: 썸네일 업로드 임시 구현
