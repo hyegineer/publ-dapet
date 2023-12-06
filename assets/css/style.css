@@ -1389,6 +1389,7 @@ img {
   font-size: 1.4rem;
   line-height: 1.4;
   font-weight: 300;
+  word-break: keep-all;
 }
 @media all and (max-width: 280px) {
   .info-dl {
@@ -1500,6 +1501,25 @@ img {
   word-wrap: break-word;
   line-height: 1.6rem;
   height: 1.6rem;
+}
+
+/* 상단 주문번호와 날짜 */
+.txt-row-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
+  padding: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.txt-row-wrap .sm-txt {
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding-top: 0.2rem;
+  display: inline-flex;
 }
 
 /* ======================== 구성요소 - 폼 ======================== */
@@ -4528,20 +4548,16 @@ img {
   color: #000;
 }
 
-.txt-row-wrap {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 1rem;
-  width: 100%;
-  border-bottom: 1px solid var(--gray-light, #f1f1f1);
-  padding: 1.5rem;
-  font-size: 1.4rem;
-  font-weight: 500;
+.dlvry-cck-page .page {
+  padding: 2rem 0;
 }
-.txt-row-wrap .sm-txt {
-  font-size: 1.2rem;
-  font-weight: 300;
-  padding-top: 0.2rem;
-  display: inline-flex;
+.dlvry-cck-page .section {
+  padding: 0 1.5rem;
+  margin-bottom: 2rem;
+}
+.dlvry-cck-page .section:last-child {
+  margin-bottom: 0;
+}
+.dlvry-cck-page .d-iflex-row.type-gap {
+  gap: 1rem;
 }
