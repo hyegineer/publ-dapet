@@ -2989,15 +2989,42 @@ img {
   align-items: center;
   background-color: var(--gray-light, #f1f1f1);
 }
+.svc-card-item .txt-row-wrap .thumbnail {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: white;
+  background-size: 1rem;
+  flex-shrink: 0;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.svc-card-item .txt-row-wrap .name-wrap {
+  gap: 1rem;
+}
 .svc-card-item .txt-row-wrap .txt-lg {
   font-size: 1.4rem;
   font-weight: 500;
+}
+.svc-card-item .txt-row-wrap .txt-md {
+  font-size: 1.4rem;
+}
+.svc-card-item .txt-row-wrap .txt-sm {
+  font-size: 1.2rem;
 }
 .svc-card-item .txt-row-wrap .txt-btn-wrap {
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
   gap: 0.5rem;
+}
+.svc-card-item .svc-card-bottom .thumbnails {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  padding-left: 1rem;
+}
+.svc-card-item .svc-card-bottom .thumbnails .thumbnail {
+  margin-left: -1rem;
 }
 
 /* 받은 견적 목록 아이템 */
@@ -4962,6 +4989,34 @@ img {
 }
 .offer-list-page .inner-page .nothing-list-grp.type-center {
   height: 100%;
+}
+
+/* 의뢰 및 예약내역 */
+.rsv-list-page .page {
+  height: 100%;
+}
+.rsv-list-page .col-list-grp .list {
+  padding: 0 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.rsv-list-page .col-list-grp .list:last-child {
+  margin-bottom: 0;
+}
+.rsv-list-page .status-list-grp {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
+}
+.rsv-list-page .status-list-grp + .status-list-contt-container {
+  height: calc(100% - 8.4rem);
+}
+.rsv-list-page .status-list-contt-container {
+  height: 100%;
+}
+.rsv-list-page .status-list-contt {
+  height: 100%;
+}
+.rsv-list-page .status-list-contt .nothing-list-grp.type-center {
+  height: calc(100% - 5.9rem);
 }
 
 /* ======================== 기타 페이지 - 완료 페이지 ======================== */

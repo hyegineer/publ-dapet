@@ -22,13 +22,12 @@
       <div class="l-wrapper">
 
         <!-- TODO: ***** 의뢰 및 예약내역 페이지 ***** -->
-        <div class="request-detail-page l-container">
+        <div class="rsv-list-page l-container">
 
-          <!--
- <!-- TODO: layout) 헤더 타입 02 -->
+          <!-- TODO: layout) 헤더 타입 02 -->
 
           <!-- TODO: 밑줄 있는 화면일 때는 type-bd 클래스 추가 -->
-          <header class="header type-bd">
+          <header class="header ">
             <div class="header-inner">
 
               <!-- 헤더 왼쪽 -->
@@ -49,7 +48,7 @@
 
               <!-- 헤더 중앙 -->
               <div class="hd-center ">
-                <span class="ttl">펫시터 찾기</span>
+                <span class="ttl">의뢰 및 예약 내역</span>
               </div>
 
               <!-- 헤더 오른쪽 -->
@@ -70,7 +69,7 @@
             </div>
           </header>
 
-          <!-- ENDO layout) 헤더 타입 02 --> -->
+          <!-- ENDO layout) 헤더 타입 02 -->
 
           <!-- layout) 페이지 -->
           <div class="l-contt-container">
@@ -78,6 +77,532 @@
             <!-- layout) 페이지 상단 -->
             <div class="l-contt-top">
               <div class="page">
+
+                <!-- 상단 상태탭 -->
+                <ul class="status-list-grp">
+
+                  <!-- TODO: 클릭시 active 클래스 추가 -->
+                  <li class="status-list active" data-tabs-contt="content1">
+                    <p class="txts">
+                      <span class="txt-name">의뢰중</span>
+                      <span class="txt">
+                    <b class="bold-txt">3</b><span>건</span>
+                      </span>
+                    </p>
+                  </li>
+                  <li class="status-list" data-tabs-contt="content2">
+                    <p class="txts">
+                      <span class="txt-name">진행중</span>
+                      <span class="txt">
+                    <b class="bold-txt">1</b><span>건</span>
+                      </span>
+                    </p>
+                  </li>
+                  <li class="status-list" data-tabs-contt="content3">
+                    <p class="txts">
+                      <span class="txt-name">완료 및 취소</span>
+                      <span class="txt">
+                    <b class="bold-txt">2</b><span>건</span>
+                      </span>
+                    </p>
+                  </li>
+                </ul>
+
+                <!-- END 상단 상태탭 -->
+                <div class="tabs-contt-container status-list-contt-container">
+
+                  <!-- ### 1. 탭 내용: 의뢰중 -->
+                  <div id="content1" class="tabs-contt status-list-contt show">
+
+                    <!-- 상단 월 컨트롤 영역 -->
+                    <div class="ctrls-txt-wrap type-sticky">
+                      <button type="button" class="btn prev-ctrl-btn">
+                        <span class="txt-hidden">이전 월</span>
+                        <i class="ico ico-arrow-left-gray"></i>
+                      </button>
+                      <span class="txt">2023년 11월</span>
+                      <button type="button" class="btn next-ctrl-btn">
+                        <span class="txt-hidden">다음 월</span>
+                        <i class="ico ico-arrow-right-gray"></i>
+                      </button>
+                    </div>
+
+                    <!-- END 상단 월 컨트롤 영역 -->
+
+                    <!-- TODO: 목록 있을 때 -->
+                    <div class="col-list-grp" data-pdbt30>
+
+                      <!-- 리스트 -->
+                      <div class="list">
+                        <div class="svc-card-item">
+                          <div class="svc-card-top">
+                            <div class="card-information-wrap">
+                              <ul class="card-information">
+                                <li>
+                                  <div class="card-name-wrap">
+
+                                    <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                                    <figure class="thumbnail circle">
+                                      <img src="assets/images/sample/img-sample03.png" alt="" class="thumbnail-img">
+                                    </figure>
+                                    <span class="card-name">춘식이</span>
+                                    <span class="main-green-txt">의뢰중</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="card-desc-wrap">
+                                    <p class="d-iflex-row">
+                                      <span class="dark-dot-txt">2023-11-18</span>
+                                      <span class="dark-dot-txt">13:00~15:00</span>
+                                    </p>
+                                    <span class="red-txt">(협의 가능)</span>
+                                  </div>
+                                </li>
+                              </ul>
+
+                              <!-- <div class="d-iflex-row mg-left card-btn-wrap">
+                            <button type="button" class="btn btn-sm dark-bd-btn square-btn">취소</button>
+                            <button type="button" class="btn btn-sm dark-solid-btn square-btn">완료</button>
+                          </div> -->
+                            </div>
+                            <div class="badge-grp">
+                              <span class="badge gray">산책</span>
+                              <span class="badge gray">목욕</span>
+                              <span class="badge gray">드롭&픽업</span>
+                              <span class="badge gray">미용</span>
+                              <span class="badge gray">훈련</span>
+                              <span class="badge gray">돌봄</span>
+                            </div>
+                          </div>
+                          <div class="svc-card-bottom">
+                            <div class="txt-row-wrap">
+
+                              <!-- TODO: 썸네일 프로필사진은 5개까지가 최대임 -->
+                              <div class="thumbnails">
+
+                                <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                                <figure class="thumbnail circle">
+                                  <img src="assets/images/sample/img-sample04.png" alt="" class="thumbnail-img">
+                                </figure>
+
+                                <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                                <figure class="thumbnail circle inactive">
+
+                                  <!-- <img src="assets/images/sample/img-sample04.png" alt="" class="thumbnail-img"> -->
+                                </figure>
+
+                                <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                                <figure class="thumbnail circle inactive">
+                                  <img src="assets/images/sample/img-sample15.png" alt="" class="thumbnail-img">
+                                </figure>
+
+                                <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                                <figure class="thumbnail circle inactive">
+                                  <img src="assets/images/sample/img-sample13.png" alt="" class="thumbnail-img">
+                                </figure>
+
+                                <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                                <figure class="thumbnail circle inactive">
+
+                                  <!-- <img src="assets/images/sample/img-sample04.png" alt="" class="thumbnail-img"> -->
+                                </figure>
+                              </div>
+                              <div class="mg-left txt-btn-wrap">
+                                <span class="txt-lg">총 6건의 견적서가 도착했어요</span>
+                                <button type="button" class="btn ico-btn">
+                                  <i class="ico ico-arrow-right-gray"></i>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- END 리스트 -->
+
+                      <!-- 리스트 -->
+                      <div class="list">
+                        <div class="svc-card-item">
+                          <div class="svc-card-top">
+                            <div class="card-information-wrap">
+                              <ul class="card-information">
+                                <li>
+                                  <div class="card-name-wrap">
+
+                                    <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                                    <figure class="thumbnail circle">
+                                      <img src="assets/images/sample/img-sample03.png" alt="" class="thumbnail-img">
+                                    </figure>
+                                    <span class="card-name">춘식이</span>
+                                    <span class="main-green-txt">의뢰중</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="card-desc-wrap">
+                                    <p class="d-iflex-row">
+                                      <span class="dark-dot-txt">2023-11-18</span>
+                                      <span class="dark-dot-txt">13:00~15:00</span>
+                                    </p>
+                                    <span class="red-txt">(협의 가능)</span>
+                                  </div>
+                                </li>
+                              </ul>
+
+                              <!-- <div class="d-iflex-row mg-left card-btn-wrap">
+                            <button type="button" class="btn btn-sm dark-bd-btn square-btn">취소</button>
+                            <button type="button" class="btn btn-sm dark-solid-btn square-btn">완료</button>
+                          </div> -->
+                            </div>
+                            <div class="badge-grp">
+                              <span class="badge gray">산책</span>
+                              <span class="badge gray">목욕</span>
+                              <span class="badge gray">드롭&픽업</span>
+                              <span class="badge gray">미용</span>
+                              <span class="badge gray">훈련</span>
+                              <span class="badge gray">돌봄</span>
+                            </div>
+                          </div>
+                          <div class="svc-card-bottom">
+                            <div class="txt-row-wrap">
+
+                              <!-- TODO: 썸네일 프로필사진은 5개까지가 최대임 -->
+                              <div class="thumbnails">
+
+                                <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                                <figure class="thumbnail circle">
+                                  <img src="assets/images/sample/img-sample04.png" alt="" class="thumbnail-img">
+                                </figure>
+
+                                <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                                <figure class="thumbnail circle inactive">
+
+                                  <!-- <img src="assets/images/sample/img-sample04.png" alt="" class="thumbnail-img"> -->
+                                </figure>
+
+                                <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                                <figure class="thumbnail circle inactive">
+                                  <img src="assets/images/sample/img-sample15.png" alt="" class="thumbnail-img">
+                                </figure>
+
+                                <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                                <figure class="thumbnail circle inactive">
+                                  <img src="assets/images/sample/img-sample13.png" alt="" class="thumbnail-img">
+                                </figure>
+
+                                <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                                <figure class="thumbnail circle inactive">
+
+                                  <!-- <img src="assets/images/sample/img-sample04.png" alt="" class="thumbnail-img"> -->
+                                </figure>
+                              </div>
+                              <div class="mg-left txt-btn-wrap">
+                                <span class="txt-lg">총 6건의 견적서가 도착했어요</span>
+                                <button type="button" class="btn ico-btn">
+                                  <i class="ico ico-arrow-right-gray"></i>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- END 리스트 -->
+                    </div>
+
+                    <!-- END 목록 있을 때 -->
+
+                    <!-- TODO: 목록 없을 때 -->
+                    <div class="nothing-list-grp type-center" style="display: none;">
+                      <div class="nothing-list">
+                        <i class="ico ico-nothing ico-lg ico-nothing-list"></i>
+                        <h3 class="nl-ttl">이전 의뢰 내역이 없습니다.</h3>
+                        <p class="nl-desc">원하는 서비스가 있다면 펫시터 의뢰를 진행해 주세요.</p>
+                      </div>
+                    </div>
+
+                    <!-- END 목록 없을 때 -->
+                  </div>
+
+                  <!-- END ### 1. 탭 내용: 의뢰중 -->
+
+                  <!-- ### 2. 탭 내용: 진행중 -->
+                  <div id="content2" class="tabs-contt status-list-contt">
+
+                    <!-- 상단 월 컨트롤 영역 -->
+                    <div class="ctrls-txt-wrap type-sticky">
+                      <button type="button" class="btn prev-ctrl-btn">
+                        <span class="txt-hidden">이전 월</span>
+                        <i class="ico ico-arrow-left-gray"></i>
+                      </button>
+                      <span class="txt">2023년 11월</span>
+                      <button type="button" class="btn next-ctrl-btn">
+                        <span class="txt-hidden">다음 월</span>
+                        <i class="ico ico-arrow-right-gray"></i>
+                      </button>
+                    </div>
+
+                    <!-- END 상단 월 컨트롤 영역 -->
+
+                    <!-- TODO: 목록 있을 때 -->
+                    <div class="col-list-grp" data-pdbt30>
+
+                      <!-- 리스트 -->
+                      <div class="list">
+                        <div class="svc-card-item">
+                          <div class="svc-card-top">
+                            <div class="card-information-wrap">
+                              <ul class="card-information">
+                                <li>
+                                  <div class="card-name-wrap">
+
+                                    <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                                    <figure class="thumbnail circle">
+                                      <img src="assets/images/sample/img-sample03.png" alt="" class="thumbnail-img">
+                                    </figure>
+                                    <span class="card-name">춘식이</span>
+                                    <span class="main-green-txt">의뢰중</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="card-desc-wrap">
+                                    <p class="d-iflex-row">
+                                      <span class="dark-dot-txt">2023-11-18</span>
+                                      <span class="dark-dot-txt">13:00~15:00</span>
+                                    </p>
+                                    <span class="red-txt">(협의 가능)</span>
+                                  </div>
+                                </li>
+                              </ul>
+                              <div class="d-iflex-row mg-left card-btn-wrap">
+                                <button type="button" class="btn btn-sm dark-bd-btn square-btn">취소</button>
+                                <button type="button" class="btn btn-sm dark-solid-btn square-btn">완료</button>
+                              </div>
+                            </div>
+                            <div class="badge-grp">
+                              <span class="badge gray">산책</span>
+                              <span class="badge gray">목욕</span>
+                              <span class="badge gray">드롭&픽업</span>
+                              <span class="badge gray">미용</span>
+                              <span class="badge gray">훈련</span>
+                              <span class="badge gray">돌봄</span>
+                            </div>
+                          </div>
+                          <div class="svc-card-bottom">
+                            <div class="txt-row-wrap">
+
+                              <!-- TODO: 썸네일 프로필사진은 5개까지가 최대임 -->
+                              <div class="d-iflex-row name-wrap">
+
+                                <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                                <figure class="thumbnail circle">
+                                  <img src="assets/images/sample/img-sample04.png" alt="" class="thumbnail-img">
+                                </figure>
+                                <span class="txt txt-sm">강박사 / 총 100,000원</span>
+                              </div>
+                              <div class="mg-left txt-btn-wrap">
+                                <span class="gray-txt txt-sm">채팅하기</span>
+                                <button type="button" class="btn ico-btn">
+                                  <i class="ico ico-arrow-right-gray"></i>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- END 리스트 -->
+                    </div>
+
+                    <!-- END 목록 있을 때 -->
+
+                    <!-- TODO: 목록 없을 때 -->
+                    <div class="nothing-list-grp type-center" style="display: none;">
+                      <div class="nothing-list">
+                        <i class="ico ico-nothing ico-lg ico-nothing-list"></i>
+                        <h3 class="nl-ttl">이전 의뢰 내역이 없습니다.</h3>
+                        <p class="nl-desc">원하는 서비스가 있다면 펫시터 의뢰를 진행해 주세요.</p>
+                      </div>
+                    </div>
+
+                    <!-- END 목록 없을 때 -->
+                  </div>
+
+                  <!-- END ### 2. 탭 내용: 진행중 -->
+
+                  <!-- ### 3. 탭 내용: 완료 및 취소 -->
+                  <div id="content3" class="tabs-contt status-list-contt">
+
+                    <!-- 상단 월 컨트롤 영역 -->
+                    <div class="ctrls-txt-wrap type-sticky">
+                      <button type="button" class="btn prev-ctrl-btn">
+                        <span class="txt-hidden">이전 월</span>
+                        <i class="ico ico-arrow-left-gray"></i>
+                      </button>
+                      <span class="txt">2023년 11월</span>
+                      <button type="button" class="btn next-ctrl-btn">
+                        <span class="txt-hidden">다음 월</span>
+                        <i class="ico ico-arrow-right-gray"></i>
+                      </button>
+                    </div>
+
+                    <!-- END 상단 월 컨트롤 영역 -->
+
+                    <!-- TODO: 목록 있을 때 -->
+                    <div class="col-list-grp" data-pdbt30>
+
+                      <!-- 리스트 -->
+                      <div class="list">
+                        <div class="svc-card-item">
+                          <div class="svc-card-top">
+                            <div class="card-information-wrap">
+                              <ul class="card-information">
+                                <li>
+                                  <div class="card-name-wrap">
+
+                                    <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                                    <figure class="thumbnail circle">
+                                      <img src="assets/images/sample/img-sample03.png" alt="" class="thumbnail-img">
+                                    </figure>
+                                    <span class="card-name">춘식이</span>
+                                    <span class="main-green-txt">서비스 완료</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="card-desc-wrap">
+                                    <p class="d-iflex-row">
+                                      <span class="dark-dot-txt">2023-11-18</span>
+                                      <span class="dark-dot-txt">13:00~15:00</span>
+                                    </p>
+                                    <span class="red-txt">(협의 가능)</span>
+                                  </div>
+                                </li>
+                              </ul>
+
+                              <!-- <div class="d-iflex-row mg-left card-btn-wrap">
+                            <button type="button" class="btn btn-sm dark-bd-btn square-btn">취소</button>
+                            <button type="button" class="btn btn-sm dark-solid-btn square-btn">완료</button>
+                          </div> -->
+                            </div>
+                            <div class="badge-grp">
+                              <span class="badge gray">산책</span>
+                              <span class="badge gray">목욕</span>
+                              <span class="badge gray">드롭&픽업</span>
+                              <span class="badge gray">미용</span>
+                              <span class="badge gray">훈련</span>
+                              <span class="badge gray">돌봄</span>
+                            </div>
+                          </div>
+                          <div class="svc-card-bottom">
+                            <div class="txt-row-wrap">
+
+                              <!-- TODO: 썸네일 프로필사진은 5개까지가 최대임 -->
+                              <div class="d-iflex-row name-wrap">
+
+                                <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                                <figure class="thumbnail circle">
+                                  <img src="assets/images/sample/img-sample04.png" alt="" class="thumbnail-img">
+                                </figure>
+                                <span class="txt txt-sm">강박사 / 총 100,000원</span>
+                              </div>
+
+                              <!-- <div class="mg-left txt-btn-wrap">
+                            <span class="gray-txt txt-sm">채팅하기</span>
+                            <button type="button" class="btn ico-btn">
+                              <i class="ico ico-arrow-right-gray"></i>
+                            </button>
+                          </div> -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- END 리스트 -->
+
+                      <!-- 리스트 -->
+                      <div class="list">
+                        <div class="svc-card-item">
+                          <div class="svc-card-top">
+                            <div class="card-information-wrap">
+                              <ul class="card-information">
+                                <li>
+                                  <div class="card-name-wrap">
+
+                                    <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                                    <figure class="thumbnail circle">
+                                      <img src="assets/images/sample/img-sample03.png" alt="" class="thumbnail-img">
+                                    </figure>
+                                    <span class="card-name">춘식이</span>
+                                    <span class="main-green-txt">서비스 취소</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="card-desc-wrap">
+                                    <p class="d-iflex-row">
+                                      <span class="dark-dot-txt">2023-11-18</span>
+                                      <span class="dark-dot-txt">13:00~15:00</span>
+                                    </p>
+                                    <span class="red-txt">(협의 가능)</span>
+                                  </div>
+                                </li>
+                              </ul>
+
+                              <!-- <div class="d-iflex-row mg-left card-btn-wrap">
+                            <button type="button" class="btn btn-sm dark-bd-btn square-btn">취소</button>
+                            <button type="button" class="btn btn-sm dark-solid-btn square-btn">완료</button>
+                          </div> -->
+                            </div>
+                            <div class="badge-grp">
+                              <span class="badge gray">산책</span>
+                              <span class="badge gray">목욕</span>
+                              <span class="badge gray">드롭&픽업</span>
+                              <span class="badge gray">미용</span>
+                              <span class="badge gray">훈련</span>
+                              <span class="badge gray">돌봄</span>
+                            </div>
+                          </div>
+                          <div class="svc-card-bottom">
+                            <div class="txt-row-wrap">
+
+                              <!-- TODO: 썸네일 프로필사진은 5개까지가 최대임 -->
+                              <div class="d-iflex-row name-wrap">
+
+                                <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                                <figure class="thumbnail circle">
+                                  <img src="assets/images/sample/img-sample04.png" alt="" class="thumbnail-img">
+                                </figure>
+                                <span class="txt txt-sm">강박사 / 총 100,000원</span>
+                              </div>
+
+                              <!-- <div class="mg-left txt-btn-wrap">
+                            <span class="gray-txt txt-sm">채팅하기</span>
+                            <button type="button" class="btn ico-btn">
+                              <i class="ico ico-arrow-right-gray"></i>
+                            </button>
+                          </div> -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- END 리스트 -->
+                    </div>
+
+                    <!-- END 목록 있을 때 -->
+
+                    <!-- TODO: 목록 없을 때 -->
+                    <div class="nothing-list-grp type-center" style="display: none;">
+                      <div class="nothing-list">
+                        <i class="ico ico-nothing ico-lg ico-nothing-list"></i>
+                        <h3 class="nl-ttl">이전 의뢰 내역이 없습니다.</h3>
+                        <p class="nl-desc">원하는 서비스가 있다면 펫시터 의뢰를 진행해 주세요.</p>
+                      </div>
+                    </div>
+
+                    <!-- END 목록 없을 때 -->
+                  </div>
+
+                  <!-- END ### 3. 탭 내용: 완료 및 취소 -->
+                </div>
               </div>
             </div>
 
