@@ -1184,9 +1184,9 @@ img {
   align-items: center;
   justify-content: flex-start;
   gap: 1.5rem;
+  padding: 1rem 1.5rem;
   border-top: 1px solid var(--gray-light, #f1f1f1);
   width: 100%;
-  padding: 1rem 1.5rem;
 }
 .lefttxt-btn-bottom .d-iflex-row.mall-d-iflex-row {
   gap: 1rem;
@@ -3506,6 +3506,7 @@ img {
 /* ======================== 페이지 - 이용약관 ======================== */
 .terms-of-page .page {
   padding: 1rem 1.5rem;
+  padding-bottom: 3rem;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -4306,7 +4307,8 @@ img {
 
 /* ======================== 페이지 - 펫시터 의뢰 ======================== */
 .pst-request-page .page {
-  padding: 1rem 1.5rem 3rem;
+  padding: 1rem 1.5rem;
+  padding-bottom: 3rem;
 }
 .pst-request-page .list-page {
   height: 100%;
@@ -4386,7 +4388,8 @@ img {
 
 /* ======================== 페이지 - 반려동물 등록 ======================== */
 .penroll-page .page {
-  padding: 1rem 1.5rem 3rem;
+  padding: 1rem 1.5rem;
+  padding-bottom: 3rem;
 }
 .penroll-page .list-page {
   height: 100%;
