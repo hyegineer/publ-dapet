@@ -1546,6 +1546,14 @@ img {
   display: inline-flex;
 }
 
+/* 완료 페이지 */
+.complete-page .page {
+  height: 100%;
+}
+.complete-page .complete-list-grp.type-center {
+  height: 90%;
+}
+
 /* ======================== 구성요소 - 폼 ======================== */
 .form-page .page {
   padding: 1rem 1.5rem;
@@ -4344,13 +4352,6 @@ img {
 }
 .pst-request-page .gray-light-box {
   padding: 1.5rem;
-}
-
-.pst-request-complete-page .page {
-  height: 100%;
-}
-.pst-request-complete-page .complete-list-grp.type-center {
-  height: 90%;
 }
 
 /* ======================== 페이지 - 등록된 반려동물 ======================== */
