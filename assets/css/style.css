@@ -3000,6 +3000,50 @@ img {
   gap: 0.5rem;
 }
 
+/* 받은 견적 목록 아이템 */
+.offer-card-item {
+  background-color: var(--gray-light, #f1f1f1);
+  border-radius: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.5rem;
+}
+.offer-card-item:active {
+  background-color: #e8e8e8;
+}
+.offer-card-item .card-name-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+}
+.offer-card-item .card-name-wrap .gray-txt {
+  font-weight: 300;
+}
+.offer-card-item .card-name {
+  font-weight: 500;
+}
+.offer-card-item .thumbnail.circle {
+  width: 2.9rem;
+  height: 2.9rem;
+  flex-shrink: 0;
+  background-color: white;
+  background-size: 1rem;
+}
+.offer-card-item .txt-btn-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+.offer-card-item .txt-lg {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
 .list-card-item {
   width: 100%;
   display: flex;
@@ -4888,6 +4932,36 @@ img {
 .offer-detail-page .info-section .info-ttl {
   font-size: 1.4rem;
   margin-bottom: 1.5rem;
+}
+
+.offer-list-page .page {
+  height: 100%;
+}
+.offer-list-page .top-card-wrap {
+  padding: 1rem 1.5rem 2rem;
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
+}
+.offer-list-page .search-select-wrap {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+}
+.offer-list-page .col-list-grp {
+  padding: 0 1.5rem;
+  padding-bottom: 3rem;
+}
+.offer-list-page .col-list-grp .list {
+  margin-bottom: 1rem;
+}
+.offer-list-page .col-list-grp .list:last-child {
+  margin-bottom: 0;
+}
+.offer-list-page .inner-page {
+  height: calc(100% - 21.15rem);
+}
+.offer-list-page .inner-page .nothing-list-grp.type-center {
+  height: 100%;
 }
 
 /* ======================== 기타 페이지 - 완료 페이지 ======================== */
