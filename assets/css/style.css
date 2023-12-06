@@ -946,21 +946,8 @@ img {
   font-weight: 300;
   color: var(--gray, #aeaeae);
 }
-.complete-list .txt-btn {
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background-color: transparent;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  gap: 5px;
+.complete-list .blue-txt-btn {
   font-size: 1.2rem;
-  line-height: 1.4;
-  font-weight: 300;
-  color: var(--blue, #0085ff);
-  text-decoration: underline;
   margin-top: 2rem;
 }
 
@@ -1449,6 +1436,11 @@ img {
 }
 .ctrls-txt-wrap .next-ctrl-btn {
   right: 1.5rem;
+}
+
+.ctrls-txt-wrap.type-sticky {
+  position: sticky;
+  top: 0;
 }
 
 /* 기본 테이블 */
@@ -2255,6 +2247,11 @@ img {
   height: 2rem;
 }
 
+.gray-solid-btn {
+  background-color: var(--gray-light, #f1f1f1);
+  color: var(--gray, #aeaeae);
+}
+
 .square-btn {
   border-radius: 5px;
 }
@@ -2285,17 +2282,24 @@ img {
 }
 
 .btn-lg {
-  height: 5rem;
   font-size: 1.6rem;
   font-weight: 400;
-  padding: 0 1rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
 }
 
 .btn-md {
-  height: 4.4rem;
   font-size: 1.4rem;
   font-weight: 300;
-  padding: 0 1rem;
+  padding: 1.2rem 1rem;
+  text-align: center;
+}
+
+.btn-sm {
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: 0.8rem 1rem;
+  line-height: 1.4;
 }
 
 .btn-lg .txt {
@@ -2415,6 +2419,23 @@ img {
 .mini-txtx-btn .btn .ico-x-gray {
   width: 100%;
   height: 100%;
+}
+
+.blue-txt-btn {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 5px;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  font-weight: 300;
+  color: var(--blue, #0085ff);
+  text-decoration: underline;
 }
 
 /* ======================== 구성요소 - 목록 카드 아이템 ======================== */
@@ -3024,6 +3045,14 @@ img {
   padding: 0 10px;
 }
 
+#guide-page .gtbl-body .list .cell:nth-child(1) {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
 #guide-page .badge {
   padding: 3px 8px;
   font-size: 10px;
@@ -3061,11 +3090,6 @@ img {
     margin-bottom: 5px;
     font-size: 16px;
     font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 5px;
-    flex-wrap: wrap;
   }
   #guide-page .gtbl-body .list .cell .etc {
     margin-bottom: 5px;

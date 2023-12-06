@@ -21,14 +21,13 @@
       <!-- layout) 페이지 레이아웃 -->
       <div class="l-wrapper">
 
-        <!-- TODO: ***** XXX 페이지 ***** -->
-        <div class="l-container">
+        <!-- TODO: ***** 주문 내역 페이지 ***** -->
+        <div class="od-list-page l-container">
 
-          <!--
- <!-- TODO: layout) 헤더 타입 02 -->
+          <!-- TODO: layout) 헤더 타입 02 -->
 
           <!-- TODO: 밑줄 있는 화면일 때는 type-bd 클래스 추가 -->
-          <header class="header type-bd">
+          <header class="header ">
             <div class="header-inner">
 
               <!-- 헤더 왼쪽 -->
@@ -49,7 +48,7 @@
 
               <!-- 헤더 중앙 -->
               <div class="hd-center ">
-                <span class="ttl">펫시터 찾기</span>
+                <span class="ttl">주문 내역</span>
               </div>
 
               <!-- 헤더 오른쪽 -->
@@ -70,14 +69,90 @@
             </div>
           </header>
 
-          <!-- ENDO layout) 헤더 타입 02 --> -->
+          <!-- ENDO layout) 헤더 타입 02 -->
 
           <!-- layout) 페이지 -->
           <div class="l-contt-container">
 
             <!-- layout) 페이지 상단 -->
+            <section class="heavy-bd-row">
+              <h3>나의 주문/배송 현황</h3>
+              <div class="contt">
+                <div class="odstatus-list-grp">
+                  <div class="odstatus-list">
+                    <p class="txts">
+                      <span class="cnt-txt">0</span>
+                      <span class="txt">입금확인</span>
+                    </p>
+                  </div>
+                  <div class="odstatus-list">
+                    <p class="txts">
+                      <span class="cnt-txt">0</span>
+                      <span class="txt">결제완료</span>
+                    </p>
+                  </div>
+                  <div class="odstatus-list">
+                    <p class="txts">
+                      <span class="cnt-txt">0</span>
+                      <span class="txt">배송중</span>
+                    </p>
+                  </div>
+                  <div class="odstatus-list">
+                    <p class="txts">
+                      <span class="cnt-txt">0</span>
+                      <span class="txt">배송완료</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
             <div class="l-contt-top">
               <div class="page">
+
+                <!-- TODO: 목록 있을 때 -->
+                <div class="col-list-grp">
+                  <div class="list">
+                    <div class="order-card-item">
+
+                      <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                      <figure class="thumbnail">
+                        <img src="assets/images/sample/img-sample07.png" alt="" class="thumbnail-img">
+                      </figure>
+                      <ul class="card-information">
+                        <li>
+                          <span class="main-green-txt status-txt">입금확인</span>
+                        </li>
+                        <li>
+                          <h3 class="card-name">그랜마루시 쓰리베이즈 동결건조 독 푸드 닭고기 ...</h3>
+                        </li>
+                        <li>
+                          <div class="info-txt-wrap">
+                            <span class="info-txt">100,000원</span>
+                            <span class="sm-txt">(주문수량: 2)</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="card-btn-wrap">
+                            <button type="button" class="btn btn-sm gray-solid-btn square-btn">배송문의</button>
+                            <button type="button" class="btn btn-sm gray-solid-btn square-btn">배송조회</button>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- END 목록 있을 때 -->
+
+                <!-- TODO: 목록 없을 때 -->
+                <div class="nothing-list-grp type-center">
+                  <div class="nothing-list">
+                    <i class="ico ico-nothing ico-lg ico-nothing-bang"></i>
+                    <h3 class="nl-ttl">주문내역이 없습니다.</h3>
+                  </div>
+                </div>
+
+                <!-- END 목록 없을 때 -->
               </div>
             </div>
 
@@ -93,7 +168,7 @@
           <!-- END layout) 페이지 -->
         </div>
 
-        <!-- END ***** XXX 페이지 ***** -->
+        <!-- END ***** 주문 내역 페이지 ***** -->
       </div>
 
       <!-- END layout) 페이지 레이아웃 -->
