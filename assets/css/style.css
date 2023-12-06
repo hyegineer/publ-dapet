@@ -2335,9 +2335,14 @@ img {
   height: 2rem;
 }
 
-.gray-solid-btn {
+.gray-light-solid-btn {
   background-color: var(--gray-light, #f1f1f1);
   color: var(--gray, #aeaeae);
+}
+
+.gray-solid-btn {
+  background-color: var(--gray, #aeaeae);
+  color: white;
 }
 
 .dark-bd-btn {
@@ -3212,6 +3217,64 @@ img {
   min-width: 7.5rem;
   font-size: 1.2rem;
   font-weight: 300;
+}
+
+/* 목록 카드 아이템 타입 06 (펫시터 프로필 등...) */
+.list-card-item.type06 {
+  gap: 1.5rem;
+  align-items: center;
+}
+.list-card-item.type06 .thumbnail {
+  width: 7.5rem;
+  height: 7.5rem;
+}
+.list-card-item.type06 .card-information {
+  gap: 0;
+}
+.list-card-item.type06 .card-name {
+  font-size: 2rem;
+}
+.list-card-item.type06 .star-heart-wrap {
+  gap: 1rem;
+  align-items: center;
+  margin-top: -2px;
+  margin-bottom: 1px;
+}
+.list-card-item.type06 .star-heart-wrap .star-txt-item {
+  font-weight: 500;
+}
+.list-card-item.type06 .star-heart-wrap .heart-btn {
+  margin-left: auto;
+  margin-top: -2px;
+}
+.list-card-item.type06 .star-txt-item {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.list-card-item.type06 .txt-arw-btn {
+  font-weight: 300;
+}
+
+/* 목록 카드 아이템 타입 07 (의뢰 상세 등...) */
+.list-card-item.type07 {
+  gap: 1.5rem;
+  align-items: center;
+}
+.list-card-item.type07 .thumbnail {
+  width: 7.5rem;
+  height: 7.5rem;
+}
+.list-card-item.type07 .card-information {
+  gap: 0.5rem;
+}
+.list-card-item.type07 .main-green-txt {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.list-card-item.type07 .card-name {
+  font-size: 1.6rem;
+  font-weight: 500;
 }
 
 /* ======================== 페이지 - 가이드 & 컴포넌트 ======================== */
@@ -4204,23 +4267,8 @@ img {
 .pst-profile-page .section-ttl-wrap .txt-arw-btn {
   margin-top: 1px;
 }
-.pst-profile-page .list-card-item.type03 {
+.pst-profile-page .list-card-item {
   padding: 0 1.5rem;
-  align-items: center;
-}
-.pst-profile-page .list-card-item .card-name {
-  font-size: 2rem;
-}
-.pst-profile-page .list-card-item .star-heart-wrap {
-  align-items: center;
-}
-.pst-profile-page .list-card-item .star-txt-item {
-  font-size: 1.6rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-.pst-profile-page .list-card-item .txt-arw-btn {
-  font-weight: 300;
 }
 .pst-profile-page .badge-grp {
   display: flex;
@@ -4757,4 +4805,58 @@ img {
 }
 .dlvry-cck-page .d-iflex-row.type-gap {
   gap: 1rem;
+}
+
+/* ======================== 페이지 - 의뢰 상세 및 견적 상세 페이지 ======================== */
+/* 의뢰 상세 */
+.request-detail-page .page {
+  padding: 0 1.5rem;
+  padding-bottom: 3rem;
+}
+.request-detail-page .list-card-item {
+  padding: 2rem 0;
+}
+.request-detail-page .card-under-section {
+  border-top: 1px solid var(--gray-light, #f1f1f1);
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
+  margin-bottom: 2rem;
+}
+.request-detail-page .card-under-section:last-child {
+  margin-bottom: 0;
+}
+.request-detail-page .status-list-grp {
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
+  padding: 2rem 0;
+}
+.request-detail-page .status-list-grp:last-child {
+  border-bottom: 0;
+}
+.request-detail-page .status-list {
+  color: #000;
+}
+.request-detail-page .status-list .txts {
+  gap: 0.5rem;
+}
+.request-detail-page .status-list .bold-txt {
+  font-size: 1.4rem;
+}
+.request-detail-page .info-section {
+  margin-bottom: 2rem;
+}
+.request-detail-page .info-section:last-child {
+  margin-bottom: 0;
+}
+.request-detail-page .d-iflex-row {
+  gap: 1rem;
+}
+.request-detail-page .blue-txt-btn {
+  font-size: 1.2rem;
+}
+
+/* ======================== 기타 페이지 - 완료 페이지 ======================== */
+.complete-page .page {
+  height: 100%;
+}
+.complete-page .complete-list-grp.type-center {
+  height: 90%;
 }
