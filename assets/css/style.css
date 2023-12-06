@@ -1365,8 +1365,22 @@ img {
   flex-direction: column;
   gap: 1.8rem;
   width: 100%;
+  margin-bottom: 1.8rem;
 }
-.info-section .info-dl {
+.info-section .info-contt:last-child {
+  margin-bottom: 0;
+}
+.info-section .info-contt.type-nogap {
+  gap: 0;
+}
+.info-section .info-contt.type-nogap .info-dl {
+  margin-bottom: 1.8rem;
+}
+.info-section .info-contt.type-nogap .info-dl:last-child {
+  margin-bottom: 0;
+}
+
+.info-dl {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -1377,36 +1391,51 @@ img {
   font-weight: 300;
 }
 @media all and (max-width: 280px) {
-  .info-section .info-dl {
+  .info-dl {
     flex-direction: column;
     font-size: 1.2rem;
   }
 }
-.info-section .info-dl dt {
+.info-dl dt {
   flex-shrink: 0;
 }
 @media all and (max-width: 280px) {
-  .info-section .info-dl dt {
+  .info-dl dt {
     font-weight: 500;
   }
 }
-.info-section .info-dl dd {
+.info-dl dd {
   margin-left: auto;
   text-align: right;
 }
 @media all and (max-width: 280px) {
-  .info-section .info-dl dd {
+  .info-dl dd {
     margin-left: 0;
     text-align: left;
   }
 }
-.info-section .info-txt {
+
+.info-dl.type-flg {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.bd-info-dl {
+  width: 100%;
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
+  padding: 2rem 0;
+}
+.bd-info-dl:first-child {
+  border-top: 1px solid var(--gray-light, #f1f1f1);
+}
+
+.info-txt {
   font-size: 1.4rem;
   line-height: 1.5;
   font-weight: 300;
 }
 @media all and (max-width: 280px) {
-  .info-section .info-txt {
+  .info-txt {
     font-size: 1.2rem;
   }
 }
@@ -4423,6 +4452,22 @@ img {
   height: 100%;
 }
 
+.od-detail-page .top-card-wrap {
+  width: 100%;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
+  margin-bottom: 2rem;
+}
+.od-detail-page .section {
+  padding: 0 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
+}
+.od-detail-page .section:last-child {
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+
 .od-section {
   padding: 1.5rem;
   width: 100%;
@@ -4481,4 +4526,22 @@ img {
   font-size: 1.2rem;
   font-weight: 300;
   color: #000;
+}
+
+.txt-row-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
+  padding: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.txt-row-wrap .sm-txt {
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding-top: 0.2rem;
+  display: inline-flex;
 }
