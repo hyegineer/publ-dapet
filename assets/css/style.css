@@ -4991,6 +4991,11 @@ img {
   height: 100%;
 }
 
+.offer-create-page .page {
+  padding: 1rem 1.5rem;
+  padding-bottom: 3rem;
+}
+
 /* 의뢰 및 예약내역 */
 .rsv-list-page .page {
   height: 100%;
