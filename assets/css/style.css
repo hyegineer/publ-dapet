@@ -3077,13 +3077,16 @@ img {
   align-items: flex-start;
   margin-top: -2px;
   margin-bottom: 1px;
+  position: relative;
+  margin-bottom: 0.5rem;
 }
 .list-card-item.type03 .star-heart-wrap .star-txt-item {
   font-weight: 500;
 }
 .list-card-item.type03 .star-heart-wrap .heart-btn {
-  margin-left: auto;
-  margin-top: -2px;
+  position: absolute;
+  top: -0.2rem;
+  right: 0;
 }
 .list-card-item.type03 .name-wrap {
   margin-bottom: 3px;
@@ -3239,13 +3242,16 @@ img {
   align-items: center;
   margin-top: -2px;
   margin-bottom: 1px;
+  position: relative;
+  margin-bottom: 0.5rem;
 }
 .list-card-item.type06 .star-heart-wrap .star-txt-item {
   font-weight: 500;
 }
 .list-card-item.type06 .star-heart-wrap .heart-btn {
-  margin-left: auto;
-  margin-top: -2px;
+  position: absolute;
+  top: -0.2rem;
+  right: 0;
 }
 .list-card-item.type06 .star-txt-item {
   font-size: 1.6rem;
@@ -4807,7 +4813,7 @@ img {
   gap: 1rem;
 }
 
-/* ======================== 페이지 - 의뢰 상세 및 견적 상세 페이지 ======================== */
+/* ======================== 페이지 - 의뢰 및 견적 관련 페이지 ======================== */
 /* 의뢰 상세 */
 .request-detail-page .page {
   padding: 0 1.5rem;
@@ -4851,6 +4857,37 @@ img {
 }
 .request-detail-page .blue-txt-btn {
   font-size: 1.2rem;
+}
+
+/* 견적 상세 및 목록 */
+.offer-detail-page .page {
+  padding: 0 1.5rem;
+  padding-bottom: 3rem;
+}
+.offer-detail-page .page .txt-row-wrap {
+  width: 100%;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
+}
+.offer-detail-page .page .txt-row-wrap .txt {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.offer-detail-page .list-card-item {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
+}
+.offer-detail-page .info-section {
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
+  margin: 0;
+  padding: 1.5rem 0;
+}
+.offer-detail-page .info-section:last-child {
+  border-bottom: 0;
+}
+.offer-detail-page .info-section .info-ttl {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
 }
 
 /* ======================== 기타 페이지 - 완료 페이지 ======================== */
