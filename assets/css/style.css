@@ -207,6 +207,8 @@ html {
   position: sticky;
   top: 0;
   border-bottom: 1px solid var(--white, #fff);
+  background-color: white;
+  z-index: 250;
 }
 
 .header.type-bd {
@@ -278,7 +280,7 @@ html {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 500;
   display: flex;
   align-items: center;
   justify-content: center;
