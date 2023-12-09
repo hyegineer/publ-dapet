@@ -585,14 +585,10 @@ img {
   max-width: 7rem;
   font-size: 1.2rem;
 }
-.category-tab.active {
-  color: var(--main-green, #56c595);
-  font-weight: 500;
-}
-.category-tab.active .mini-thumbnail {
-  border-color: var(--main-green, #56C595);
-}
 .category-tab .mini-thumbnail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
@@ -600,8 +596,38 @@ img {
   border: 2px solid var(--gray-light, #f1f1f1);
   background-color: var(--gary, #aeaeae);
 }
+.category-tab .mini-thumbnail.ico-rq-box {
+  background-color: var(--gray-light, #f1f1f1);
+}
+.category-tab .ico-rq-box .ico-box {
+  width: 2.4rem;
+  height: 2.4rem;
+  position: relative;
+}
+.category-tab .ico-rq-box .ico {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.category-tab .ico-rq-box .ico-on {
+  opacity: 0;
+}
 .category-tab .txt {
   color: inherit;
+}
+
+.category-tab.active {
+  color: var(--main-green, #56c595);
+  font-weight: 500;
+}
+.category-tab.active .mini-thumbnail {
+  border-color: var(--main-green, #56C595);
+}
+.category-tab.active .ico-box .ico-off {
+  opacity: 0;
+}
+.category-tab.active .ico-box .ico-on {
+  opacity: 1;
 }
 
 /* 썸네일 */
@@ -1831,6 +1857,21 @@ img {
   line-height: 1.4;
 }
 
+.cckbox-item.type-sm {
+  gap: 0.5rem;
+}
+.cckbox-item.type-sm .custom-ckbox {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.cckbox-item.type-sm .custom-ckbox:after {
+  width: 1rem;
+  height: 0.8rem;
+}
+.cckbox-item.type-sm .custom-ckbox-label {
+  font-size: 1.2rem;
+}
+
 .custom-ckbox {
   border-radius: 3px;
   width: 2rem;
@@ -1841,6 +1882,7 @@ img {
   border: 1px solid var(--gray-light, #f1f1f1);
   flex-shrink: 0;
   background-color: white;
+  position: relative;
 }
 
 .custom-ckbox:after {
@@ -1851,8 +1893,11 @@ img {
   position: absolute;
   background-repeat: no-repeat;
   background-image: url(../images/ico/ico-custom-ckbox.svg);
+  background-size: contain;
   transition: all 0.2s;
-  transform: translateY(10px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
   opacity: 0;
 }
 
@@ -1862,7 +1907,7 @@ img {
 }
 
 .custom-ckbox-inp:checked + .custom-ckbox:after {
-  transform: translateY(0);
+  transform: translate(-50%, -50%);
   opacity: 1;
 }
 
@@ -2270,6 +2315,54 @@ img {
 
 .ico-search-gray-light {
   background-image: url(../images/ico/ico-search-gray-light.svg);
+}
+
+.ico-rq-walk-gray {
+  background-image: url(../images/ico/ico-rq-walk-gray.svg);
+}
+
+.ico-rq-walk-green {
+  background-image: url(../images/ico/ico-rq-walk-green.svg);
+}
+
+.ico-rq-beauty-gray {
+  background-image: url(../images/ico/ico-rq-beauty-gray.svg);
+}
+
+.ico-rq-beauty-green {
+  background-image: url(../images/ico/ico-rq-beauty-green.svg);
+}
+
+.ico-rq-wash-gray {
+  background-image: url(../images/ico/ico-rq-wash-gray.svg);
+}
+
+.ico-rq-wash-green {
+  background-image: url(../images/ico/ico-rq-wash-green.svg);
+}
+
+.ico-rq-traning-gray {
+  background-image: url(../images/ico/ico-rq-traning-gray.svg);
+}
+
+.ico-rq-traning-green {
+  background-image: url(../images/ico/ico-rq-traning-green.svg);
+}
+
+.ico-rq-care-gray {
+  background-image: url(../images/ico/ico-rq-care-gray.svg);
+}
+
+.ico-rq-care-green {
+  background-image: url(../images/ico/ico-rq-care-green.svg);
+}
+
+.ico-rq-drop-gray {
+  background-image: url(../images/ico/ico-rq-drop-gray.svg);
+}
+
+.ico-rq-drop-green {
+  background-image: url(../images/ico/ico-rq-drop-green.svg);
 }
 
 /* ======================== 구성요소 - 버튼 ======================== */
@@ -2951,6 +3044,9 @@ img {
   width: 3rem;
   height: 3rem;
   flex-shrink: 0;
+}
+.svc-card-item .thumbnail.inactive {
+  background-size: 1rem;
 }
 .svc-card-item .card-name {
   font-size: 1.6rem;
@@ -5024,6 +5120,36 @@ img {
 }
 .rsv-list-page .status-list-contt .nothing-list-grp.type-center {
   height: calc(100% - 5.9rem);
+}
+
+/* 의뢰 찾기 */
+.search-request-page .page {
+  height: 100%;
+}
+.search-request-page .nothing-list-grp.type-center {
+  height: calc(100% - 10rem - 5.7rem);
+}
+.search-request-page .search-select-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+}
+.search-request-page .search-select-wrap .cckbox-item {
+  gap: 0.5rem;
+}
+.search-request-page .search-select-wrap .custom-ckbox-label {
+  font-size: 1.2rem;
+}
+.search-request-page .col-list-grp {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.search-request-page .col-list-grp .list {
+  margin-bottom: 1.5rem;
+}
+.search-request-page .col-list-grp .list:last-child {
+  margin-bottom: 0;
 }
 
 /* ======================== 기타 페이지 - 완료 페이지 ======================== */

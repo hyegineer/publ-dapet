@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>DAPET</title>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- JS -->
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+  </head>
+  <body ontouchstart>
+    <div id="app">
+
+      <!-- layout) 페이지 레이아웃 -->
+      <div class="l-wrapper">
+
+        <!-- TODO: ***** 의뢰 찾기 목록 페이지 ***** -->
+        <div class="search-request-page l-container">
+
+          <!-- TODO: layout) 헤더 타입 02 -->
+
+          <!-- TODO: 밑줄 있는 화면일 때는 type-bd 클래스 추가 -->
+          <header class="header ">
+            <div class="header-inner">
+
+              <!-- 헤더 왼쪽 -->
+
+              <!-- TODO: invisible 클래스 넣으면 안보임 -->
+              <div class="hd-left ">
+                <button onclick="history.back()" type="button" class="hd-btn">
+                  <span class="txt-hidden">뒤로가기</span>
+                  <i class="ico ico-line-arrow-left"></i>
+                </button>
+
+                <!-- TODO: invisible 클래스 넣으면 안보임 -->
+                <a href="main.html" class="hd-btn ">
+                  <span class="txt-hidden">홈</span>
+                  <i class="ico ico-home"></i>
+                </a>
+              </div>
+
+              <!-- 헤더 중앙 -->
+              <div class="hd-center ">
+                <span class="ttl">의뢰 찾기</span>
+              </div>
+
+              <!-- 헤더 오른쪽 -->
+
+              <!-- TODO: invisible 클래스 넣으면 안보임 -->
+              <div class="hd-right ">
+
+                <!-- 알림 버튼 -->
+                <a href="alarm-activity-list.html" type="button" class="hd-btn">
+                  <span class="txt-hidden">알림</span>
+
+                  <!-- TODO: 새로 알람 들어온 경우 ico-alarm-on 클래스 추가해야함 -->
+                  <i class="ico ico-alarm"></i>
+                </a>
+
+                <!-- END 알림 버튼 -->
+              </div>
+            </div>
+          </header>
+
+          <!-- ENDO layout) 헤더 타입 02 -->
+
+          <!-- layout) 페이지 -->
+          <div class="l-contt-container">
+
+            <!-- layout) 페이지 상단 -->
+            <div class="l-contt-top">
+              <div class="page">
+                <div class="category-tabs">
+                  <div class="category-tab-grp">
+
+                    <!-- TODO: 클릭시 active 클래스 추가 -->
+                    <button type="button" class="category-tab active">
+                      <figure class="mini-thumbnail ico-rq-box">
+                        <span class="ico-box">
+                      <i class="ico ico-on ico-rq-walk-green"></i>
+                      <i class="ico ico-off ico-rq-walk-gray"></i>
+                    </span>
+                      </figure>
+                      <span class="txt">산책</span>
+                    </button>
+                    <button type="button" class="category-tab">
+                      <figure class="mini-thumbnail ico-rq-box">
+                        <span class="ico-box">
+                      <i class="ico ico-on ico-rq-beauty-green"></i>
+                      <i class="ico ico-off ico-rq-beauty-gray"></i>
+                    </span>
+                      </figure>
+                      <span class="txt">미용</span>
+                    </button>
+                    <button type="button" class="category-tab">
+                      <figure class="mini-thumbnail ico-rq-box">
+                        <span class="ico-box">
+                      <i class="ico ico-on ico-rq-wash-green"></i>
+                      <i class="ico ico-off ico-rq-wash-gray"></i>
+                    </span>
+                      </figure>
+                      <span class="txt">목욕</span>
+                    </button>
+                    <button type="button" class="category-tab">
+                      <figure class="mini-thumbnail ico-rq-box">
+                        <span class="ico-box">
+                      <i class="ico ico-on ico-rq-traning-green"></i>
+                      <i class="ico ico-off ico-rq-traning-gray"></i>
+                    </span>
+                      </figure>
+                      <span class="txt">훈련</span>
+                    </button>
+                    <button type="button" class="category-tab">
+                      <figure class="mini-thumbnail ico-rq-box">
+                        <span class="ico-box">
+                      <i class="ico ico-on ico-rq-care-green"></i>
+                      <i class="ico ico-off ico-rq-care-gray"></i>
+                    </span>
+                      </figure>
+                      <span class="txt">돌봄</span>
+                    </button>
+                    <button type="button" class="category-tab">
+                      <figure class="mini-thumbnail ico-rq-box">
+                        <span class="ico-box">
+                      <i class="ico ico-on ico-rq-drop-green"></i>
+                      <i class="ico ico-off ico-rq-drop-gray"></i>
+                    </span>
+                      </figure>
+                      <span class="txt">드롭&픽업</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- 상단 검색옵션 바 -->
+                <div class="search-select-wrap">
+                  <div class="d-iflex-row">
+
+                    <!-- 옵션 선택 영역 -->
+                    <div class="custom-select-wrap">
+
+                      <!-- 선택값 보여지는 타겟 -->
+                      <div class="custom-select">
+                        <span class="txt">서울시</span>
+                      </div>
+
+                      <!-- END 선택값 보여지는 타겟 -->
+
+                      <!-- 옵션 리스트 -->
+                      <div class="custom-option-wrap">
+                        <ul class="custom-option">
+                          <li class="opt-list">
+                            <span>서울시</span>
+                          </li>
+                          <li class="opt-list">
+                            <span>경기도</span>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <!-- END 옵션 리스트 -->
+                    </div>
+
+                    <!-- END 옵션 선택 영역 -->
+
+                    <!-- 옵션 선택 영역 -->
+                    <div class="custom-select-wrap">
+
+                      <!-- 선택값 보여지는 타겟 -->
+                      <div class="custom-select">
+                        <span class="txt">시/군/구</span>
+                      </div>
+
+                      <!-- END 선택값 보여지는 타겟 -->
+
+                      <!-- 옵션 리스트 -->
+                      <div class="custom-option-wrap">
+                        <ul class="custom-option">
+                          <li class="opt-list">
+                            <span>서울시</span>
+                          </li>
+                          <li class="opt-list">
+                            <span>경기도</span>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <!-- END 옵션 리스트 -->
+                    </div>
+
+                    <!-- END 옵션 선택 영역 -->
+                  </div>
+                  <div class="d-iflex-row mg-left">
+                    <div class="cckbox-item type-sm">
+                      <input id="option1" type="checkbox" name="option1" class="none custom-ckbox-inp" />
+                      <label for="option1" class="custom-ckbox"></label>
+                      <label for="option1" class="custom-ckbox-label">마감된 의뢰 제외</label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- END 상단 검색옵션 바 -->
+
+                <!-- TODO: 목록 있을 때 -->
+                <div class="col-list-grp" data-pdbt30>
+
+                  <!-- 리스트 -->
+                  <div class="list">
+                    <div class="svc-card-item">
+                      <div class="svc-card-top">
+                        <div class="card-information-wrap">
+                          <ul class="card-information">
+                            <li>
+                              <div class="card-name-wrap">
+
+                                <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                                <figure class="thumbnail circle">
+                                  <img src="assets/images/sample/img-sample03.png" alt="" class="thumbnail-img">
+                                </figure>
+                                <span class="card-name">춘식이</span>
+
+                                <!-- <span class="main-green-txt">의뢰 마감</span> -->
+                              </div>
+                            </li>
+                            <li>
+                              <div class="card-desc-wrap">
+                                <p class="d-iflex-row">
+                                  <span class="dark-dot-txt">2023-11-18</span>
+                                  <span class="dark-dot-txt">13:00~15:00</span>
+                                </p>
+                                <span class="red-txt">(협의 가능)</span>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="badge-grp">
+                          <span class="badge gray">산책</span>
+                          <span class="badge gray">목욕</span>
+                          <span class="badge gray">드롭&픽업</span>
+                          <span class="badge gray">미용</span>
+                          <span class="badge gray">훈련</span>
+                          <span class="badge gray">돌봄</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- END 리스트 -->
+
+                  <!-- 리스트 -->
+                  <div class="list">
+                    <div class="svc-card-item">
+                      <div class="svc-card-top">
+                        <div class="card-information-wrap">
+                          <ul class="card-information">
+                            <li>
+                              <div class="card-name-wrap">
+
+                                <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
+                                <figure class="thumbnail circle inactive">
+
+                                  <!-- <img src="assets/images/sample/img-sample03.png" alt="" class="thumbnail-img"> -->
+                                </figure>
+                                <span class="card-name">멍몽몽</span>
+                                <span class="main-green-txt">의뢰 마감</span>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="card-desc-wrap">
+                                <p class="d-iflex-row">
+                                  <span class="dark-dot-txt">2023-11-18</span>
+                                  <span class="dark-dot-txt">13:00~15:00</span>
+                                </p>
+                                <span class="red-txt">(협의 가능)</span>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="badge-grp">
+                          <span class="badge gray">산책</span>
+                          <span class="badge gray">목욕</span>
+                          <span class="badge gray">드롭&픽업</span>
+                          <span class="badge gray">미용</span>
+                          <span class="badge gray">훈련</span>
+                          <span class="badge gray">돌봄</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- END 리스트 -->
+                </div>
+
+                <!-- END 목록 있을 때 -->
+
+                <!-- TODO: 목록 없을 때 -->
+                <div class="nothing-list-grp type-center" style="display: none;">
+                  <div class="nothing-list">
+                    <i class="ico ico-nothing ico-lg ico-nothing-list"></i>
+                    <h3 class="nl-ttl">조건에 맞는 의뢰를 찾을 수 없습니다.</h3>
+                    <p class="nl-desc">다른 검색 조건을 설정하여 의뢰를 찾아주세요.</p>
+                  </div>
+                </div>
+
+                <!-- END 목록 없을 때 -->
+              </div>
+            </div>
+
+            <!-- END layout) 페이지 상단 -->
+
+            <!-- layout) 페이지 하단 -->
+            <div class="l-contt-bottom">
+            </div>
+
+            <!-- END layout) 페이지 하단 -->
+          </div>
+
+          <!-- END layout) 페이지 -->
+        </div>
+
+        <!-- END ***** 의뢰 찾기 목록 페이지 ***** -->
+      </div>
+
+      <!-- END layout) 페이지 레이아웃 -->
+    </div>
+    <script src="assets/js/ui.js"></script>
+  </body>
+</html>
