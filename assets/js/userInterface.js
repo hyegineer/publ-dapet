@@ -34,4 +34,9 @@
       $(this).toggleClass('active');
     }
   })
+
+  // 공지사항 아코디언 효과
+  $(".fold-card-item.type01 .fold-card-top").click(function (e) {
+    $(this).siblings().slideToggle();
+  });
 })();

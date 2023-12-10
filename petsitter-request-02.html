@@ -40,10 +40,10 @@
                 </button>
 
                 <!-- TODO: invisible 클래스 넣으면 안보임 -->
-                <a href="main.html" class="hd-btn ">
+                <button type="button" onclick="location.href='main.html';" class="hd-btn ">
                   <span class="txt-hidden">홈</span>
                   <i class="ico ico-home"></i>
-                </a>
+                </button>
               </div>
 
               <!-- 헤더 중앙 -->
@@ -57,12 +57,12 @@
               <div class="hd-right ">
 
                 <!-- 알림 버튼 -->
-                <a href="alarm-activity-list.html" type="button" class="hd-btn">
+                <button type="button" onclick="location.href='alarm-activity-list.html';" class="hd-btn">
                   <span class="txt-hidden">알림</span>
 
                   <!-- TODO: 새로 알람 들어온 경우 ico-alarm-on 클래스 추가해야함 -->
                   <i class="ico ico-alarm"></i>
-                </a>
+                </button>
 
                 <!-- END 알림 버튼 -->
               </div>
@@ -93,7 +93,7 @@
                       <div class="accordion-card-item active">
 
                         <!-- 선택 영역 -->
-                        <div class="accordion-card-top">
+                        <article class="accordion-card-top">
                           <div class="ico-txt-card">
                             <span class="ico-box">
                           <i class="ico ico-svc-walk-gray ico-off"></i>
@@ -101,7 +101,7 @@
                         </span>
                             <p class="txt">산책을 맡기고 싶어요</p>
                           </div>
-                        </div>
+                        </article>
 
                         <!-- END 선택 영역 -->
 
@@ -147,7 +147,7 @@
                       <div class="accordion-card-item">
 
                         <!-- 선택 영역 -->
-                        <div class="accordion-card-top">
+                        <article class="accordion-card-top">
                           <div class="ico-txt-card">
                             <span class="ico-box">
                           <i class="ico ico-svc-beauty-gray ico-off"></i>
@@ -155,7 +155,7 @@
                         </span>
                             <p class="txt">미용하고 싶어요</p>
                           </div>
-                        </div>
+                        </article>
 
                         <!-- END 선택 영역 -->
 
@@ -217,7 +217,7 @@
                       <div class="accordion-card-item">
 
                         <!-- 선택 영역 -->
-                        <div class="accordion-card-top">
+                        <article class="accordion-card-top">
 
                           <!-- 선택 영역 -->
                           <div class="ico-txt-card">
@@ -227,7 +227,7 @@
                         </span>
                             <p class="txt">목욕시켜주세요</p>
                           </div>
-                        </div>
+                        </article>
 
                         <!-- END 선택 영역 -->
 
@@ -248,7 +248,7 @@
                       <div class="accordion-card-item">
 
                         <!-- 선택 영역 -->
-                        <div class="accordion-card-top">
+                        <article class="accordion-card-top">
                           <div class="ico-txt-card">
                             <span class="ico-box">
                           <i class="ico ico-svc-traning-gray ico-off"></i>
@@ -256,7 +256,7 @@
                         </span>
                             <p class="txt">훈련시켜 주세요</p>
                           </div>
-                        </div>
+                        </article>
 
                         <!-- END 선택 영역 -->
 
@@ -318,7 +318,7 @@
                       <div class="accordion-card-item">
 
                         <!-- 선택 영역 -->
-                        <div class="accordion-card-top">
+                        <article class="accordion-card-top">
                           <div class="ico-txt-card">
                             <span class="ico-box">
                           <i class="ico ico-svc-care-gray ico-off"></i>
@@ -326,7 +326,7 @@
                         </span>
                             <p class="txt">잠시 동안 돌봐주세요</p>
                           </div>
-                        </div>
+                        </article>
 
                         <!-- END 선택 영역 -->
 
@@ -378,7 +378,7 @@
                       <div class="accordion-card-item">
 
                         <!-- 선택 영역 -->
-                        <div class="accordion-card-top">
+                        <article class="accordion-card-top">
                           <div class="ico-txt-card">
                             <span class="ico-box">
                           <i class="ico ico-svc-drop-gray ico-off"></i>
@@ -386,7 +386,7 @@
                         </span>
                             <p class="txt">드롭 및 픽업을 해 주세요</p>
                           </div>
-                        </div>
+                        </article>
 
                         <!-- END 선택 영역 -->
 
@@ -441,9 +441,9 @@
               <div class="btn-wrap">
 
                 <!-- TODO: 다 채우고나서 before 클래스 삭제 -->
-                <a href="petsitter-request-03.html" class="btn theme-solid-btn btn-lg square-btn before">
+                <button type="button" onclick="location.href='petsitter-request-03.html';" class="btn theme-solid-btn btn-lg square-btn before">
                   <span class="txt">다음</span>
-                </a>
+                </button>
               </div>
             </div>
 
@@ -451,6 +451,27 @@
           </div>
 
           <!-- END layout) 페이지 -->
+
+          <!-- **** modal) 페이지 내 모달 1. 게시글 삭제 확인 **** -->
+          <div id="modal-1" class="modal-wrapper">
+            <div class="modal-overlay" onclick="closeModal('modal-1');"></div>
+            <div class="custom-modal system-modal">
+              <div class="smodal-contt-container">
+                <h3 class="smodal-ttl">게시글을 삭제하시겠습니까?</h3>
+                <div class="smodal-contt">
+                  <p class="smodal-desc">작성하신 서비스 내용이 맞습니까?</p>
+                  <div class="svc-detail-item">
+                  </div>
+                </div>
+              </div>
+              <div class="smodal-btn-wrap">
+                <button type="button" class="btn" onclick="closeModal('modal-1');">취소</button>
+                <button type="button" class="btn confirm-btn" onclick="alert('삭제되었습니다.');allCloseModal();">확인</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END **** modal) 페이지 내 모달 1. 게시글 삭제 확인 **** -->
         </div>
 
         <!-- END ***** 펫시터 의뢰 페이지 (서비스 상세내용) ***** -->
