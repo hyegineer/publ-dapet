@@ -472,7 +472,7 @@ html {
   align-self: flex-end;
   width: 100%;
   max-width: 450px;
-  padding: 1.5rem;
+  padding: 1rem 1.5rem;
   position: relative;
   z-index: 1;
   /* iPhone XR : 1792x828px at 326ppi */
@@ -502,6 +502,7 @@ html {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  padding: 1rem 0;
 }
 .ctrlmodal .ctrl-btn {
   background-color: white;
@@ -539,39 +540,92 @@ html {
   z-index: 1;
   width: 100%;
   max-width: 450px;
-}
-
-.btmodal {
-  width: 100%;
-  background-color: white;
+  overflow: hidden;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  overflow: hidden;
-  padding: 1rem 1.5rem 1.5rem;
+  background-color: white;
   /* iPhone XR : 1792x828px at 326ppi */
   /* iPhone XS : 2436x1125px at 458ppi */
   /* iPhone XS Max : 2688x1242px at 458ppi */
 }
 @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
-  .btmodal {
+  .bottom-modal {
     padding-bottom: 3rem;
   }
 }
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-  .btmodal {
+  .bottom-modal {
     padding-bottom: 3rem;
   }
 }
 @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
-  .btmodal {
+  .bottom-modal {
     padding-bottom: 3rem;
   }
 }
 
+.btmodal {
+  width: 100%;
+  background-color: white;
+  padding: 1rem 1.5rem;
+}
+.btmodal .close-btn {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 5px;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  margin: 0 auto;
+}
+.btmodal .close-btn .ico {
+  width: 100%;
+  height: 100%;
+}
+
 .btmodal-contt {
-  padding-bottom: 1.5rem;
   margin-bottom: 1.5rem;
   border-bottom: 1px solid var(--gray-light);
+}
+.btmodal-contt .detail-dl-wrap {
+  width: 100%;
+}
+.btmodal-contt .detail-dl-wrap .detail-dl {
+  width: 100%;
+}
+.btmodal-contt .detail-dl {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
+}
+.btmodal-contt .detail-dl:last-child {
+  border-bottom: 0;
+}
+.btmodal-contt .detail-dl.type-flex-end {
+  align-items: flex-end;
+}
+.btmodal-contt .detail-dl.type-flex-end dt {
+  position: relative;
+  top: -2px;
+}
+.btmodal-contt .ctrl-count-item {
+  padding: 1rem 0;
+}
+.btmodal-contt .total-detail-dl-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 1rem 0;
+  margin-bottom: 1.5rem;
+}
+.btmodal-contt .total-detail-dl-wrap .detail-dl {
+  padding: 0;
 }
 
 .btmodal-btn-wrap {
@@ -588,7 +642,6 @@ html {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 100%;
   gap: 1rem;
 }
 .detail-dl dt {
@@ -599,39 +652,6 @@ html {
 .detail-dl .txt-lg {
   font-size: 2rem;
   font-weight: 500;
-}
-
-.ctrl-count-item {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-.ctrl-count-item .ctrl-count-btn {
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background-color: transparent;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  gap: 5px;
-  border-radius: 5px;
-  width: 2.5rem;
-  height: 2.5rem;
-  background-color: var(--gray-light, #f1f1f1);
-}
-.ctrl-count-item .inp {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 1rem;
-  outline: none;
-  height: 2.5rem;
-  border: 0;
-  font-size: 1.6rem;
-  outline: none;
 }
 
 /* ======================== 구성요소 - 공통 ======================== */
@@ -1809,6 +1829,44 @@ img {
   height: 90%;
 }
 
+/* 조절 버튼 + 인풋 */
+.ctrl-count-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.ctrl-count-item .ctrl-count-btn {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 5px;
+  border-radius: 5px;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--gray-light, #f1f1f1);
+}
+.ctrl-count-item .ctrl-count-btn .ico {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.ctrl-count-item .inp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  outline: none;
+  height: 2.5rem;
+  border: 0;
+  font-size: 1.6rem;
+  outline: none;
+}
+
 /* ======================== 구성요소 - 폼 ======================== */
 .form-page .page {
   padding: 1rem 1.5rem;
@@ -2214,6 +2272,10 @@ img {
   background-image: url(../images/ico/ico-strch-arrow-right-gray-light.svg);
 }
 
+.ico-strch-arrow-down-gray-light {
+  background-image: url(../images/ico/ico-strch-arrow-down-gray-light.svg);
+}
+
 .ico-home {
   background-image: url(../images/ico/ico-home.svg);
 }
@@ -2422,6 +2484,10 @@ img {
 
 .ico-plus-gray {
   background-image: url(../images/ico/ico-plus-gray.svg);
+}
+
+.ico-minus-gray {
+  background-image: url(../images/ico/ico-minus-gray.svg);
 }
 
 .ico-svc-walk-gray {

@@ -115,7 +115,7 @@
 
                   <!-- TODO: 자신의 글이 아닐 경우에 보이는 기부하기 버튼임, 자신의 글은 기부하기 버튼 안보임 
                 (invisible 클래스 추가하거나 인라인 스타일로 style="display: none;" 해주면 됨 -->
-                  <button type="button" class="btn theme-solid-btn btn-lg square-btn">
+                  <button type="button" class="btn theme-solid-btn btn-lg square-btn" onclick="openModal('modal-bottom');">
                     <span class="txt">기부하기</span>
                   </button>
 
@@ -132,38 +132,66 @@
           </div>
 
           <!-- END layout) 페이지 -->
+
+          <!-- **** modal) 페이지 내 바텀 모달. 상세정보 및 결제하기 버튼 **** -->
           <div id="modal-bottom" class="modal-wrapper">
-            <div class="modal-overlay"></div>
+            <div class="modal-overlay" onclick="closeModal('modal-bottom');"></div>
             <div class="custom-modal bottom-modal">
               <div class="btmodal">
+                <button type="button" class="close-btn" onclick="closeModal('modal-bottom');">
+                  <span class="txt-hidden">모달 닫기</span>
+                  <i class="ico ico-strch-arrow-down-gray-light"></i>
+                </button>
+
+                <!-- 모달 내용 -->
                 <div class="btmodal-contt">
-                  <dl class="detail-dl">
-                    <dt>기부 1회</dt>
-                    <dd>
-                      <span class="txt-lg">200원</span>
-                    </dd>
-                  </dl>
-                  <dl class="detail-dl">
-                    <dt>기부 횟수</dt>
-                    <dd class="mg-left">
-                      <div class="ctrl-count-item">
-                        <button type="button" class="ctrl-count-btn">
-                          <span class="txt-hidden">빼기</span>
-                        </button>
-                        <span class="inp" rolebox="textbox" contenteditable="">1</span>
-                        <button type="button" class="ctrl-count-btn">
-                          <span class="txt-hidden">더하기</span>
-                        </button>
-                      </div>
-                    </dd>
-                  </dl>
+                  <div class="detail-dl-wrap">
+                    <dl class="detail-dl type-flex-end">
+                      <dt>기부 1회</dt>
+                      <dd>
+                        <span class="txt-lg">200원</span>
+                      </dd>
+                    </dl>
+                    <dl class="detail-dl">
+                      <dt>기부 횟수</dt>
+                      <dd class="mg-left">
+                        <div class="ctrl-count-item">
+                          <button type="button" class="ctrl-count-btn">
+                            <span class="txt-hidden">빼기</span>
+                            <i class="ico ico-minus-gray"></i>
+                          </button>
+                          <span class="inp" rolebox="textbox" contenteditable="">1</span>
+                          <button type="button" class="ctrl-count-btn">
+                            <span class="txt-hidden">더하기</span>
+                            <i class="ico ico-plus-gray"></i>
+                          </button>
+                        </div>
+                      </dd>
+                    </dl>
+                  </div>
+                  <div class="total-detail-dl-wrap">
+                    <dl class="detail-dl mg-left">
+                      <dt>결제 예정 금액</dt>
+                      <dd>
+                        <span class="txt-lg">총 600원</span>
+                      </dd>
+                    </dl>
+                  </div>
                 </div>
+
+                <!-- END 모달 내용 -->
+
+                <!-- 모달 하단 버튼 -->
                 <div class="btmodal-btn-wrap">
                   <button type="button" class="btn btn-lg square-btn theme-solid-btn">결제하기</button>
                 </div>
+
+                <!-- END 모달 하단 버튼 -->
               </div>
             </div>
           </div>
+
+          <!-- END **** modal) 페이지 내 바텀 모달. 상세정보 및 결제하기 버튼 **** -->
 
           <!-- **** modal) 페이지 내 컨트롤 모달. 수정/삭제/끌어올리기 **** -->
           <div id="modal-ctrl" class="modal-wrapper">
@@ -241,8 +269,5 @@
     <script src="assets/js/form.js"></script>
     <script src="assets/js/imageUpload.js"></script>
     <script src="assets/js/modal.js"></script>
-    <script>
-      openModal('modal-bottom');
-    </script>
   </body>
 </html>
