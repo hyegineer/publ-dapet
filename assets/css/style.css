@@ -3280,6 +3280,8 @@ img {
 .mini-txtx-btn .btn {
   width: 1.3rem;
   height: 1.3rem;
+  position: relative;
+  top: 0.07rem;
 }
 .mini-txtx-btn .btn .ico-x-gray {
   width: 100%;

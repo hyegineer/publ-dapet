@@ -226,7 +226,7 @@
                           <!-- 버튼 -->
                           <div class="mini-txtx-btn">
                             <span class="txt">부천시 원미구</span>
-                            <button type="button" class="btn">
+                            <button type="button" class="btn" onclick="openModal('modal-1');">
                               <i class="txt-hidden">해당 주소 삭제하기</i>
                               <i class="ico ico-x-gray"></i>
                             </button>
@@ -237,7 +237,7 @@
                           <!-- 버튼 -->
                           <div class="mini-txtx-btn">
                             <span class="txt">전라남도 신안군</span>
-                            <button type="button" class="btn">
+                            <button type="button" class="btn" onclick="openModal('modal-1');">
                               <i class="txt-hidden">해당 주소 삭제하기</i>
                               <i class="ico ico-x-gray"></i>
                             </button>
@@ -538,6 +538,27 @@
           </div>
 
           <!-- END **** modal) 페이지 내 창 형식 모달. 서비스 지역 설정 모달 **** -->
+
+          <!-- **** modal) 페이지 내 모달 1. 주소 삭제 확인 **** -->
+          <div id="modal-1" class="modal-wrapper">
+            <div class="modal-overlay" onclick="closeModal('modal-1');"></div>
+            <div class="custom-modal system-modal">
+              <div class="smodal-contt-container">
+                <h3 class="smodal-ttl">부천시 원미구</h3>
+                <div class="smodal-contt">
+                  <p class="smodal-desc">
+                    선택한 주소를 삭제하시겠습니까?
+                  </p>
+                </div>
+              </div>
+              <div class="smodal-btn-wrap">
+                <button type="button" class="btn" onclick="closeModal('modal-1');">취소</button>
+                <button type="button" class="btn confirm-btn" onclick="alert('삭제되었습니다.');allCloseModal();">삭제</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END **** modal) 페이지 내 모달 1. 주소 삭제 확인 **** -->
         </div>
 
         <!-- END ***** 펫시터 신청 페이지 ***** -->
