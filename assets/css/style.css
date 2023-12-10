@@ -3125,6 +3125,7 @@ img {
   background-repeat: no-repeat;
   background-size: 2.4rem;
   background-position: 1.5rem 50%;
+  color: #000;
 }
 .social-btn.kakao-btn {
   background-color: var(--kakao-bg, #fee500);
@@ -3132,7 +3133,6 @@ img {
   border-radius: 12px;
   background-image: url(../images/ico/ico-kakao.svg);
   background-position: 2.5rem 50%;
-  color: #000;
 }
 .social-btn.email-btn {
   background-image: url(../images/ico/ico-mail.svg);
