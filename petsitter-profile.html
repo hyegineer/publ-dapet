@@ -6,15 +6,21 @@
     <title>DAPET</title>
 
     <!-- Fonts -->
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" as="style" crossorigin href="assets/css/vendor/pretendard.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/datepicker.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/vendor/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- JS -->
     <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/vendor/jquery.datetimepicker.full.js"></script>
+    <script src="assets/js/vendor/datepicker-full.min.js"></script>
+    <script src="assets/js/vendor/swiper-bundle.min.js"></script>
   </head>
   <body ontouchstart>
     <div id="app">
@@ -87,7 +93,7 @@
                     </figure>
                     <ul class="card-information">
                       <li>
-                        <div class="d-flex-row star-heart-wrap">
+                        <div class="d-flex-row name-heart-wrap">
                           <h3 class="card-name">김몽이</h3>
 
                           <!-- TODO: heart-btn 클릭시 on 클래스 추가, 그럼 하트 색깔 바뀜 -->
@@ -179,32 +185,44 @@
                 </section>
                 <section class="section type-pb0">
                   <div class="section-ttl-wrap">
-                    <h3 class="ttl">펫시터 소개</h3>
-                    <a href="#" class="txt-arw-btn">
+                    <h3 class="ttl">관련 자격증 사진</h3>
+                    <button type="button" onclick="showMoreLicense(0);" class="txt-arw-btn">
                       <span>더보기</span>
                       <i class="ico ico-arrow-right-gray"></i>
-                    </a>
+                    </button>
                   </div>
                   <div class="contt">
 
                     <!-- TODO: 목록 있을 때 -->
-                    <div class="row-list-grp">
+                    <div class="row-list-grp license-list-grp">
                       <div class="list">
-                        <figure class="square-card">
-
-                          <!-- <img src="" alt="" class="thumbnail-img"> -->
+                        <figure class="square-card" onclick="showMoreLicense(0);">
+                          <img src="assets/images/sample/img-sample-license-swiper01.png" alt="" class="thumbnail-img">
                         </figure>
                       </div>
                       <div class="list">
-                        <figure class="square-card">
-
-                          <!-- <img src="" alt="" class="thumbnail-img"> -->
+                        <figure class="square-card" onclick="showMoreLicense(1);">
+                          <img src="assets/images/sample/img-sample-license-swiper02.png" alt="" class="thumbnail-img">
                         </figure>
                       </div>
                       <div class="list">
-                        <figure class="square-card">
-
-                          <!-- <img src="" alt="" class="thumbnail-img"> -->
+                        <figure class="square-card" onclick="showMoreLicense(2);">
+                          <img src="assets/images/sample/img-sample-license-swiper03.png" alt="" class="thumbnail-img">
+                        </figure>
+                      </div>
+                      <div class="list">
+                        <figure class="square-card" onclick="showMoreLicense(3);">
+                          <img src="assets/images/sample/img-sample-license-swiper04.png" alt="" class="thumbnail-img">
+                        </figure>
+                      </div>
+                      <div class="list">
+                        <figure class="square-card" onclick="showMoreLicense(4);">
+                          <img src="assets/images/sample/img-sample-license-swiper05.png" alt="" class="thumbnail-img">
+                        </figure>
+                      </div>
+                      <div class="list">
+                        <figure class="square-card" onclick="showMoreLicense(5);">
+                          <img src="assets/images/sample/img-sample-license-swiper06.png" alt="" class="thumbnail-img">
                         </figure>
                       </div>
                     </div>
@@ -225,31 +243,43 @@
                 <section class="section type-pb0">
                   <div class="section-ttl-wrap">
                     <h3 class="ttl">서비스 사진</h3>
-                    <a href="#" class="txt-arw-btn">
+                    <button type="button" onclick="showMoreService(0);" class="txt-arw-btn">
                       <span>더보기</span>
                       <i class="ico ico-arrow-right-gray"></i>
-                    </a>
+                    </button>
                   </div>
                   <div class="contt">
 
                     <!-- TODO: 목록 있을 때 -->
-                    <div class="row-list-grp">
+                    <div class="row-list-grp service-list-grp">
                       <div class="list">
-                        <figure class="square-card">
-
-                          <!-- <img src="" alt="" class="thumbnail-img"> -->
+                        <figure class="square-card" onclick="showMoreService(0);">
+                          <img src="assets/images/sample/img-sample-pst-swiper01.png" alt="" class="thumbnail-img">
                         </figure>
                       </div>
                       <div class="list">
-                        <figure class="square-card">
-
-                          <!-- <img src="" alt="" class="thumbnail-img"> -->
+                        <figure class="square-card" onclick="showMoreService(1);">
+                          <img src="assets/images/sample/img-sample-pst-swiper02.png" alt="" class="thumbnail-img">
                         </figure>
                       </div>
                       <div class="list">
-                        <figure class="square-card">
-
-                          <!-- <img src="" alt="" class="thumbnail-img"> -->
+                        <figure class="square-card" onclick="showMoreService(2);">
+                          <img src="assets/images/sample/img-sample-pst-swiper03.png" alt="" class="thumbnail-img">
+                        </figure>
+                      </div>
+                      <div class="list">
+                        <figure class="square-card" onclick="showMoreService(3);">
+                          <img src="assets/images/sample/img-sample-pst-swiper04.png" alt="" class="thumbnail-img">
+                        </figure>
+                      </div>
+                      <div class="list">
+                        <figure class="square-card" onclick="showMoreService(4);">
+                          <img src="assets/images/sample/img-sample-pst-swiper05.png" alt="" class="thumbnail-img">
+                        </figure>
+                      </div>
+                      <div class="list">
+                        <figure class="square-card" onclick="showMoreService(5);">
+                          <img src="assets/images/sample/img-sample-pst-swiper06.png" alt="" class="thumbnail-img">
                         </figure>
                       </div>
                     </div>
@@ -280,6 +310,212 @@
           </div>
 
           <!-- END layout) 페이지 -->
+
+          <!-- **** modal) 페이지 내 창 형식 모달 1. 관련 자격증 사진 더보기 **** -->
+          <div id="modal-more-pictures-1" class="modal-wrapper">
+            <div class="window-modal more-picutres-modal">
+              <div class="wmodal">
+                <header class="header">
+                  <div class="header-inner">
+
+                    <!-- 헤더 중앙 -->
+                    <div class="hd-center">
+                      <div class="sdm-swiper-pagination sdm-swiper-pagination-1"></div>
+                    </div>
+
+                    <!-- 헤더 오른쪽 -->
+
+                    <!-- TODO: invisible 클래스 넣으면 안보임 -->
+                    <div class="hd-right">
+
+                      <!-- 알림 버튼 -->
+                      <button type="button" onclick="closeModal('modal-more-pictures-1');" type="button" class="hd-btn">
+                        <span class="txt-hidden">닫기</span>
+                        <i class="ico ico-x-white"></i>
+                      </button>
+
+                      <!-- END 알림 버튼 -->
+                    </div>
+                  </div>
+                </header>
+
+                <!-- modal) 모달 페이지 -->
+                <div class="wmodal-contt-container">
+
+                  <!-- modal) 모달 페이지 상단 -->
+                  <div class="wmodal-contt-top">
+                    <div class="modal-page">
+                      <div class="modal-thumbnail-wrap">
+                        <div class="thumbnail-wrap">
+                          <div id="swiper-detail-more-1" class="swiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="assets/images/sample/img-sample-license-swiper01.png" alt="" class="thumbnail-img">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="assets/images/sample/img-sample-license-swiper02.png" alt="" class="thumbnail-img">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="assets/images/sample/img-sample-license-swiper03.png" alt="" class="thumbnail-img">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="assets/images/sample/img-sample-license-swiper04.png" alt="" class="thumbnail-img">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="assets/images/sample/img-sample-license-swiper05.png" alt="" class="thumbnail-img">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="assets/images/sample/img-sample-license-swiper06.png" alt="" class="thumbnail-img">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- END modal) 모달 페이지 상단 -->
+
+                  <!-- modal) 모달 페이지 하단 -->
+                  <div class="wmodal-contt-bottom">
+                    <div class="bottom-thumbs-wrap">
+                      <div id="swiper-detail-more-thumbs-1" class="swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img src="assets/images/sample/img-sample-license-swiper01.png" alt="" class="thumbnail-img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/images/sample/img-sample-license-swiper02.png" alt="" class="thumbnail-img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/images/sample/img-sample-license-swiper03.png" alt="" class="thumbnail-img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/images/sample/img-sample-license-swiper04.png" alt="" class="thumbnail-img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/images/sample/img-sample-license-swiper05.png" alt="" class="thumbnail-img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/images/sample/img-sample-license-swiper06.png" alt="" class="thumbnail-img">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- END modal) 모달 페이지 하단 -->
+                </div>
+
+                <!-- END modal) 모달 페이지 -->
+              </div>
+            </div>
+          </div>
+
+          <!-- END **** modal) 페이지 내 창 형식 모달 1. 관련 자격증 사진 더보기 **** -->
+
+          <!-- **** modal) 페이지 내 창 형식 모달 2. 서비스 사진 더보기 **** -->
+          <div id="modal-more-pictures-2" class="modal-wrapper">
+            <div class="window-modal more-picutres-modal">
+              <div class="wmodal">
+                <header class="header">
+                  <div class="header-inner">
+
+                    <!-- 헤더 중앙 -->
+                    <div class="hd-center">
+                      <div class="sdm-swiper-pagination sdm-swiper-pagination-2"></div>
+                    </div>
+
+                    <!-- 헤더 오른쪽 -->
+
+                    <!-- TODO: invisible 클래스 넣으면 안보임 -->
+                    <div class="hd-right">
+
+                      <!-- 알림 버튼 -->
+                      <button type="button" onclick="closeModal('modal-more-pictures-2');" type="button" class="hd-btn">
+                        <span class="txt-hidden">닫기</span>
+                        <i class="ico ico-x-white"></i>
+                      </button>
+
+                      <!-- END 알림 버튼 -->
+                    </div>
+                  </div>
+                </header>
+
+                <!-- modal) 모달 페이지 -->
+                <div class="wmodal-contt-container">
+
+                  <!-- modal) 모달 페이지 상단 -->
+                  <div class="wmodal-contt-top">
+                    <div class="modal-page">
+                      <div class="modal-thumbnail-wrap">
+                        <div class="thumbnail-wrap">
+                          <div id="swiper-detail-more-2" class="swiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="assets/images/sample/img-sample-pst-swiper01.png" alt="" class="thumbnail-img">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="assets/images/sample/img-sample-pst-swiper02.png" alt="" class="thumbnail-img">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="assets/images/sample/img-sample-pst-swiper03.png" alt="" class="thumbnail-img">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="assets/images/sample/img-sample-pst-swiper04.png" alt="" class="thumbnail-img">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="assets/images/sample/img-sample-pst-swiper05.png" alt="" class="thumbnail-img">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="assets/images/sample/img-sample-pst-swiper06.png" alt="" class="thumbnail-img">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- END modal) 모달 페이지 상단 -->
+
+                  <!-- modal) 모달 페이지 하단 -->
+                  <div class="wmodal-contt-bottom">
+                    <div class="bottom-thumbs-wrap">
+                      <div id="swiper-detail-more-thumbs-2" class="swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img src="assets/images/sample/img-sample-pst-swiper01.png" alt="" class="thumbnail-img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/images/sample/img-sample-pst-swiper02.png" alt="" class="thumbnail-img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/images/sample/img-sample-pst-swiper03.png" alt="" class="thumbnail-img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/images/sample/img-sample-pst-swiper04.png" alt="" class="thumbnail-img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/images/sample/img-sample-pst-swiper05.png" alt="" class="thumbnail-img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/images/sample/img-sample-pst-swiper06.png" alt="" class="thumbnail-img">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- END modal) 모달 페이지 하단 -->
+                </div>
+
+                <!-- END modal) 모달 페이지 -->
+              </div>
+            </div>
+          </div>
+
+          <!-- END **** modal) 페이지 내 창 형식 모달 2. 서비스 사진 더보기 **** -->
         </div>
 
         <!-- END ***** 펫시터 프로필 페이지 ***** -->
@@ -287,9 +523,68 @@
 
       <!-- END layout) 페이지 레이아웃 -->
     </div>
+    <script src="assets/js/vendor/datepicker-ko.js"></script>
     <script src="assets/js/userInterface.js"></script>
     <script src="assets/js/form.js"></script>
     <script src="assets/js/imageUpload.js"></script>
     <script src="assets/js/modal.js"></script>
+    <script>
+      function showMoreLicense(idx) {
+        swiperDetailMore01.slideTo(idx);
+        openModal('modal-more-pictures-1');
+      }
+      function showMoreService(idx) {
+        swiperDetailMore02.slideTo(idx);
+        openModal('modal-more-pictures-2');
+      }
+      // 스와이퍼: 1. 펫시터 사진 더보기 모달 안 하단 쪽 썸네일 갤러리효과
+      const swiperDetailMoreThumbs01 = new Swiper("#swiper-detail-more-thumbs-1", {
+        slidesPerView: "auto",
+        spaceBetween: 15,
+        observer: true,
+        observeParents: true,
+        watchOverflow: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        freeMode: true,
+      });
+      // 스와이퍼: 1. 펫시터 사진 더보기 모달 안 상단 쪽 썸네일 슬라이드
+      const swiperDetailMore01 = new Swiper("#swiper-detail-more-1", {
+        observer: true,
+        observeParents: true,
+        watchOverflow: true,
+        pagination: {
+          el: '.sdm-swiper-pagination-1',
+          type: 'fraction'
+        },
+        thumbs: {
+          swiper: swiperDetailMoreThumbs01
+        },
+      });
+      // 스와이퍼: 2. 서비스 사진 더보기 모달 안 하단 쪽 썸네일 갤러리효과
+      const swiperDetailMoreThumbs02 = new Swiper("#swiper-detail-more-thumbs-2", {
+        slidesPerView: "auto",
+        spaceBetween: 15,
+        observer: true,
+        observeParents: true,
+        watchOverflow: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        freeMode: true,
+      });
+      // 스와이퍼: 2. 서비스 사진 더보기 모달 안 상단 쪽 썸네일 슬라이드
+      const swiperDetailMore02 = new Swiper("#swiper-detail-more-2", {
+        observer: true,
+        observeParents: true,
+        watchOverflow: true,
+        pagination: {
+          el: '.sdm-swiper-pagination-2',
+          type: 'fraction'
+        },
+        thumbs: {
+          swiper: swiperDetailMoreThumbs02
+        },
+      });
+    </script>
   </body>
 </html>

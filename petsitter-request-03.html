@@ -6,15 +6,21 @@
     <title>DAPET</title>
 
     <!-- Fonts -->
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" as="style" crossorigin href="assets/css/vendor/pretendard.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/datepicker.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/vendor/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- JS -->
     <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/vendor/jquery.datetimepicker.full.js"></script>
+    <script src="assets/js/vendor/datepicker-full.min.js"></script>
+    <script src="assets/js/vendor/swiper-bundle.min.js"></script>
   </head>
   <body ontouchstart>
     <div id="app">
@@ -86,21 +92,24 @@
                   <div class="form-item">
                     <label class="form-label">의뢰 희망일시</label>
                     <div class="form-inp-wrap">
-
-                      <!-- FIXME: 달력 데이트피커 -->
-                      <input type="text" class="custom-inp" placeholder="희망일시 입력" />
+                      <div class="inp-ico-item">
+                        <input type="text" readonly name="datepicker1" class="custom-inp" placeholder="희망일시 입력" />
+                        <i class="ico ico-calendar-gray-light"></i>
+                      </div>
                     </div>
                     <div class="form-inp-wrap type01">
-
-                      <!-- FIXME: 시간 설정 -->
-                      <input type="text" class="custom-inp" placeholder="시작 시간" />
-
-                      <!-- FIXME: 시간 설정 -->
-                      <input type="text" class="custom-inp" placeholder="종료 시간" />
+                      <div class="inp-ico-item">
+                        <input type="text" readonly id="start-time" class="custom-inp" placeholder="시작 시간" />
+                        <i class="ico ico-watch-gray-light"></i>
+                      </div>
+                      <div class="inp-ico-item">
+                        <input type="text" readonly id="end-time" class="custom-inp" placeholder="종료 시간" />
+                        <i class="ico ico-watch-gray-light"></i>
+                      </div>
                     </div>
                     <div class="form-inp-wrap">
                       <div class="cckbox-item">
-                        <input id="able-1" type="radio" name="option1" class="none custom-ckbox-inp" />
+                        <input id="able-1" type="checkbox" name="option1" class="none custom-ckbox-inp" />
                         <label for="able-1" class="custom-ckbox"></label>
                         <label for="able-1" class="custom-ckbox-label">시간 조율 가능</label>
                       </div>
@@ -143,9 +152,41 @@
 
       <!-- END layout) 페이지 레이아웃 -->
     </div>
+    <script src="assets/js/vendor/datepicker-ko.js"></script>
     <script src="assets/js/userInterface.js"></script>
     <script src="assets/js/form.js"></script>
     <script src="assets/js/imageUpload.js"></script>
     <script src="assets/js/modal.js"></script>
+    <script>
+      // 희망일시 데이트피커
+      // 참고 documentation: https://mymth.github.io/vanillajs-datepicker
+      const datepicker1 = new Datepicker(document.querySelector('input[name="datepicker1"]'), {
+        autohide: true,
+        format: 'yyyy년 mm월 dd일',
+        language: 'ko'
+      });
+      // 희망일시 시작시간
+      // 참고 documentation: https://github.com/xdan/datetimepicker
+      $('#start-time').datetimepicker({
+        datepicker: false,
+        format: 'H:i'
+      });
+      // 희망일시 시작시간
+      // 참고 documentation: https://github.com/xdan/datetimepicker
+      $('#end-time').datetimepicker({
+        datepicker: false,
+        format: 'H:i'
+      });
+      // 시간 조율 가능 체크했을 때, 안했을 때 효과
+      $('[name="option1"]').on('change', function() {
+        if ($(this).is(':checked')) {
+          $('#start-time').val('').attr('disabled', true);
+          $('#end-time').val('').attr('disabled', true);
+        } else {
+          $('#start-time').attr('disabled', false);
+          $('#end-time').attr('disabled', false);
+        }
+      })
+    </script>
   </body>
 </html>

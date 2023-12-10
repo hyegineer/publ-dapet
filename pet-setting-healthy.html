@@ -6,15 +6,21 @@
     <title>DAPET</title>
 
     <!-- Fonts -->
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" as="style" crossorigin href="assets/css/vendor/pretendard.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/datepicker.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/vendor/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- JS -->
     <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/vendor/jquery.datetimepicker.full.js"></script>
+    <script src="assets/js/vendor/datepicker-full.min.js"></script>
+    <script src="assets/js/vendor/swiper-bundle.min.js"></script>
   </head>
   <body ontouchstart>
     <div id="app">
@@ -139,20 +145,20 @@
                       <ul class="inner-grid-grp">
                         <li class="inner-grid">
                           <div class="cckbox-item">
-                            <input id="option3-1" type="radio" name="option3" class="none custom-ckbox-inp" />
-                            <label for="option3-1" class="custom-ckbox"></label>
-                            <label for="option3-1" class="custom-ckbox-label">없어요</label>
+                            <input id="bite-option3-1" value="no" type="radio" name="bite-option3" class="none custom-ckbox-inp" />
+                            <label for="bite-option3-1" class="custom-ckbox"></label>
+                            <label for="bite-option3-1" class="custom-ckbox-label">없어요</label>
                           </div>
                         </li>
                         <li class="inner-grid">
                           <div class="cckbox-item">
-                            <input id="option3-2" type="radio" name="option3" checked class="none custom-ckbox-inp" />
-                            <label for="option3-2" class="custom-ckbox"></label>
-                            <label for="option3-2" class="custom-ckbox-label">있어요</label>
+                            <input id="bite-option3-2" value="yes" type="radio" name="bite-option3" checked class="none custom-ckbox-inp" />
+                            <label for="bite-option3-2" class="custom-ckbox"></label>
+                            <label for="bite-option3-2" class="custom-ckbox-label">있어요</label>
                           </div>
                         </li>
                       </ul>
-                      <div class="form-memo-box">
+                      <div id="js-memo-box" class="form-memo-box invisible">
                         <textarea placeholder="입질에 대한 메모를 작성해 주세요." class="custom-inp-textarea type-h100" maxlength="200">먹는 중에 만지면 입질이 있어요</textarea>
                       </div>
                     </div>
@@ -217,9 +223,29 @@
 
       <!-- END layout) 페이지 레이아웃 -->
     </div>
+    <script src="assets/js/vendor/datepicker-ko.js"></script>
     <script src="assets/js/userInterface.js"></script>
     <script src="assets/js/form.js"></script>
     <script src="assets/js/imageUpload.js"></script>
     <script src="assets/js/modal.js"></script>
+    <script>
+      // 임시: 있어요 체크되있으면 메모박스 보이게
+      $('[name="bite-option3"]').each(function() {
+        if ($('[name="bite-option3"]:checked').val() === 'yes') {
+          $('#js-memo-box').removeClass('invisible');
+        } else {
+          $('#js-memo-box').addClass('invisible');
+        }
+      })
+      // 임시: 있어요 체크하면 메모박스 보이게
+      $('[name="bite-option3"]').on('change', function() {
+        if ($('[name="bite-option3"]:checked').val() === 'yes') {
+          $('#js-memo-box').removeClass('invisible');
+        } else {
+          $('#js-memo-box textarea').val('');
+          $('#js-memo-box').addClass('invisible');
+        }
+      })
+    </script>
   </body>
 </html>

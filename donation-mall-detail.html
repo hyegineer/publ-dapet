@@ -6,15 +6,21 @@
     <title>DAPET</title>
 
     <!-- Fonts -->
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" as="style" crossorigin href="assets/css/vendor/pretendard.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/datepicker.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/vendor/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- JS -->
     <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/vendor/jquery.datetimepicker.full.js"></script>
+    <script src="assets/js/vendor/datepicker-full.min.js"></script>
+    <script src="assets/js/vendor/swiper-bundle.min.js"></script>
   </head>
   <body ontouchstart>
     <div id="app">
@@ -81,9 +87,56 @@
 
                 <!-- 사진 -->
                 <div class="detail-page-top">
-
-                  <!-- FIXME: 사진 보충 -->
-                  <div class="thumbnail-wrap"></div>
+                  <div class="thumbnail-wrap">
+                    <div id="swiper-detail" class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img src="assets/images/sample/img-sample-dnmall-swiper01.png" alt="" class="thumbnail-img">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="assets/images/sample/img-sample-dnmall-swiper02.png" alt="" class="thumbnail-img">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="assets/images/sample/img-sample-dnmall-swiper03.png" alt="" class="thumbnail-img">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="assets/images/sample/img-sample-dnmall-swiper04.png" alt="" class="thumbnail-img">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="assets/images/sample/img-sample-dnmall-swiper05.png" alt="" class="thumbnail-img">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="assets/images/sample/img-sample-dnmall-swiper06.png" alt="" class="thumbnail-img">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="assets/images/sample/img-sample-dnmall-swiper07.png" alt="" class="thumbnail-img">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="assets/images/sample/img-sample-dnmall-swiper08.png" alt="" class="thumbnail-img">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="assets/images/sample/img-sample-dnmall-swiper09.png" alt="" class="thumbnail-img">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="assets/images/sample/img-sample-dnmall-swiper10.png" alt="" class="thumbnail-img">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="assets/images/sample/img-sample-dnmall-swiper11.png" alt="" class="thumbnail-img">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="assets/images/sample/img-sample-dnmall-swiper12.png" alt="" class="thumbnail-img">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="assets/images/sample/img-sample-dnmall-swiper13.png" alt="" class="thumbnail-img">
+                        </div>
+                      </div>
+                      <div class="sd-swiper-pagination swiper-pagination"></div>
+                    </div>
+                    <button type="button" class="more-btn" onclick="openModal('modal-more-pictures');">
+                      <span class="txt-hidden">더보기</span>
+                      <i class="ico ico-zoom-white"></i>
+                    </button>
+                  </div>
                 </div>
 
                 <!-- 정보 -->
@@ -133,6 +186,151 @@
           </div>
 
           <!-- END layout) 페이지 -->
+
+          <!-- **** modal) 페이지 내 창 형식 모달. 사진 더보기 **** -->
+          <div id="modal-more-pictures" class="modal-wrapper">
+            <div class="window-modal more-picutres-modal">
+              <div class="wmodal">
+                <header class="header">
+                  <div class="header-inner">
+
+                    <!-- 헤더 중앙 -->
+                    <div class="hd-center">
+                      <div class="sdm-swiper-pagination"></div>
+                    </div>
+
+                    <!-- 헤더 오른쪽 -->
+
+                    <!-- TODO: invisible 클래스 넣으면 안보임 -->
+                    <div class="hd-right">
+
+                      <!-- 알림 버튼 -->
+                      <button type="button" onclick="closeModal('modal-more-pictures');" type="button" class="hd-btn">
+                        <span class="txt-hidden">닫기</span>
+                        <i class="ico ico-x-white"></i>
+                      </button>
+
+                      <!-- END 알림 버튼 -->
+                    </div>
+                  </div>
+                </header>
+
+                <!-- modal) 모달 페이지 -->
+                <div class="wmodal-contt-container">
+
+                  <!-- modal) 모달 페이지 상단 -->
+                  <div class="wmodal-contt-top">
+                    <div class="modal-page">
+                      <div class="modal-thumbnail-wrap">
+                        <div class="thumbnail-wrap">
+                          <div id="swiper-detail-more" class="swiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="assets/images/sample/img-sample-dnmall-swiper01.png" alt="" class="thumbnail-img">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="assets/images/sample/img-sample-dnmall-swiper02.png" alt="" class="thumbnail-img">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="assets/images/sample/img-sample-dnmall-swiper03.png" alt="" class="thumbnail-img">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="assets/images/sample/img-sample-dnmall-swiper04.png" alt="" class="thumbnail-img">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="assets/images/sample/img-sample-dnmall-swiper05.png" alt="" class="thumbnail-img">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="assets/images/sample/img-sample-dnmall-swiper06.png" alt="" class="thumbnail-img">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="assets/images/sample/img-sample-dnmall-swiper07.png" alt="" class="thumbnail-img">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="assets/images/sample/img-sample-dnmall-swiper08.png" alt="" class="thumbnail-img">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="assets/images/sample/img-sample-dnmall-swiper09.png" alt="" class="thumbnail-img">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="assets/images/sample/img-sample-dnmall-swiper10.png" alt="" class="thumbnail-img">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="assets/images/sample/img-sample-dnmall-swiper11.png" alt="" class="thumbnail-img">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="assets/images/sample/img-sample-dnmall-swiper12.png" alt="" class="thumbnail-img">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="assets/images/sample/img-sample-dnmall-swiper13.png" alt="" class="thumbnail-img">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- END modal) 모달 페이지 상단 -->
+
+                  <!-- modal) 모달 페이지 하단 -->
+                  <div class="wmodal-contt-bottom">
+                    <div class="bottom-thumbs-wrap">
+                      <div id="swiper-detail-more-thumbs" class="swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img src="assets/images/sample/img-sample-dnmall-swiper01.png" alt="" class="thumbnail-img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/images/sample/img-sample-dnmall-swiper02.png" alt="" class="thumbnail-img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/images/sample/img-sample-dnmall-swiper03.png" alt="" class="thumbnail-img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/images/sample/img-sample-dnmall-swiper04.png" alt="" class="thumbnail-img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/images/sample/img-sample-dnmall-swiper05.png" alt="" class="thumbnail-img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/images/sample/img-sample-dnmall-swiper06.png" alt="" class="thumbnail-img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/images/sample/img-sample-dnmall-swiper07.png" alt="" class="thumbnail-img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/images/sample/img-sample-dnmall-swiper08.png" alt="" class="thumbnail-img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/images/sample/img-sample-dnmall-swiper09.png" alt="" class="thumbnail-img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/images/sample/img-sample-dnmall-swiper10.png" alt="" class="thumbnail-img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/images/sample/img-sample-dnmall-swiper11.png" alt="" class="thumbnail-img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/images/sample/img-sample-dnmall-swiper12.png" alt="" class="thumbnail-img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/images/sample/img-sample-dnmall-swiper13.png" alt="" class="thumbnail-img">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- END modal) 모달 페이지 하단 -->
+                </div>
+
+                <!-- END modal) 모달 페이지 -->
+              </div>
+            </div>
+          </div>
+
+          <!-- END **** modal) 페이지 내 창 형식 모달. 사진 더보기 **** -->
 
           <!-- **** modal) 페이지 내 바텀 모달. 상세정보 및 결제하기 버튼 **** -->
           <div id="modal-bottom" class="modal-wrapper">
@@ -266,9 +464,55 @@
 
       <!-- END layout) 페이지 레이아웃 -->
     </div>
+    <script src="assets/js/vendor/datepicker-ko.js"></script>
     <script src="assets/js/userInterface.js"></script>
     <script src="assets/js/form.js"></script>
     <script src="assets/js/imageUpload.js"></script>
     <script src="assets/js/modal.js"></script>
+    <script>
+      // 스와이퍼: 상세페이지 상단 쪽 썸네일 슬라이드
+      const swiperDetail = new Swiper("#swiper-detail", {
+        observer: true,
+        observeParents: true,
+        watchOverflow: true,
+        pagination: {
+          el: '.sd-swiper-pagination',
+        },
+        on: {
+          slideChange: function() {
+            swiperDetailMore.slideTo(swiperDetail.realIndex)
+          }
+        }
+      });
+      // 스와이퍼: 모달 안 하단 쪽 썸네일 갤러리효과
+      const swiperDetailMoreThumbs = new Swiper("#swiper-detail-more-thumbs", {
+        slidesPerView: "auto",
+        spaceBetween: 15,
+        observer: true,
+        observeParents: true,
+        watchOverflow: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        freeMode: true,
+      });
+      // 스와이퍼: 모달 안 상단 쪽 썸네일 슬라이드
+      const swiperDetailMore = new Swiper("#swiper-detail-more", {
+        observer: true,
+        observeParents: true,
+        watchOverflow: true,
+        pagination: {
+          el: '.sdm-swiper-pagination',
+          type: 'fraction'
+        },
+        thumbs: {
+          swiper: swiperDetailMoreThumbs
+        },
+        on: {
+          slideChange: function() {
+            swiperDetail.slideTo(swiperDetailMore.realIndex)
+          }
+        }
+      });
+    </script>
   </body>
 </html>

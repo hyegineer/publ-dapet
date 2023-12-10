@@ -20,6 +20,7 @@
   ::-webkit-scrollbar {
     background-color: transparent;
     width: 5px;
+    height: 5px;
   }
   ::-webkit-scrollbar-track {
     background-color: transparent;
@@ -414,6 +415,82 @@ html {
 .search-location-section .list .txt {
   font-size: 1.4rem;
   font-weight: 300;
+}
+
+.more-picutres-modal .wmodal,
+.more-picutres-modal .header {
+  background-color: black;
+}
+.more-picutres-modal .header {
+  border-color: black !important;
+}
+.more-picutres-modal .header .sdm-swiper-pagination {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.more-picutres-modal .modal-page {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.more-picutres-modal .modal-thumbnail-wrap {
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+}
+.more-picutres-modal .thumbnail-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.more-picutres-modal .modal-thumbnail-wrap .swiper {
+  height: 100%;
+}
+.more-picutres-modal .modal-thumbnail-wrap .swiper-slide {
+  height: 100%;
+}
+.more-picutres-modal .modal-thumbnail-wrap .thumbnail-img {
+  object-fit: contain;
+}
+.more-picutres-modal .wmodal-contt-bottom {
+  /* iPhone XR : 1792x828px at 326ppi */
+  /* iPhone XS : 2436x1125px at 458ppi */
+  /* iPhone XS Max : 2688x1242px at 458ppi */
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+  .more-picutres-modal .wmodal-contt-bottom {
+    padding-bottom: 3rem;
+  }
+}
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .more-picutres-modal .wmodal-contt-bottom {
+    padding-bottom: 3rem;
+  }
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  .more-picutres-modal .wmodal-contt-bottom {
+    padding-bottom: 3rem;
+  }
+}
+.more-picutres-modal .bottom-thumbs-wrap {
+  padding: 1rem 0;
+}
+.more-picutres-modal .bottom-thumbs-wrap .swiper {
+  padding: 0 1.5rem;
+}
+.more-picutres-modal .bottom-thumbs-wrap .swiper-slide {
+  width: 7.5rem;
+  height: 7.5rem;
+  border: 2px solid transparent;
+  opacity: 0.8;
+}
+.more-picutres-modal .bottom-thumbs-wrap .swiper-slide-thumb-active {
+  border: 2px solid white;
+  opacity: 1;
 }
 
 /* 시스템 모달 (confirm, alert) */
@@ -1456,6 +1533,57 @@ img {
   padding-top: 100%;
   background-color: white;
   border-bottom: 1px solid var(--gray-light, #f1f1f1);
+  position: relative;
+}
+.detail-page-top .thumbnail-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.detail-page-top .thumbnail-wrap .swiper {
+  height: 100%;
+}
+.detail-page-top .thumbnail-wrap .swiper-horizontal > .swiper-pagination-bullets,
+.detail-page-top .thumbnail-wrap .swiper-pagination-bullets.swiper-pagination-horizontal,
+.detail-page-top .thumbnail-wrap .swiper-pagination-custom,
+.detail-page-top .thumbnail-wrap .swiper-pagination-fraction {
+  bottom: 2rem;
+}
+.detail-page-top .thumbnail-wrap .swiper-pagination-bullet {
+  width: 5px;
+  height: 5px;
+  margin: 0 2.5px;
+  opacity: 1;
+  background-color: var(--gray-light, #f1f1f1);
+}
+.detail-page-top .thumbnail-wrap .swiper-pagination-bullet-active {
+  background-color: var(--main-green, #56c595);
+}
+.detail-page-top .more-btn {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 5px;
+  background-color: black;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+.detail-page-top .more-btn .ico {
+  width: 1.6rem;
+  height: 1.6rem;
 }
 
 .detail-page-bottom .tabs {
@@ -1928,6 +2056,57 @@ img {
   outline: none;
 }
 
+.floating-wrapper {
+  position: fixed;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  /* iPhone XR : 1792x828px at 326ppi */
+  /* iPhone XS : 2436x1125px at 458ppi */
+  /* iPhone XS Max : 2688x1242px at 458ppi */
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+  .floating-wrapper {
+    padding-bottom: 3rem;
+  }
+}
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .floating-wrapper {
+    padding-bottom: 3rem;
+  }
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  .floating-wrapper {
+    padding-bottom: 3rem;
+  }
+}
+
+.floating-wrapper.active .floating-txt {
+  opacity: 1;
+  pointer-events: visible;
+  transform: translateY(0);
+}
+
+.floating-txt {
+  width: 90%;
+  max-width: 300px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 1.5rem;
+  border-radius: 5px;
+  margin: 0 auto;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(60px);
+  transition: all 0.3s;
+}
+
 /* ======================== 구성요소 - 폼 ======================== */
 .form-page .page {
   padding: 1rem 1.5rem;
@@ -2035,8 +2214,13 @@ img {
 }
 
 .inp-btn-item,
-.inp-unit-item {
+.inp-unit-item,
+.inp-ico-item {
   position: relative;
+}
+
+.inp-ico-item {
+  width: 100%;
 }
 
 .inp-btn-item .btn {
@@ -2046,8 +2230,21 @@ img {
   width: 2.4rem;
 }
 
+.inp-ico-item .ico {
+  position: absolute;
+  top: 1.05rem;
+  right: 1rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  pointer-events: none;
+}
+
 .inp-btn-item .custom-inp {
   padding-right: 5rem;
+}
+
+.inp-ico-item .custom-inp {
+  padding-right: 4rem;
 }
 
 .inp-unit-item .unit {
@@ -2112,6 +2309,11 @@ img {
 }
 .custom-inp:focus {
   border-color: var(--gray, #aeaeae);
+}
+
+.custom-inp:disabled {
+  background-color: var(--gray-light, #f1f1f1);
+  color: var(--gray, #aeaeae);
 }
 
 .custom-inp-textarea {
@@ -2747,6 +2949,14 @@ img {
   background-image: url(../images/ico/ico-x-gray.svg);
 }
 
+.ico-x-white {
+  background-image: url(../images/ico/ico-x-white.svg);
+}
+
+.ico-zoom-white {
+  background-image: url(../images/ico/ico-zoom-white.svg);
+}
+
 .ico-search-gray-light {
   background-image: url(../images/ico/ico-search-gray-light.svg);
 }
@@ -2801,6 +3011,14 @@ img {
 
 .ico-dots {
   background-image: url(../images/ico/ico-dots.svg);
+}
+
+.ico-calendar-gray-light {
+  background-image: url(../images/ico/ico-calendar-gray-light.svg);
+}
+
+.ico-watch-gray-light {
+  background-image: url(../images/ico/ico-watch-gray-light.svg);
 }
 
 /* ======================== 구성요소 - 버튼 ======================== */
@@ -3074,7 +3292,7 @@ img {
   text-decoration: underline;
 }
 
-/* ======================== 구성요소 - 버튼 ======================== */
+/* ======================== 구성요소 - 별점 ======================== */
 /*  
  *  Pure CSS star rating that works without reversing order
  *  of inputs
@@ -3127,6 +3345,34 @@ img {
 }
 .star-rating-item .rating__input:hover ~ .rating__label .rating__icon--star {
   color: var(--gray-light, #f1f1f1);
+}
+
+/* ======================== 구성요소 - 데이트피커 ======================== */
+.datepicker {
+  font-size: 1.6rem;
+}
+
+.datepicker .dow {
+  height: 3.5rem;
+  font-size: 1.4rem;
+}
+
+.datepicker-controls .button {
+  height: 3.5rem;
+  font-size: 1.6rem;
+  padding: 0 1rem;
+}
+
+.datepicker-view {
+  width: 25rem;
+}
+
+.datepicker-cell {
+  height: 3.6rem;
+}
+
+.datepicker span {
+  font-size: 1.5rem;
 }
 
 /* ======================== 구성요소 - 목록 카드 아이템 ======================== */
@@ -3899,20 +4145,18 @@ img {
 .list-card-item.type06 .card-name {
   font-size: 2rem;
 }
-.list-card-item.type06 .star-heart-wrap {
+.list-card-item.type06 .name-heart-wrap {
   gap: 1rem;
   align-items: center;
-  margin-top: -2px;
-  margin-bottom: 1px;
   position: relative;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
 }
-.list-card-item.type06 .star-heart-wrap .star-txt-item {
+.list-card-item.type06 .name-heart-wrap .star-txt-item {
   font-weight: 500;
 }
-.list-card-item.type06 .star-heart-wrap .heart-btn {
+.list-card-item.type06 .name-heart-wrap .heart-btn {
   position: absolute;
-  top: -0.2rem;
+  top: 0.5rem;
   right: 0;
 }
 .list-card-item.type06 .star-txt-item {
@@ -3922,6 +4166,7 @@ img {
 }
 .list-card-item.type06 .txt-arw-btn {
   font-weight: 300;
+  gap: 0;
 }
 
 /* 목록 카드 아이템 타입 07 (의뢰 상세 등...) */

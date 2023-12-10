@@ -6,15 +6,21 @@
     <title>DAPET</title>
 
     <!-- Fonts -->
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" as="style" crossorigin href="assets/css/vendor/pretendard.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/datepicker.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/vendor/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- JS -->
     <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/vendor/jquery.datetimepicker.full.js"></script>
+    <script src="assets/js/vendor/datepicker-full.min.js"></script>
+    <script src="assets/js/vendor/swiper-bundle.min.js"></script>
   </head>
   <body ontouchstart>
     <div id="app">
@@ -139,22 +145,22 @@
                       <ul class="inner-grid-grp">
                         <li class="inner-grid">
                           <div class="cckbox-item">
-                            <input id="option3-1" type="radio" name="option3" class="none custom-ckbox-inp" />
-                            <label for="option3-1" class="custom-ckbox"></label>
-                            <label for="option3-1" class="custom-ckbox-label">없어요</label>
+                            <input id="bite-option3-1" value="no" type="radio" name="bite-option3" class="none custom-ckbox-inp" />
+                            <label for="bite-option3-1" class="custom-ckbox"></label>
+                            <label for="bite-option3-1" class="custom-ckbox-label">없어요</label>
                           </div>
                         </li>
                         <li class="inner-grid">
                           <div class="cckbox-item">
-                            <input id="option3-2" type="radio" name="option3" class="none custom-ckbox-inp" />
-                            <label for="option3-2" class="custom-ckbox"></label>
-                            <label for="option3-2" class="custom-ckbox-label">있어요</label>
+                            <input id="bite-option3-2" value="yes" type="radio" name="bite-option3" class="none custom-ckbox-inp" />
+                            <label for="bite-option3-2" class="custom-ckbox"></label>
+                            <label for="bite-option3-2" class="custom-ckbox-label">있어요</label>
                           </div>
                         </li>
                       </ul>
 
                       <!-- TODO: 입질 유무에 있어요를 체크하면 보이는 textarea -->
-                      <div class="form-memo-box">
+                      <div id="js-memo-box" class="form-memo-box invisible">
                         <textarea placeholder="입질에 대한 메모를 작성해 주세요." class="custom-inp-textarea type-h100" maxlength="200"></textarea>
                       </div>
                     </div>
@@ -206,7 +212,7 @@
               <div class="btn-wrap">
 
                 <!-- TODO: 다 채우고나서 before 클래스 삭제 -->
-                <button type="button" class="btn theme-solid-btn btn-lg square-btn before">
+                <button type="button" onclick="openModal('modal-1');" class="btn theme-solid-btn btn-lg square-btn before">
                   <span class="txt">등록 완료</span>
                 </button>
               </div>
@@ -216,6 +222,24 @@
           </div>
 
           <!-- END layout) 페이지 -->
+
+          <!-- **** modal) 페이지 내 모달 1. 반려동물 등록 완료 **** -->
+          <div id="modal-1" class="modal-wrapper">
+            <div class="modal-overlay" onclick="closeModal('modal-1');"></div>
+            <div class="custom-modal system-modal">
+              <div class="smodal-contt-container">
+                <h3 class="smodal-ttl">등록 완료</h3>
+                <div class="smodal-contt">
+                  <p class="smodal-desc">반려동물 등록이 완료되었습니다.</p>
+                </div>
+              </div>
+              <div class="smodal-btn-wrap">
+                <button type="button" class="btn confirm-btn" onclick="closeModal('modal-1');">확인</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END **** modal) 페이지 내 모달 1. 반려동물 등록 완료 **** -->
         </div>
 
         <!-- END ***** 반려동물 등록 페이지 (건강정보 작성) ***** -->
@@ -223,9 +247,29 @@
 
       <!-- END layout) 페이지 레이아웃 -->
     </div>
+    <script src="assets/js/vendor/datepicker-ko.js"></script>
     <script src="assets/js/userInterface.js"></script>
     <script src="assets/js/form.js"></script>
     <script src="assets/js/imageUpload.js"></script>
     <script src="assets/js/modal.js"></script>
+    <script>
+      // 임시: 있어요 체크되있으면 메모박스 보이게
+      $('[name="bite-option3"]').each(function() {
+        if ($('[name="bite-option3"]:checked').val() === 'yes') {
+          $('#js-memo-box').removeClass('invisible');
+        } else {
+          $('#js-memo-box').addClass('invisible');
+        }
+      })
+      // 임시: 있어요 체크하면 메모박스 보이게
+      $('[name="bite-option3"]').on('change', function() {
+        if ($('[name="bite-option3"]:checked').val() === 'yes') {
+          $('#js-memo-box').removeClass('invisible');
+        } else {
+          $('#js-memo-box textarea').val('');
+          $('#js-memo-box').addClass('invisible');
+        }
+      })
+    </script>
   </body>
 </html>

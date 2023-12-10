@@ -6,15 +6,21 @@
     <title>DAPET</title>
 
     <!-- Fonts -->
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" as="style" crossorigin href="assets/css/vendor/pretendard.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/datepicker.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/vendor/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- JS -->
     <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/vendor/jquery.datetimepicker.full.js"></script>
+    <script src="assets/js/vendor/datepicker-full.min.js"></script>
+    <script src="assets/js/vendor/swiper-bundle.min.js"></script>
   </head>
   <body ontouchstart>
     <div id="app">
@@ -149,9 +155,10 @@
                       <span class="sm-txt">(추정)</span>
                     </label>
                     <div class="form-inp-wrap">
-
-                      <!-- FIXME: 달력 데이트피커 -->
-                      <input type="text" class="custom-inp" placeholder="날짜 선택">
+                      <div class="inp-ico-item">
+                        <input type="text" readonly name="datepicker1" class="custom-inp" placeholder="날짜 선택" />
+                        <i class="ico ico-calendar-gray-light"></i>
+                      </div>
                     </div>
                     <span class="form-caution">생년월일을 입력해 주세요.</span>
                   </div>
@@ -161,9 +168,10 @@
                     <label class="form-label">아이와 함께한 첫날</label>
                     </label>
                     <div class="form-inp-wrap">
-
-                      <!-- FIXME: 달력 데이트피커 -->
-                      <input type="text" class="custom-inp" placeholder="날짜 선택">
+                      <div class="inp-ico-item">
+                        <input type="text" readonly name="datepicker2" class="custom-inp" placeholder="날짜 선택" />
+                        <i class="ico ico-calendar-gray-light"></i>
+                      </div>
                     </div>
                     <span class="form-caution">아이와 함께한 첫날을 입력해 주세요.</span>
                   </div>
@@ -193,7 +201,7 @@
               <div class="btn-wrap">
 
                 <!-- TODO: 다 채우고나서 before 클래스 삭제 -->
-                <button type="button" class="btn theme-solid-btn btn-lg square-btn before">
+                <button type="button" onclick="location.href='pet-enroll-03.html';" class="btn theme-solid-btn btn-lg square-btn before">
                   <span class="txt">다음</span>
                 </button>
               </div>
@@ -210,9 +218,26 @@
 
       <!-- END layout) 페이지 레이아웃 -->
     </div>
+    <script src="assets/js/vendor/datepicker-ko.js"></script>
     <script src="assets/js/userInterface.js"></script>
     <script src="assets/js/form.js"></script>
     <script src="assets/js/imageUpload.js"></script>
     <script src="assets/js/modal.js"></script>
+    <script>
+      // 생년월일 데이트피커
+      // 참고 documentation: https://mymth.github.io/vanillajs-datepicker
+      const datepicker1 = new Datepicker(document.querySelector('input[name="datepicker1"]'), {
+        autohide: true,
+        format: 'yyyy년 mm월 dd일',
+        language: 'ko'
+      });
+      // 아이와 함께한 첫날 데이트피커
+      // 참고 documentation: https://mymth.github.io/vanillajs-datepicker
+      const datepicker2 = new Datepicker(document.querySelector('input[name="datepicker2"]'), {
+        autohide: true,
+        format: 'yyyy년 mm월 dd일',
+        language: 'ko'
+      });
+    </script>
   </body>
 </html>
