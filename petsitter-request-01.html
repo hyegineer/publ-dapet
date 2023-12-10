@@ -205,6 +205,29 @@
           </div>
 
           <!-- END layout) 페이지 -->
+
+          <!-- **** modal) 페이지 내 모달 1. 고객 전환 안내 **** -->
+          <div id="modal-1" class="modal-wrapper">
+
+            <!-- TODO: 뒷 배경이 흐려야할 때 type-blur 클래스 추가 -->
+            <div class="modal-overlay type-blur" onclick="closeModal('modal-1');"></div>
+            <div class="custom-modal system-modal">
+              <div class="smodal-contt-container">
+                <h3 class="smodal-ttl">고객 전환 안내</h3>
+                <div class="smodal-contt">
+                  <p class="smodal-desc">
+                    고객 모드에서 의뢰가 가능합니다. <br>전환하시겠습니까?
+                  </p>
+                </div>
+              </div>
+              <div class="smodal-btn-wrap">
+                <button type="button" class="btn" onclick="closeModal('modal-1');">취소</button>
+                <button type="button" class="btn confirm-btn" onclick="alert('전환되었습니다.');allCloseModal();">전환하기</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END **** modal) 페이지 내 모달 1. 고객 전환 안내 **** -->
         </div>
 
         <!-- END ***** 펫시터 의뢰 페이지 (반려동물 선택) ***** -->
@@ -216,5 +239,9 @@
     <script src="assets/js/form.js"></script>
     <script src="assets/js/imageUpload.js"></script>
     <script src="assets/js/modal.js"></script>
+    <script>
+      // 임시: 펫시터 의뢰의 첫 페이지인 반려동물 선택페이지에서 고객모드 변경 안내 모달창을 띄웁니다.
+      openModal('modal-1');
+    </script>
   </body>
 </html>

@@ -441,7 +441,7 @@
               <div class="btn-wrap">
 
                 <!-- TODO: 다 채우고나서 before 클래스 삭제 -->
-                <button type="button" onclick="location.href='petsitter-request-03.html';" class="btn theme-solid-btn btn-lg square-btn before">
+                <button type="button" onclick="openModal('modal-1');" class="btn theme-solid-btn btn-lg square-btn before">
                   <span class="txt">다음</span>
                 </button>
               </div>
@@ -452,26 +452,43 @@
 
           <!-- END layout) 페이지 -->
 
-          <!-- **** modal) 페이지 내 모달 1. 게시글 삭제 확인 **** -->
+          <!-- **** modal) 페이지 내 모달 1. 서비스 확인**** -->
           <div id="modal-1" class="modal-wrapper">
             <div class="modal-overlay" onclick="closeModal('modal-1');"></div>
             <div class="custom-modal system-modal">
               <div class="smodal-contt-container">
-                <h3 class="smodal-ttl">게시글을 삭제하시겠습니까?</h3>
+                <h3 class="smodal-ttl">서비스 확인</h3>
                 <div class="smodal-contt">
                   <p class="smodal-desc">작성하신 서비스 내용이 맞습니까?</p>
                   <div class="svc-detail-item">
+                    <div class="name-wrap">
+                      <span class="name">춘식이</span>
+
+                      <!-- TODO: 여자일 경우에는 ico-female-dark 클래스 적용 -->
+                      <i class="ico ico-gender ico-male-dark"></i>
+                    </div>
+                    <ul class="dots-ul">
+                      <li>
+                        산책(60분)
+                      </li>
+                      <li>
+                        목욕
+                      </li>
+                      <li>
+                        드롭 & 픽업 <br>(드롭-다펫1동, 픽업-다펫3동)
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
               <div class="smodal-btn-wrap">
                 <button type="button" class="btn" onclick="closeModal('modal-1');">취소</button>
-                <button type="button" class="btn confirm-btn" onclick="alert('삭제되었습니다.');allCloseModal();">확인</button>
+                <button type="button" class="btn confirm-btn" onclick="location.href='petsitter-request-03.html';">확인</button>
               </div>
             </div>
           </div>
 
-          <!-- END **** modal) 페이지 내 모달 1. 게시글 삭제 확인 **** -->
+          <!-- END **** modal) 페이지 내 모달 1. 서비스 확인 **** -->
         </div>
 
         <!-- END ***** 펫시터 의뢰 페이지 (서비스 상세내용) ***** -->

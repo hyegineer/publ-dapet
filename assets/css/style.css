@@ -304,6 +304,10 @@ html {
   transition: all 0.3s;
 }
 
+.modal-overlay.type-blur {
+  backdrop-filter: blur(2px);
+}
+
 .modal-wrapper.active .modal-overlay {
   opacity: 1;
 }
@@ -442,6 +446,10 @@ html {
   font-size: 1.4rem;
   font-weight: 300;
   word-break: keep-all;
+  margin-bottom: 1rem;
+}
+.smodal-desc:last-child {
+  margin-bottom: 0;
 }
 
 .smodal-btn-wrap {
@@ -465,6 +473,56 @@ html {
 }
 .smodal-btn-wrap .btn.confirm-btn {
   color: var(--main-green, #56c595);
+}
+
+.svc-detail-item {
+  width: 100%;
+  background-color: var(--gray-light, #f1f1f1);
+  text-align: left;
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+
+.svc-detail-item .name-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--gray, #aeaeae);
+  margin-bottom: 0.5rem;
+}
+.svc-detail-item .name-wrap .ico {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.dots-ul {
+  padding: 0.5rem 0;
+}
+.dots-ul li {
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  padding-left: 0.8rem;
+  line-height: 1.4;
+}
+.dots-ul li:last-child {
+  margin-bottom: 0;
+}
+.dots-ul li:before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: black;
+  display: inline-block;
+  position: absolute;
+  top: 0.6rem;
+  left: 0;
 }
 
 /* 시스템 컨트롤 모달 */
@@ -531,6 +589,9 @@ html {
   box-shadow: none;
   border-radius: 0;
   padding: 2.15rem 1rem;
+}
+.ctrlbtn-list .ctrl-btn:disabled {
+  color: var(--gray, #aeaeae);
 }
 
 /* 바텀 모달 */
@@ -2476,6 +2537,14 @@ img {
 
 .ico-male {
   background-image: url(../images/ico/ico-male.svg);
+}
+
+.ico-female-dark {
+  background-image: url(../images/ico/ico-female-dark.svg);
+}
+
+.ico-male-dark {
+  background-image: url(../images/ico/ico-male-dark.svg);
 }
 
 .ico-pet-gray {
@@ -4984,6 +5053,15 @@ img {
 }
 
 .mi-cta-card-item {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 5px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;

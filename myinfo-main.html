@@ -104,7 +104,7 @@
 
                     <!-- TODO: 신청 수락 시 버튼 보임 -->
                     <div class="d-iflex-row mg-left">
-                      <button type="button" class="rounded-btn">고객 변환</button>
+                      <button type="button" class="rounded-btn" onclick="openModal('modal-ctrl');">고객 변환</button>
 
                       <!-- <button type="button" class="theme-bd-btn">자격 변경</button> -->
                     </div>
@@ -225,6 +225,35 @@
           </div>
 
           <!-- END layout) 페이지 -->
+
+          <!-- **** modal) 페이지 내 컨트롤 모달. 전환하기 **** -->
+          <div id="modal-ctrl" class="modal-wrapper">
+            <div class="modal-overlay" onclick="closeModal('modal-ctrl');"></div>
+            <div class="custom-modal control-modal">
+              <div class="ctrlmodal">
+                <ul class="ctrlbtn-list-grp">
+                  <li class="ctrlbtn-list">
+
+                    <!-- TODO: <= 둘 다 신청한 경우, 고객 모드에서 변경할 때 disabled attribute 추가 -->
+                    <button type="button" class="btn ctrl-btn" disabled onclick="alert('고객 프로필로 전환되었습니다');">고객 프로필로 전환하기</button>
+                  </li>
+                  <li class="ctrlbtn-list">
+
+                    <!-- TODO: <= 둘 다 신청한 경우, 보호소 모드에서 변경할 때 disabled attribute 추가 -->
+                    <button type="button" class="btn ctrl-btn" onclick="alert('펫시터 프로필로 전환되었습니다');">펫시터 프로필로 전환하기</button>
+                  </li>
+                  <li class="ctrlbtn-list">
+
+                    <!-- TODO: <= 둘 다 신청한 경우, 펫시터 모드에서 변경할 때 disabled attribute 추가 -->
+                    <button type="button" class="btn ctrl-btn" onclick="alert('유기동물 보호소 프로필로 전환되었습니다');">유기동물 보호소 프로필로 전환하기</button>
+                  </li>
+                </ul>
+                <button type="button" class="btn ctrl-btn red-txt" onclick="closeModal('modal-ctrl');">취소</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END **** modal) 페이지 내 컨트롤 모달. 전환하기 **** -->
         </div>
 
         <!-- END ***** 내 정보 페이지 ***** -->
