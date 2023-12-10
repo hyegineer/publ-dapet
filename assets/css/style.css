@@ -294,7 +294,7 @@ html {
 }
 
 .modal-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -311,9 +311,6 @@ html {
 .custom-modal {
   transform: translateY(60px);
   transition: all 0.3s;
-  background-color: #FFFFFF;
-  border-radius: 6px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
 .modal-wrapper.active .custom-modal {
@@ -328,6 +325,7 @@ html {
   right: 0;
 }
 
+/* 창 형식 모달 */
 .window-modal {
   width: 100%;
   max-width: 450px;
@@ -385,6 +383,10 @@ html {
 .search-location-modal .nothing-list-grp {
   height: 100%;
 }
+.search-location-modal .top-form-item {
+  width: 100%;
+  padding: 1.5rem;
+}
 
 .search-location-section {
   width: 100%;
@@ -408,6 +410,228 @@ html {
 .search-location-section .list .txt {
   font-size: 1.4rem;
   font-weight: 300;
+}
+
+/* 시스템 모달 (confirm, alert) */
+.system-modal {
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  width: 90%;
+  max-width: 270px;
+  border-radius: 5px;
+}
+
+.smodal-contt-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.smodal-ttl {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  word-break: keep-all;
+}
+
+.smodal-contt {
+  width: 100%;
+}
+
+.smodal-desc {
+  font-size: 1.4rem;
+  font-weight: 300;
+  word-break: keep-all;
+}
+
+.smodal-btn-wrap {
+  border-top: 1px solid var(--gray-light, #f1f1f1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+.smodal-btn-wrap .btn {
+  padding: 1.3rem;
+  font-size: 1.4rem;
+  text-align: center;
+  justify-content: center;
+  flex: 1;
+  font-weight: 500;
+  border-right: 1px solid var(--gray-light, #f1f1f1);
+}
+.smodal-btn-wrap .btn:last-child {
+  border-right: 0;
+}
+.smodal-btn-wrap .btn.confirm-btn {
+  color: var(--main-green, #56c595);
+}
+
+/* 시스템 컨트롤 모달 */
+.control-modal {
+  align-self: flex-end;
+  width: 100%;
+  max-width: 450px;
+  padding: 1.5rem;
+  position: relative;
+  z-index: 1;
+  /* iPhone XR : 1792x828px at 326ppi */
+  /* iPhone XS : 2436x1125px at 458ppi */
+  /* iPhone XS Max : 2688x1242px at 458ppi */
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+  .control-modal {
+    padding-bottom: 3rem;
+  }
+}
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .control-modal {
+    padding-bottom: 3rem;
+  }
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  .control-modal {
+    padding-bottom: 3rem;
+  }
+}
+
+.ctrlmodal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.ctrlmodal .ctrl-btn {
+  background-color: white;
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.ctrlmodal .ctrl-btn.red-txt {
+  color: var(--red, #CD3E3E);
+}
+
+.ctrlbtn-list-grp {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.ctrlbtn-list {
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
+}
+
+.ctrlbtn-list .ctrl-btn {
+  box-shadow: none;
+  border-radius: 0;
+  padding: 2.15rem 1rem;
+}
+
+/* 바텀 모달 */
+.bottom-modal {
+  align-self: flex-end;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 450px;
+}
+
+.btmodal {
+  width: 100%;
+  background-color: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  overflow: hidden;
+  padding: 1rem 1.5rem 1.5rem;
+  /* iPhone XR : 1792x828px at 326ppi */
+  /* iPhone XS : 2436x1125px at 458ppi */
+  /* iPhone XS Max : 2688x1242px at 458ppi */
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+  .btmodal {
+    padding-bottom: 3rem;
+  }
+}
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .btmodal {
+    padding-bottom: 3rem;
+  }
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  .btmodal {
+    padding-bottom: 3rem;
+  }
+}
+
+.btmodal-contt {
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.btmodal-btn-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.btmodal-btn-wrap .btn-lg {
+  width: 100%;
+}
+
+.detail-dl {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 1rem;
+}
+.detail-dl dt {
+  color: var(--gray, #aeaeae);
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.detail-dl .txt-lg {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.ctrl-count-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.ctrl-count-item .ctrl-count-btn {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 5px;
+  border-radius: 5px;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--gray-light, #f1f1f1);
+}
+.ctrl-count-item .inp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  outline: none;
+  height: 2.5rem;
+  border: 0;
+  font-size: 1.6rem;
+  outline: none;
 }
 
 /* ======================== 구성요소 - 공통 ======================== */
@@ -1215,16 +1439,20 @@ img {
   padding: 1rem 1.5rem;
   border-top: 1px solid var(--gray-light, #f1f1f1);
   width: 100%;
+  min-height: 7rem;
 }
 .lefttxt-btn-bottom .d-iflex-row.mall-d-iflex-row {
   gap: 1rem;
 }
 .lefttxt-btn-bottom .d-iflex-row.dnmall-d-iflex-row {
   gap: 0.8rem;
-  align-items: flex-end;
 }
 .lefttxt-btn-bottom .mg-left {
   margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.8rem;
 }
 .lefttxt-btn-bottom .main-green-txt {
   font-size: 1.4rem;
@@ -1234,9 +1462,8 @@ img {
   font-size: 2rem;
   font-weight: 500;
   position: relative;
-  top: 2px;
 }
-.lefttxt-btn-bottom .btn {
+.lefttxt-btn-bottom .btn-lg {
   min-width: 16.5rem;
 }
 
@@ -2363,6 +2590,10 @@ img {
 
 .ico-rq-drop-green {
   background-image: url(../images/ico/ico-rq-drop-green.svg);
+}
+
+.ico-dots {
+  background-image: url(../images/ico/ico-dots.svg);
 }
 
 /* ======================== 구성요소 - 버튼 ======================== */
@@ -4757,10 +4988,6 @@ img {
   margin-bottom: 1.7rem;
   line-height: 1.4;
   padding: 0;
-}
-.mi-info-page .top-form-item {
-  width: 100%;
-  padding: 1.5rem;
 }
 
 /* ======================== 페이지 - 내 서비스 관리 ======================== */

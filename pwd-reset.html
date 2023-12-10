@@ -110,7 +110,7 @@
                   </div>
                 </div>
                 <div class="form-submit-btn-wrap">
-                  <button type="button" class="btn theme-solid-btn btn-lg square-btn">
+                  <button type="button" onclick="openModal('modal-1');" class="btn theme-solid-btn btn-lg square-btn">
                     <span class="txt">비밀번호 재설정</span>
                   </button>
                 </div>
@@ -127,6 +127,26 @@
           </div>
 
           <!-- END layout) 페이지 -->
+
+          <!-- **** modal) 페이지 내 모달 1. 비밀번호 재설정 완료 **** -->
+
+          <!-- FIXME: 모달 이름 설정 -->
+          <div id="modal-1" class="modal-wrapper">
+            <div class="modal-overlay" onclick="closeModal('modal-1');"></div>
+            <div class="custom-modal system-modal">
+              <div class="smodal-contt-container">
+                <h3 class="smodal-ttl">비밀번호 재설정</h3>
+                <div class="smodal-contt">
+                  <p class="smodal-desc">비밀번호 변경이 완료되었습니다.</p>
+                </div>
+              </div>
+              <div class="smodal-btn-wrap">
+                <button type="button" class="btn" onclick="closeModal('modal-1');">확인</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END **** modal) 페이지 내 모달 1. 비밀번호 재설정 완료 **** -->
         </div>
 
         <!-- END ***** 비밀번호 재설정 페이지 ***** -->

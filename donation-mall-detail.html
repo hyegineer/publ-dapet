@@ -112,8 +112,17 @@
                   <span class="dark-txt">200원</span>
                 </div>
                 <div class="mg-left">
+
+                  <!-- TODO: 자신의 글이 아닐 경우에 보이는 기부하기 버튼임, 자신의 글은 기부하기 버튼 안보임 
+                (invisible 클래스 추가하거나 인라인 스타일로 style="display: none;" 해주면 됨 -->
                   <button type="button" class="btn theme-solid-btn btn-lg square-btn">
                     <span class="txt">기부하기</span>
+                  </button>
+
+                  <!-- TODO: 자신의 글일 경우에는 메뉴 버튼 보이게 해야함 -->
+                  <button type="button" class="btn" onclick="openModal('modal-ctrl');">
+                    <span class="txt-hidden">메뉴</span>
+                    <i class="ico ico-dots"></i>
                   </button>
                 </div>
               </div>
@@ -123,6 +132,104 @@
           </div>
 
           <!-- END layout) 페이지 -->
+          <div id="modal-bottom" class="modal-wrapper">
+            <div class="modal-overlay"></div>
+            <div class="custom-modal bottom-modal">
+              <div class="btmodal">
+                <div class="btmodal-contt">
+                  <dl class="detail-dl">
+                    <dt>기부 1회</dt>
+                    <dd>
+                      <span class="txt-lg">200원</span>
+                    </dd>
+                  </dl>
+                  <dl class="detail-dl">
+                    <dt>기부 횟수</dt>
+                    <dd class="mg-left">
+                      <div class="ctrl-count-item">
+                        <button type="button" class="ctrl-count-btn">
+                          <span class="txt-hidden">빼기</span>
+                        </button>
+                        <span class="inp" rolebox="textbox" contenteditable="">1</span>
+                        <button type="button" class="ctrl-count-btn">
+                          <span class="txt-hidden">더하기</span>
+                        </button>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="btmodal-btn-wrap">
+                  <button type="button" class="btn btn-lg square-btn theme-solid-btn">결제하기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- **** modal) 페이지 내 컨트롤 모달. 수정/삭제/끌어올리기 **** -->
+          <div id="modal-ctrl" class="modal-wrapper">
+            <div class="modal-overlay" onclick="closeModal('modal-ctrl');"></div>
+            <div class="custom-modal control-modal">
+              <div class="ctrlmodal">
+                <ul class="ctrlbtn-list-grp">
+                  <li class="ctrlbtn-list">
+                    <button type="button" class="btn ctrl-btn" onclick="location.href='donation-mall-create.html';">게시글
+                      수정</button>
+                  </li>
+                  <li class="ctrlbtn-list">
+                    <button type="button" class="btn ctrl-btn" onclick="openModal('modal-1');">게시글 삭제</button>
+                  </li>
+                  <li class="ctrlbtn-list">
+                    <button type="button" class="btn ctrl-btn" onclick="openModal('modal-2');">게시글 끌어올리기</button>
+                  </li>
+                </ul>
+                <button type="button" class="btn ctrl-btn red-txt" onclick="closeModal('modal-ctrl');">취소</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END **** modal) 페이지 내 컨트롤 모달. 수정/삭제/끌어올리기 **** -->
+
+          <!-- **** modal) 페이지 내 모달 1. 게시글 삭제 확인 **** -->
+          <div id="modal-1" class="modal-wrapper">
+            <div class="modal-overlay" onclick="closeModal('modal-1');"></div>
+            <div class="custom-modal system-modal">
+              <div class="smodal-contt-container">
+                <h3 class="smodal-ttl">게시글을 삭제하시겠습니까?</h3>
+                <div class="smodal-contt">
+                  <p class="smodal-desc">글을 삭제하면 되돌릴 수 없습니다.</p>
+                </div>
+              </div>
+              <div class="smodal-btn-wrap">
+                <button type="button" class="btn" onclick="closeModal('modal-1');">취소</button>
+                <button type="button" class="btn confirm-btn" onclick="alert('삭제되었습니다.');allCloseModal();">확인</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END **** modal) 페이지 내 모달 1. 게시글 삭제 확인 **** -->
+
+          <!-- **** modal) 페이지 내 모달 2. 게시글 끌어올리기 확인 **** -->
+
+          <!-- FIXME: 모달 이름 설정 -->
+          <div id="modal-2" class="modal-wrapper">
+            <div class="modal-overlay" onclick="closeModal('modal-2');"></div>
+            <div class="custom-modal system-modal">
+              <div class="smodal-contt-container">
+                <h3 class="smodal-ttl">게시글을 끌어올리겠습니까?</h3>
+                <div class="smodal-contt">
+                  <p class="smodal-desc">
+                    지금 게시글을 끌어올리면 <br>3일 뒤에 다시 하실 수 있습니다.
+                  </p>
+                </div>
+              </div>
+              <div class="smodal-btn-wrap">
+                <button type="button" class="btn" onclick="closeModal('modal-2');">취소</button>
+                <button type="button" class="btn confirm-btn" onclick="alert('끌어올리기를 하였습니다.');allCloseModal();">끌어올리기</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END **** modal) 페이지 내 모달 2. 게시글 끌어올리기 확인 **** -->
         </div>
 
         <!-- END ***** 기부몰 상세 페이지 ***** -->
@@ -134,5 +241,8 @@
     <script src="assets/js/form.js"></script>
     <script src="assets/js/imageUpload.js"></script>
     <script src="assets/js/modal.js"></script>
+    <script>
+      openModal('modal-bottom');
+    </script>
   </body>
 </html>
