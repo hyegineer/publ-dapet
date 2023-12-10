@@ -2463,6 +2463,26 @@ img {
   background-image: url(../images/ico/ico-stars05.svg);
 }
 
+.ico-stars.type04 {
+  background-image: url(../images/ico/ico-stars04.svg);
+}
+
+.ico-stars.type03 {
+  background-image: url(../images/ico/ico-stars03.svg);
+}
+
+.ico-stars.type02 {
+  background-image: url(../images/ico/ico-stars02.svg);
+}
+
+.ico-stars.type01 {
+  background-image: url(../images/ico/ico-stars01.svg);
+}
+
+.ico-stars.type00 {
+  background-image: url(../images/ico/ico-stars00.svg);
+}
+
 .ico-send-gray {
   background-image: url(../images/ico/ico-send-gray.svg);
 }
@@ -3000,6 +3020,61 @@ img {
   font-weight: 300;
   color: var(--blue, #0085ff);
   text-decoration: underline;
+}
+
+/* ======================== 구성요소 - 버튼 ======================== */
+/*  
+ *  Pure CSS star rating that works without reversing order
+ *  of inputs
+ *  -------------------------------------------------------
+ *  NOTE: For the styling to work, there needs to be a radio
+ *        input selected by default. There also needs to be a
+ *        radio input before the first star, regardless of
+ *        whether you offer a 'no rating' or 0 stars option
+ *  
+ *  This codepen uses FontAwesome icons
+ *  https://codepen.io/andreacrawford/pen/NvqJXW
+ */
+.star-rating-item {
+  /* use display:inline-flex to prevent whitespace issues. alternatively, you can put all the children of .rating-group on a single line */
+  /* make hover effect work properly in IE */
+  /* hide radio inputs */
+  /* hide 'none' input from screenreaders */
+  /* set icon padding and size */
+  /* set default star color */
+  /* if any input is checked, make its following siblings grey */
+  /* make all stars orange on rating group hover */
+  /* make hovered input's following siblings grey on hover */
+}
+.star-rating-item .rating-group {
+  display: inline-flex;
+}
+.star-rating-item .rating__icon {
+  pointer-events: none;
+}
+.star-rating-item .rating__input {
+  position: absolute !important;
+  left: -9999px !important;
+}
+.star-rating-item .rating__input--none {
+  display: none;
+}
+.star-rating-item .rating__label {
+  cursor: pointer;
+  padding: 0 0.1em;
+  font-size: 2rem;
+}
+.star-rating-item .rating__icon--star {
+  color: black;
+}
+.star-rating-item .rating__input:checked ~ .rating__label .rating__icon--star {
+  color: var(--gray-light, #f1f1f1);
+}
+.star-rating-item .rating-group:hover .rating__label .rating__icon--star {
+  color: black;
+}
+.star-rating-item .rating__input:hover ~ .rating__label .rating__icon--star {
+  color: var(--gray-light, #f1f1f1);
 }
 
 /* ======================== 구성요소 - 목록 카드 아이템 ======================== */
@@ -4514,6 +4589,7 @@ img {
   justify-content: flex-start;
   gap: 0.5rem;
   width: 100%;
+  font-size: 1.2rem;
 }
 .average-review-item .stars-wrap {
   display: flex;

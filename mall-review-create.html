@@ -7,6 +7,7 @@
 
     <!-- Fonts -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/vendor/reset.css">
@@ -98,9 +99,21 @@
                   <div class="form-item">
                     <label class="form-label">상품 만족도</label>
                     <div class="form-inp-wrap">
-
-                      <!-- FIXME: 별 새로 -->
-                      <i class="ico-stars type05"></i>
+                      <div class="star-rating-item">
+                        <div class="rating-group">
+                          <input disabled checked class="rating__input rating__input--none" name="rating3" id="rating3-none" value="0" type="radio">
+                          <label aria-label="1 star" class="rating__label" for="rating3-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                          <input class="rating__input" name="rating3" id="rating3-1" value="1" type="radio">
+                          <label aria-label="2 stars" class="rating__label" for="rating3-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                          <input class="rating__input" name="rating3" id="rating3-2" value="2" type="radio">
+                          <label aria-label="3 stars" class="rating__label" for="rating3-3"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                          <input class="rating__input" name="rating3" id="rating3-3" value="3" type="radio">
+                          <label aria-label="4 stars" class="rating__label" for="rating3-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                          <input class="rating__input" name="rating3" id="rating3-4" value="4" type="radio">
+                          <label aria-label="5 stars" class="rating__label" for="rating3-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                          <input class="rating__input" name="rating3" id="rating3-5" value="5" type="radio">
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="form-item">
