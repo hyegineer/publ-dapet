@@ -307,6 +307,7 @@ html {
 
 .modal-overlay.type-blur {
   backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
 
 .modal-wrapper.active .modal-overlay {
