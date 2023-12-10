@@ -544,6 +544,7 @@ html {
   flex: 1;
   font-weight: 500;
   border-right: 1px solid var(--gray-light, #f1f1f1);
+  color: #000;
 }
 .smodal-btn-wrap .btn:last-child {
   border-right: 0;
