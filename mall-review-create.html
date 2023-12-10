@@ -106,10 +106,10 @@
                   <div class="form-item">
                     <label class="form-label">
                       <span>리뷰작성</span>
-                      <span class="sm-txt">(<span class="js-txtarea-count">0</span>/200)</span>
+                      <span class="sm-txt">(<span data-js-count>0</span>/200)</span>
                     </label>
                     <div class="form-inp-wrap">
-                      <textarea placeholder="최소 10자 이상의 내용을 입력해 주세요." class="custom-inp-textarea type-h150 js-txtarea" maxlength="200"></textarea>
+                      <textarea placeholder="최소 10자 이상의 내용을 입력해 주세요." class="custom-inp-textarea type-h150" maxlength="200" data-js-counttextarea></textarea>
                     </div>
                     <span class="form-caution gray-txt">상품과 관련 없는 내용, 비속어 등을 포함한 부적절한 리뷰는 통보 없이 삭제 처리될 수 있습니다. 작성해 주신 리뷰는
                   상업적 용도로 활용될 수 있습니다.</span>
@@ -140,6 +140,9 @@
 
       <!-- END layout) 페이지 레이아웃 -->
     </div>
-    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/userInterface.js"></script>
+    <script src="assets/js/form.js"></script>
+    <script src="assets/js/imageUpload.js"></script>
+    <script src="assets/js/modal.js"></script>
   </body>
 </html>

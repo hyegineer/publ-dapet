@@ -81,7 +81,7 @@
                   <div class="form-item">
                     <label class="form-label">제목</label>
                     <div class="form-inp-wrap">
-                      <textarea rows="1" maxlength="40" class="custom-inp custom-inp-textarea" placeholder="제목을 입력해 주세요. (40자 이내)" data-autoresize></textarea>
+                      <textarea rows="1" maxlength="40" class="custom-inp custom-inp-textarea" placeholder="제목을 입력해 주세요. (40자 이내)" data-js-autoresize></textarea>
                     </div>
                   </div>
                   <div class="form-item">
@@ -106,7 +106,7 @@
                     <label class="form-label">썸네일 등록</label>
                     <p class="form-label-desc">기부몰 메인 페이지에서 보일 사진을 등록해 주세요. (최대 1개)</p>
 
-                    <!-- TODO: ui.js 에 임시로 만든 이미지 업로드 script 참고 -->
+                    <!-- TODO: imageUpload.js 에 임시로 만든 이미지 업로드 script 참고 -->
                     <div class="form-inp-wrap">
                       <div id="thumbnails01" class="attach-list-grp">
 
@@ -135,7 +135,7 @@
                       </div>
                     </div>
 
-                    <!-- END ui.js 에 임시로 만든 이미지 업로드 script 참고 -->
+                    <!-- END imageUpload.js 에 임시로 만든 이미지 업로드 script 참고 -->
 
                     <!-- TODO: 아무 스크립트 적용되지 않은 이미지 첨부 html -->
                     <div class="form-inp-wrap" style="display: none;">
@@ -183,7 +183,7 @@
                     <label class="form-label">관련 사진</label>
                     <p class="form-label-desc">상세 페이지에서 보일 기부 요청과 관련된 사진을 등록해 주세요.</p>
 
-                    <!-- TODO: ui.js 에 임시로 만든 이미지 업로드 script 참고 -->
+                    <!-- TODO: imageUpload.js 에 임시로 만든 이미지 업로드 script 참고 -->
                     <div class="form-inp-wrap">
                       <div id="related01" class="attach-list-grp">
 
@@ -212,7 +212,7 @@
                       </div>
                     </div>
 
-                    <!-- END ui.js 에 임시로 만든 이미지 업로드 script 참고 -->
+                    <!-- END imageUpload.js 에 임시로 만든 이미지 업로드 script 참고 -->
 
                     <!-- TODO: 아무 스크립트 적용되지 않은 이미지 첨부 html -->
                     <div class="form-inp-wrap" style="display: none;">
@@ -286,6 +286,9 @@
 
       <!-- END layout) 페이지 레이아웃 -->
     </div>
-    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/userInterface.js"></script>
+    <script src="assets/js/form.js"></script>
+    <script src="assets/js/imageUpload.js"></script>
+    <script src="assets/js/modal.js"></script>
   </body>
 </html>

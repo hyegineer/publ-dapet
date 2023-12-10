@@ -128,10 +128,10 @@
                     <div class="form-item">
                       <label class="form-label">
                         <span>펫시터 소개</span>
-                        <span class="sm-txt">(<span class="js-txtarea-count">0</span>/500)</span>
+                        <span class="sm-txt">(<span data-js-count>0</span>/500)</span>
                       </label>
                       <div class="form-inp-wrap">
-                        <textarea maxlength="500" required="required" class="custom-inp-textarea type-h150 js-txtarea" placeholder="펫시터님에 대한 소개와 보유하고 계신 자격 내용, 과거 근무 경력 등을 자세하게 작성해 주세요."></textarea>
+                        <textarea maxlength="500" data-js-counttextarea required="required" class="custom-inp-textarea type-h150" placeholder="펫시터님에 대한 소개와 보유하고 계신 자격 내용, 과거 근무 경력 등을 자세하게 작성해 주세요."></textarea>
                       </div>
                       <span class="form-caution">펫시터 소개글을 입력해주세요.</span>
                     </div>
@@ -245,7 +245,7 @@
                         <span class="sm-txt">(선택)</span>
                       </label>
 
-                      <!-- TODO: ui.js 에 임시로 만든 이미지 업로드 script 참고 -->
+                      <!-- TODO: imageUpload.js 에 임시로 만든 이미지 업로드 script 참고 -->
                       <div class="form-inp-wrap">
                         <div id="pictures01" class="attach-list-grp">
 
@@ -274,7 +274,7 @@
                         </div>
                       </div>
 
-                      <!-- END ui.js 에 임시로 만든 이미지 업로드 script 참고 -->
+                      <!-- END imageUpload.js 에 임시로 만든 이미지 업로드 script 참고 -->
 
                       <!-- TODO: 아무 스크립트 적용되지 않은 이미지 첨부 html -->
                       <div class="form-inp-wrap" style="display: none;">
@@ -326,7 +326,7 @@
                         <span class="sm-txt">(선택)</span>
                       </label>
 
-                      <!-- TODO: ui.js 에 임시로 만든 이미지 업로드 script 참고 -->
+                      <!-- TODO: imageUpload.js 에 임시로 만든 이미지 업로드 script 참고 -->
                       <div class="form-inp-wrap">
                         <div id="pictures02" class="attach-list-grp">
 
@@ -355,7 +355,7 @@
                         </div>
                       </div>
 
-                      <!-- END ui.js 에 임시로 만든 이미지 업로드 script 참고 -->
+                      <!-- END imageUpload.js 에 임시로 만든 이미지 업로드 script 참고 -->
 
                       <!-- TODO: 아무 스크립트 적용되지 않은 이미지 첨부 html -->
                       <div class="form-inp-wrap" style="display: none;">
@@ -430,6 +430,9 @@
 
       <!-- END layout) 페이지 레이아웃 -->
     </div>
-    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/userInterface.js"></script>
+    <script src="assets/js/form.js"></script>
+    <script src="assets/js/imageUpload.js"></script>
+    <script src="assets/js/modal.js"></script>
   </body>
 </html>
