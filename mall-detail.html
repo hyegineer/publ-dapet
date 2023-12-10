@@ -143,7 +143,7 @@
                           <div class="mg-left">
 
                             <!-- 옵션 선택 영역 -->
-                            <div class="custom-select-wrap">
+                            <div class="custom-select-wrap js-custom-select-wrap">
 
                               <!-- 선택값 보여지는 타겟 -->
                               <div class="custom-select">
@@ -159,7 +159,7 @@
                                     <span>최신순</span>
                                   </li>
                                   <li class="opt-list">
-                                    <span>별점순</span>
+                                    <span>별점 높은 순</span>
                                   </li>
                                 </ul>
                               </div>
@@ -328,7 +328,7 @@
                   <span class="dark-txt">50,000원</span>
                 </div>
                 <div class="mg-left">
-                  <button type="button" class="btn theme-solid-btn btn-lg square-btn">
+                  <button type="button" onclick="openModal('modal-bottom');" class="btn theme-solid-btn btn-lg square-btn">
                     <span class="txt">구매하기</span>
                   </button>
                 </div>
@@ -339,6 +339,66 @@
           </div>
 
           <!-- END layout) 페이지 -->
+
+          <!-- **** modal) 페이지 내 바텀 모달. 상세정보 및 구매하기 버튼 **** -->
+          <div id="modal-bottom" class="modal-wrapper">
+            <div class="modal-overlay" onclick="closeModal('modal-bottom');"></div>
+            <div class="custom-modal bottom-modal">
+              <div class="btmodal">
+                <button type="button" class="close-btn" onclick="closeModal('modal-bottom');">
+                  <span class="txt-hidden">모달 닫기</span>
+                  <i class="ico ico-strch-arrow-down-gray-light"></i>
+                </button>
+
+                <!-- 모달 내용 -->
+                <div class="btmodal-contt">
+                  <div class="detail-dl-wrap">
+                    <dl class="detail-dl type-flex-end">
+                      <dt>상품 가격</dt>
+                      <dd>
+                        <span class="txt-lg">50,000원</span>
+                      </dd>
+                    </dl>
+                    <dl class="detail-dl">
+                      <dt>주문 수량</dt>
+                      <dd class="mg-left">
+                        <div class="ctrl-count-item">
+                          <button type="button" class="ctrl-count-btn">
+                            <span class="txt-hidden">빼기</span>
+                            <i class="ico ico-minus-gray"></i>
+                          </button>
+                          <span class="inp" rolebox="textbox" contenteditable="">2</span>
+                          <button type="button" class="ctrl-count-btn">
+                            <span class="txt-hidden">더하기</span>
+                            <i class="ico ico-plus-gray"></i>
+                          </button>
+                        </div>
+                      </dd>
+                    </dl>
+                  </div>
+                  <div class="total-detail-dl-wrap">
+                    <dl class="detail-dl mg-left">
+                      <dt>결제 예정 금액</dt>
+                      <dd>
+                        <span class="txt-lg">총 100,000원</span>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+
+                <!-- END 모달 내용 -->
+
+                <!-- 모달 하단 버튼 -->
+                <div class="btmodal-btn-wrap">
+                  <button type="button" class="btn btn-lg square-btn theme-solid-btn">구매하기</button>
+                </div>
+
+                <!-- END 모달 하단 버튼 -->
+              </div>
+            </div>
+          </div>
+
+          <!-- END **** modal) 페이지 내 바텀 모달. 상세정보 및 구매하기 버튼 **** -->
         </div>
 
         <!-- END ***** 다펫몰 상세 페이지 ***** -->

@@ -65,4 +65,32 @@
       $(this).css('color', '#000');
     }
   })
+
+  // 커스텀 셀렉트: 클릭시 옵션 보여주는 효과
+  function showOptions(element) {
+    $(".custom-option-wrap").removeClass("active");
+    $(element).siblings(".custom-option-wrap").addClass("active");
+  }
+
+  // 커스텀 셀렉트: 옵션 선택시 적용되는 효과
+  function selectOption(element) {
+    var val = $(element).text();
+    $(element).parents(".custom-option-wrap").removeClass("active");
+    $(element).parents(".custom-option-wrap").siblings(".custom-select").children().text(val);
+  }
+
+  $(".js-custom-select-wrap .custom-select").on("click", function (e) {
+    showOptions(e.currentTarget);
+  })
+
+  $(".js-custom-select-wrap .opt-list").on("click", function (e) {
+    selectOption(e.currentTarget)
+  })
+
+  $(document).mouseup(function (e) {
+    var customSelect = $(".js-custom-select-wrap .custom-select");
+    if (customSelect.has(e.target).length === 0) {
+      $(".custom-option-wrap").removeClass("active");
+    }
+  });
 })();
