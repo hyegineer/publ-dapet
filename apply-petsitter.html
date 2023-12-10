@@ -212,9 +212,12 @@
                       </label>
                       </label>
                       <div class="form-inp-wrap">
-
-                        <!-- FIXME: 구,군 단위로 검색-->
-                        <input type="text" class="custom-inp" placeholder="구, 군 단위로 검색">
+                        <div class="inp-btn-item">
+                          <input type="text" class="custom-inp" placeholder="구, 군 단위로 검색">
+                          <button type="button" class="btn" onclick="openModal('modal-search-location');">
+                            <i class="ico ico-search-gray-light"></i>
+                          </button>
+                        </div>
                       </div>
                       <span class="form-caution">서비스 지역을 선택해주세요.</span>
                       <div class="formiw-under-wrap">
@@ -430,6 +433,111 @@
           </div>
 
           <!-- END layout) 페이지 -->
+
+          <!-- **** modal) 페이지 내 창 형식 모달. 서비스 지역 설정 모달 **** -->
+          <div id="modal-search-location" class="modal-wrapper">
+            <div class="window-modal search-location-modal">
+              <div class="wmodal">
+                <header class="header">
+                  <div class="header-inner">
+
+                    <!-- 헤더 왼쪽 -->
+
+                    <!-- TODO: invisible 클래스 넣으면 안보임 -->
+                    <div class="hd-left">
+                      <button onclick="closeModal('modal-search-location');" type="button" class="hd-btn">
+                        <span class="txt-hidden">뒤로가기</span>
+                        <i class="ico ico-line-arrow-left"></i>
+                      </button>
+
+                      <!-- TODO: invisible 클래스 넣으면 안보임 -->
+                      <button type="button" onclick="location.href='main.html';" class="hd-btn">
+                        <span class="txt-hidden">홈</span>
+                        <i class="ico ico-home"></i>
+                      </button>
+                    </div>
+
+                    <!-- 헤더 중앙 -->
+                    <div class="hd-center">
+                      <span class="ttl">서비스 지역 설정</span>
+                    </div>
+
+                    <!-- 헤더 오른쪽 -->
+
+                    <!-- TODO: invisible 클래스 넣으면 안보임 -->
+                    <div class="hd-right">
+
+                      <!-- 알림 버튼 -->
+                      <button type="button" onclick="location.href='alarm-activity-list.html';" type="button" class="hd-btn">
+                        <span class="txt-hidden">알림</span>
+
+                        <!-- TODO: 새로 알람 들어온 경우 ico-alarm-on 클래스 추가해야함 -->
+                        <i class="ico ico-alarm"></i>
+                      </button>
+
+                      <!-- END 알림 버튼 -->
+                    </div>
+                  </div>
+                </header>
+
+                <!-- modal) 모달 페이지 -->
+                <div class="wmodal-contt-container">
+
+                  <!-- modal) 모달 페이지 상단 -->
+                  <div class="top-form-item">
+                    <div class="form-item">
+                      <label class="form-label">서비스 지역 검색</label>
+                      <div class="form-inp-wrap">
+                        <div class="inp-btn-item">
+                          <input type="text" class="custom-inp" required="required" placeholder="구, 군 단위로 검색">
+                          <button type="button" class="btn">
+                            <i class="ico ico-search-gray-light"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wmodal-contt-top">
+                    <div class="modal-page">
+
+                      <!-- TODO: 목록 있을 때 -->
+                      <section class="search-location-section">
+                        <h3 class="sls-ttl">"원미구" 검색 결과</h3>
+                        <ul class="contt">
+                          <li class="list">
+                            <span class="txt">부천시 원미구</span>
+                          </li>
+                        </ul>
+                      </section>
+
+                      <!-- END 목록 있을 때 -->
+
+                      <!-- TODO: 목록 없을 때 -->
+                      <div class="nothing-list-grp type-center" style="display: none;">
+                        <div class="nothing-list">
+                          <i class="ico ico-nothing ico-lg ico-nothing-location"></i>
+                          <h3 class="nl-ttl">펫시터 활동을 원하시는 지역을 설정해 주세요.</h3>
+                        </div>
+                      </div>
+
+                      <!-- END 목록 없을 때 -->
+                    </div>
+                  </div>
+
+                  <!-- END modal) 모달 페이지 상단 -->
+
+                  <!-- modal) 모달 페이지 하단 -->
+                  <div class="wmodal-contt-bottom"></div>
+
+                  <!-- END modal) 모달 페이지 하단 -->
+                </div>
+
+                <!-- END modal) 모달 페이지 -->
+              </div>
+            </div>
+          </div>
+
+          <!-- END **** modal) 페이지 내 창 형식 모달. 서비스 지역 설정 모달 **** -->
         </div>
 
         <!-- END ***** 펫시터 신청 페이지 ***** -->

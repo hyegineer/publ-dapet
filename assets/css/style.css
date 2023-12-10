@@ -602,6 +602,14 @@ html {
   left: 0;
 }
 
+.change-schedule-modal .smodal-contt-container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.change-schedule-modal .smodal-contt-container .custom-inp {
+  padding-left: 1rem;
+}
+
 /* 시스템 컨트롤 모달 */
 .control-modal {
   align-self: flex-end;

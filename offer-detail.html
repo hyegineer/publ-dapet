@@ -178,7 +178,7 @@
             <div class="l-contt-bottom">
               <div class="btn-wrap">
                 <button type="button" class="btn btn-lg gray-solid-btn square-btn">채팅하기</button>
-                <button type="button" class="btn btn-lg theme-solid-btn square-btn">선택 및 결제</button>
+                <button type="button" onclick="openModal('modal-1');" class="btn btn-lg theme-solid-btn square-btn">선택 및 결제</button>
               </div>
             </div>
 
@@ -186,6 +186,25 @@
           </div>
 
           <!-- END layout) 페이지 -->
+
+          <!-- **** modal) 페이지 내 모달 1. 펫시터 선택 결제 확인 **** -->
+          <div id="modal-1" class="modal-wrapper">
+            <div class="modal-overlay" onclick="closeModal('modal-1');"></div>
+            <div class="custom-modal system-modal">
+              <div class="smodal-contt-container">
+                <h3 class="smodal-ttl">펫시터 선택</h3>
+                <div class="smodal-contt">
+                  <p class="smodal-desc">강박사님의 서비스를 결제하시겠습니까?</p>
+                </div>
+              </div>
+              <div class="smodal-btn-wrap">
+                <button type="button" class="btn" onclick="closeModal('modal-1');">취소</button>
+                <button type="button" class="btn confirm-btn" onclick="alert('결제를 진행하겠습니다');">선택 및 결제</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END **** modal) 페이지 내 모달 1. 펫시터 선택 결제 확인 **** -->
         </div>
 
         <!-- END ***** 견적 상세 페이지 ***** -->

@@ -217,7 +217,7 @@
                       <dd>
                         <div class="d-iflex-row">
                           <span>2023-12-15</span>
-                          <button type="button" class="blue-txt-btn">수정</button>
+                          <button type="button" class="blue-txt-btn" onclick="openModal('modal-1');">수정</button>
                         </div>
                       </dd>
                     </dl>
@@ -226,7 +226,7 @@
                       <dd>
                         <div class="d-iflex-row">
                           <span>15:00 부터 18:15 까지</span>
-                          <button type="button" class="blue-txt-btn">수정</button>
+                          <button type="button" class="blue-txt-btn" onclick="openModal('modal-1');">수정</button>
                         </div>
                       </dd>
                     </dl>
@@ -269,6 +269,42 @@
           </div>
 
           <!-- END layout) 페이지 -->
+
+          <!-- **** modal) 페이지 내 모달 1. 의뢰일시 변경 **** -->
+          <div id="modal-1" class="modal-wrapper">
+            <div class="modal-overlay" onclick="closeModal('modal-1');"></div>
+            <div class="custom-modal system-modal change-schedule-modal">
+              <div class="smodal-contt-container">
+                <h3 class="smodal-ttl">의뢰일시 변경</h3>
+                <div class="smodal-contt">
+                  <div class="form-item">
+                    <div class="form-inp-wrap">
+                      <div class="inp-ico-item">
+                        <input type="text" readonly name="datepicker1" class="custom-inp" placeholder="희망일시 입력" />
+                        <i class="ico ico-calendar-gray-light"></i>
+                      </div>
+                    </div>
+                    <div class="form-inp-wrap type01">
+                      <div class="inp-ico-item">
+                        <input type="text" readonly id="start-time" class="custom-inp" placeholder="시작 시간" />
+                        <i class="ico ico-watch-gray-light"></i>
+                      </div>
+                      <div class="inp-ico-item">
+                        <input type="text" readonly id="end-time" class="custom-inp" placeholder="종료 시간" />
+                        <i class="ico ico-watch-gray-light"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="smodal-btn-wrap">
+                <button type="button" class="btn" onclick="closeModal('modal-1');">취소</button>
+                <button type="button" class="btn confirm-btn" onclick="alert('변경이 완료되었습니다');">변경 완료</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END **** modal) 페이지 내 모달 1. 의뢰일시 변경 **** -->
         </div>
 
         <!-- END ***** 의뢰 상세 - 의뢰 상세 페이지 ***** -->
@@ -281,5 +317,26 @@
     <script src="assets/js/form.js"></script>
     <script src="assets/js/imageUpload.js"></script>
     <script src="assets/js/modal.js"></script>
+    <script>
+      // 희망일시 데이트피커
+      // 참고 documentation: https://mymth.github.io/vanillajs-datepicker
+      const datepicker1 = new Datepicker(document.querySelector('input[name="datepicker1"]'), {
+        autohide: true,
+        format: 'yyyy년 mm월 dd일',
+        language: 'ko'
+      });
+      // 희망일시 시작시간
+      // 참고 documentation: https://github.com/xdan/datetimepicker
+      $('#start-time').datetimepicker({
+        datepicker: false,
+        format: 'H:i'
+      });
+      // 희망일시 시작시간
+      // 참고 documentation: https://github.com/xdan/datetimepicker
+      $('#end-time').datetimepicker({
+        datepicker: false,
+        format: 'H:i'
+      });
+    </script>
   </body>
 </html>

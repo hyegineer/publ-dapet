@@ -99,7 +99,7 @@
               <div class="btn-wrap">
 
                 <!-- TODO: 다 채우고나서 before 클래스 삭제 -->
-                <button type="button" onclick="location.href='offer-create-complete.html';" class="btn theme-solid-btn btn-lg square-btn before">
+                <button type="button" onclick="openModal('modal-1');" class="btn theme-solid-btn btn-lg square-btn before">
                   <span class="txt">견적서 발송하기</span>
                 </button>
               </div>
@@ -109,6 +109,25 @@
           </div>
 
           <!-- END layout) 페이지 -->
+
+          <!-- **** modal) 페이지 내 모달 1. 견적서 발송 확인 **** -->
+          <div id="modal-1" class="modal-wrapper">
+            <div class="modal-overlay" onclick="closeModal('modal-1');"></div>
+            <div class="custom-modal system-modal">
+              <div class="smodal-contt-container">
+                <h3 class="smodal-ttl">견적서 발송</h3>
+                <div class="smodal-contt">
+                  <p class="smodal-desc">작성하신 내용으로 <br>견적서를 발송하시겠습니까?</p>
+                </div>
+              </div>
+              <div class="smodal-btn-wrap">
+                <button type="button" class="btn" onclick="closeModal('modal-1');">취소</button>
+                <button type="button" class="btn confirm-btn" onclick="location.href='offer-create-complete.html';">발송하기</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END **** modal) 페이지 내 모달 1. 견적서 발송 확인 **** -->
         </div>
 
         <!-- END ***** 견적서 작성 (견적 설명) 페이지 ***** -->
