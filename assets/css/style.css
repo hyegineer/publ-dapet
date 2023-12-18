@@ -267,6 +267,14 @@ html {
   gap: 5px;
 }
 
+.header .hd-sm-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  min-width: 7.2rem;
+}
+
 .header .logo {
   width: 7.58rem;
 }
@@ -672,6 +680,9 @@ html {
 .ctrlbtn-list {
   border-bottom: 1px solid var(--gray-light, #f1f1f1);
 }
+.ctrlbtn-list:last-child {
+  border-bottom: 0;
+}
 
 .ctrlbtn-list .ctrl-btn {
   box-shadow: none;
@@ -856,6 +867,10 @@ img {
   color: var(--main-green, #56C595);
 }
 
+.red-txt {
+  color: var(--red, #CD3E3E);
+}
+
 .badge {
   padding: 0;
   border: 0;
@@ -880,6 +895,20 @@ img {
 .badge.gray {
   background-color: var(--gray-light, #f1f1f1);
   color: var(--gray-dark, #6c6c6c);
+}
+
+.badge-cnt {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--red, #cd3e3e);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0 0.6rem;
+  height: 2rem;
+  border-radius: 100px;
+  min-width: 2.2rem;
 }
 
 /* 탭 */
@@ -1311,6 +1340,10 @@ img {
 }
 .nothing-list .ico-nothing {
   margin-bottom: 0.7rem;
+}
+.nothing-list .ico-md {
+  width: 2rem;
+  height: 2rem;
 }
 .nothing-list .ico-lg {
   width: 3.6rem;
@@ -2125,6 +2158,7 @@ img {
 }
 
 .form-item-grp {
+  width: 100%;
   margin-bottom: 2.5rem;
 }
 .form-item-grp:last-child {
@@ -2135,6 +2169,25 @@ img {
 }
 .form-item-grp .form-item:last-child {
   margin-bottom: 0;
+}
+
+.form-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 1.5rem;
+}
+.form-item-row .form-label {
+  margin: 0;
+  font-weight: 300;
+  font-size: 1.6rems;
+}
+.form-item-row .form-inp-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: auto;
 }
 
 .form-label {
@@ -2350,6 +2403,7 @@ img {
 
 .custom-inp-textarea.type-h150 {
   height: 15rem;
+  max-height: 25rem;
 }
 
 .custom-inp-textarea.type-h100 {
@@ -2468,6 +2522,48 @@ img {
 .custom-ckbox-inp:checked + .custom-ckbox:after {
   transform: translate(-50%, -50%);
   opacity: 1;
+}
+
+.custom-toggle {
+  transition: ease 0.3s;
+  -webkit-transition: ease 0.3s;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+.custom-toggle:before {
+  transition: ease 0.3s;
+  -webkit-transition: ease 0.3s;
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  border-radius: 50%;
+  background: var(--gray, #AEAEAE);
+}
+.custom-toggle:after {
+  transition: ease 0.3s;
+  -webkit-transition: ease 0.3s;
+  content: "";
+  width: 43px;
+  height: 15px;
+  display: inline-block;
+  background: var(--gray-light, #f1f1f1);
+  border-radius: 18px;
+  clear: both;
+  position: relative;
+  top: 3px;
+}
+
+.custom-toggle:checked:before {
+  left: 24px;
+  background-color: var(--main-green, #56C595);
 }
 
 .form-submit-btn-wrap {
@@ -2630,6 +2726,10 @@ img {
   background-image: url(../images/ico/ico-arrow-right-gray.svg);
 }
 
+.ico-arrow-right-white {
+  background-image: url(../images/ico/ico-arrow-right-white.svg);
+}
+
 .ico-arrow-left-gray {
   background-image: url(../images/ico/ico-arrow-left-gray.svg);
 }
@@ -2714,6 +2814,10 @@ img {
 
 .ico-nothing-bang {
   background-image: url(../images/ico/ico-nothing-bang.svg);
+}
+
+.ico-nothing-cam {
+  background-image: url(../images/ico/ico-nothing-cam.svg);
 }
 
 .ico-stars {
@@ -3024,12 +3128,60 @@ img {
   background-image: url(../images/ico/ico-dots.svg);
 }
 
+.ico-more-dots {
+  background-image: url(../images/ico/ico-more-dots.svg);
+}
+
 .ico-calendar-gray-light {
   background-image: url(../images/ico/ico-calendar-gray-light.svg);
 }
 
 .ico-watch-gray-light {
   background-image: url(../images/ico/ico-watch-gray-light.svg);
+}
+
+.ico-live-red {
+  background-image: url(../images/ico/ico-live-red.svg);
+}
+
+.ico-start-green {
+  background-image: url(../images/ico/ico-start-green.svg);
+}
+
+.ico-mute-on {
+  background-image: url(../images/ico/ico-mute-on.svg);
+}
+
+.ico-mute-off {
+  background-image: url(../images/ico/ico-mute-off.svg);
+}
+
+.ico-cam-on {
+  background-image: url(../images/ico/ico-cam-on.svg);
+}
+
+.ico-cam-off {
+  background-image: url(../images/ico/ico-cam-off.svg);
+}
+
+.ico-particapant-on {
+  background-image: url(../images/ico/ico-particapant-on.svg);
+}
+
+.ico-particapant-off {
+  background-image: url(../images/ico/ico-particapant-off.svg);
+}
+
+.ico-sound-on {
+  background-image: url(../images/ico/ico-sound-on.svg);
+}
+
+.ico-sound-off {
+  background-image: url(../images/ico/ico-sound-off.svg);
+}
+
+.ico-download-white {
+  background-image: url(../images/ico/ico-download-white.svg);
 }
 
 /* ======================== 구성요소 - 버튼 ======================== */
@@ -3144,6 +3296,11 @@ img {
   font-size: 1.6rem;
   font-weight: 400;
   color: inherit;
+}
+
+.red-solid-btn {
+  background-color: var(--red, #CD3E3E);
+  color: white;
 }
 
 .btn-lg {
@@ -3303,6 +3460,35 @@ img {
   font-weight: 300;
   color: var(--blue, #0085ff);
   text-decoration: underline;
+}
+
+.direct-btn {
+  width: 100%;
+  background-color: var(--main-green, #56c595);
+  color: white;
+  border-radius: 10px;
+  height: 4.7rem;
+  padding: 0 1.5rem;
+  font-size: 1.2rem;
+}
+.direct-btn .thumbnail.circle {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.direct-btn .d-iflex-row {
+  gap: 0.5rem;
+  font-weight: 500;
+}
+.direct-btn .txt-lg {
+  font-size: 1.4rem;
+}
+.direct-btn .mg-left {
+  gap: 0;
+  font-weight: 400;
+}
+.direct-btn .mg-left .ico {
+  width: 1.6rem;
+  height: 1.6rem;
 }
 
 /* ======================== 구성요소 - 별점 ======================== */
@@ -3603,19 +3789,6 @@ img {
   font-size: 1.4rem;
   font-weight: 300;
 }
-.chat-card-item .txt-badge-wrap .badge-cnt {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--red, #cd3e3e);
-  color: white;
-  font-size: 1.2rem;
-  font-weight: 500;
-  padding: 0 0.8rem;
-  height: 2rem;
-  border-radius: 100px;
-  min-width: 2.4rem;
-}
 
 /* 반려동물 아이템 */
 .pet-card-item {
@@ -3792,6 +3965,17 @@ img {
   font-size: 1.2rem;
   font-weight: 500;
 }
+.svc-card-item .card-name-wrap .left-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+.svc-card-item .card-name-wrap .right-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+}
 .svc-card-item .thumbnail.circle {
   width: 3rem;
   height: 3rem;
@@ -3866,6 +4050,47 @@ img {
   align-items: center;
   justify-content: flex-start;
   gap: 0.5rem;
+}
+.svc-card-item .svc-card-btn-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--gray-light, #f1f1f1);
+}
+.svc-card-item .svc-card-btn-wrap .svc-card-btn {
+  flex: 1;
+}
+.svc-card-item .svc-card-btn-wrap .btn-grp {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.svc-card-item .svc-card-btn {
+  padding: 1.5rem 1rem;
+  position: relative;
+  color: #000;
+}
+.svc-card-item .svc-card-btn:after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 1.7rem;
+  background-color: var(--gray-light, #f1f1f1);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.svc-card-item .svc-card-btn:last-child:after {
+  display: none;
+}
+.svc-card-item .svc-card-btn .ico {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.svc-card-item .svc-card-btn .txt {
+  color: inherit;
 }
 .svc-card-item .svc-card-bottom .thumbnails {
   display: inline-flex;
@@ -4202,6 +4427,32 @@ img {
 .list-card-item.type07 .card-name {
   font-size: 1.6rem;
   font-weight: 500;
+}
+.list-card-item.type07 .dots-btn {
+  align-self: flex-start;
+}
+
+/* 목록 카드 아이템 타입 08 (상품) */
+.list-card-item.type08 {
+  gap: 1.5rem;
+}
+.list-card-item.type08 .thumbnail {
+  border: 1px solid var(--gray-light, #f1f1f1);
+  width: 7.5rem;
+  height: 7.5rem;
+}
+.list-card-item.type08 .card-information {
+  gap: 4px;
+}
+.list-card-item.type08 .card-name {
+  line-height: 1.3;
+}
+.list-card-item.type08 .gray-txt {
+  font-size: 1.2rem;
+}
+.list-card-item.type08 .info-txt {
+  font-weight: 500;
+  text-align: right;
 }
 
 /* ======================== 페이지 - 가이드 & 컴포넌트 ======================== */
@@ -4695,6 +4946,9 @@ img {
 .ctlist-page .col-list-grp .col-item {
   padding: 1.5rem 0;
 }
+.ctlist-page .tabs .badge-cnt {
+  margin-left: 0.5rem;
+}
 
 /* ======================== 페이지 - 채팅 상세 ======================== */
 .chat-window-wrap {
@@ -4945,6 +5199,57 @@ img {
 }
 .mall-rvcreate-page .list-card-item .card-information {
   gap: 4px;
+}
+
+/* 다펫몰 주문서 */
+.mall-order-page .page {
+  padding: 1.5rem;
+  padding-bottom: 3rem;
+}
+.mall-order-page .list-card-item {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
+}
+.mall-order-page .form-label {
+  font-size: 1.4rem;
+}
+.mall-order-page .info-section {
+  margin-bottom: 3rem;
+}
+.mall-order-page .info-section:last-child {
+  margin-bottom: 0;
+}
+.mall-order-page .info-section .bold-txt {
+  font-weight: 500;
+}
+.mall-order-page .bd-info-dl:last-child {
+  border-bottom: 0;
+}
+.mall-order-page .info-dl.type-flg {
+  font-size: 2rem;
+}
+.mall-order-page .info-dl.type-flg dt {
+  font-size: 1.4rem;
+}
+
+.form-item-under-txt-wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -1rem;
+}
+.form-item-under-txt-wrap .left-wrap {
+  font-size: 1.2rem;
+  font-weight: 300;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.form-item-under-txt-wrap .left-wrap .main-green-txt {
+  font-size: 1.4rem;
+  font-weight: 500;
 }
 
 /* ======================== 페이지 - 기부몰 ======================== */
@@ -5914,4 +6219,97 @@ img {
 }
 .complete-page .complete-list-grp.type-center {
   height: 90%;
+}
+
+/* ======================== 추가 페이지 - 라이브 관련 페이지들 ======================== */
+.live-streaming-page .page,
+.live-replay-page .page {
+  height: 100%;
+}
+.live-streaming-page .nothing-list-grp,
+.live-replay-page .nothing-list-grp {
+  height: 100%;
+  background-color: #000;
+}
+
+.camera-page {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.live-btn-wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+.live-btn-wrap .live-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 7.5rem;
+  border-radius: 5px;
+  padding: 0.5rem 0;
+}
+.live-btn-wrap .live-btn .ico-on {
+  display: none;
+}
+.live-btn-wrap .live-btn .txt {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.live-btn-wrap .dark-live-btn {
+  background-color: #000;
+  color: white;
+}
+.live-btn-wrap .live-btn.on .ico-on {
+  display: block;
+}
+.live-btn-wrap .live-btn.on .ico-off {
+  display: none;
+}
+
+/* ======================== 추가 페이지 - 서비스 일지 관련 페이지들 ======================== */
+.svclog-create-page .page {
+  padding: 1.5rem;
+}
+.svclog-create-page .top-card-wrap {
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
+}
+.svclog-create-page .svc-card-item {
+  box-shadow: none;
+  border: 0;
+}
+.svclog-create-page .svc-card-item .svc-card-top {
+  padding: 0;
+}
+
+.svclog-confirm-page .page {
+  padding: 1.5rem;
+}
+.svclog-confirm-page .left-ttl-wrap {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
+}
+.svclog-confirm-page .top-card-wrap {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gray-light, #f1f1f1);
+}
+.svclog-confirm-page .svc-card-item {
+  box-shadow: none;
+  border: 0;
+}
+.svclog-confirm-page .svc-card-item .svc-card-top {
+  padding: 0;
+}
+.svclog-confirm-page .svclog-txt-wrapper {
+  padding: 1.5rem 0;
+  font-size: 1.4rem;
+  font-weight: 300;
 }

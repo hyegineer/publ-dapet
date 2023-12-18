@@ -67,47 +67,44 @@
       <!-- layout) 페이지 레이아웃 -->
       <div class="l-wrapper">
 
-        <!-- TODO: ***** 다펫몰 리뷰 작성 페이지 ***** -->
-        <div class="mall-rvcreate-page l-container">
+        <!-- TODO: ***** 라이브 스트리밍 페이지 ***** -->
+        <div class="live-streaming-page l-container">
 
           <!-- TODO: layout) 헤더 타입 02 -->
 
           <!-- TODO: 밑줄 있는 화면일 때는 type-bd 클래스 추가 -->
-          <header class="header ">
+          <header class="header">
             <div class="header-inner">
 
               <!-- 헤더 왼쪽 -->
 
               <!-- TODO: invisible 클래스 넣으면 안보임 -->
-              <div class="hd-left ">
+              <div class="hd-left">
                 <button onclick="history.back()" type="button" class="hd-btn">
                   <span class="txt-hidden">뒤로가기</span>
                   <i class="ico ico-line-arrow-left"></i>
                 </button>
 
                 <!-- TODO: invisible 클래스 넣으면 안보임 -->
-                <button type="button" onclick="location.href='main.html';" class="hd-btn ">
+                <button type="button" onclick="location.href='main.html';" class="hd-btn invisible">
                   <span class="txt-hidden">홈</span>
                   <i class="ico ico-home"></i>
                 </button>
               </div>
 
               <!-- 헤더 중앙 -->
-              <div class="hd-center ">
-                <span class="ttl">리뷰 작성</span>
+              <div class="hd-center">
+                <span class="ttl">라이브 스트리밍</span>
               </div>
 
               <!-- 헤더 오른쪽 -->
 
               <!-- TODO: invisible 클래스 넣으면 안보임 -->
-              <div class="hd-right ">
+              <div class="hd-right">
 
                 <!-- 알림 버튼 -->
-                <button type="button" onclick="location.href='alarm-activity-list.html';" class="hd-btn">
-                  <span class="txt-hidden">알림</span>
-
-                  <!-- TODO: 새로 알람 들어온 경우 ico-alarm-on 클래스 추가해야함 -->
-                  <i class="ico ico-alarm"></i>
+                <button type="button" onclick="openModal('modal-1');" class="btn red-solid-btn hd-sm-btn">
+                  종료
                 </button>
 
                 <!-- END 알림 버튼 -->
@@ -123,56 +120,22 @@
             <!-- layout) 페이지 상단 -->
             <div class="l-contt-top">
               <div class="page">
-                <section class="top-card-wrap">
-                  <div class="list-card-item type08">
 
-                    <!-- TODO: 이미지가 없을 경우 inactive 클래스 추가 -->
-                    <figure class="thumbnail">
-                      <img src="assets/images/sample/img-sample07.png" alt="" class="thumbnail-img">
-                    </figure>
-                    <ul class="card-information">
-                      <li>
-                        <h3 class="card-name">그랜마루시 쓰리베이즈 동결건조 독 푸드 닭고기</h3>
-                      </li>
-                      <li>
-                        <p class="gray-txt">주문수량 : 2</p>
-                      </li>
-                    </ul>
-                  </div>
-                </section>
-                <div class="form-item-grp">
-                  <div class="form-item">
-                    <label class="form-label">상품 만족도</label>
-                    <div class="form-inp-wrap">
-                      <div class="star-rating-item">
-                        <div class="rating-group">
-                          <input disabled checked class="rating__input rating__input--none" name="rating3" id="rating3-none" value="0" type="radio">
-                          <label aria-label="1 star" class="rating__label" for="rating3-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
-                          <input class="rating__input" name="rating3" id="rating3-1" value="1" type="radio">
-                          <label aria-label="2 stars" class="rating__label" for="rating3-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
-                          <input class="rating__input" name="rating3" id="rating3-2" value="2" type="radio">
-                          <label aria-label="3 stars" class="rating__label" for="rating3-3"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
-                          <input class="rating__input" name="rating3" id="rating3-3" value="3" type="radio">
-                          <label aria-label="4 stars" class="rating__label" for="rating3-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
-                          <input class="rating__input" name="rating3" id="rating3-4" value="4" type="radio">
-                          <label aria-label="5 stars" class="rating__label" for="rating3-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
-                          <input class="rating__input" name="rating3" id="rating3-5" value="5" type="radio">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-item">
-                    <label class="form-label">
-                      <span>리뷰작성</span>
-                      <span class="sm-txt">(<span data-js-count>0</span>/200)</span>
-                    </label>
-                    <div class="form-inp-wrap">
-                      <textarea placeholder="최소 10자 이상의 내용을 입력해 주세요." class="custom-inp-textarea type-h150" maxlength="200" data-js-counttextarea></textarea>
-                    </div>
-                    <span class="form-caution gray-txt">상품과 관련 없는 내용, 비속어 등을 포함한 부적절한 리뷰는 통보 없이 삭제 처리될 수 있습니다. 작성해 주신 리뷰는
-                  상업적 용도로 활용될 수 있습니다.</span>
+                <!-- TODO: 카메라 있을 때 -->
+                <div class="camera-page" style="display: none;">
+                </div>
+
+                <!-- END 카메라 있을 때 -->
+
+                <!-- TODO: 카메라 없을 때 -->
+                <div class="nothing-list-grp type-center">
+                  <div class="nothing-list">
+                    <i class="ico ico-nothing ico-md ico-nothing-cam"></i>
+                    <h3 class="nl-ttl">카메라가 꺼져있습니다</h3>
                   </div>
                 </div>
+
+                <!-- END 카메라 없을 때 -->
               </div>
             </div>
 
@@ -180,9 +143,27 @@
 
             <!-- layout) 페이지 하단 -->
             <div class="l-contt-bottom">
-              <div class="btn-wrap">
-                <button type="button" class="btn theme-solid-btn btn-lg square-btn">
-                  <span class="txt">등록하기</span>
+              <div class="live-btn-wrap">
+
+                <!-- TODO: 음소거 풀 때 on 클래스 추가 -->
+                <button type="button" class="btn live-btn on">
+                  <i class="ico ico-mute-on ico-on"></i>
+                  <i class="ico ico-mute-off ico-off"></i>
+                  <span class="txt">음소거</span>
+                </button>
+
+                <!-- TODO: 비디오 킬 때 on 클래스 추가 -->
+                <button type="button" class="btn live-btn">
+                  <i class="ico ico-cam-on ico-on"></i>
+                  <i class="ico ico-cam-off ico-off"></i>
+                  <span class="txt">비디오</span>
+                </button>
+
+                <!-- TODO: 의뢰자 있을 때 on 클래스 추가 -->
+                <button type="button" class="btn live-btn on">
+                  <i class="ico ico-particapant-on ico-on"></i>
+                  <i class="ico ico-particapant-off ico-off"></i>
+                  <span class="txt">의뢰자</span>
                 </button>
               </div>
             </div>
@@ -191,9 +172,46 @@
           </div>
 
           <!-- END layout) 페이지 -->
+
+          <!-- **** modal) 페이지 내 모달 1. 라이브스트리밍 종료 확인 **** -->
+          <div id="modal-1" class="modal-wrapper">
+            <div class="modal-overlay" onclick="closeModal('modal-1');"></div>
+            <div class="custom-modal system-modal">
+              <div class="smodal-contt-container">
+                <h3 class="smodal-ttl">라이브 스트리밍</h3>
+                <div class="smodal-contt">
+                  <p class="smodal-desc">라이브를 종료하시겠습니까?</p>
+                </div>
+              </div>
+              <div class="smodal-btn-wrap">
+                <button type="button" class="btn" onclick="closeModal('modal-1');">취소</button>
+                <button type="button" class="btn confirm-btn" onclick="alert('종료되었습니다.');allCloseModal();">종료</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END **** modal) 페이지 내 모달 1. 라이브스트리밍 종료 확인 **** -->
+
+          <!-- **** modal) 페이지 내 모달 2. 펫시터의 라이브 종료통보 **** -->
+          <div id="modal-2" class="modal-wrapper">
+            <div class="modal-overlay" onclick="closeModal('modal-2');"></div>
+            <div class="custom-modal system-modal">
+              <div class="smodal-contt-container">
+                <h3 class="smodal-ttl">라이브 스트리밍</h3>
+                <div class="smodal-contt">
+                  <p class="smodal-desc">펫시터의 라이브가 종료되었습니다.</p>
+                </div>
+              </div>
+              <div class="smodal-btn-wrap">
+                <button type="button" class="btn confirm-btn" onclick="allCloseModal();">나가기</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END **** modal) 페이지 내 모달 2. 펫시터의 라이브 종료통보 **** -->
         </div>
 
-        <!-- END ***** 다펫몰 리뷰 작성 페이지 ***** -->
+        <!-- END ***** 라이브 스트리밍 페이지 ***** -->
       </div>
 
       <!-- END layout) 페이지 레이아웃 -->

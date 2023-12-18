@@ -149,6 +149,10 @@
                       </div>
                     </li>
                   </ul>
+                  <button type="button" onclick="openModal('modal-ctrl');" class="btn dots-btn">
+                    <span class="txt-hidden">메뉴</span>
+                    <i class="ico ico-more-dots"></i>
+                  </button>
                 </div>
                 <section class="card-under-section">
                   <ul class="status-list-grp">
@@ -297,10 +301,26 @@
             <!-- END layout) 페이지 상단 -->
 
             <!-- layout) 페이지 하단 -->
+
+            <!-- TODO: 진행중 (펫시터) 출발 전일 때 -->
+            <div class="l-contt-bottom" style="display: none;">
+              <div class="btn-wrap">
+                <button type="button" class="btn btn-lg gray-solid-btn square-btn">서비스 취소</button>
+                <button type="button" class="btn btn-lg theme-solid-btn square-btn">서비스 출발</button>
+              </div>
+            </div>
+
+            <!-- TODO: 진행중 (펫시터) 출발 후일 때 -->
+            <div class="l-contt-bottom" style="display: none;">
+              <div class="btn-wrap">
+                <button type="button" class="btn btn-lg red-solid-btn square-btn">라이브 시작</button>
+              </div>
+            </div>
+
+            <!-- TODO: 진행중 (펫시터) 서비스 종료/서비스 완료일 때 -->
             <div class="l-contt-bottom">
               <div class="btn-wrap">
-                <button type="button" class="btn btn-lg gray-solid-btn square-btn">취소하기</button>
-                <button type="button" class="btn btn-lg theme-solid-btn square-btn">완료 확정하기</button>
+                <button type="button" class="btn btn-lg dark-solid-btn square-btn">라이브 다시보기</button>
               </div>
             </div>
 
@@ -344,6 +364,31 @@
           </div>
 
           <!-- END **** modal) 페이지 내 모달 1. 의뢰일시 변경 **** -->
+
+          <!-- **** modal) 페이지 내 컨트롤 모달. 의뢰자와 채팅하기/서비스일지 작성하기 **** -->
+          <div id="modal-ctrl" class="modal-wrapper">
+            <div class="modal-overlay" onclick="closeModal('modal-ctrl');"></div>
+            <div class="custom-modal control-modal">
+              <div class="ctrlmodal">
+                <ul class="ctrlbtn-list-grp">
+
+                  <!-- TODO: 견적작성완료/취소/진행중/종료/완료일 때 보이는 버튼 -->
+                  <li class="ctrlbtn-list">
+                    <button type="button" class="btn ctrl-btn">의뢰자와 채팅하기</button>
+                  </li>
+
+                  <!-- TODO: 진행중 / 종료 / 완료일 때 보이는 버튼
+                (견적작성완료/취소일 때는 안보임) -->
+                  <li class="ctrlbtn-list">
+                    <button type="button" class="btn ctrl-btn">서비스 일지 작성하기</button>
+                  </li>
+                </ul>
+                <button type="button" class="btn ctrl-btn red-txt" onclick="closeModal('modal-ctrl');">취소</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END **** modal) 페이지 내 컨트롤 모달. 의뢰자와 채팅하기/서비스일지 작성하기 **** -->
         </div>
 
         <!-- END ***** 의뢰 상세 - 의뢰 상세 페이지 ***** -->
